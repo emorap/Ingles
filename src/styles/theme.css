@@ -1,0 +1,25 @@
+:root{
+  --color-base:#0F172A; --color-surface:#1E293B; --color-primary:#6366F1;
+  --color-success:#10B981; --color-streak:#F59E0B; --color-error:#F43F5E;
+  --color-text:#F8FAFC; --color-muted:#94A3B8;
+  /* module accents */
+  --accent-tenses:#6366F1; --accent-conditionals:#8B5CF6; --accent-structure:#2DD4BF;
+  --accent-verbforms:#38BDF8; --accent-mechanics:#10B981; --accent-functional:#F59E0B;
+  --radius:14px; --tap:44px; --font:Inter,system-ui,-apple-system,sans-serif;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+[data-theme="light"]{
+  --color-base:#F8FAFC; --color-surface:#FFFFFF; --color-text:#0F172A; --color-muted:#475569;
+  --shadow:0 6px 24px rgba(15,23,42,.12);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--color-base);color:var(--color-text);
+  font-family:var(--font);line-height:1.5}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--color-primary)}
+.btn{min-height:var(--tap);padding:0 18px;border:none;border-radius:var(--radius);
+  background:var(--color-primary);color:#fff;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid var(--color-muted);color:var(--color-text)}
+.surface{background:var(--color-surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
