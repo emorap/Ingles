@@ -118,3 +118,65 @@ ordinal (medallas), GPS humano.
 we're/were, right/write) son trampas de escucha/ortografía internas del inglés, no
 errores estrictos de interferencia del español. Son sólidos pedagógicamente y coinciden
 con el estilo de `tenses.json`, pero no todos son de transferencia L1.
+
+---
+
+# Fase 2 — Pase de profundización (validación + ajuste de contenido)
+
+**Fecha:** 2026-09-24
+**Petición de Edgar:** *"valida los documentos, ajusta los diálogos, que no sean diálogos
+pequeños o incoherentes, que den suficientes ejemplos, suficiente información, que no sea
+algo pobre en conceptos y teoría así como en experiencia de usuario."*
+
+**Diagnóstico objetivo antes de tocar nada** (para no inflar a ciegas): los 5 módulos
+nuevos ya superaban la barra de oro (5 ejemplos/tema, ~1633–2274 chars de explicación,
+`why` en cada ítem). El eslabón débil era el módulo original `tenses`: solo **3
+ejemplos/tema**. El cross-linking (`related`) estaba delgado en todo el corpus
+(promedios 1.4–2.1). Cero tablas de referencia. Cero `why` faltantes.
+
+**Cómo se hizo:** workflow multi-agente en paralelo — 1 agente por módulo (6 en total,
+Sonnet 5, esfuerzo alto), fase única *Profundización*, ~7.5 min, 0 errores. Mandato
+**conservador con restricciones duras**: editar solo el propio archivo, NO tocar
+`index.json` (lección de la carrera de Fase 1), **NUNCA renombrar/borrar/renumerar ids de
+ítems** (ancla del repaso espaciado), no encoger contenido, sin relleno.
+
+**Puerta de calidad (la corrí yo al integrar):**
+- `scripts/validate_module.mjs` × 6 → todos `ok: true`.
+- `scripts/validate_content.mjs` → 6 módulos pasan (`index.json module missing` = falso
+  positivo esperado).
+- Suite completa `node --test` → **171/171, 0 fallos**.
+- **Diff contra baseline `/tmp/momentum-baseline/`**: 0 ids de ítems o temas
+  renombrados/perdidos en los 6 módulos. Único ítem añadido: `cnd-inv-hadshe`.
+- **Todos los `related` resuelven** dentro de su módulo.
+- Lectura de muestras (present-simple, present-perfect-continuous): ejemplos con usos
+  distintos, traducciones idiomáticas, pitfalls de error real del hispanohablante.
+
+**Resultado por módulo:**
+- **tenses** — subió los 14 temas de 3 → **5 ejemplos** (+28 frases, ancladas a los PDFs y
+  cubriendo usos distintos). Reclasificó 2 bloques `callout` que ya nombraban un error a
+  `pitfall` (regla de finished-time-word; "I've been knowing her") y escribió 2 pitfalls
+  nuevos (omisión de -s en tercera persona; forzar verbos de estado al continuo).
+  Reforzó `related` (promedio 2.93). Corrigió un typo de fuente: *"Future Tenses
+  Masterclass.pdf" → "Future Tense Masterclass.pdf"* en los 6 temas de futuro.
+- **conditionals** — +0 ejemplos (ya estaba). Reforzó `related` (bridges reales:
+  zero↔unless, third↔wish). Llevó `formal-inversion` a paridad 4→5 ítems con
+  **`cnd-inv-hadshe`** (usa el 5º ejemplo que estaba sin practicar).
+- **structure** — +0 ejemplos. Solo 3 bridges de `related` (passive↔reported,
+  passive-tenses↔connectors por registro formal).
+- **verbforms** — +0 ejemplos. 1 bridge recíproco gerund-vs-infinitive↔get-phrasal.
+- **modifiers** — +0 ejemplos. Reescribió `related` en los 7 temas (promedio 1.43 →
+  2.71) + añadió **tabla OSASCOMP** de referencia en adjective-order (anclada al PDF).
+- **mechanics** — +0 ejemplos. `related` a 2-3 por tema en los 6 + añadió **tabla de
+  sufijos ordinales** (con la excepción 11/12/13) en dates-ordinal-podium.
+
+**Offline:** subí la caché del service worker `v3 → v4` para que los usuarios que vuelven
+re-precacheen el contenido enriquecido en el `activate` (en vez de recibirlo una carga
+atrasada por stale-while-revalidate). La lista de precache no cambió (mismos 6 archivos).
+
+**Corpus tras Fase 2:** 6 módulos · 51 temas · **255 ítems** (era 254; +1 por
+`cnd-inv-hadshe`) · **todos los temas con ≥5 ejemplos**.
+
+**⚠️ Riesgo residual para que Edgar revise:** las dos tablas nuevas (OSASCOMP en
+modifiers, sufijos ordinales en mechanics) son el primer uso del bloque `table` en el
+corpus fuera de `tenses`; pasan validación y la app las renderiza, pero vale una mirada
+visual en vivo para confirmar que se ven bien en móvil.
