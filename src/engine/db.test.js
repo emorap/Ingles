@@ -65,6 +65,32 @@ describe('Store', () => {
     s = s2; // hand off to afterEach for closing
   });
 
+  test('rejects a parseable backup with malformed records without throwing or corrupting data', async () => {
+    await s.putProgress(p('keep'));
+    // Valid JSON, right format tag, but a progress record with no itemId: the
+    // keyPath resolves to undefined and put() would reject (RF#6).
+    const bad = JSON.stringify({ format: 'momentum-progress', version: 2, progress: [{ seen: 1 }] });
+    let r;
+    await assert.doesNotReject(async () => { r = await s.importAll(bad); }, 'importAll never rejects');
+    assert.equal(r.ok, false, 'malformed backup is refused');
+    assert.equal((await s.getProgress('keep'))?.itemId, 'keep', 'existing data untouched');
+  });
+
+  test('export omits the AI key so a shared backup never leaks it', async () => {
+    await s.setMeta('aiKey', 'secret-gemini-key');
+    await s.setMeta('newPerDay', 12);
+    const dump = JSON.parse(await s.exportAll());
+    assert.equal(dump.meta.aiKey, undefined, 'aiKey excluded from backup');
+    assert.equal(dump.meta.newPerDay, 12, 'other meta still exported');
+  });
+
+  test('import ignores any AI key embedded in a backup', async () => {
+    const withKey = JSON.stringify({ format: 'momentum-progress', version: 2, progress: [], meta: { aiKey: 'leaked', newPerDay: 9 } });
+    assert.equal((await s.importAll(withKey)).ok, true);
+    assert.equal(await s.getMeta('aiKey', ''), '', 'aiKey not restored from backup');
+    assert.equal(await s.getMeta('newPerDay', 0), 9, 'other meta restored');
+  });
+
   test('migrates ids on import', async () => {
     await s.putProgress(p('old'));
     const dump = await s.exportAll();

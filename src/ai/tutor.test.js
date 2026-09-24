@@ -44,6 +44,17 @@ test('generateItems is schema-validated: invalid items are dropped (Review Focus
   assert.equal(items[0].id, 'g1');
 });
 
+test('generateItems stamps the topic id so generated items join the right session (I4)', async () => {
+  setNavigator(true);
+  // The model omits the topic field; selectItems filters by item.topic, so an
+  // unstamped item would silently vanish from the session it was generated for.
+  const noTopic = { id: 'g1', type: 'cloze', prompt: { en: 'a ___', es: 'a ___' }, answer: 'x', accept: ['x'], why: { en: 'b', es: 'p' } };
+  geminiReturns(JSON.stringify([noTopic]));
+  const items = await (await getTutor(fakeStore('k'))).generateItems({ id: 'present-simple' }, 1);
+  assert.equal(items.length, 1);
+  assert.equal(items[0].topic, 'present-simple', 'topic stamped from the requested topic, not trusted from the model');
+});
+
 test('generateItems tolerates fenced JSON and returns [] on non-JSON', async () => {
   setNavigator(true);
   geminiReturns('```json\n[]\n```');

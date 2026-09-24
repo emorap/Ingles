@@ -30,7 +30,10 @@ export function createGeminiTutor(key, opts = {}) {
     chat: (history) => ask(chatPrompt(history)),
     async generateItems(topic, n) {
       const text = await ask(generatePrompt(topic, n));
-      return parseItems(text);
+      // Stamp the topic ourselves: the model is not trusted to set it, and the
+      // session picks items by `item.topic`, so an unstamped item would be
+      // generated and then silently filtered out of its own session.
+      return parseItems(text).map((it) => ({ ...it, topic: topic?.id }));
     },
   };
 }

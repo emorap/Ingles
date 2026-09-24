@@ -4,6 +4,8 @@
 // tested units (pwa.js, validateContent, mountApp); this file only wires them
 // to the browser.
 import { mountApp } from './ui/app.js';
+import { Store } from './engine/db.js';
+import { MemoryStore } from './engine/memory-store.js';
 import { validateContent } from './engine/schema.js';
 import { requestPersist, idbAvailable, persistenceBanner, registerServiceWorker } from './pwa.js';
 
@@ -15,7 +17,8 @@ if (root) boot(root);
 /** @param {HTMLElement} root */
 async function boot(root) {
   const persisted = await requestPersist();
-  const banner = persistenceBanner({ idb: idbAvailable(), persisted });
+  const hasIdb = idbAvailable();
+  const banner = persistenceBanner({ idb: hasIdb, persisted });
   if (banner) document.body.insertBefore(banner, document.body.firstChild);
 
   try {
@@ -23,7 +26,15 @@ async function boot(root) {
     const data = await res.json();
     const result = validateContent(data);
     if (!result.ok) throw new Error('Contenido inválido: ' + JSON.stringify(result.errors));
-    await mountApp(root, result.content);
+    // Without IndexedDB (e.g. private mode) — or if opening it fails — fall back
+    // to an ephemeral in-memory store so the offline core still runs. The banner
+    // above already warns that progress won't be saved between sessions.
+    try {
+      await mountApp(root, result.content, hasIdb ? new Store() : new MemoryStore());
+    } catch (storageErr) {
+      if (!banner) document.body.insertBefore(persistenceBanner({ idb: false, persisted: false }), document.body.firstChild);
+      await mountApp(root, result.content, new MemoryStore());
+    }
   } catch (err) {
     const msg = document.createElement('main');
     msg.style.padding = '2rem';

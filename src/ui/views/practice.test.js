@@ -118,6 +118,24 @@ test('keyboard 1–4 rate the revealed card (3 = Good)', async () => {
   assert.equal(store.puts.length, 1, 'keyboard rated the card');
 });
 
+test('keyboard shortcut stops rating once the card leaves the view (no stale-listener hijack)', async () => {
+  const container = document.createElement('div');
+  document.body.append(container); // in real use the view is mounted in the document
+  const store = fakeStore();
+  renderPractice(container, { items: [CLOZE], progress: new Map(), store, onDone: () => {}, now: new Date() });
+  await type(container, 'boils'); // reveal → attaches the window keydown handler
+
+  // Simulate navigating away: the router clears the shared view container.
+  while (container.firstChild) container.removeChild(container.firstChild);
+
+  const e = new window.Event('keydown');
+  e.key = '3';
+  window.dispatchEvent(e);
+  await tick();
+  assert.equal(store.puts.length, 0, 'a digit key does not resume the abandoned card');
+  container.remove();
+});
+
 test('session completion calls onDone after the last item is rated', async () => {
   const container = document.createElement('div');
   let done = 0;

@@ -3,7 +3,13 @@ import { openDB } from '../../vendor/idb.js';
 /** @typedef {import('./types.js').ItemProgress} ItemProgress */
 
 const DB = 'momentum';
-const VERSION = 2;
+export const VERSION = 2;
+
+// Meta keys that must never leave the device in a backup: the AI key is the
+// learner's own Gemini credential, and a backup is meant to be shared between
+// their phone and computer. Excluded on export and ignored on import. Shared
+// with the in-memory fallback store so both honour the same rule.
+export const SECRET_META = new Set(['aiKey']);
 
 /**
  * IndexedDB-backed progress store. SRS state lives here, keyed by itemId,
@@ -95,7 +101,10 @@ export class Store {
     const metaKeys = await this.#db.getAllKeys('meta');
     /** @type {Record<string, unknown>} */
     const meta = {};
-    for (const k of metaKeys) meta[/** @type {string} */ (k)] = await this.#db.get('meta', k);
+    for (const k of metaKeys) {
+      if (SECRET_META.has(/** @type {string} */ (k))) continue;
+      meta[/** @type {string} */ (k)] = await this.#db.get('meta', k);
+    }
     return JSON.stringify({ format: 'momentum-progress', version: VERSION, progress, notes, meta });
   }
 
@@ -117,17 +126,34 @@ export class Store {
     if (data?.format !== 'momentum-progress' || !Array.isArray(data.progress)) {
       return { ok: false, error: 'unrecognised backup' };
     }
+    // The whole restore is one transaction: any malformed record rolls the
+    // batch back (no partial import) and surfaces as { ok:false } rather than a
+    // rejected promise, so a hand-edited or older backup can never corrupt or
+    // half-write the store (RF#6).
     const tx = this.#db.transaction(['progress', 'notes', 'meta'], 'readwrite');
-    for (const p of /** @type {ItemProgress[]} */ (data.progress)) {
-      const id = opts?.idMap?.[p.itemId] ?? p.itemId;
-      await tx.objectStore('progress').put({ ...p, itemId: id });
+    try {
+      for (const p of /** @type {ItemProgress[]} */ (data.progress)) {
+        if (!p || typeof p.itemId !== 'string') throw new Error('progress record missing itemId');
+        const id = opts?.idMap?.[p.itemId] ?? p.itemId;
+        await tx.objectStore('progress').put({ ...p, itemId: id });
+      }
+      for (const n of /** @type {{ itemId: string }[]} */ (Array.isArray(data.notes) ? data.notes : [])) {
+        if (!n || typeof n.itemId !== 'string') continue; // skip a malformed note, keep the rest
+        const id = opts?.idMap?.[n.itemId] ?? n.itemId;
+        await tx.objectStore('notes').put({ ...n, itemId: id });
+      }
+      for (const [k, v] of Object.entries(data.meta ?? {})) {
+        if (SECRET_META.has(k)) continue; // never restore a secret from a backup
+        await tx.objectStore('meta').put(v, k);
+      }
+      await tx.done;
+      return { ok: true };
+    } catch (err) {
+      try { tx.abort(); } catch { /* already aborted by the failing write */ }
+      // Consume the transaction's abort rejection so it never surfaces as an
+      // unhandled rejection; the batch is rolled back either way.
+      await tx.done.catch(() => {});
+      return { ok: false, error: 'registros no válidos en la copia' };
     }
-    for (const n of /** @type {{ itemId: string }[]} */ (Array.isArray(data.notes) ? data.notes : [])) {
-      const id = opts?.idMap?.[n.itemId] ?? n.itemId;
-      await tx.objectStore('notes').put({ ...n, itemId: id });
-    }
-    for (const [k, v] of Object.entries(data.meta ?? {})) await tx.objectStore('meta').put(v, k);
-    await tx.done;
-    return { ok: true };
   }
 }

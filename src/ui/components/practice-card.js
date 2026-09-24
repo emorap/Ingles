@@ -86,7 +86,13 @@ export function practiceCard(item, { onRate, voice, tutor } = {}) {
     // offline core is untouched; these buttons simply don't exist otherwise.
     if (tutor) feedback.append(aiPanel(tutor, item, wasCorrect, given));
 
+    // The digit shortcut listens on window, so it outlives the card unless we
+    // let it go when the card leaves the tree it was revealed in (e.g. the user
+    // reveals an answer, then navigates away without rating). Otherwise a later
+    // digit press would resume this dead card over whatever view is now shown.
+    const revealRoot = rootOf(card);
     keyHandler = (e) => {
+      if (rootOf(card) !== revealRoot) { removeEventListener('keydown', keyHandler); keyHandler = null; return; }
       const found = RATINGS.find((r) => r[3] === e.key);
       if (found) rate(found[2], wasCorrect, given);
     };
@@ -180,6 +186,13 @@ function aiPanel(tutor, item, wasCorrect, given) {
 
   panel.append(buttons, output);
   return panel;
+}
+
+/** Topmost ancestor of a node — its detached subtree root, or the document. */
+function rootOf(node) {
+  let n = node;
+  while (n.parentNode) n = n.parentNode;
+  return n;
 }
 
 function shuffle(arr) {
