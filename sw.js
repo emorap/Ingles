@@ -17,7 +17,11 @@
 // 5 examples, cross-linking + two reference tables). The precache list is
 // unchanged, but the bump forces returning users to re-precache the updated
 // JSON on activate instead of waiting a load behind for stale-while-revalidate.
-const CACHE = 'momentum-v4';
+// Bumped v4 -> v5 after the content-fidelity pass restored the teaching
+// frameworks from the PDFs (57 explanation blocks across the 6 modules:
+// the "N purposes/jobs" tables + diagnostic-question callouts). Same
+// precache list; the bump re-precaches the deepened JSON for returning users.
+const CACHE = 'momentum-v5';
 const SHELL = [
   './',
   './index.html',
