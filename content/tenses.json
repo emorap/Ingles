@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "module": {
+    "id": "tenses",
+    "title": { "en": "The present: four viewpoints", "es": "El presente: cuatro perspectivas" },
+    "accent": "#6366F1",
+    "topics": [
+      {
+        "id": "present-simple",
+        "title": { "en": "Present Simple — the identity window", "es": "Presente simple — la ventana de la identidad" },
+        "source": "Present tense masterclass.pdf",
+        "explanation": [
+          { "kind": "p", "text": {
+            "en": "Grammar books say Present Simple is 'for routines'. That is true, but it is not the whole truth. Its real job is to describe the world as generally, normally true — identity, habits, facts and opinions.",
+            "es": "Los libros dicen que el presente simple es 'para rutinas'. Es cierto, pero no es toda la verdad. Su función real es describir el mundo como algo generalmente cierto — identidad, hábitos, hechos y opiniones."
+          } },
+          { "kind": "callout", "text": {
+            "en": "The student's question: 'Am I describing my normal reality?' If yes, Present Simple is probably right.",
+            "es": "La pregunta del estudiante: '¿Estoy describiendo mi realidad normal?' Si la respuesta es sí, el presente simple suele ser el correcto."
+          } },
+          { "kind": "callout", "text": {
+            "en": "Stative verbs (know, believe, love, own, want…) describe states, not visible actions, so they normally avoid the continuous form.",
+            "es": "Los verbos de estado (know, believe, love, own, want…) describen estados, no acciones visibles, por eso normalmente no van en forma continua."
+          } }
+        ],
+        "examples": [
+          { "en": "I work as an engineer.", "es": "Trabajo como ingeniero." },
+          { "en": "Water boils at 100°C.", "es": "El agua hierve a 100°C." },
+          { "en": "My brother lives in London.", "es": "Mi hermano vive en Londres." }
+        ],
+        "related": ["present-continuous"],
+        "items": ["ps-lives", "ps-boils", "ps-know", "ps-loves", "ps-drinks"]
+      },
+      {
+        "id": "present-continuous",
+        "title": { "en": "Present Continuous — the zoom lens", "es": "Presente continuo — el lente de acercamiento" },
+        "source": "Present tense masterclass.pdf",
+        "explanation": [
+          { "kind": "p", "text": {
+            "en": "Present Simple sees the whole landscape; Present Continuous zooms in. It shows life while it is moving: actions now, temporary situations, trends, changing situations, and planned arrangements.",
+            "es": "El presente simple ve todo el paisaje; el presente continuo hace zoom. Muestra la vida mientras se mueve: acciones ahora, situaciones temporales, tendencias, cambios y planes ya acordados."
+          } },
+          { "kind": "callout", "text": {
+            "en": "'I live in Bogotá' feels permanent (identity). 'I'm living in Bogotá' feels temporary — only the perspective changed, not the facts.",
+            "es": "'I live in Bogotá' se siente permanente (identidad). 'I'm living in Bogotá' se siente temporal — solo cambió la perspectiva, no los hechos."
+          } },
+          { "kind": "callout", "text": {
+            "en": "The emotional continuous: with always/constantly/forever it stops being about frequency and starts being about feeling — usually irritation. 'He's always arriving late!'",
+            "es": "El continuo emocional: con always/constantly/forever ya no habla de frecuencia sino de emoción — normalmente irritación. '¡He's always arriving late!'"
+          } }
+        ],
+        "examples": [
+          { "en": "I'm learning Italian this year.", "es": "Estoy aprendiendo italiano este año." },
+          { "en": "Cities are becoming larger.", "es": "Las ciudades se están volviendo más grandes." },
+          { "en": "I'm meeting Sarah tomorrow.", "es": "Me veo con Sarah mañana (ya está acordado)." }
+        ],
+        "related": ["present-simple", "present-perfect"],
+        "items": ["pc-living", "pc-becoming", "pc-project", "pc-annoyed", "pc-meeting"]
+      },
+      {
+        "id": "present-perfect",
+        "title": { "en": "Present Perfect — the bridge to now", "es": "Presente perfecto — el puente hacia el ahora" },
+        "source": "Present tense masterclass.pdf",
+        "explanation": [
+          { "kind": "p", "text": {
+            "en": "Present Perfect is not really a past tense. It builds a bridge from the past into the present: 'this happened before, but I want you to think about now.' Use it for life experience, change over time, present results and unfinished time.",
+            "es": "El presente perfecto no es realmente un tiempo pasado. Construye un puente del pasado al presente: 'esto pasó antes, pero quiero que pienses en el ahora.' Úsalo para experiencias de vida, cambios en el tiempo, resultados presentes y tiempo sin terminar."
+          } },
+          { "kind": "callout", "text": {
+            "en": "A finished time word closes the bridge. 'yesterday', 'in 2018' → Past Simple. That is why 'I have seen him yesterday' is wrong; say 'I saw him yesterday.'",
+            "es": "Una palabra de tiempo terminado cierra el puente. 'yesterday', 'in 2018' → pasado simple. Por eso 'I have seen him yesterday' está mal; se dice 'I saw him yesterday.'"
+          } },
+          { "kind": "callout", "text": {
+            "en": "BEEN vs GONE: 'I've been to Italy' = I visited and came back. 'I've gone to Italy' = I left and I'm still there.",
+            "es": "BEEN vs GONE: 'I've been to Italy' = fui y regresé. 'I've gone to Italy' = me fui y todavía estoy allá."
+          } }
+        ],
+        "examples": [
+          { "en": "I've visited fifteen countries.", "es": "He visitado quince países." },
+          { "en": "I've lost my keys (I still don't have them).", "es": "Perdí mis llaves (todavía no las tengo)." },
+          { "en": "Prices have increased a lot.", "es": "Los precios han subido mucho." }
+        ],
+        "related": ["present-perfect-continuous"],
+        "items": ["pp-saw", "pp-visited", "pp-gone", "pp-lost", "pp-ever"]
+      },
+      {
+        "id": "present-perfect-continuous",
+        "title": { "en": "Present Perfect Continuous — the time-lapse", "es": "Presente perfecto continuo — la cámara en time-lapse" },
+        "source": "Present tense masterclass.pdf",
+        "explanation": [
+          { "kind": "p", "text": {
+            "en": "This tense answers: 'What has been happening over time until now?' It shows the journey, not the destination — ongoing activities, recent activity with visible evidence, repeated effort and temporary situations.",
+            "es": "Este tiempo responde: '¿Qué ha estado pasando a lo largo del tiempo hasta ahora?' Muestra el recorrido, no el destino — actividades en curso, actividad reciente con evidencia visible, esfuerzo repetido y situaciones temporales."
+          } },
+          { "kind": "callout", "text": {
+            "en": "Present Perfect shows the certificate (result); Present Perfect Continuous shows your tired hands (process). 'I've cleaned the kitchen' vs 'I've been cleaning the kitchen.'",
+            "es": "El presente perfecto muestra el certificado (resultado); el continuo muestra tus manos cansadas (proceso). 'I've cleaned the kitchen' vs 'I've been cleaning the kitchen.'"
+          } },
+          { "kind": "callout", "text": {
+            "en": "Stative verbs stay in the plain Perfect: 'I've known her for years', never 'I've been knowing her.'",
+            "es": "Los verbos de estado se quedan en el perfecto simple: 'I've known her for years', nunca 'I've been knowing her.'"
+          } }
+        ],
+        "examples": [
+          { "en": "I've been studying English for three years.", "es": "Llevo tres años estudiando inglés." },
+          { "en": "You've been crying (your eyes are red).", "es": "Has estado llorando (tienes los ojos rojos)." },
+          { "en": "I've been calling you all day.", "es": "Te he estado llamando todo el día." }
+        ],
+        "related": ["present-perfect"],
+        "items": ["ppc-working", "ppc-painting", "ppc-known", "ppc-finished", "ppc-studying"]
+      }
+    ],
+    "items": [
+      { "id": "ps-lives", "topic": "present-simple", "type": "choice",
+        "prompt": { "en": "My brother ___ in London (it is his home).", "es": "My brother ___ in London (es donde vive)." },
+        "answer": "lives", "distractors": ["is living"],
+        "why": { "en": "London is his home — a stable, general truth, so Present Simple.", "es": "Londres es su hogar — una verdad estable y general, por eso presente simple." },
+        "tags": ["identity", "stative"] },
+
+      { "id": "ps-boils", "topic": "present-simple", "type": "cloze",
+        "prompt": { "en": "Water ___ (boil) at 100°C.", "es": "Water ___ (boil) at 100°C." },
+        "answer": "boils", "accept": ["boils"],
+        "why": { "en": "A scientific fact / general truth uses Present Simple; third person adds -s.", "es": "Un hecho científico / verdad general usa presente simple; la tercera persona añade -s." },
+        "tags": ["fact"] },
+
+      { "id": "ps-know", "topic": "present-simple", "type": "choice",
+        "prompt": { "en": "Choose the natural sentence:", "es": "Elige la oración natural:" },
+        "answer": "I know the answer.", "distractors": ["I'm knowing the answer."],
+        "why": { "en": "'know' is a stative verb — you cannot watch it happen, so no continuous form.", "es": "'know' es un verbo de estado — no se puede 'ver' ocurrir, así que no lleva forma continua." },
+        "tags": ["stative", "error"] },
+
+      { "id": "ps-loves", "topic": "present-simple", "type": "choice",
+        "prompt": { "en": "She ___ chocolate.", "es": "She ___ chocolate." },
+        "answer": "loves", "distractors": ["is loving"],
+        "why": { "en": "'love' describes a state, not an action in progress → Present Simple.", "es": "'love' describe un estado, no una acción en progreso → presente simple." },
+        "tags": ["stative", "error"] },
+
+      { "id": "ps-drinks", "topic": "present-simple", "type": "cloze",
+        "prompt": { "en": "He never ___ (drink) alcohol.", "es": "He never ___ (drink) alcohol." },
+        "answer": "drinks", "accept": ["drinks"],
+        "why": { "en": "A habit / normal life uses Present Simple; third person singular takes -s.", "es": "Un hábito / vida normal usa presente simple; la tercera persona del singular lleva -s." },
+        "tags": ["habit"] },
+
+      { "id": "pc-living", "topic": "present-continuous", "type": "choice",
+        "prompt": { "en": "I ___ in Bogotá — just for six months.", "es": "I ___ in Bogotá — solo por seis meses." },
+        "answer": "am living", "accept": ["am living", "'m living"], "distractors": ["live"],
+        "why": { "en": "'just for six months' signals a temporary situation → Present Continuous.", "es": "'solo por seis meses' indica una situación temporal → presente continuo." },
+        "tags": ["temporary"] },
+
+      { "id": "pc-becoming", "topic": "present-continuous", "type": "cloze",
+        "prompt": { "en": "Cities ___ (become) larger every year.", "es": "Cities ___ (become) larger every year." },
+        "answer": "are becoming", "accept": ["are becoming", "'re becoming"],
+        "why": { "en": "A trend developing over time uses Present Continuous, even if nobody is doing it 'right now'.", "es": "Una tendencia que se desarrolla en el tiempo usa presente continuo, aunque nadie la haga 'justo ahora'." },
+        "tags": ["trend"] },
+
+      { "id": "pc-project", "topic": "present-continuous", "type": "choice",
+        "prompt": { "en": "I ___ on an exciting project this week.", "es": "I ___ on an exciting project this week." },
+        "answer": "am working", "accept": ["am working", "'m working"], "distractors": ["work"],
+        "why": { "en": "'this week' frames a temporary period → Present Continuous, not the general 'I work'.", "es": "'this week' enmarca un periodo temporal → presente continuo, no el general 'I work'." },
+        "tags": ["temporary", "error"] },
+
+      { "id": "pc-annoyed", "topic": "present-continuous", "type": "choice",
+        "prompt": { "en": "To sound annoyed about a habit: 'He ___ late!'", "es": "Para sonar molesto por una costumbre: 'He ___ late!'" },
+        "answer": "is always arriving", "accept": ["is always arriving", "'s always arriving"], "distractors": ["always arrives"],
+        "why": { "en": "Continuous + always adds emotion (irritation); 'always arrives' is a neutral observation.", "es": "Continuo + always añade emoción (irritación); 'always arrives' es una observación neutral." },
+        "tags": ["emotional"] },
+
+      { "id": "pc-meeting", "topic": "present-continuous", "type": "cloze",
+        "prompt": { "en": "I ___ (meet) Sarah tomorrow — it's already arranged.", "es": "I ___ (meet) Sarah tomorrow — ya está acordado." },
+        "answer": "am meeting", "accept": ["am meeting", "'m meeting"],
+        "why": { "en": "A fixed future arrangement that exists now uses Present Continuous.", "es": "Un plan futuro fijo que ya existe ahora usa presente continuo." },
+        "tags": ["arrangement", "future"] },
+
+      { "id": "pp-saw", "topic": "present-perfect", "type": "choice",
+        "prompt": { "en": "I ___ him yesterday.", "es": "I ___ him yesterday." },
+        "answer": "saw", "distractors": ["have seen"],
+        "why": { "en": "'yesterday' is finished time — it closes the bridge, so Past Simple.", "es": "'yesterday' es tiempo terminado — cierra el puente, así que pasado simple." },
+        "tags": ["vs-past", "error"] },
+
+      { "id": "pp-visited", "topic": "present-perfect", "type": "choice",
+        "prompt": { "en": "I ___ Paris in 2018.", "es": "I ___ Paris in 2018." },
+        "answer": "visited", "distractors": ["have visited"],
+        "why": { "en": "'in 2018' is a finished moment → Past Simple, not Present Perfect.", "es": "'in 2018' es un momento terminado → pasado simple, no presente perfecto." },
+        "tags": ["vs-past", "error"] },
+
+      { "id": "pp-gone", "topic": "present-perfect", "type": "choice",
+        "prompt": { "en": "She isn't here — she ___ home.", "es": "She isn't here — she ___ home." },
+        "answer": "has gone", "accept": ["has gone", "'s gone"], "distractors": ["has been"],
+        "why": { "en": "'gone' = left and not back yet. 'been' would mean she went and returned.", "es": "'gone' = se fue y aún no regresa. 'been' significaría que fue y volvió." },
+        "tags": ["been-gone"] },
+
+      { "id": "pp-lost", "topic": "present-perfect", "type": "choice",
+        "prompt": { "en": "I ___ my keys — I still don't have them.", "es": "I ___ my keys — todavía no las tengo." },
+        "answer": "have lost", "accept": ["have lost", "'ve lost"], "distractors": ["lost"],
+        "why": { "en": "The result matters now (no keys) → Present Perfect. 'lost' would just be a finished story.", "es": "El resultado importa ahora (sin llaves) → presente perfecto. 'lost' sería solo una historia terminada." },
+        "tags": ["result"] },
+
+      { "id": "pp-ever", "topic": "present-perfect", "type": "cloze",
+        "prompt": { "en": "Have you ever ___ (climb) a mountain?", "es": "Have you ever ___ (climb) a mountain?" },
+        "answer": "climbed", "accept": ["climbed"],
+        "why": { "en": "'ever' asks about life experience with no date → Present Perfect + past participle.", "es": "'ever' pregunta por una experiencia de vida sin fecha → presente perfecto + participio pasado." },
+        "tags": ["experience"] },
+
+      { "id": "ppc-working", "topic": "present-perfect-continuous", "type": "choice",
+        "prompt": { "en": "I ___ here since 2022.", "es": "I ___ here since 2022." },
+        "answer": "have been working", "accept": ["have been working", "'ve been working", "have worked", "'ve worked"], "distractors": ["am working"],
+        "why": { "en": "An activity from 2022 continuing until now → Present Perfect (Continuous). 'am working' can't express 'since 2022'.", "es": "Una actividad desde 2022 que sigue hasta ahora → presente perfecto (continuo). 'am working' no puede expresar 'since 2022'." },
+        "tags": ["duration", "error"] },
+
+      { "id": "ppc-painting", "topic": "present-perfect-continuous", "type": "choice",
+        "prompt": { "en": "Your clothes are covered in paint! I ___ the room.", "es": "¡Tu ropa está llena de pintura! I ___ the room." },
+        "answer": "have been painting", "accept": ["have been painting", "'ve been painting"], "distractors": ["have painted"],
+        "why": { "en": "Visible evidence of the process (paint on clothes) → Continuous; it may not even be finished.", "es": "Evidencia visible del proceso (pintura en la ropa) → continuo; puede que ni esté terminado." },
+        "tags": ["process", "evidence"] },
+
+      { "id": "ppc-known", "topic": "present-perfect-continuous", "type": "choice",
+        "prompt": { "en": "I ___ her for years.", "es": "I ___ her for years." },
+        "answer": "have known", "accept": ["have known", "'ve known"], "distractors": ["have been knowing"],
+        "why": { "en": "'know' is stative — it stays in the plain Present Perfect, never the continuous.", "es": "'know' es de estado — se queda en presente perfecto simple, nunca continuo." },
+        "tags": ["stative", "error"] },
+
+      { "id": "ppc-finished", "topic": "present-perfect-continuous", "type": "choice",
+        "prompt": { "en": "Great news — I ___ the report!", "es": "¡Buenas noticias — I ___ the report!" },
+        "answer": "have finished", "accept": ["have finished", "'ve finished"], "distractors": ["have been finishing"],
+        "why": { "en": "A completed result (it's done) → Present Perfect. 'finish' is a moment, not an ongoing activity.", "es": "Un resultado completado (está listo) → presente perfecto. 'finish' es un momento, no una actividad en curso." },
+        "tags": ["result", "error"] },
+
+      { "id": "ppc-studying", "topic": "present-perfect-continuous", "type": "cloze",
+        "prompt": { "en": "I ___ (study) English for three years.", "es": "I ___ (study) English for three years." },
+        "answer": "have been studying", "accept": ["have been studying", "'ve been studying"],
+        "why": { "en": "Duration + ongoing effort until now → Present Perfect Continuous.", "es": "Duración + esfuerzo continuo hasta ahora → presente perfecto continuo." },
+        "tags": ["duration"] }
+    ]
+  }
+}

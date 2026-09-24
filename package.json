@@ -6,6 +6,7 @@
   "description": "Momentum — offline-first English study PWA (no-build, vendored ESM).",
   "scripts": {
     "test": "node --test",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "content:validate": "node scripts/validate_content.mjs"
   }
 }
