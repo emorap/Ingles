@@ -3,8 +3,8 @@
   "module": {
     "id": "tenses",
     "title": {
-      "en": "The present: four viewpoints",
-      "es": "El presente: cuatro perspectivas"
+      "en": "Tense system",
+      "es": "Sistema de tiempos"
     },
     "accent": "#6366F1",
     "topics": [
@@ -509,6 +509,408 @@
           "pstpc-known",
           "pstpc-working",
           "pstpc-raining"
+        ]
+      },
+      {
+        "id": "future-simple",
+        "title": {
+          "en": "Future Simple (will) — deciding now",
+          "es": "Futuro simple (will) — decidir ahora"
+        },
+        "coreIdea": {
+          "en": "Use 'will' when the future doesn't exist yet — you create it while speaking: a decision, an offer, a promise or an opinion.",
+          "es": "Usa 'will' cuando el futuro aún no existe — lo creas al hablar: una decisión, un ofrecimiento, una promesa o una opinión."
+        },
+        "source": "Future Tenses Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "English speakers don't ask 'what tense?' — they ask 'what am I trying to communicate?' 'Will' is for the future you invent in the moment. One second before you speak, the decision didn't exist. Structure: subject + will + base verb; the negative is won't. Native speakers almost always contract it: I'll, she'll, we'll.",
+              "es": "Los angloparlantes no preguntan '¿qué tiempo?' — preguntan '¿qué quiero comunicar?' 'Will' es para el futuro que inventas en el momento. Un segundo antes de hablar, la decisión no existía. Estructura: sujeto + will + verbo base; el negativo es won't. Los nativos casi siempre lo contraen: I'll, she'll, we'll."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Four jobs for will: spontaneous decisions ('I'll answer it'), offers ('I'll carry that'), promises ('I'll never forget') and opinion-predictions ('I think prices will rise').",
+              "es": "Cuatro usos de will: decisiones espontáneas ('I'll answer it'), ofrecimientos ('I'll carry that'), promesas ('I'll never forget') y predicciones de opinión ('I think prices will rise')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "A prediction from evidence is different: 'Look at those clouds — it's going to rain.' Evidence you can see now points to 'going to', not will.",
+              "es": "Una predicción con evidencia es distinta: 'Look at those clouds — it's going to rain.' La evidencia que ves ahora apunta a 'going to', no a will."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish speakers overuse will for plans already made. If it's already organised, prefer 'going to' or the present continuous: 'I'm going to visit Italy — everything's booked', not 'I'll visit Italy'.",
+              "es": "Los hispanohablantes abusan de will para planes ya hechos. Si ya está organizado, prefiere 'going to' o el presente continuo: 'I'm going to visit Italy — everything's booked', no 'I'll visit Italy'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The phone's ringing — I'll answer it.",
+            "es": "Suena el teléfono — yo contesto."
+          },
+          {
+            "en": "Don't worry, I won't tell anyone.",
+            "es": "No te preocupes, no se lo diré a nadie."
+          },
+          {
+            "en": "I think people will live longer in the future.",
+            "es": "Creo que la gente vivirá más en el futuro."
+          }
+        ],
+        "related": [
+          "future-going-to",
+          "future-arrangements"
+        ],
+        "items": [
+          "fut-answer",
+          "fut-carry",
+          "fut-tell",
+          "fut-improve",
+          "fut-close"
+        ]
+      },
+      {
+        "id": "future-going-to",
+        "title": {
+          "en": "Going to — already decided",
+          "es": "Going to — ya decidido"
+        },
+        "coreIdea": {
+          "en": "Use 'going to' when the decision already exists — it was made before this conversation: a plan, an intention, or a prediction based on present evidence.",
+          "es": "Usa 'going to' cuando la decisión ya existe — se tomó antes de esta conversación: un plan, una intención o una predicción basada en evidencia presente."
+        },
+        "source": "Future Tenses Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "The difference from will is the moment of the decision. Will decides now; going to decided earlier. Structure: subject + am/is/are + going to + base verb. If someone asks 'when did you decide?' and the answer is 'before now', you want going to.",
+              "es": "La diferencia con will es el momento de la decisión. Will decide ahora; going to decidió antes. Estructura: sujeto + am/is/are + going to + verbo base. Si alguien pregunta '¿cuándo lo decidiste?' y la respuesta es 'antes de ahora', quieres going to."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Three jobs for going to: plans ('We're going to renovate the house'), intentions ('I'm going to save money') and evidence-predictions ('Those clouds are dark — it's going to rain').",
+              "es": "Tres usos de going to: planes ('We're going to renovate the house'), intenciones ('I'm going to save money') y predicciones con evidencia ('Those clouds are dark — it's going to rain')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Evidence vs opinion: 'Liverpool are playing brilliantly — they're going to win' (evidence now) vs 'I think Liverpool will win' (just an opinion).",
+              "es": "Evidencia vs opinión: 'Liverpool are playing brilliantly — they're going to win' (evidencia ahora) vs 'I think Liverpool will win' (solo una opinión)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "The structure is 'going TO + verb' — don't drop the 'to': 'I'm going to travel to Mexico', never 'I'm going travel to Mexico'.",
+              "es": "La estructura es 'going TO + verbo' — no omitas el 'to': 'I'm going to travel to Mexico', nunca 'I'm going travel to Mexico'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I've booked the hotel — I'm going to travel to Greece in August.",
+            "es": "Reservé el hotel — voy a viajar a Grecia en agosto."
+          },
+          {
+            "en": "This year I'm going to save money.",
+            "es": "Este año voy a ahorrar dinero."
+          },
+          {
+            "en": "Look at that cyclist! He's going to fall.",
+            "es": "¡Mira ese ciclista! Se va a caer."
+          }
+        ],
+        "related": [
+          "future-simple",
+          "future-arrangements"
+        ],
+        "items": [
+          "futg-greece",
+          "futg-fall",
+          "futg-save",
+          "futg-gotravel",
+          "futg-win"
+        ]
+      },
+      {
+        "id": "future-arrangements",
+        "title": {
+          "en": "Present Continuous for the future — already arranged",
+          "es": "Presente continuo para el futuro — ya organizado"
+        },
+        "coreIdea": {
+          "en": "Use the present continuous (am/is/are + -ing) for a fixed arrangement — something in your diary, usually with a time and often another person.",
+          "es": "Usa el presente continuo (am/is/are + -ing) para una cita fija — algo en tu agenda, normalmente con hora y a menudo con otra persona."
+        },
+        "source": "Future Tenses Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Think calendar, diary, appointment, meeting. If it's organised and scheduled, English uses the same form as a present action, but the time word points to the future: 'I'm meeting HR tomorrow.'",
+              "es": "Piensa en calendario, agenda, cita, reunión. Si está organizado y agendado, el inglés usa la misma forma que una acción presente, pero la palabra de tiempo apunta al futuro: 'I'm meeting HR tomorrow.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "It's common for arranged meetings ('I'm seeing the dentist tomorrow'), travel ('We're flying on Saturday') and social plans ('I'm visiting my parents this weekend').",
+              "es": "Es común para citas ('I'm seeing the dentist tomorrow'), viajes ('We're flying on Saturday') y planes sociales ('I'm visiting my parents this weekend')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Compare with going to: 'I'm going to visit London' is a plan; 'I'm visiting London next Friday' means the flights and hotel are already booked.",
+              "es": "Compara con going to: 'I'm going to visit London' es un plan; 'I'm visiting London next Friday' significa que los vuelos y el hotel ya están reservados."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "No arrangement yet? Don't use the present continuous. 'I'm seeing my cousin one day' is wrong — 'one day' means nothing is fixed → 'I'm going to see my cousin one day.'",
+              "es": "¿Aún sin cita concreta? No uses el presente continuo. 'I'm seeing my cousin one day' está mal — 'one day' significa que nada es fijo → 'I'm going to see my cousin one day.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I'm meeting a client at 3 tomorrow.",
+            "es": "Tengo reunión con un cliente mañana a las 3."
+          },
+          {
+            "en": "We're flying to Barcelona next Thursday.",
+            "es": "Volamos a Barcelona el próximo jueves."
+          },
+          {
+            "en": "I'm having dinner with my parents tonight.",
+            "es": "Ceno con mis padres esta noche."
+          }
+        ],
+        "related": [
+          "future-going-to",
+          "present-continuous"
+        ],
+        "items": [
+          "futa-dentist",
+          "futa-client",
+          "futa-flying",
+          "futa-gymvs",
+          "futa-cousin"
+        ]
+      },
+      {
+        "id": "future-continuous",
+        "title": {
+          "en": "Future Continuous — press pause on the future",
+          "es": "Futuro continuo — pausa en el futuro"
+        },
+        "coreIdea": {
+          "en": "Use will be + -ing to place yourself inside a future moment and describe what will already be happening — the middle of the action, not its start or end.",
+          "es": "Usa will be + -ing para meterte dentro de un momento futuro y describir lo que ya estará ocurriendo — la mitad de la acción, no su inicio ni su final."
+        },
+        "source": "Future Tenses Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Imagine pressing 'pause' on the future. What activity is already in progress? That's Future Continuous: 'If someone looked at me at that moment, this is what they'd see me doing.' Structure: subject + will + be + -ing.",
+              "es": "Imagina pulsar 'pausa' en el futuro. ¿Qué actividad ya está en curso? Eso es futuro continuo: 'Si alguien me mirara en ese momento, esto es lo que me vería haciendo.' Estructura: sujeto + will + be + -ing."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Compare: 'I'll watch a film tonight' (a decision/prediction) vs 'At 8 tonight I'll be watching a film' (the activity already happening at that exact time).",
+              "es": "Compara: 'I'll watch a film tonight' (una decisión/predicción) vs 'At 8 tonight I'll be watching a film' (la actividad que ya ocurre a esa hora exacta)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "It also softens questions: 'Will you be using the car later?' sounds more polite than 'Will you use the car?' because it asks about your schedule, not your intentions.",
+              "es": "También suaviza preguntas: 'Will you be using the car later?' suena más educado que 'Will you use the car?' porque pregunta por tu agenda, no por tus intenciones."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "For what's happening at an exact future moment, don't use the simple will. 'This time tomorrow I will fly' → 'This time tomorrow I'll be flying.'",
+              "es": "Para lo que ocurre en un momento futuro exacto, no uses el will simple. 'This time tomorrow I will fly' → 'This time tomorrow I'll be flying.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "This time tomorrow, we'll be flying over the Atlantic.",
+            "es": "Mañana a esta hora, estaremos volando sobre el Atlántico."
+          },
+          {
+            "en": "At 8 tonight I'll be watching a film.",
+            "es": "Esta noche a las 8 estaré viendo una película."
+          },
+          {
+            "en": "I'll be working from home all next week.",
+            "es": "Estaré trabajando desde casa toda la próxima semana."
+          }
+        ],
+        "related": [
+          "future-simple",
+          "past-continuous"
+        ],
+        "items": [
+          "futc-flying",
+          "futc-watching",
+          "futc-using",
+          "futc-flyerror",
+          "futc-working"
+        ]
+      },
+      {
+        "id": "future-perfect",
+        "title": {
+          "en": "Future Perfect — looking back from the future",
+          "es": "Futuro perfecto — mirar atrás desde el futuro"
+        },
+        "coreIdea": {
+          "en": "Use will have + past participle for something completed before a future point — travel forward in time, look back, and see what has already finished.",
+          "es": "Usa will have + participio pasado para algo completado antes de un punto futuro — viaja al futuro, mira atrás y ve qué ya ha terminado."
+        },
+        "source": "Future Tenses Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Imagine standing at a future moment and turning around to look backwards. What has already finished? That's Future Perfect. Structure: subject + will + have + past participle. It almost always travels with a 'by' time expression.",
+              "es": "Imagina estar en un momento futuro y girarte para mirar hacia atrás. ¿Qué ya ha terminado? Eso es futuro perfecto. Estructura: sujeto + will + have + participio pasado. Casi siempre viaja con una expresión de tiempo con 'by'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Time expressions that trigger it: by tomorrow, by next month, by 2030, before Friday, within three weeks. 'By Friday, I'll have finished the report.'",
+              "es": "Expresiones de tiempo que lo activan: by tomorrow, by next month, by 2030, before Friday, within three weeks. 'By Friday, I'll have finished the report.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Compare: 'I'll finish the report tomorrow' (a simple future fact) vs 'By tomorrow I'll have finished the report' (completed before that point).",
+              "es": "Compara: 'I'll finish the report tomorrow' (un hecho futuro simple) vs 'By tomorrow I'll have finished the report' (completado antes de ese punto)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "After 'will have' use the past participle, never the base or -ing form. 'By December I will have working here' is wrong → 'I'll have worked here.'",
+              "es": "Después de 'will have' usa el participio pasado, nunca la base ni la forma -ing. 'By December I will have working here' está mal → 'I'll have worked here.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "By Friday, I'll have finished the report.",
+            "es": "Para el viernes, habré terminado el informe."
+          },
+          {
+            "en": "By 2035, many businesses will have automated routine tasks.",
+            "es": "Para 2035, muchas empresas habrán automatizado tareas rutinarias."
+          },
+          {
+            "en": "By retirement, I'll have worked for forty years.",
+            "es": "Para la jubilación, habré trabajado cuarenta años."
+          }
+        ],
+        "related": [
+          "future-perfect-continuous",
+          "present-perfect"
+        ],
+        "items": [
+          "futp-finished",
+          "futp-graduated",
+          "futp-cooked",
+          "futp-finisherror",
+          "futp-saved"
+        ]
+      },
+      {
+        "id": "future-perfect-continuous",
+        "title": {
+          "en": "Future Perfect Continuous — duration up to a future point",
+          "es": "Futuro perfecto continuo — duración hasta un punto futuro"
+        },
+        "coreIdea": {
+          "en": "Use will have been + -ing for how long an activity will have continued before a future point — the focus is the length of time, not completion.",
+          "es": "Usa will have been + -ing para cuánto tiempo llevará una actividad antes de un punto futuro — el foco es la duración, no la finalización."
+        },
+        "source": "Future Tenses Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Future Perfect asks 'will it be finished?'; Future Perfect Continuous asks 'how long will it have been happening?' The activity may even continue afterwards — you care about the duration. Structure: subject + will + have + been + -ing.",
+              "es": "El futuro perfecto pregunta '¿estará terminado?'; el futuro perfecto continuo pregunta '¿cuánto tiempo llevará ocurriendo?' La actividad incluso puede continuar después — te importa la duración. Estructura: sujeto + will + have + been + -ing."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "It's especially natural with continuous activities: 'By July I'll have been living here for three years' sounds better than 'I'll have lived here for three years.'",
+              "es": "Es especialmente natural con actividades continuas: 'By July I'll have been living here for three years' suena mejor que 'I'll have lived here for three years.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Completion vs duration: 'By tomorrow I'll have written five reports' (finished) vs 'By tomorrow I'll have been writing reports all week' (how long).",
+              "es": "Finalización vs duración: 'By tomorrow I'll have written five reports' (terminado) vs 'By tomorrow I'll have been writing reports all week' (cuánto tiempo)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Don't forget 'been'. The form is will have BEEN + -ing: 'I'll have been working', never 'I'll have working' or 'I'll have been work'.",
+              "es": "No olvides 'been'. La forma es will have BEEN + -ing: 'I'll have been working', nunca 'I'll have working' ni 'I'll have been work'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "By July, I'll have been living here for three years.",
+            "es": "Para julio, llevaré tres años viviendo aquí."
+          },
+          {
+            "en": "By the time we arrive, they'll have been waiting for over an hour.",
+            "es": "Para cuando lleguemos, llevarán más de una hora esperando."
+          },
+          {
+            "en": "By next Friday, you'll have been studying English for six months.",
+            "es": "Para el próximo viernes, llevarás seis meses estudiando inglés."
+          }
+        ],
+        "related": [
+          "future-perfect",
+          "past-perfect-continuous"
+        ],
+        "items": [
+          "futpc-living",
+          "futpc-studying",
+          "futpc-waiting",
+          "futpc-beenerror",
+          "futpc-vsperfect"
         ]
       }
     ],
@@ -1377,6 +1779,639 @@
         },
         "tags": [
           "duration"
+        ]
+      },
+      {
+        "id": "fut-answer",
+        "topic": "future-simple",
+        "type": "choice",
+        "prompt": {
+          "en": "The phone's ringing. I ___ answer it.",
+          "es": "The phone's ringing. I ___ answer it."
+        },
+        "answer": "will",
+        "distractors": [
+          "am going to"
+        ],
+        "why": {
+          "en": "The decision is made this second, while speaking — that's Future Simple (will), not a pre-existing plan.",
+          "es": "La decisión se toma en este segundo, mientras hablas — eso es futuro simple (will), no un plan previo."
+        },
+        "tags": [
+          "spontaneous",
+          "will"
+        ]
+      },
+      {
+        "id": "fut-carry",
+        "topic": "future-simple",
+        "type": "choice",
+        "prompt": {
+          "en": "You look tired. I ___ carry your bags.",
+          "es": "You look tired. I ___ carry your bags."
+        },
+        "answer": "will",
+        "distractors": [
+          "am carrying"
+        ],
+        "why": {
+          "en": "An offer created during the conversation uses will, not the present continuous.",
+          "es": "Un ofrecimiento creado durante la conversación usa will, no el presente continuo."
+        },
+        "tags": [
+          "offer",
+          "will"
+        ]
+      },
+      {
+        "id": "fut-tell",
+        "topic": "future-simple",
+        "type": "cloze",
+        "prompt": {
+          "en": "Don't worry, I ___ (not/tell) anyone. (a promise)",
+          "es": "Don't worry, I ___ (not/tell) anyone. (una promesa)"
+        },
+        "answer": "won't tell",
+        "accept": [
+          "won't tell",
+          "will not tell"
+        ],
+        "why": {
+          "en": "A promise made while speaking uses will; the negative is won't.",
+          "es": "Una promesa hecha al hablar usa will; el negativo es won't."
+        },
+        "tags": [
+          "promise",
+          "negative"
+        ]
+      },
+      {
+        "id": "fut-improve",
+        "topic": "future-simple",
+        "type": "choice",
+        "prompt": {
+          "en": "I think technology ___ improve healthcare.",
+          "es": "I think technology ___ improve healthcare."
+        },
+        "answer": "will",
+        "distractors": [
+          "is going to"
+        ],
+        "why": {
+          "en": "A prediction that is only an opinion — with no present evidence — uses will.",
+          "es": "Una predicción que es solo una opinión — sin evidencia presente — usa will."
+        },
+        "tags": [
+          "prediction",
+          "opinion",
+          "will"
+        ]
+      },
+      {
+        "id": "fut-close",
+        "topic": "future-simple",
+        "type": "cloze",
+        "prompt": {
+          "en": "It's cold in here. I ___ (close) the window.",
+          "es": "It's cold in here. I ___ (close) the window."
+        },
+        "answer": "'ll close",
+        "accept": [
+          "'ll close",
+          "will close"
+        ],
+        "why": {
+          "en": "A decision made at the moment of speaking uses will (I'll).",
+          "es": "Una decisión tomada en el momento de hablar usa will (I'll)."
+        },
+        "tags": [
+          "spontaneous",
+          "will"
+        ]
+      },
+      {
+        "id": "futg-greece",
+        "topic": "future-going-to",
+        "type": "choice",
+        "prompt": {
+          "en": "I've already booked the hotel. I ___ travel to Greece in August.",
+          "es": "I've already booked the hotel. I ___ travel to Greece in August."
+        },
+        "answer": "am going to",
+        "distractors": [
+          "will"
+        ],
+        "why": {
+          "en": "The decision was made before this conversation (hotel already booked) — that's 'going to'.",
+          "es": "La decisión se tomó antes de esta conversación (hotel ya reservado) — eso es 'going to'."
+        },
+        "tags": [
+          "plan",
+          "going-to"
+        ]
+      },
+      {
+        "id": "futg-fall",
+        "topic": "future-going-to",
+        "type": "choice",
+        "prompt": {
+          "en": "Look at that cyclist! He ___ fall.",
+          "es": "Look at that cyclist! He ___ fall."
+        },
+        "answer": "is going to",
+        "distractors": [
+          "will"
+        ],
+        "why": {
+          "en": "There's evidence right now, so English uses 'going to', not will.",
+          "es": "Hay evidencia ahora mismo, así que el inglés usa 'going to', no will."
+        },
+        "tags": [
+          "prediction",
+          "evidence",
+          "going-to"
+        ]
+      },
+      {
+        "id": "futg-save",
+        "topic": "future-going-to",
+        "type": "cloze",
+        "prompt": {
+          "en": "This year I ___ (save) money to buy a house.",
+          "es": "This year I ___ (save) money to buy a house."
+        },
+        "answer": "am going to save",
+        "accept": [
+          "am going to save",
+          "'m going to save"
+        ],
+        "why": {
+          "en": "An intention the speaker already holds uses 'going to' (be + going to + verb).",
+          "es": "Una intención que el hablante ya tiene usa 'going to' (be + going to + verbo)."
+        },
+        "tags": [
+          "intention",
+          "going-to"
+        ]
+      },
+      {
+        "id": "futg-gotravel",
+        "topic": "future-going-to",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "I'm going to travel to Mexico next year.",
+        "distractors": [
+          "I'm going travel to Mexico next year."
+        ],
+        "why": {
+          "en": "The structure is 'going TO + verb'; don't drop the 'to': going to travel, not going travel.",
+          "es": "La estructura es 'going TO + verbo'; no omitas el 'to': going to travel, no going travel."
+        },
+        "tags": [
+          "form",
+          "error"
+        ]
+      },
+      {
+        "id": "futg-win",
+        "topic": "future-going-to",
+        "type": "choice",
+        "prompt": {
+          "en": "Liverpool are playing brilliantly. They ___ win.",
+          "es": "Liverpool are playing brilliantly. They ___ win."
+        },
+        "answer": "are going to",
+        "distractors": [
+          "will"
+        ],
+        "why": {
+          "en": "Present evidence (they're dominating now) → 'going to'; 'will' would be a pure opinion.",
+          "es": "Evidencia presente (están dominando ahora) → 'going to'; 'will' sería una opinión pura."
+        },
+        "tags": [
+          "prediction",
+          "evidence",
+          "contrast"
+        ]
+      },
+      {
+        "id": "futa-dentist",
+        "topic": "future-arrangements",
+        "type": "choice",
+        "prompt": {
+          "en": "My calendar says 'Dentist, Friday 10am'. I ___ the dentist on Friday.",
+          "es": "My calendar says 'Dentist, Friday 10am'. I ___ the dentist on Friday."
+        },
+        "answer": "am seeing",
+        "distractors": [
+          "will see"
+        ],
+        "why": {
+          "en": "A fixed arrangement in your diary uses the present continuous (am/is/are + -ing).",
+          "es": "Una cita fija en tu agenda usa el presente continuo (am/is/are + -ing)."
+        },
+        "tags": [
+          "arrangement",
+          "calendar"
+        ]
+      },
+      {
+        "id": "futa-client",
+        "topic": "future-arrangements",
+        "type": "cloze",
+        "prompt": {
+          "en": "I ___ (meet) a client at 3 tomorrow. (it's in my diary)",
+          "es": "I ___ (meet) a client at 3 tomorrow. (está en mi agenda)"
+        },
+        "answer": "am meeting",
+        "accept": [
+          "am meeting",
+          "'m meeting"
+        ],
+        "why": {
+          "en": "An organised meeting with a set time uses the present continuous for the future.",
+          "es": "Una reunión organizada con hora fija usa el presente continuo para el futuro."
+        },
+        "tags": [
+          "arrangement"
+        ]
+      },
+      {
+        "id": "futa-flying",
+        "topic": "future-arrangements",
+        "type": "choice",
+        "prompt": {
+          "en": "Everything's booked. We ___ to Barcelona next Thursday.",
+          "es": "Everything's booked. We ___ to Barcelona next Thursday."
+        },
+        "answer": "are flying",
+        "distractors": [
+          "will fly"
+        ],
+        "why": {
+          "en": "Travel that is already arranged and booked uses the present continuous.",
+          "es": "Un viaje ya organizado y reservado usa el presente continuo."
+        },
+        "tags": [
+          "arrangement",
+          "travel"
+        ]
+      },
+      {
+        "id": "futa-gymvs",
+        "topic": "future-arrangements",
+        "type": "choice",
+        "prompt": {
+          "en": "I've just decided to join a gym. I ___ a gym. (no arrangement yet)",
+          "es": "I've just decided to join a gym. I ___ a gym. (aún sin cita concreta)"
+        },
+        "answer": "am going to join",
+        "distractors": [
+          "am joining"
+        ],
+        "why": {
+          "en": "A new intention with nothing arranged yet is 'going to'; the present continuous needs a concrete arrangement.",
+          "es": "Una intención nueva sin nada concreto es 'going to'; el presente continuo necesita una cita concreta."
+        },
+        "tags": [
+          "contrast",
+          "intention"
+        ]
+      },
+      {
+        "id": "futa-cousin",
+        "topic": "future-arrangements",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural sentence:",
+          "es": "Elige la oración natural:"
+        },
+        "answer": "I'm going to see my cousin one day.",
+        "distractors": [
+          "I'm seeing my cousin one day."
+        ],
+        "why": {
+          "en": "'One day' means no arrangement exists yet, so use 'going to', not the present continuous.",
+          "es": "'One day' significa que aún no hay cita concreta, así que usa 'going to', no el presente continuo."
+        },
+        "tags": [
+          "arrangement",
+          "error"
+        ]
+      },
+      {
+        "id": "futc-flying",
+        "topic": "future-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "This time tomorrow, we ___ over the Atlantic.",
+          "es": "This time tomorrow, we ___ over the Atlantic."
+        },
+        "answer": "will be flying",
+        "distractors": [
+          "will fly"
+        ],
+        "why": {
+          "en": "At an exact future moment, focus on the activity in progress → will be + -ing.",
+          "es": "En un momento futuro exacto, el foco es la actividad en curso → will be + -ing."
+        },
+        "tags": [
+          "in-progress"
+        ]
+      },
+      {
+        "id": "futc-watching",
+        "topic": "future-continuous",
+        "type": "cloze",
+        "prompt": {
+          "en": "At 8 tonight I ___ (watch) a film.",
+          "es": "At 8 tonight I ___ (watch) a film."
+        },
+        "answer": "will be watching",
+        "accept": [
+          "will be watching",
+          "'ll be watching"
+        ],
+        "why": {
+          "en": "Picture yourself inside that future moment — the action already happening uses Future Continuous.",
+          "es": "Imagínate dentro de ese momento futuro — la acción que ya está ocurriendo usa futuro continuo."
+        },
+        "tags": [
+          "in-progress"
+        ]
+      },
+      {
+        "id": "futc-using",
+        "topic": "future-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "Which is the softer, more polite question?",
+          "es": "¿Cuál es la pregunta más suave y educada?"
+        },
+        "answer": "Will you be using the car later?",
+        "distractors": [
+          "Will you use the car later?"
+        ],
+        "why": {
+          "en": "Future Continuous asks about someone's schedule, so it sounds less direct than a plain will-question.",
+          "es": "El futuro continuo pregunta por la agenda de alguien, así que suena menos directo que una pregunta con will."
+        },
+        "tags": [
+          "polite"
+        ]
+      },
+      {
+        "id": "futc-flyerror",
+        "topic": "future-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "This time tomorrow I ___. (emphasis: in the middle of the flight)",
+          "es": "This time tomorrow I ___. (énfasis: en medio del vuelo)"
+        },
+        "answer": "will be flying",
+        "distractors": [
+          "will fly"
+        ],
+        "why": {
+          "en": "For what's happening at an exact future moment, use will be + -ing, not the simple will.",
+          "es": "Para lo que ocurre en un momento futuro exacto, usa will be + -ing, no el will simple."
+        },
+        "tags": [
+          "in-progress",
+          "error"
+        ]
+      },
+      {
+        "id": "futc-working",
+        "topic": "future-continuous",
+        "type": "cloze",
+        "prompt": {
+          "en": "I ___ (work) from home all next week.",
+          "es": "I ___ (work) from home all next week."
+        },
+        "answer": "will be working",
+        "accept": [
+          "will be working",
+          "'ll be working"
+        ],
+        "why": {
+          "en": "An expected future routine, described as simply what will be happening, uses Future Continuous.",
+          "es": "Una rutina futura esperada, descrita como lo que simplemente estará ocurriendo, usa futuro continuo."
+        },
+        "tags": [
+          "routine"
+        ]
+      },
+      {
+        "id": "futp-finished",
+        "topic": "future-perfect",
+        "type": "choice",
+        "prompt": {
+          "en": "By Friday, I ___ the report.",
+          "es": "By Friday, I ___ the report."
+        },
+        "answer": "will have finished",
+        "distractors": [
+          "will finish"
+        ],
+        "why": {
+          "en": "'By Friday' means completed before that future point → will have + past participle.",
+          "es": "'By Friday' significa terminado antes de ese punto futuro → will have + participio pasado."
+        },
+        "tags": [
+          "completion",
+          "by"
+        ]
+      },
+      {
+        "id": "futp-graduated",
+        "topic": "future-perfect",
+        "type": "cloze",
+        "prompt": {
+          "en": "By next year, she ___ (graduate).",
+          "es": "By next year, she ___ (graduate)."
+        },
+        "answer": "will have graduated",
+        "accept": [
+          "will have graduated",
+          "'ll have graduated"
+        ],
+        "why": {
+          "en": "Completion before a future moment uses Future Perfect (will have + past participle).",
+          "es": "La finalización antes de un momento futuro usa futuro perfecto (will have + participio pasado)."
+        },
+        "tags": [
+          "completion"
+        ]
+      },
+      {
+        "id": "futp-cooked",
+        "topic": "future-perfect",
+        "type": "choice",
+        "prompt": {
+          "en": "By the time you arrive tonight, we ___ dinner.",
+          "es": "By the time you arrive tonight, we ___ dinner."
+        },
+        "answer": "will have cooked",
+        "distractors": [
+          "will cook"
+        ],
+        "why": {
+          "en": "The dinner is finished before you arrive — that completion before a point is Future Perfect.",
+          "es": "La cena está terminada antes de que llegues — esa finalización antes de un punto es futuro perfecto."
+        },
+        "tags": [
+          "completion",
+          "by"
+        ]
+      },
+      {
+        "id": "futp-finisherror",
+        "topic": "future-perfect",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "By December I'll have worked here for three years.",
+        "distractors": [
+          "By December I'll have working here for three years."
+        ],
+        "why": {
+          "en": "After 'will have' use the past participle (worked), never the -ing form.",
+          "es": "Después de 'will have' usa el participio pasado (worked), nunca la forma -ing."
+        },
+        "tags": [
+          "form",
+          "error"
+        ]
+      },
+      {
+        "id": "futp-saved",
+        "topic": "future-perfect",
+        "type": "cloze",
+        "prompt": {
+          "en": "By retirement, I ___ (save) enough money.",
+          "es": "By retirement, I ___ (save) enough money."
+        },
+        "answer": "will have saved",
+        "accept": [
+          "will have saved",
+          "'ll have saved"
+        ],
+        "why": {
+          "en": "A personal achievement completed before a future point uses Future Perfect.",
+          "es": "Un logro personal completado antes de un punto futuro usa futuro perfecto."
+        },
+        "tags": [
+          "completion",
+          "achievement"
+        ]
+      },
+      {
+        "id": "futpc-living",
+        "topic": "future-perfect-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "By July, I ___ here for three years.",
+          "es": "By July, I ___ here for three years."
+        },
+        "answer": "will have been living",
+        "distractors": [
+          "will have lived"
+        ],
+        "why": {
+          "en": "Duration (three years) continuing up to a future point → will have been + -ing.",
+          "es": "Una duración (tres años) que continúa hasta un punto futuro → will have been + -ing."
+        },
+        "tags": [
+          "duration"
+        ]
+      },
+      {
+        "id": "futpc-studying",
+        "topic": "future-perfect-continuous",
+        "type": "cloze",
+        "prompt": {
+          "en": "By next Friday, you ___ (study) English for six months.",
+          "es": "By next Friday, you ___ (study) English for six months."
+        },
+        "answer": "will have been studying",
+        "accept": [
+          "will have been studying",
+          "'ll have been studying"
+        ],
+        "why": {
+          "en": "How long an activity will have lasted before a future point uses Future Perfect Continuous.",
+          "es": "Cuánto tiempo habrá durado una actividad antes de un punto futuro usa futuro perfecto continuo."
+        },
+        "tags": [
+          "duration"
+        ]
+      },
+      {
+        "id": "futpc-waiting",
+        "topic": "future-perfect-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "By the time we arrive, they ___ for over an hour.",
+          "es": "By the time we arrive, they ___ for over an hour."
+        },
+        "answer": "will have been waiting",
+        "distractors": [
+          "will have waited"
+        ],
+        "why": {
+          "en": "The focus is how long the waiting will have gone on, so the continuous form.",
+          "es": "El foco es cuánto tiempo llevará esperando, así que la forma continua."
+        },
+        "tags": [
+          "duration"
+        ]
+      },
+      {
+        "id": "futpc-beenerror",
+        "topic": "future-perfect-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "By June I'll have been working here for five years.",
+        "distractors": [
+          "By June I'll have working here for five years."
+        ],
+        "why": {
+          "en": "The form is will have BEEN + -ing; learners often drop 'been'.",
+          "es": "La forma es will have BEEN + -ing; los estudiantes suelen omitir 'been'."
+        },
+        "tags": [
+          "form",
+          "error"
+        ]
+      },
+      {
+        "id": "futpc-vsperfect",
+        "topic": "future-perfect-continuous",
+        "type": "choice",
+        "prompt": {
+          "en": "We care about how long, not one finished report: 'By Friday I ___ reports all week.'",
+          "es": "Nos importa cuánto tiempo, no un informe terminado: 'By Friday I ___ reports all week.'"
+        },
+        "answer": "will have been writing",
+        "distractors": [
+          "will have written"
+        ],
+        "why": {
+          "en": "When the emphasis is duration ('all week') rather than a completed result, use the continuous.",
+          "es": "Cuando el énfasis es la duración ('all week') y no un resultado terminado, usa el continuo."
+        },
+        "tags": [
+          "duration",
+          "contrast"
         ]
       }
     ]
