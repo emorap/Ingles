@@ -8,6 +8,10 @@
       {
         "id": "present-simple",
         "title": { "en": "Present Simple — the identity window", "es": "Presente simple — la ventana de la identidad" },
+        "coreIdea": {
+          "en": "Present Simple is the window onto what is generally, normally true — identity, habits, facts.",
+          "es": "El presente simple es la ventana a lo que es generalmente cierto — identidad, hábitos, hechos."
+        },
         "source": "Present tense masterclass.pdf",
         "explanation": [
           { "kind": "p", "text": {
@@ -34,6 +38,10 @@
       {
         "id": "present-continuous",
         "title": { "en": "Present Continuous — the zoom lens", "es": "Presente continuo — el lente de acercamiento" },
+        "coreIdea": {
+          "en": "Present Continuous zooms in on life while it moves — actions now and temporary situations.",
+          "es": "El presente continuo hace zoom a la vida en movimiento — acciones ahora y situaciones temporales."
+        },
         "source": "Present tense masterclass.pdf",
         "explanation": [
           { "kind": "p", "text": {
@@ -60,6 +68,10 @@
       {
         "id": "present-perfect",
         "title": { "en": "Present Perfect — the bridge to now", "es": "Presente perfecto — el puente hacia el ahora" },
+        "coreIdea": {
+          "en": "Present Perfect is a bridge from the past into now — not a real past tense.",
+          "es": "El presente perfecto es un puente del pasado al ahora — no es un pasado de verdad."
+        },
         "source": "Present tense masterclass.pdf",
         "explanation": [
           { "kind": "p", "text": {
@@ -86,6 +98,10 @@
       {
         "id": "present-perfect-continuous",
         "title": { "en": "Present Perfect Continuous — the time-lapse", "es": "Presente perfecto continuo — la cámara en time-lapse" },
+        "coreIdea": {
+          "en": "Present Perfect Continuous is the time-lapse of the journey until now — the process, not the result.",
+          "es": "El presente perfecto continuo es el time-lapse del recorrido hasta ahora — el proceso, no el resultado."
+        },
         "source": "Present tense masterclass.pdf",
         "explanation": [
           { "kind": "p", "text": {

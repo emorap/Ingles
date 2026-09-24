@@ -57,6 +57,10 @@ export function validateContent(data) {
     if (it.accept && !it.accept.includes(it.answer)) e.push(`item ${it.id}: accept must include answer`);
   }
   for (const t of (m.topics ?? [])) {
+    // Learn-first invariant: every topic must carry its one-sentence essence,
+    // rendered above the lesson. A topic without it would drop the student
+    // straight into practice with no concept — the gap this whole phase fixes.
+    if (!isBi(t.coreIdea)) e.push(`topic ${t.id}: coreIdea must be bilingual`);
     for (const ref of (t.items ?? [])) if (!itemIds.has(ref)) e.push(`topic ${t.id}: unresolved item ${ref}`);
     // `related` may point to topics in other modules; that is checked cross-module at load time.
   }

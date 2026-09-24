@@ -8,7 +8,7 @@ const good = {
     id: 'tenses',
     title: { en: 'T', es: 'T' },
     accent: '#6366F1',
-    topics: [{ id: 't1', title: { en: 'A', es: 'A' }, explanation: [], items: ['i1'], related: [] }],
+    topics: [{ id: 't1', title: { en: 'A', es: 'A' }, coreIdea: { en: 'core', es: 'nucleo' }, explanation: [], items: ['i1'], related: [] }],
     items: [{ id: 'i1', topic: 't1', type: 'cloze', prompt: { en: 'x', es: 'x' }, answer: 'a', accept: ['a'], why: { en: 'w', es: 'w' } }],
   },
 };
@@ -24,6 +24,18 @@ test('validateContent rejects an item whose accept omits the answer', () => {
   const r = validateContent(bad);
   assert.equal(r.ok, false);
   if (!r.ok) assert.match(r.errors.join(), /accept/);
+});
+
+test('validateContent requires bilingual coreIdea on every topic', () => {
+  const missing = structuredClone(good);
+  delete missing.module.topics[0].coreIdea;
+  const r = validateContent(missing);
+  assert.equal(r.ok, false);
+  if (!r.ok) assert.match(r.errors.join(), /coreIdea/);
+
+  const onlyEn = structuredClone(good);
+  onlyEn.module.topics[0].coreIdea = { en: 'core' };
+  assert.equal(validateContent(onlyEn).ok, false);
 });
 
 test('validateContent rejects an unresolved topic->item reference', () => {
