@@ -56,12 +56,28 @@ export function validateContent(data) {
     if (!isBi(it.why)) e.push(`item ${it.id}: why must be bilingual`);
     if (it.accept && !it.accept.includes(it.answer)) e.push(`item ${it.id}: accept must include answer`);
   }
+  // Topic families (optional): a module may group its topics so the module view
+  // reads as sections (Presente · Pasado · Futuro) instead of one flat pile.
+  // Each group needs an id + bilingual title; every topic.group must resolve.
+  /** @type {Set<string>} */
+  const groupIds = new Set();
+  if (m.groups != null) {
+    if (!Array.isArray(m.groups)) { e.push('module.groups must be an array'); } else {
+      for (const g of m.groups) {
+        if (typeof g?.id !== 'string' || !g.id) { e.push('group.id missing'); continue; }
+        if (groupIds.has(g.id)) e.push(`duplicate group id ${g.id}`);
+        groupIds.add(g.id);
+        if (!isBi(g.title)) e.push(`group ${g.id}: title must be bilingual`);
+      }
+    }
+  }
   for (const t of (m.topics ?? [])) {
     // Learn-first invariant: every topic must carry its one-sentence essence,
     // rendered above the lesson. A topic without it would drop the student
     // straight into practice with no concept — the gap this whole phase fixes.
     if (!isBi(t.coreIdea)) e.push(`topic ${t.id}: coreIdea must be bilingual`);
     for (const ref of (t.items ?? [])) if (!itemIds.has(ref)) e.push(`topic ${t.id}: unresolved item ${ref}`);
+    if (t.group != null && !groupIds.has(t.group)) e.push(`topic ${t.id}: unknown group ${t.group}`);
     // `related` may point to topics in other modules; that is checked cross-module at load time.
   }
   return e.length ? { ok: false, errors: e } : { ok: true, content: /** @type {ContentFile} */ (d) };

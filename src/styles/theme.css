@@ -223,6 +223,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 .topic-status[data-status="learned"]{color:var(--color-primary);background:color-mix(in srgb,var(--color-primary) 14%,transparent);border-color:transparent}
 .topic-status[data-status="practicing"]{color:var(--color-streak);background:color-mix(in srgb,var(--color-streak) 14%,transparent);border-color:transparent}
 .topic-status[data-status="mastered"]{color:var(--color-success);background:color-mix(in srgb,var(--color-success) 16%,transparent);border-color:transparent}
+/* Topic families: a small uppercase heading over each group of topic rows. */
+.topic-group{display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-3)}
+.topic-group-title{margin:0 0 var(--sp-1);font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted)}
+.topic-group-en{font-weight:600;letter-spacing:0;text-transform:none}
 
 /* ---- Topic (teach) -------------------------------------------------------- */
 .topic{display:flex;flex-direction:column;gap:var(--sp-2)}

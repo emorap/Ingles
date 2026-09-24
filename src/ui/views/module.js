@@ -37,9 +37,8 @@ export function renderModule(container, ctx) {
   header.append(h2, sub);
   section.append(header);
 
-  const list = document.createElement('ol');
-  list.className = 'topic-rows';
-  for (const topic of mod.topics) {
+  // One <li> for a topic: a tappable row with its title and derived status.
+  const topicRow = (topic) => {
     const status = topicStatus(topic, mod.items, progress, lessonViewed ?? {});
     const li = document.createElement('li');
     li.className = 'topic-row surface';
@@ -62,9 +61,42 @@ export function renderModule(container, ctx) {
 
     btn.append(name, badge);
     li.append(btn);
-    list.append(li);
+    return li;
+  };
+
+  const rowList = (topics) => {
+    const list = document.createElement('ol');
+    list.className = 'topic-rows';
+    for (const topic of topics) list.append(topicRow(topic));
+    return list;
+  };
+
+  if (mod.groups?.length) {
+    // Grouped: one labelled section per declared family, in declared order, so a
+    // large module (14 tenses) reads as Presente · Pasado · Futuro, not a pile.
+    for (const group of mod.groups) {
+      const topics = mod.topics.filter((t) => t.group === group.id);
+      if (!topics.length) continue;
+      const groupSection = document.createElement('section');
+      groupSection.className = 'topic-group';
+      groupSection.setAttribute('data-group', group.id);
+      const h3 = document.createElement('h3');
+      h3.className = 'topic-group-title';
+      h3.textContent = group.title.es;
+      const en = document.createElement('span');
+      en.className = 'topic-group-en muted';
+      en.setAttribute('lang', 'en');
+      en.textContent = group.title.en;
+      h3.append(' ', en);
+      groupSection.append(h3, rowList(topics));
+      section.append(groupSection);
+    }
+    // Any topic without a declared family still shows — guide, don't drop.
+    const orphans = mod.topics.filter((t) => !mod.groups.some((g) => g.id === t.group));
+    if (orphans.length) section.append(rowList(orphans));
+  } else {
+    section.append(rowList(mod.topics));
   }
-  section.append(list);
   container.append(section);
 }
 

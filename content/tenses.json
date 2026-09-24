@@ -7,6 +7,29 @@
       "es": "Sistema de tiempos"
     },
     "accent": "#6366F1",
+    "groups": [
+      {
+        "id": "present",
+        "title": {
+          "en": "Present",
+          "es": "Presente"
+        }
+      },
+      {
+        "id": "past",
+        "title": {
+          "en": "Past",
+          "es": "Pasado"
+        }
+      },
+      {
+        "id": "future",
+        "title": {
+          "en": "Future",
+          "es": "Futuro"
+        }
+      }
+    ],
     "topics": [
       {
         "id": "present-simple",
@@ -14,6 +37,7 @@
           "en": "Present Simple — the identity window",
           "es": "Presente simple — la ventana de la identidad"
         },
+        "group": "present",
         "coreIdea": {
           "en": "Present Simple is the window onto what is generally, normally true — identity, habits, facts.",
           "es": "El presente simple es la ventana a lo que es generalmente cierto — identidad, hábitos, hechos."
@@ -73,6 +97,7 @@
           "en": "Present Continuous — the zoom lens",
           "es": "Presente continuo — el lente de acercamiento"
         },
+        "group": "present",
         "coreIdea": {
           "en": "Present Continuous zooms in on life while it moves — actions now and temporary situations.",
           "es": "El presente continuo hace zoom a la vida en movimiento — acciones ahora y situaciones temporales."
@@ -133,6 +158,7 @@
           "en": "Present Perfect — the bridge to now",
           "es": "Presente perfecto — el puente hacia el ahora"
         },
+        "group": "present",
         "coreIdea": {
           "en": "Present Perfect is a bridge from the past into now — not a real past tense.",
           "es": "El presente perfecto es un puente del pasado al ahora — no es un pasado de verdad."
@@ -192,6 +218,7 @@
           "en": "Present Perfect Continuous — the time-lapse",
           "es": "Presente perfecto continuo — la cámara en time-lapse"
         },
+        "group": "present",
         "coreIdea": {
           "en": "Present Perfect Continuous is the time-lapse of the journey until now — the process, not the result.",
           "es": "El presente perfecto continuo es el time-lapse del recorrido hasta ahora — el proceso, no el resultado."
@@ -251,6 +278,7 @@
           "en": "Past Simple — the story camera",
           "es": "Pasado simple — la cámara narradora"
         },
+        "group": "past",
         "coreIdea": {
           "en": "Past Simple just records what happened and pushes the story one step forward — finished events in finished time.",
           "es": "El pasado simple solo registra lo que pasó y empuja la historia un paso adelante — eventos terminados en tiempo terminado."
@@ -318,6 +346,7 @@
           "en": "Past Continuous — the movie camera",
           "es": "Pasado continuo — la cámara de cine"
         },
+        "group": "past",
         "coreIdea": {
           "en": "Past Continuous puts you inside a past moment to watch the action unfold — the background, the scene, the interrupted middle.",
           "es": "El pasado continuo te mete dentro de un momento del pasado para ver la acción en desarrollo — el fondo, la escena, la mitad interrumpida."
@@ -384,6 +413,7 @@
           "en": "Past Perfect — the flashback camera",
           "es": "Pasado perfecto — la cámara de flashback"
         },
+        "group": "past",
         "coreIdea": {
           "en": "Past Perfect is already in the past and steps even further back — the earlier of two past events.",
           "es": "El pasado perfecto ya está en el pasado y da un paso aún más atrás — el más temprano de dos eventos pasados."
@@ -451,6 +481,7 @@
           "en": "Past Perfect Continuous — the duration camera",
           "es": "Pasado perfecto continuo — la cámara de duración"
         },
+        "group": "past",
         "coreIdea": {
           "en": "Past Perfect Continuous measures how long an activity had been going on before another past moment — the duration, not the result.",
           "es": "El pasado perfecto continuo mide cuánto tiempo llevaba ocurriendo una actividad antes de otro momento pasado — la duración, no el resultado."
@@ -517,6 +548,7 @@
           "en": "Future Simple (will) — deciding now",
           "es": "Futuro simple (will) — decidir ahora"
         },
+        "group": "future",
         "coreIdea": {
           "en": "Use 'will' when the future doesn't exist yet — you create it while speaking: a decision, an offer, a promise or an opinion.",
           "es": "Usa 'will' cuando el futuro aún no existe — lo creas al hablar: una decisión, un ofrecimiento, una promesa o una opinión."
@@ -584,6 +616,7 @@
           "en": "Going to — already decided",
           "es": "Going to — ya decidido"
         },
+        "group": "future",
         "coreIdea": {
           "en": "Use 'going to' when the decision already exists — it was made before this conversation: a plan, an intention, or a prediction based on present evidence.",
           "es": "Usa 'going to' cuando la decisión ya existe — se tomó antes de esta conversación: un plan, una intención o una predicción basada en evidencia presente."
@@ -651,6 +684,7 @@
           "en": "Present Continuous for the future — already arranged",
           "es": "Presente continuo para el futuro — ya organizado"
         },
+        "group": "future",
         "coreIdea": {
           "en": "Use the present continuous (am/is/are + -ing) for a fixed arrangement — something in your diary, usually with a time and often another person.",
           "es": "Usa el presente continuo (am/is/are + -ing) para una cita fija — algo en tu agenda, normalmente con hora y a menudo con otra persona."
@@ -718,6 +752,7 @@
           "en": "Future Continuous — press pause on the future",
           "es": "Futuro continuo — pausa en el futuro"
         },
+        "group": "future",
         "coreIdea": {
           "en": "Use will be + -ing to place yourself inside a future moment and describe what will already be happening — the middle of the action, not its start or end.",
           "es": "Usa will be + -ing para meterte dentro de un momento futuro y describir lo que ya estará ocurriendo — la mitad de la acción, no su inicio ni su final."
@@ -785,6 +820,7 @@
           "en": "Future Perfect — looking back from the future",
           "es": "Futuro perfecto — mirar atrás desde el futuro"
         },
+        "group": "future",
         "coreIdea": {
           "en": "Use will have + past participle for something completed before a future point — travel forward in time, look back, and see what has already finished.",
           "es": "Usa will have + participio pasado para algo completado antes de un punto futuro — viaja al futuro, mira atrás y ve qué ya ha terminado."
@@ -852,6 +888,7 @@
           "en": "Future Perfect Continuous — duration up to a future point",
           "es": "Futuro perfecto continuo — duración hasta un punto futuro"
         },
+        "group": "future",
         "coreIdea": {
           "en": "Use will have been + -ing for how long an activity will have continued before a future point — the focus is the length of time, not completion.",
           "es": "Usa will have been + -ing para cuánto tiempo llevará una actividad antes de un punto futuro — el foco es la duración, no la finalización."

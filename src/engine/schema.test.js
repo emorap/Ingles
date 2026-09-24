@@ -50,6 +50,29 @@ test('validateContent rejects an invalid item type', () => {
   assert.equal(validateContent(bad).ok, false);
 });
 
+test('validateContent accepts declared topic groups', () => {
+  const grouped = structuredClone(good);
+  grouped.module.groups = [{ id: 'present', title: { en: 'Present', es: 'Presente' } }];
+  grouped.module.topics[0].group = 'present';
+  assert.equal(validateContent(grouped).ok, true);
+});
+
+test('validateContent rejects a topic whose group is not declared', () => {
+  const bad = structuredClone(good);
+  bad.module.groups = [{ id: 'present', title: { en: 'Present', es: 'Presente' } }];
+  bad.module.topics[0].group = 'ghost';
+  const r = validateContent(bad);
+  assert.equal(r.ok, false);
+  if (!r.ok) assert.match(r.errors.join(), /group/);
+});
+
+test('validateContent rejects a group without a bilingual title', () => {
+  const bad = structuredClone(good);
+  bad.module.groups = [{ id: 'present', title: { en: 'Present' } }];
+  bad.module.topics[0].group = 'present';
+  assert.equal(validateContent(bad).ok, false);
+});
+
 test('validateItem accepts a renderable item and rejects malformed ones', () => {
   const ok = { id: 'i1', topic: 't1', type: 'cloze', prompt: { en: 'x', es: 'x' }, answer: 'a', accept: ['a'], why: { en: 'w', es: 'w' } };
   assert.equal(validateItem(ok), true);
