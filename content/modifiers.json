@@ -1,0 +1,1316 @@
+{
+  "version": 1,
+  "module": {
+    "id": "modifiers",
+    "title": {
+      "en": "Words & modifiers",
+      "es": "Palabras y modificadores"
+    },
+    "accent": "#10B981",
+    "groups": [
+      {
+        "id": "adjetivos",
+        "title": {
+          "en": "Adjectives & nouns",
+          "es": "Adjetivos y sustantivos"
+        }
+      },
+      {
+        "id": "comparacion",
+        "title": {
+          "en": "Comparison",
+          "es": "Comparación"
+        }
+      },
+      {
+        "id": "preposiciones",
+        "title": {
+          "en": "Prepositions",
+          "es": "Preposiciones"
+        }
+      }
+    ],
+    "topics": [
+      {
+        "id": "adjectives-vs-adverbs",
+        "title": {
+          "en": "Adjectives vs Adverbs — the tailor and the choreographer",
+          "es": "Adjetivos vs adverbios — el sastre y el coreógrafo"
+        },
+        "group": "adjetivos",
+        "coreIdea": {
+          "en": "An adjective is a tailor who dresses the noun; an adverb is a choreographer who directs how the verb moves — mixing the two up is the #1 slip Spanish speakers make in English.",
+          "es": "Un adjetivo es un sastre que viste al sustantivo; un adverbio es un coreógrafo que dirige cómo se mueve el verbo — confundir los dos es el error #1 del hispanohablante en inglés."
+        },
+        "source": "_Adjectives, Adverbs, and Countable vs Uncountable Nouns.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "The tailor (adjective) only ever measures nouns and pronouns: 'a careful driver', 'the cake is delicious'. The choreographer (adverb) never touches the noun — it directs verbs ('drives carefully'), adjectives ('really tired') and even other adverbs ('extremely quickly'). Ask yourself: 'Am I describing a thing, or the way an action happens?'",
+              "es": "El sastre (adjetivo) solo mide sustantivos y pronombres: 'a careful driver', 'the cake is delicious'. El coreógrafo (adverbio) nunca toca al sustantivo — dirige verbos ('drives carefully'), adjetivos ('really tired') e incluso otros adverbios ('extremely quickly'). Pregúntate: '¿Estoy describiendo una cosa, o la manera en que ocurre una acción?'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Most adverbs are the adjective + -ly: quick → quickly, loud → loudly, beautiful → beautifully. But some adverbs keep the adjective's exact shape: fast, hard, well, late, early — 'She works hard' (adverb), not 'hardly' (which means 'apenas', a different word entirely).",
+              "es": "La mayoría de adverbios son el adjetivo + -ly: quick → quickly, loud → loudly, beautiful → beautifully. Pero algunos adverbios conservan la forma exacta del adjetivo: fast, hard, well, late, early — 'She works hard' (adverbio), no 'hardly' (que significa 'apenas', una palabra totalmente distinta)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Gradable adjectives (tired, cold, happy) can vary in degree, so they take soft intensifiers: very, a bit, extremely. Non-gradable adjectives (dead, perfect, freezing) already sit at the extreme, so they need absolute intensifiers instead: absolutely amazing, totally freezing — never 'very dead'.",
+              "es": "Los adjetivos graduables (tired, cold, happy) varían en grado, así que llevan intensificadores suaves: very, a bit, extremely. Los no graduables (dead, perfect, freezing) ya están en el extremo, así que necesitan intensificadores absolutos: absolutely amazing, totally freezing — nunca 'very dead'."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish 'con cuidado' or 'bien' tricks the ear into dressing the wrong word. 'He is a carefully driver' ❌ (an adverb can't dress a noun) → 'He is a careful driver' ✅. And 'She speaks English very good' ❌ (an adjective can't direct a verb) → 'She speaks English very well' ✅ — 'good' is the tailor's word, 'well' is the choreographer's.",
+              "es": "El 'con cuidado' o 'bien' del español engaña al oído y viste la palabra equivocada. 'He is a carefully driver' ❌ (un adverbio no puede vestir a un sustantivo) → 'He is a careful driver' ✅. Y 'She speaks English very good' ❌ (un adjetivo no puede dirigir a un verbo) → 'She speaks English very well' ✅ — 'good' es la palabra del sastre, 'well' es la del coreógrafo."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "He is a careful driver.",
+            "es": "Es un conductor cuidadoso."
+          },
+          {
+            "en": "He drives carefully.",
+            "es": "Conduce con cuidado."
+          },
+          {
+            "en": "She speaks English really well.",
+            "es": "Ella habla inglés muy bien."
+          },
+          {
+            "en": "That's absolutely amazing.",
+            "es": "Eso es absolutamente increíble."
+          },
+          {
+            "en": "I'm very tired tonight.",
+            "es": "Estoy muy cansado esta noche."
+          }
+        ],
+        "related": [
+          "adjective-order",
+          "countable-uncountable-quantifiers"
+        ],
+        "items": [
+          "mdf-adjadv-1",
+          "mdf-adjadv-2",
+          "mdf-adjadv-3",
+          "mdf-adjadv-4",
+          "mdf-adjadv-5"
+        ]
+      },
+      {
+        "id": "adjective-order",
+        "title": {
+          "en": "Adjective order — the red-carpet queue",
+          "es": "Orden de los adjetivos — la fila de la alfombra roja"
+        },
+        "group": "adjetivos",
+        "coreIdea": {
+          "en": "English adjectives queue toward the noun in a fixed order — from your personal opinion to the noun's exact function — like guests filing past a red carpet from first impression to ID check to reason for entry.",
+          "es": "Los adjetivos en inglés hacen fila hacia el sustantivo en un orden fijo — de tu opinión personal hasta la función exacta — como invitados que pasan por una alfombra roja: primero la impresión, luego la identificación, y al final el motivo de su entrada."
+        },
+        "source": "🔵 ADJECTIVE ORDER IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "The queue follows OSASCOMP: Opinion → Size → Age → Shape → Colour → Origin → Material → Purpose → Noun. It moves from subjective to objective and from general to specific — your personal impression goes first (like a doorman's first glance), then hard physical facts, then the reason the guest is even there (purpose, right next to the noun).",
+              "es": "La fila sigue OSASCOMP: Opinión → Tamaño → Edad → Forma → Color → Origen → Material → Propósito → Sustantivo. Avanza de lo subjetivo a lo objetivo y de lo general a lo específico — tu impresión personal va primero (como la primera mirada del portero), luego los hechos físicos duros, y al final el motivo de la visita (propósito, justo al lado del sustantivo)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Native speakers rarely stack more than 2–3 adjectives, even though the full queue has 8 slots. Overloaded: 'a beautiful small old round red Italian wooden dining table' ❌. Natural: 'a beautiful old wooden table' ✅ or 'a large modern office building' ✅ — pick only the information that matters.",
+              "es": "Los hablantes nativos rara vez acumulan más de 2–3 adjetivos, aunque la fila completa tenga 8 lugares. Sobrecargado: 'a beautiful small old round red Italian wooden dining table' ❌. Natural: 'a beautiful old wooden table' ✅ o 'a large modern office building' ✅ — elige solo la información que realmente importa."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Full worked example: 'a lovely little old round green Italian ceramic cooking pot' → lovely (opinion) → little (size) → old (age) → round (shape) → green (colour) → Italian (origin) → ceramic (material) → cooking (purpose) → pot (noun). Every guest keeps its assigned place in the queue.",
+              "es": "Ejemplo completo: 'a lovely little old round green Italian ceramic cooking pot' → lovely (opinión) → little (tamaño) → old (edad) → round (forma) → green (color) → Italian (origen) → ceramic (material) → cooking (propósito) → pot (sustantivo). Cada invitado guarda su lugar asignado en la fila."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Translating word-for-word from Spanish scrambles the queue or puts the adjective after the noun. 'a red big car' ❌ → 'a big red car' ✅ (size skips ahead of colour). 'a car red' ❌ → 'a red car' ✅ (in English the adjective always cuts in line before the noun, it never follows it).",
+              "es": "Traducir palabra por palabra del español desordena la fila o pone el adjetivo después del sustantivo. 'a red big car' ❌ → 'a big red car' ✅ (el tamaño se cuela antes que el color). 'a car red' ❌ → 'a red car' ✅ (en inglés el adjetivo siempre se cuela antes del sustantivo, nunca lo sigue)."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "a beautiful old wooden table",
+            "es": "una hermosa mesa vieja de madera"
+          },
+          {
+            "en": "a large modern office building",
+            "es": "un edificio de oficinas grande y moderno"
+          },
+          {
+            "en": "an old French wooden desk",
+            "es": "un escritorio viejo, francés y de madera"
+          },
+          {
+            "en": "I bought a big red car.",
+            "es": "Compré un carro rojo grande."
+          },
+          {
+            "en": "a lovely little old round green Italian ceramic cooking pot",
+            "es": "una ollita para cocinar, vieja, redonda, verde, italiana y de cerámica, muy linda"
+          }
+        ],
+        "related": [
+          "adjectives-vs-adverbs",
+          "countable-uncountable-quantifiers"
+        ],
+        "items": [
+          "mdf-order-1",
+          "mdf-order-2",
+          "mdf-order-3",
+          "mdf-order-4",
+          "mdf-order-5"
+        ]
+      },
+      {
+        "id": "countable-uncountable-quantifiers",
+        "title": {
+          "en": "Countable vs uncountable — boxes and puddles",
+          "es": "Contables vs incontables — cajas y charcos"
+        },
+        "group": "adjetivos",
+        "coreIdea": {
+          "en": "Countable nouns arrive in separate boxes you can number one by one; uncountable nouns are a single puddle you can only measure, never count.",
+          "es": "Los sustantivos contables llegan en cajas separadas que puedes numerar una por una; los incontables son un solo charco que solo se puede medir, nunca contar."
+        },
+        "source": "_Adjectives, Adverbs, and Countable vs Uncountable Nouns.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Boxes (countable nouns) have a singular and a plural: one apple, two apples; a chair, three chairs. Puddles (uncountable nouns) only exist as one undivided mass with no plural: water, information, advice, bread, time, money. You cannot count a puddle box by box — you can only say how much of it there is.",
+              "es": "Las cajas (sustantivos contables) tienen singular y plural: one apple, two apples; a chair, three chairs. Los charcos (incontables) solo existen como una masa sin dividir y sin plural: water, information, advice, bread, time, money. No puedes contar un charco caja por caja — solo puedes decir cuánto hay."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Match the quantifier to the container: many/few/fewer only work with boxes (countable) — many books, few chairs; much/little/less only work with puddles (uncountable) — much water, little time. 'Some', 'any' and 'a lot of' are flexible and work with both.",
+              "es": "Empareja el cuantificador con el envase: many/few/fewer solo van con cajas (contables) — many books, few chairs; much/little/less solo van con charcos (incontables) — much water, little time. 'Some', 'any' y 'a lot of' son flexibles y funcionan con ambos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "'Few' and 'a few' look identical but feel opposite: 'few' leans negative — almost none, a shortage ('I have few friends here' = I feel lonely). 'A few' leans positive — a small but real amount ('I have a few friends here' = enough to be okay).",
+              "es": "'Few' y 'a few' se ven idénticos pero se sienten opuestos: 'few' suena negativo — casi nada, escasez ('I have few friends here' = me siento solo). 'A few' suena positivo — una cantidad pequeña pero real ('I have a few friends here' = suficiente para estar bien)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Puddle nouns never take an English plural, even when Spanish uses one. 'I need some informations' ❌ → 'I need some information' ✅. 'She gave me some advices' ❌ → 'some advice' ✅. And 'There's too many water' ❌ mixes a box-quantifier with a puddle noun → 'too much water' ✅.",
+              "es": "Los sustantivos-charco nunca llevan plural en inglés, aunque el español sí lo use. 'I need some informations' ❌ → 'I need some information' ✅. 'She gave me some advices' ❌ → 'some advice' ✅. Y 'There's too many water' ❌ mezcla un cuantificador de caja con un sustantivo-charco → 'too much water' ✅."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I have many books but little time.",
+            "es": "Tengo muchos libros pero poco tiempo."
+          },
+          {
+            "en": "Can I give you some advice?",
+            "es": "¿Te puedo dar un consejo?"
+          },
+          {
+            "en": "We don't have much water left.",
+            "es": "No nos queda mucha agua."
+          },
+          {
+            "en": "There are a few apples in the basket.",
+            "es": "Hay algunas manzanas en la canasta."
+          },
+          {
+            "en": "There is little hope left.",
+            "es": "Queda poca esperanza."
+          }
+        ],
+        "related": [
+          "adjectives-vs-adverbs",
+          "adjective-order"
+        ],
+        "items": [
+          "mdf-count-1",
+          "mdf-count-2",
+          "mdf-count-3",
+          "mdf-count-4",
+          "mdf-count-5"
+        ]
+      },
+      {
+        "id": "comparatives",
+        "title": {
+          "en": "Comparatives — the two-pan scale",
+          "es": "Comparativos — la balanza de dos platos"
+        },
+        "group": "comparacion",
+        "coreIdea": {
+          "en": "A comparative puts exactly two things on a two-pan scale and shows which side goes down — and English only ever loads one weight onto that side, never 'more' plus '-er' together.",
+          "es": "El comparativo coloca exactamente dos cosas en una balanza de dos platos y muestra cuál lado pesa más — y el inglés solo pone un peso de ese lado, nunca 'more' junto con '-er'."
+        },
+        "source": "Updated Comparatives & Superlatives.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Short adjectives (1 syllable) add -er + than: taller than, colder than. Adjectives ending in -y change to -ier: happy → happier. Long adjectives (2+ syllables) use more + adjective + than: more beautiful than. Ask 'am I loading the scale with exactly two things?' — that's your signal for a comparative.",
+              "es": "Los adjetivos cortos (1 sílaba) añaden -er + than: taller than, colder than. Los que terminan en -y cambian a -ier: happy → happier. Los adjetivos largos (2+ sílabas) usan more + adjetivo + than: more beautiful than. Pregúntate '¿estoy poniendo exactamente dos cosas en la balanza?' — esa es tu señal para un comparativo."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Three irregular weights don't follow either rule: good → better, bad → worse, far → farther/further. 'This restaurant is better' sits on its own, memorised whole — never 'gooder' or 'more good'.",
+              "es": "Tres pesas irregulares no siguen ninguna de las dos reglas: good → better, bad → worse, far → farther/further. 'This restaurant is better' se memoriza completo — nunca 'gooder' ni 'more good'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "When the scale balances perfectly, switch to equality: as + adjective + as ('as tall as'), not as...as for the negative ('not as expensive as'), and twice as...as for double weight ('twice as large as'). 'Same as', not 'same than'.",
+              "es": "Cuando la balanza queda perfectamente equilibrada, usa igualdad: as + adjetivo + as ('as tall as'), not as...as para lo negativo ('not as expensive as'), y twice as...as para el doble de peso ('twice as large as'). 'Same as', nunca 'same than'."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish 'más' works for everything, so learners double-weight the scale: 'more taller' ❌ → 'taller' ✅; 'more nicer' ❌ → 'nicer' ✅; 'gooder' ❌ → 'better' ✅. An -er ending already means 'more' — adding the word 'more' too is putting the same weight on the scale twice.",
+              "es": "El 'más' del español sirve para todo, así que se sobrecarga la balanza con doble peso: 'more taller' ❌ → 'taller' ✅; 'more nicer' ❌ → 'nicer' ✅; 'gooder' ❌ → 'better' ✅. Una terminación -er ya significa 'más' — añadir también la palabra 'more' es poner el mismo peso dos veces."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "John is taller than Mike.",
+            "es": "John es más alto que Mike."
+          },
+          {
+            "en": "This book is more interesting than that one.",
+            "es": "Este libro es más interesante que aquel."
+          },
+          {
+            "en": "She's happier now than last year.",
+            "es": "Ella está más feliz ahora que el año pasado."
+          },
+          {
+            "en": "My car is as fast as yours.",
+            "es": "Mi carro es tan rápido como el tuyo."
+          },
+          {
+            "en": "This route isn't as long as that one.",
+            "es": "Esta ruta no es tan larga como aquella."
+          }
+        ],
+        "related": [
+          "superlatives"
+        ],
+        "items": [
+          "mdf-comp-1",
+          "mdf-comp-2",
+          "mdf-comp-3",
+          "mdf-comp-4",
+          "mdf-comp-5"
+        ]
+      },
+      {
+        "id": "superlatives",
+        "title": {
+          "en": "Superlatives — the winner's podium",
+          "es": "Superlativos — el podio de premiación"
+        },
+        "group": "comparacion",
+        "coreIdea": {
+          "en": "A superlative puts one single thing on the top step of the podium among three or more competitors — and English never lets two winners share that top step.",
+          "es": "El superlativo pone una sola cosa en el escalón más alto del podio entre tres o más competidores — y el inglés nunca deja que dos ganadores compartan ese escalón."
+        },
+        "source": "Updated Comparatives & Superlatives.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Short adjectives add the + -est: the tallest, the coldest. Adjectives ending in -y change to -iest: the happiest. Long adjectives use the most + adjective: the most expensive. You only step onto this podium when you're comparing three or more competitors, not just two.",
+              "es": "Los adjetivos cortos añaden the + -est: the tallest, the coldest. Los que terminan en -y cambian a -iest: the happiest. Los adjetivos largos usan the most + adjetivo: the most expensive. Solo subes a este podio cuando comparas tres o más competidores, no solo dos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Useful podium phrases: 'by far the best' (no competition at all), 'one of the most exciting cities' (top group, not necessarily #1), 'among the most profitable years' (top cluster). Irregulars: good → the best, bad → the worst, far → the farthest/furthest.",
+              "es": "Frases útiles del podio: 'by far the best' (sin competencia alguna), 'one of the most exciting cities' (grupo de arriba, no necesariamente el #1), 'among the most profitable years' (grupo selecto). Irregulares: good → the best, bad → the worst, far → the farthest/furthest."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "After 'one of the' the podium always needs a full team, not a lone winner: 'one of the best engineers' ✅ (plural noun), not 'one of the best engineer' ❌ — you're saying this person belongs to a small group at the top, so the noun must be plural.",
+              "es": "Después de 'one of the' el podio siempre necesita un equipo completo, no un solo ganador: 'one of the best engineers' ✅ (sustantivo plural), no 'one of the best engineer' ❌ — estás diciendo que esta persona pertenece a un grupo pequeño en la cima, así que el sustantivo debe ir en plural."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Never stack 'the most' on top of an -est ending — that gives two winners the same step. 'The most tallest' ❌ → 'the tallest' ✅. 'The goodest' ❌ → 'the best' ✅. Just like comparatives, the superlative ending already means 'the most' — you never need both.",
+              "es": "Nunca acumules 'the most' encima de una terminación -est — eso pone a dos ganadores en el mismo escalón. 'The most tallest' ❌ → 'the tallest' ✅. 'The goodest' ❌ → 'the best' ✅. Igual que con los comparativos, la terminación superlativa ya significa 'the most' — nunca necesitas ambos."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "That was the best meal I've ever had.",
+            "es": "Esa fue la mejor comida que he tenido."
+          },
+          {
+            "en": "She's not the oldest in the group.",
+            "es": "Ella no es la mayor del grupo."
+          },
+          {
+            "en": "It's the tallest building in the city.",
+            "es": "Es el edificio más alto de la ciudad."
+          },
+          {
+            "en": "Tokyo is one of the most exciting cities in the world.",
+            "es": "Tokio es una de las ciudades más emocionantes del mundo."
+          },
+          {
+            "en": "This is by far the best solution.",
+            "es": "Esta es, sin duda, la mejor solución."
+          }
+        ],
+        "related": [
+          "comparatives"
+        ],
+        "items": [
+          "mdf-sup-1",
+          "mdf-sup-2",
+          "mdf-sup-3",
+          "mdf-sup-4",
+          "mdf-sup-5"
+        ]
+      },
+      {
+        "id": "prepositions-place-time",
+        "title": {
+          "en": "Prepositions of place & time — the map and the clock",
+          "es": "Preposiciones de lugar y tiempo — el mapa y el reloj"
+        },
+        "group": "preposiciones",
+        "coreIdea": {
+          "en": "In, on and at pin an exact spot on the map or an exact moment on the clock — the trick is learning which size of 'spot' each little word points to.",
+          "es": "In, on y at marcan un punto exacto en el mapa o en el reloj — el truco está en aprender a qué 'tamaño' de punto apunta cada palabrita."
+        },
+        "source": "Prepositions.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "On the map: 'in' is the whole territory (in the drawer, in Bogotá), 'on' is a surface (on the table), 'at' is one pinpoint (at the door). On the clock the same logic repeats: 'in' is a whole stretch of time (in 1990, in June), 'on' is one specific day (on Monday), 'at' is one exact tick (at 3pm).",
+              "es": "En el mapa: 'in' es todo el territorio (in the drawer, in Bogotá), 'on' es una superficie (on the table), 'at' es un solo punto (at the door). En el reloj se repite la misma lógica: 'in' es todo un tramo de tiempo (in 1990, in June), 'on' es un día específico (on Monday), 'at' es un tic exacto (at 3pm)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Beyond in/on/at: place adds under, next to, behind, in front of, into, out of. Time adds by (no later than: 'finish by Friday'), since (starting point: 'since 2012'), for (duration: 'for two weeks') and ago (time before now: 'five minutes ago').",
+              "es": "Más allá de in/on/at: lugar suma under, next to, behind, in front of, into, out of. Tiempo suma by (a más tardar: 'finish by Friday'), since (punto de partida: 'since 2012'), for (duración: 'for two weeks') y ago (tiempo antes de ahora: 'five minutes ago')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Some verbs lock onto a preposition that doesn't match Spanish word-for-word: depend on ('depende de'), insist on ('insistir en'), believe in ('creer en'), agree with ('estar de acuerdo con'), married to ('casada con'). These pairs must be learned as single units, not translated piece by piece.",
+              "es": "Algunos verbos se fijan con una preposición que no coincide palabra por palabra con el español: depend on ('depende de'), insist on ('insistir en'), believe in ('creer en'), agree with ('estar de acuerdo con'), married to ('casada con'). Estas parejas se aprenden como una sola unidad, no se traducen pieza por pieza."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'Arrive' never takes 'to': 'He arrived to the airport' ❌ → 'He arrived at the airport' ✅. And confusing duration with a starting point breaks the timeline: 'I've lived here for 2012' ❌ (for needs a length, not a year) → 'I've lived here since 2012' ✅ / 'for six years' ✅.",
+              "es": "'Arrive' nunca lleva 'to': 'He arrived to the airport' ❌ → 'He arrived at the airport' ✅. Y confundir duración con punto de partida rompe la línea de tiempo: 'I've lived here for 2012' ❌ (for necesita una duración, no un año) → 'I've lived here since 2012' ✅ / 'for six years' ✅."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The keys are in the drawer.",
+            "es": "Las llaves están en el cajón."
+          },
+          {
+            "en": "The meeting is at 3pm on Monday.",
+            "es": "La reunión es a las 3pm el lunes."
+          },
+          {
+            "en": "I've lived here since 2012.",
+            "es": "Vivo aquí desde 2012."
+          },
+          {
+            "en": "He arrived at the airport an hour early.",
+            "es": "Llegó al aeropuerto una hora antes."
+          },
+          {
+            "en": "She is married to a doctor.",
+            "es": "Ella está casada con un médico."
+          }
+        ],
+        "related": [
+          "for-vs-to"
+        ],
+        "items": [
+          "mdf-prep-1",
+          "mdf-prep-2",
+          "mdf-prep-3",
+          "mdf-prep-4",
+          "mdf-prep-5"
+        ]
+      },
+      {
+        "id": "for-vs-to",
+        "title": {
+          "en": "For vs To — the gift ribbon and the shipping label",
+          "es": "For vs To — el lazo del regalo y la etiqueta de envío"
+        },
+        "group": "preposiciones",
+        "coreIdea": {
+          "en": "FOR is the ribbon that explains why a thing exists or who benefits from it; TO is the shipping label that says exactly where it's going or who receives it.",
+          "es": "FOR es el lazo que explica para qué existe algo o quién se beneficia; TO es la etiqueta de envío que dice exactamente a dónde va o quién lo recibe."
+        },
+        "source": "🔵 FOR vs TO IN ENGLISHpdf.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Spanish uses por/para broadly for both ideas, but English separates them strictly. FOR wraps purpose, benefit and duration in a ribbon: 'This tool is for cutting metal', 'I bought this for you', 'he stayed for two weeks'. TO prints a shipping label with a destination or a receiver: 'I sent the email to the director', 'we're going to the office'.",
+              "es": "El español usa por/para ampliamente para ambas ideas, pero el inglés las separa con precisión. FOR envuelve el propósito, el beneficio y la duración en un lazo: 'This tool is for cutting metal', 'I bought this for you', 'he stayed for two weeks'. TO imprime una etiqueta de envío con un destino o un receptor: 'I sent the email to the director', 'we're going to the office'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Ask the core question: does the information tell you WHY something exists or WHO benefits (→ FOR), or does it tell you WHERE it's headed or WHO physically receives it (→ TO)? 'This gift is for you' (benefit) vs 'give this to her' (transfer to a receiver).",
+              "es": "Pregunta la clave: ¿la información dice POR QUÉ existe algo o QUIÉN se beneficia (→ FOR), o dice A DÓNDE va o QUIÉN lo recibe físicamente (→ TO)? 'This gift is for you' (beneficio) vs 'give this to her' (transferencia a un receptor)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Fixed verb patterns to memorise as whole units: apologise for (doing something), apply for (a job), responsible for (managing a team) — all FOR. Speak to (someone), listen to (something), key to (success), solution to (a problem) — all TO.",
+              "es": "Patrones fijos de verbo para memorizar como unidad completa: apologise for (doing something), apply for (a job), responsible for (managing a team) — todos con FOR. Speak to (someone), listen to (something), key to (success), solution to (a problem) — todos con TO."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "The Spanish 'para' pulls learners toward FOR even when information is being handed to a receiver. 'I explained this for him' ❌ → 'I explained this to him' ✅, because 'explain' transfers information to a recipient — that transfer always calls for the shipping label TO, not the ribbon FOR.",
+              "es": "El 'para' del español empuja hacia FOR incluso cuando la información se está entregando a un receptor. 'I explained this for him' ❌ → 'I explained this to him' ✅, porque 'explain' transfiere información a un destinatario — esa transferencia siempre pide la etiqueta de envío TO, no el lazo FOR."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "This gift is for you.",
+            "es": "Este regalo es para ti."
+          },
+          {
+            "en": "Give this to her.",
+            "es": "Dáselo a ella."
+          },
+          {
+            "en": "We're going to the office.",
+            "es": "Vamos a la oficina."
+          },
+          {
+            "en": "He apologised for being late.",
+            "es": "Se disculpó por llegar tarde."
+          },
+          {
+            "en": "She is responsible for managing the team.",
+            "es": "Ella es responsable de dirigir el equipo."
+          }
+        ],
+        "related": [
+          "prepositions-place-time"
+        ],
+        "items": [
+          "mdf-forto-1",
+          "mdf-forto-2",
+          "mdf-forto-3",
+          "mdf-forto-4",
+          "mdf-forto-5"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "mdf-adjadv-1",
+        "topic": "adjectives-vs-adverbs",
+        "type": "choice",
+        "prompt": {
+          "en": "He is a ___ driver.",
+          "es": "He is a ___ driver."
+        },
+        "answer": "careful",
+        "distractors": [
+          "carefully"
+        ],
+        "why": {
+          "en": "'driver' is a noun, so it needs the tailor's word — an adjective. 'Carefully' is the choreographer's word; it has no verb here to direct.",
+          "es": "'driver' es un sustantivo, así que necesita la palabra del sastre — un adjetivo. 'Carefully' es la palabra del coreógrafo; aquí no hay verbo que dirigir."
+        },
+        "tags": [
+          "adjective",
+          "adverb"
+        ]
+      },
+      {
+        "id": "mdf-adjadv-2",
+        "topic": "adjectives-vs-adverbs",
+        "type": "choice",
+        "prompt": {
+          "en": "He drives ___.",
+          "es": "He drives ___."
+        },
+        "answer": "carefully",
+        "distractors": [
+          "careful"
+        ],
+        "why": {
+          "en": "'drives' is a verb, so it needs the choreographer's word — an adverb. 'Careful' can't direct a verb; it can only dress a noun.",
+          "es": "'drives' es un verbo, así que necesita la palabra del coreógrafo — un adverbio. 'Careful' no puede dirigir a un verbo; solo puede vestir a un sustantivo."
+        },
+        "tags": [
+          "adjective",
+          "adverb",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-adjadv-3",
+        "topic": "adjectives-vs-adverbs",
+        "type": "cloze",
+        "prompt": {
+          "en": "He works very ___ (quick).",
+          "es": "He works very ___ (quick)."
+        },
+        "answer": "quickly",
+        "accept": [
+          "quickly"
+        ],
+        "why": {
+          "en": "The word describes HOW he works (a verb), so it takes the adverb form: adjective + -ly.",
+          "es": "La palabra describe CÓMO trabaja (un verbo), así que toma la forma de adverbio: adjetivo + -ly."
+        },
+        "tags": [
+          "adverb",
+          "formation"
+        ]
+      },
+      {
+        "id": "mdf-adjadv-4",
+        "topic": "adjectives-vs-adverbs",
+        "type": "choice",
+        "prompt": {
+          "en": "She speaks English very ___.",
+          "es": "Ella habla inglés muy ___ (bien)."
+        },
+        "answer": "well",
+        "distractors": [
+          "good"
+        ],
+        "why": {
+          "en": "Spanish 'bien' tempts learners toward 'good', but 'good' is an adjective (it dresses nouns: 'a good speaker'). Here we're directing the verb 'speaks', so we need the adverb 'well'.",
+          "es": "El 'bien' del español tienta hacia 'good', pero 'good' es un adjetivo (viste sustantivos: 'a good speaker'). Aquí estamos dirigiendo el verbo 'speaks', así que necesitamos el adverbio 'well'."
+        },
+        "tags": [
+          "adverb",
+          "false-friend",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-adjadv-5",
+        "topic": "adjectives-vs-adverbs",
+        "type": "natural",
+        "prompt": {
+          "en": "Translate: 'Ella conduce con mucho cuidado.'",
+          "es": "Traduce: 'Ella conduce con mucho cuidado.'"
+        },
+        "answer": "She drives very carefully.",
+        "accept": [
+          "She drives very carefully.",
+          "She drives carefully."
+        ],
+        "why": {
+          "en": "'Con mucho cuidado' describes the manner of driving (a verb), so English needs the adverb 'carefully', not the adjective 'careful'.",
+          "es": "'Con mucho cuidado' describe la manera de conducir (un verbo), así que el inglés necesita el adverbio 'carefully', no el adjetivo 'careful'."
+        },
+        "tags": [
+          "adverb",
+          "translation"
+        ]
+      },
+      {
+        "id": "mdf-order-1",
+        "topic": "adjective-order",
+        "type": "order",
+        "prompt": {
+          "en": "Put these words in the natural order: old / French / wooden / an / table",
+          "es": "Ordena estas palabras de forma natural: old / French / wooden / an / table"
+        },
+        "answer": "an old French wooden table",
+        "accept": [
+          "an old French wooden table"
+        ],
+        "why": {
+          "en": "OSASCOMP order: age (old) → origin (French) → material (wooden) → noun (table). Each guest keeps its assigned place in the queue.",
+          "es": "Orden OSASCOMP: edad (old) → origen (French) → material (wooden) → sustantivo (table). Cada invitado guarda su lugar asignado en la fila."
+        },
+        "tags": [
+          "order",
+          "osascomp"
+        ]
+      },
+      {
+        "id": "mdf-order-2",
+        "topic": "adjective-order",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural phrase:",
+          "es": "Elige la frase natural:"
+        },
+        "answer": "a big red car",
+        "distractors": [
+          "a red big car"
+        ],
+        "why": {
+          "en": "Size comes before colour in the queue (OSASCOMP): big (size) → red (colour) → car (noun).",
+          "es": "El tamaño va antes que el color en la fila (OSASCOMP): big (tamaño) → red (color) → car (sustantivo)."
+        },
+        "tags": [
+          "order",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-order-3",
+        "topic": "adjective-order",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural phrase:",
+          "es": "Elige la frase natural:"
+        },
+        "answer": "an Italian wooden table",
+        "distractors": [
+          "a wooden Italian table"
+        ],
+        "why": {
+          "en": "Origin comes before material in the queue (OSASCOMP): Italian (origin) → wooden (material) → table (noun).",
+          "es": "El origen va antes que el material en la fila (OSASCOMP): Italian (origen) → wooden (material) → table (sustantivo)."
+        },
+        "tags": [
+          "order",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-order-4",
+        "topic": "adjective-order",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural sentence:",
+          "es": "Elige la oración natural:"
+        },
+        "answer": "I bought a red car.",
+        "distractors": [
+          "I bought a car red."
+        ],
+        "why": {
+          "en": "In English the adjective always cuts in line before the noun — it never follows it, unlike some Spanish patterns (un carro rojo).",
+          "es": "En inglés el adjetivo siempre se cuela antes del sustantivo — nunca lo sigue, a diferencia de algunos patrones en español (un carro rojo)."
+        },
+        "tags": [
+          "order",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-order-5",
+        "topic": "adjective-order",
+        "type": "natural",
+        "prompt": {
+          "en": "Translate: 'Compré una mesa vieja, francesa y de madera.'",
+          "es": "Traduce: 'Compré una mesa vieja, francesa y de madera.'"
+        },
+        "answer": "I bought an old French wooden table.",
+        "accept": [
+          "I bought an old French wooden table."
+        ],
+        "why": {
+          "en": "Spanish lets you list qualities freely; English forces the queue: age (old) → origin (French) → material (wooden) → table.",
+          "es": "El español permite enumerar cualidades libremente; el inglés obliga a la fila: edad (old) → origen (French) → material (wooden) → table."
+        },
+        "tags": [
+          "order",
+          "translation"
+        ]
+      },
+      {
+        "id": "mdf-count-1",
+        "topic": "countable-uncountable-quantifiers",
+        "type": "choice",
+        "prompt": {
+          "en": "I need some ___.",
+          "es": "Necesito ___ (información)."
+        },
+        "answer": "information",
+        "distractors": [
+          "informations"
+        ],
+        "why": {
+          "en": "'Information' is a puddle noun (uncountable) — it never takes an English plural, even though Spanish 'informaciones' exists.",
+          "es": "'Information' es un sustantivo-charco (incontable) — nunca lleva plural en inglés, aunque en español exista 'informaciones'."
+        },
+        "tags": [
+          "uncountable",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-count-2",
+        "topic": "countable-uncountable-quantifiers",
+        "type": "choice",
+        "prompt": {
+          "en": "There's too ___ water in the basement.",
+          "es": "Hay demasiada ___ (much/many) agua en el sótano."
+        },
+        "answer": "much",
+        "distractors": [
+          "many"
+        ],
+        "why": {
+          "en": "'Water' is a puddle noun (uncountable), so it pairs with 'much', not the box-quantifier 'many'.",
+          "es": "'Water' es un sustantivo-charco (incontable), así que se empareja con 'much', no con el cuantificador de caja 'many'."
+        },
+        "tags": [
+          "uncountable",
+          "quantifier"
+        ]
+      },
+      {
+        "id": "mdf-count-3",
+        "topic": "countable-uncountable-quantifiers",
+        "type": "choice",
+        "prompt": {
+          "en": "How ___ books do you have?",
+          "es": "¿Cuántos ___ (much/many) libros tienes?"
+        },
+        "answer": "many",
+        "distractors": [
+          "much"
+        ],
+        "why": {
+          "en": "'Books' come in separate boxes (countable), so they pair with 'many', not the puddle-quantifier 'much'.",
+          "es": "'Books' vienen en cajas separadas (contables), así que se emparejan con 'many', no con el cuantificador de charco 'much'."
+        },
+        "tags": [
+          "countable",
+          "quantifier"
+        ]
+      },
+      {
+        "id": "mdf-count-4",
+        "topic": "countable-uncountable-quantifiers",
+        "type": "cloze",
+        "prompt": {
+          "en": "She gave me some good ___ (advice).",
+          "es": "She gave me some good ___ (advice)."
+        },
+        "answer": "advice",
+        "accept": [
+          "advice"
+        ],
+        "why": {
+          "en": "'Advice' is an uncountable puddle noun — there is no plural 'advices' in English, unlike Spanish 'consejos'.",
+          "es": "'Advice' es un sustantivo-charco incontable — no existe plural 'advices' en inglés, a diferencia del español 'consejos'."
+        },
+        "tags": [
+          "uncountable",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-count-5",
+        "topic": "countable-uncountable-quantifiers",
+        "type": "choice",
+        "prompt": {
+          "en": "I have ___ friends here, so I feel lonely.",
+          "es": "Tengo ___ (few/a few) amigos aquí, así que me siento solo."
+        },
+        "answer": "few",
+        "distractors": [
+          "a few"
+        ],
+        "why": {
+          "en": "'Few' leans negative — almost none, a shortage — which matches 'I feel lonely'. 'A few' would feel positive (a small but real amount), which would contradict the sentence.",
+          "es": "'Few' suena negativo — casi ninguno, escasez — lo cual coincide con 'me siento solo'. 'A few' se sentiría positivo (una cantidad pequeña pero real), lo cual contradiría la oración."
+        },
+        "tags": [
+          "countable",
+          "quantifier",
+          "nuance"
+        ]
+      },
+      {
+        "id": "mdf-comp-1",
+        "topic": "comparatives",
+        "type": "choice",
+        "prompt": {
+          "en": "This car is ___ than that one.",
+          "es": "This car is ___ than that one."
+        },
+        "answer": "faster",
+        "distractors": [
+          "more faster"
+        ],
+        "why": {
+          "en": "'-er' already means 'more'. Adding the word 'more' too puts the same weight on the scale twice — a classic double comparative.",
+          "es": "'-er' ya significa 'más'. Añadir también la palabra 'more' pone el mismo peso en la balanza dos veces — un comparativo doble clásico."
+        },
+        "tags": [
+          "comparative",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-comp-2",
+        "topic": "comparatives",
+        "type": "choice",
+        "prompt": {
+          "en": "He is ___ than his brother at cooking.",
+          "es": "He is ___ than his brother at cooking."
+        },
+        "answer": "better",
+        "distractors": [
+          "gooder",
+          "more good"
+        ],
+        "why": {
+          "en": "'Good' is one of three irregular comparatives — it becomes 'better', memorised whole, never 'gooder' or 'more good'.",
+          "es": "'Good' es uno de los tres comparativos irregulares — se convierte en 'better', se memoriza completo, nunca 'gooder' ni 'more good'."
+        },
+        "tags": [
+          "comparative",
+          "irregular",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-comp-3",
+        "topic": "comparatives",
+        "type": "cloze",
+        "prompt": {
+          "en": "This dress is ___ (expensive) than the other one.",
+          "es": "This dress is ___ (expensive) than the other one."
+        },
+        "answer": "more expensive",
+        "accept": [
+          "more expensive"
+        ],
+        "why": {
+          "en": "'Expensive' has 3 syllables (a long adjective), so the comparative uses 'more + adjective', not an -er ending.",
+          "es": "'Expensive' tiene 3 sílabas (adjetivo largo), así que el comparativo usa 'more + adjetivo', no una terminación -er."
+        },
+        "tags": [
+          "comparative",
+          "formation"
+        ]
+      },
+      {
+        "id": "mdf-comp-4",
+        "topic": "comparatives",
+        "type": "choice",
+        "prompt": {
+          "en": "My phone is ___ yours.",
+          "es": "My phone is ___ yours. (igual de rápido)"
+        },
+        "answer": "as fast as",
+        "distractors": [
+          "as fast than",
+          "more fast as"
+        ],
+        "why": {
+          "en": "Equality uses as + adjective + as on both sides — never mix in 'than' or 'more' when the scale is balanced.",
+          "es": "La igualdad usa as + adjetivo + as en ambos lados — nunca mezcles 'than' o 'more' cuando la balanza está equilibrada."
+        },
+        "tags": [
+          "equality",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-comp-5",
+        "topic": "comparatives",
+        "type": "natural",
+        "prompt": {
+          "en": "Translate: 'Ella es más simpática que yo.'",
+          "es": "Traduce: 'Ella es más simpática que yo.'"
+        },
+        "answer": "She is nicer than me.",
+        "accept": [
+          "She is nicer than me.",
+          "She's nicer than me."
+        ],
+        "why": {
+          "en": "'Nice' is a short adjective, so it takes -er + than. 'More nicer' would double-weight the scale.",
+          "es": "'Nice' es un adjetivo corto, así que lleva -er + than. 'More nicer' pondría doble peso en la balanza."
+        },
+        "tags": [
+          "comparative",
+          "translation"
+        ]
+      },
+      {
+        "id": "mdf-sup-1",
+        "topic": "superlatives",
+        "type": "choice",
+        "prompt": {
+          "en": "This is ___ day of my life!",
+          "es": "This is ___ day of my life!"
+        },
+        "answer": "the best",
+        "distractors": [
+          "the goodest"
+        ],
+        "why": {
+          "en": "'Good' is irregular — its superlative is 'the best', memorised whole, never 'the goodest'.",
+          "es": "'Good' es irregular — su superlativo es 'the best', se memoriza completo, nunca 'the goodest'."
+        },
+        "tags": [
+          "superlative",
+          "irregular",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-sup-2",
+        "topic": "superlatives",
+        "type": "choice",
+        "prompt": {
+          "en": "She is ___ student in the class.",
+          "es": "She is ___ student in the class."
+        },
+        "answer": "the most intelligent",
+        "distractors": [
+          "the intelligentest"
+        ],
+        "why": {
+          "en": "'Intelligent' is a long adjective (4 syllables), so its superlative uses 'the most + adjective', never an -est ending.",
+          "es": "'Intelligent' es un adjetivo largo (4 sílabas), así que su superlativo usa 'the most + adjetivo', nunca una terminación -est."
+        },
+        "tags": [
+          "superlative",
+          "formation"
+        ]
+      },
+      {
+        "id": "mdf-sup-3",
+        "topic": "superlatives",
+        "type": "choice",
+        "prompt": {
+          "en": "He is one of ___ in the company.",
+          "es": "He is one of ___ in the company."
+        },
+        "answer": "the best engineers",
+        "distractors": [
+          "the best engineer"
+        ],
+        "why": {
+          "en": "'One of the' points to a small group at the top, so the noun after it must be plural: 'engineers', not 'engineer'.",
+          "es": "'One of the' señala a un grupo pequeño en la cima, así que el sustantivo después debe ir en plural: 'engineers', no 'engineer'."
+        },
+        "tags": [
+          "superlative",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-sup-4",
+        "topic": "superlatives",
+        "type": "cloze",
+        "prompt": {
+          "en": "That's ___ (tall) building in the city.",
+          "es": "That's ___ (tall) building in the city."
+        },
+        "answer": "the tallest",
+        "accept": [
+          "the tallest"
+        ],
+        "why": {
+          "en": "'Tall' is a short adjective, so its superlative is the + adjective + -est.",
+          "es": "'Tall' es un adjetivo corto, así que su superlativo es the + adjetivo + -est."
+        },
+        "tags": [
+          "superlative",
+          "formation"
+        ]
+      },
+      {
+        "id": "mdf-sup-5",
+        "topic": "superlatives",
+        "type": "natural",
+        "prompt": {
+          "en": "Translate: 'Ella no es la mayor del grupo.'",
+          "es": "Traduce: 'Ella no es la mayor del grupo.'"
+        },
+        "answer": "She's not the oldest in the group.",
+        "accept": [
+          "She's not the oldest in the group.",
+          "She is not the oldest in the group."
+        ],
+        "why": {
+          "en": "'Old' is a short adjective, so its superlative is 'the oldest' — the podium requires three or more people to compare (the whole group).",
+          "es": "'Old' es un adjetivo corto, así que su superlativo es 'the oldest' — el podio requiere tres o más personas para comparar (todo el grupo)."
+        },
+        "tags": [
+          "superlative",
+          "translation"
+        ]
+      },
+      {
+        "id": "mdf-prep-1",
+        "topic": "prepositions-place-time",
+        "type": "choice",
+        "prompt": {
+          "en": "He arrived ___ the airport.",
+          "es": "He arrived ___ the airport."
+        },
+        "answer": "at",
+        "distractors": [
+          "to"
+        ],
+        "why": {
+          "en": "'Arrive' pinpoints a single spot on the map, so it takes 'at' (or 'in'), never 'to' — a very common false friend from Spanish 'llegar a'.",
+          "es": "'Arrive' señala un solo punto en el mapa, así que lleva 'at' (o 'in'), nunca 'to' — un falso amigo muy común del español 'llegar a'."
+        },
+        "tags": [
+          "preposition",
+          "false-friend",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-prep-2",
+        "topic": "prepositions-place-time",
+        "type": "choice",
+        "prompt": {
+          "en": "She is married ___ him.",
+          "es": "She is married ___ him. (casada con él)"
+        },
+        "answer": "to",
+        "distractors": [
+          "with"
+        ],
+        "why": {
+          "en": "Spanish 'casada con' tempts learners toward 'with', but English fixes 'married to' as the shipping-label preposition.",
+          "es": "El 'casada con' del español tienta hacia 'with', pero el inglés fija 'married to' como la preposición de la etiqueta de envío."
+        },
+        "tags": [
+          "preposition",
+          "false-friend",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-prep-3",
+        "topic": "prepositions-place-time",
+        "type": "choice",
+        "prompt": {
+          "en": "I was born ___ 1990.",
+          "es": "I was born ___ 1990."
+        },
+        "answer": "in",
+        "distractors": [
+          "on",
+          "at"
+        ],
+        "why": {
+          "en": "Years and other broad stretches of time use 'in' — the map's whole territory, not a single pinpoint.",
+          "es": "Los años y otros tramos amplios de tiempo usan 'in' — todo el territorio del mapa, no un solo punto."
+        },
+        "tags": [
+          "preposition",
+          "time"
+        ]
+      },
+      {
+        "id": "mdf-prep-4",
+        "topic": "prepositions-place-time",
+        "type": "cloze",
+        "prompt": {
+          "en": "We met ___ (on) Monday.",
+          "es": "We met ___ (on) Monday."
+        },
+        "answer": "on",
+        "accept": [
+          "on"
+        ],
+        "why": {
+          "en": "Specific days and dates use 'on' — one surface on the calendar, between the broad 'in' and the pinpoint 'at'.",
+          "es": "Los días y fechas específicas usan 'on' — una superficie en el calendario, entre el amplio 'in' y el puntual 'at'."
+        },
+        "tags": [
+          "preposition",
+          "time"
+        ]
+      },
+      {
+        "id": "mdf-prep-5",
+        "topic": "prepositions-place-time",
+        "type": "choice",
+        "prompt": {
+          "en": "I've lived here ___ 2012.",
+          "es": "I've lived here ___ 2012."
+        },
+        "answer": "since",
+        "distractors": [
+          "for"
+        ],
+        "why": {
+          "en": "'Since' marks a starting point on the clock (2012 is a moment); 'for' marks a length of time (like 'for six years'). A year is a point, not a length.",
+          "es": "'Since' marca un punto de partida en el reloj (2012 es un momento); 'for' marca una duración (como 'for six years'). Un año es un punto, no una duración."
+        },
+        "tags": [
+          "preposition",
+          "time",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-forto-1",
+        "topic": "for-vs-to",
+        "type": "choice",
+        "prompt": {
+          "en": "I explained the problem ___ him.",
+          "es": "I explained the problem ___ him."
+        },
+        "answer": "to",
+        "distractors": [
+          "for"
+        ],
+        "why": {
+          "en": "'Explain' transfers information to a recipient — that transfer always calls for the shipping label 'to', even though Spanish 'para' tempts you toward 'for'.",
+          "es": "'Explain' transfiere información a un destinatario — esa transferencia siempre pide la etiqueta de envío 'to', aunque el 'para' del español tiente hacia 'for'."
+        },
+        "tags": [
+          "for-to",
+          "false-friend",
+          "error"
+        ]
+      },
+      {
+        "id": "mdf-forto-2",
+        "topic": "for-vs-to",
+        "type": "choice",
+        "prompt": {
+          "en": "This tool is ___ cutting metal.",
+          "es": "This tool is ___ cutting metal."
+        },
+        "answer": "for",
+        "distractors": [
+          "to"
+        ],
+        "why": {
+          "en": "This describes the tool's purpose — what it's FOR, not where it's going. Purpose always wears the ribbon 'for'.",
+          "es": "Esto describe el propósito de la herramienta — para qué sirve, no a dónde va. El propósito siempre lleva el lazo 'for'."
+        },
+        "tags": [
+          "for-to",
+          "purpose"
+        ]
+      },
+      {
+        "id": "mdf-forto-3",
+        "topic": "for-vs-to",
+        "type": "choice",
+        "prompt": {
+          "en": "She apologised ___ being late.",
+          "es": "She apologised ___ being late."
+        },
+        "answer": "for",
+        "distractors": [
+          "to"
+        ],
+        "why": {
+          "en": "'Apologise for' is a fixed verb pattern — the reason for the apology (being late) always follows 'for', memorised as one unit.",
+          "es": "'Apologise for' es un patrón fijo de verbo — el motivo de la disculpa (llegar tarde) siempre va con 'for', se memoriza como una sola unidad."
+        },
+        "tags": [
+          "for-to",
+          "verb-pattern"
+        ]
+      },
+      {
+        "id": "mdf-forto-4",
+        "topic": "for-vs-to",
+        "type": "cloze",
+        "prompt": {
+          "en": "Give this book ___ (to) your sister.",
+          "es": "Give this book ___ (to) your sister."
+        },
+        "answer": "to",
+        "accept": [
+          "to"
+        ],
+        "why": {
+          "en": "The book is being handed to a physical receiver, so it needs the shipping label 'to', not the ribbon 'for'.",
+          "es": "El libro se está entregando a un receptor físico, así que necesita la etiqueta de envío 'to', no el lazo 'for'."
+        },
+        "tags": [
+          "for-to",
+          "recipient"
+        ]
+      },
+      {
+        "id": "mdf-forto-5",
+        "topic": "for-vs-to",
+        "type": "natural",
+        "prompt": {
+          "en": "Translate: 'Este informe es para el cliente.'",
+          "es": "Traduce: 'Este informe es para el cliente.'"
+        },
+        "answer": "This report is for the client.",
+        "accept": [
+          "This report is for the client."
+        ],
+        "why": {
+          "en": "The client is who benefits from the report — a beneficiary, not a physical receiver in this context, so it wears the ribbon 'for'.",
+          "es": "El cliente es quien se beneficia del informe — un beneficiario, no un receptor físico en este contexto, así que lleva el lazo 'for'."
+        },
+        "tags": [
+          "for-to",
+          "translation"
+        ]
+      }
+    ]
+  }
+}
