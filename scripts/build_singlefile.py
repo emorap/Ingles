@@ -22,7 +22,6 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRY = os.path.join(ROOT, "src", "main.js")
 CSS = os.path.join(ROOT, "src", "styles", "theme.css")
-CONTENT = os.path.join(ROOT, "content", "tenses.json")
 INDEX = os.path.join(ROOT, "index.html")
 OUT = os.path.join(ROOT, "momentum.html")
 
@@ -75,16 +74,41 @@ def main():
     modules = collect(ENTRY)
     keys = {path: rel_key(path) for path in modules}
 
-    # Repoint the content fetch at an inlined data: URL so it works offline /
-    # from file:// with no server.
-    content_json = open(CONTENT, encoding="utf-8").read()
-    content_url = data_url("application/json", content_json)
+    # Inline the whole catalog so the single file is truly self-contained:
+    # index.json (the manifest) plus every `available` module file. At runtime
+    # the app loads these via loadCatalog((u) => fetch(u)); we swap that live
+    # fetch for an inlined resolver keyed by filename, so momentum.html runs
+    # from file:// or a share with no adjacent content/ folder and no server.
+    content_dir = os.path.join(ROOT, "content")
+    manifest = json.loads(open(os.path.join(content_dir, "index.json"), encoding="utf-8").read())
+    catalog_content = {"index.json": manifest}
+    for entry in manifest["modules"]:
+        if entry.get("status") == "available":
+            fname = entry["file"]
+            catalog_content[fname] = json.loads(
+                open(os.path.join(content_dir, fname), encoding="utf-8").read()
+            )
+    # Resolver mirrors the { ok, json } shape loadCatalog expects from fetch,
+    # matching on the last path segment (./content/index.json -> index.json).
+    resolver = (
+        "((__c) => (u) => { const k = u.split('/').pop(); return Promise.resolve("
+        "Object.prototype.hasOwnProperty.call(__c, k) "
+        "? { ok: true, json: () => Promise.resolve(__c[k]) } "
+        ": { ok: false, json: () => Promise.reject(new Error('not found: ' + u)) }"
+        "); })(" + json.dumps(catalog_content, ensure_ascii=False) + ")"
+    )
 
     imports = {}
     for path, src in modules.items():
         rewritten = rewrite_imports(path, src, keys)
         if path == ENTRY:
-            rewritten = rewritten.replace("./content/tenses.json", content_url)
+            before = rewritten
+            rewritten = rewritten.replace("(u) => fetch(u)", resolver)
+            # Fail loudly if the fetchFn hook ever moves again — the previous
+            # version silently no-op'd here and shipped a file that still
+            # depended on ./content/.
+            if rewritten == before:
+                sys.exit("build: catalog fetchFn '(u) => fetch(u)' not found in main.js — cannot inline content")
         imports[keys[path]] = data_url("text/javascript", rewritten)
 
     importmap = json.dumps({"imports": imports}, ensure_ascii=False)
