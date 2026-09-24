@@ -8,6 +8,7 @@ import { Store } from '../engine/db.js';
 import { onRoute, go } from '../router.js';
 import { streakChip } from './components/streak-chip.js';
 import { renderHub, HUB_DEFAULTS } from './views/hub.js';
+import { renderModule } from './views/module.js';
 import { renderTopic } from './views/topic.js';
 import { renderPractice } from './views/practice.js';
 import { renderInsights } from './views/insights.js';
@@ -34,6 +35,9 @@ export async function mountApp(root, catalog, store = new Store()) {
   let newPerDay = await store.getMeta('newPerDay', HUB_DEFAULTS.newPerDay);
   let voice = await store.getMeta('voice', '');
   const streak = await store.getMeta('streak', 0);
+  // Which topics the learner has already opened the lesson for — drives the
+  // "Aprendido" status on the module roadmap even before any practice.
+  const lessonViewed = await store.getMeta('lessonViewed', {});
 
   // The global primary accent follows the first available module (indigo for
   // Tiempos today). Per-module accents on the roadmap cards come from the
@@ -60,6 +64,7 @@ export async function mountApp(root, catalog, store = new Store()) {
     catalog,
     store,
     progress,
+    lessonViewed,
     cap: HUB_DEFAULTS.cap,
     navigate: go,
     get newPerDay() { return newPerDay; },
@@ -108,6 +113,19 @@ export async function renderRoute(view, route, deps) {
   const now = deps.now;
 
   switch (route.view) {
+    case 'module': {
+      // Coming-soon modules are never loaded, so modules.get is undefined →
+      // redirect to the hub. Same for an unknown id. Guide, don't dead-end.
+      const moduleContent = catalog.modules.get(route.param);
+      const entry = catalog.manifest.find((m) => m.id === route.param);
+      if (!moduleContent || !entry) { deps.navigate('hub'); return; }
+      renderModule(view, {
+        moduleContent, entry, progress,
+        lessonViewed: deps.lessonViewed ?? {},
+        onOpenTopic: (id) => deps.navigate('topic', id),
+      });
+      return;
+    }
     case 'topic': {
       const found = findTopic(catalog, route.param);
       if (!found) { deps.navigate('hub'); return; }

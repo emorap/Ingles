@@ -202,6 +202,28 @@ button{font:inherit;color:inherit;cursor:pointer}
   padding:.15rem .5rem;border-radius:999px;border:1px dashed var(--border);
 }
 
+/* ---- Module view (topic list) --------------------------------------------- */
+.module{display:flex;flex-direction:column;gap:var(--sp-3)}
+.module>header{margin-bottom:var(--sp-1)}
+.module-subtitle{margin:0;font-size:.95rem}
+.topic-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--sp-2);counter-reset:topic}
+.topic-row{padding:0;overflow:hidden;transition:transform .12s ease,box-shadow .15s ease}
+.topic-row:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+.topic-row-btn{
+  width:100%;background:none;border:0;
+  display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3);
+  padding:var(--sp-3);text-align:left;min-height:var(--tap);
+}
+.topic-row-title{font-weight:600;font-size:1rem}
+.topic-status{
+  flex:none;font-size:.75rem;font-weight:700;letter-spacing:.02em;
+  padding:.2rem .6rem;border-radius:999px;white-space:nowrap;
+  background:var(--surface-2);color:var(--color-muted);border:1px solid var(--border);
+}
+.topic-status[data-status="learned"]{color:var(--color-primary);background:color-mix(in srgb,var(--color-primary) 14%,transparent);border-color:transparent}
+.topic-status[data-status="practicing"]{color:var(--color-streak);background:color-mix(in srgb,var(--color-streak) 14%,transparent);border-color:transparent}
+.topic-status[data-status="mastered"]{color:var(--color-success);background:color-mix(in srgb,var(--color-success) 16%,transparent);border-color:transparent}
+
 /* ---- Topic (teach) -------------------------------------------------------- */
 .topic{display:flex;flex-direction:column;gap:var(--sp-2)}
 .topic>header{margin-bottom:var(--sp-2)}

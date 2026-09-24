@@ -126,6 +126,22 @@ test('renderRoute: topic renders the selected topic', async () => {
   assert.match(view.textContent, /Presente simple/);
 });
 
+test('renderRoute: module renders the module\'s topic list', async () => {
+  const view = document.createElement('main');
+  await renderRoute(view, { view: 'module', param: 'tenses' }, baseDeps(richStore()));
+  assert.ok(view.querySelector('[data-view="module"]'), 'module view');
+  assert.match(view.textContent, /Presente simple/);
+});
+
+test('renderRoute: an unknown or not-loaded (coming-soon) module id redirects to the hub', async () => {
+  for (const param of ['ghost', 'conditionals']) {
+    const view = document.createElement('main');
+    let nav = null;
+    await renderRoute(view, { view: 'module', param }, baseDeps(richStore(), { navigate: (v) => { nav = v; } }));
+    assert.equal(nav, 'hub', `module '${param}' should redirect to hub`);
+  }
+});
+
 test('renderRoute: a topic id that does not exist redirects to the hub', async () => {
   const view = document.createElement('main');
   let nav = null;
