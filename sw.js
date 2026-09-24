@@ -10,7 +10,10 @@
 // content/index.json first (loadCatalog throws without it), so it must be
 // precached. The version bump purges the stale v1 cache (old present-only
 // content) on activate and guarantees a fresh precache for returning users.
-const CACHE = 'momentum-v2';
+// Bumped v2 -> v3 when the five remaining modules shipped: every module's
+// JSON is now precached so the whole corpus works offline from the first
+// visit (not just after a learner happens to open each module online).
+const CACHE = 'momentum-v3';
 const SHELL = [
   './',
   './index.html',
@@ -19,6 +22,11 @@ const SHELL = [
   './src/main.js',
   './content/index.json',
   './content/tenses.json',
+  './content/conditionals.json',
+  './content/structure.json',
+  './content/verbforms.json',
+  './content/modifiers.json',
+  './content/mechanics.json',
   './public/icons/icon-192.png',
   './public/icons/icon-512.png',
 ];
