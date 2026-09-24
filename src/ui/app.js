@@ -1,11 +1,24 @@
-// App shell: header (title + streak + theme toggle), nav landmark, and a
-// routed <main id="view">. Opens the DB, loads progress, applies theme, and
-// wires the hash router to a view container. View bodies are stubbed here and
-// filled by later tasks (hub, practice, insights, settings). No innerHTML.
+// App shell + composition root for the view layer. Opens the DB, applies the
+// persisted theme, builds the header/nav, then either runs first-run onboarding
+// or wires the hash router to renderRoute. renderRoute is the one place that
+// turns a route into a rendered view and connects the pure views to the store:
+// practice → logMistake / streak, settings → persist + live-apply, topic/
+// practice → the AI tutor (only when getTutor resolves one). No innerHTML.
 import { Store } from '../engine/db.js';
-import { onRoute } from '../router.js';
-import { createStore } from '../store.js';
+import { onRoute, go } from '../router.js';
 import { streakChip } from './components/streak-chip.js';
+import { renderHub, HUB_DEFAULTS } from './views/hub.js';
+import { renderTopic } from './views/topic.js';
+import { renderPractice } from './views/practice.js';
+import { renderInsights } from './views/insights.js';
+import { renderSettings } from './views/settings.js';
+import { renderOnboarding, maybeOnboard, finishOnboarding } from './views/onboarding.js';
+import { selectItems } from './session-select.js';
+import { computeStats } from '../engine/analytics.js';
+import { logMistake } from '../engine/mistakes.js';
+import { recordStudyDay } from '../engine/streak.js';
+import { getTutor } from '../ai/tutor.js';
+import { listVoices } from '../audio/tts.js';
 
 /**
  * @param {HTMLElement} root
@@ -17,25 +30,138 @@ export async function mountApp(root, content, store = new Store()) {
   await store.open();
   const progress = await store.allProgress();
   let theme = await store.getMeta('theme', 'dark');
+  let newPerDay = await store.getMeta('newPerDay', HUB_DEFAULTS.newPerDay);
+  let voice = await store.getMeta('voice', '');
   const streak = await store.getMeta('streak', 0);
 
   applyTheme(theme, content.module.accent);
 
-  const ui = createStore({ content, progress, store });
-
   const view = document.createElement('main');
   view.id = 'view';
 
-  const header = buildHeader(content, streak, () => {
+  const headerApi = buildHeader(content, streak, () => {
     theme = theme === 'dark' ? 'light' : 'dark';
     applyTheme(theme, content.module.accent);
     store.setMeta('theme', theme);
   });
 
   clear(root);
-  root.append(header, buildNav(), view);
+  root.append(headerApi.header, buildNav(), view);
 
-  onRoute((route) => renderView(view, route, ui));
+  let currentRoute = { view: 'hub' };
+
+  /** @type {any} */
+  const deps = {
+    content,
+    store,
+    progress,
+    cap: HUB_DEFAULTS.cap,
+    navigate: go,
+    get newPerDay() { return newPerDay; },
+    get voice() { return voice; },
+    // Live-apply a settings change, then re-render the current view.
+    onChanged: async (key, value) => {
+      if (key === 'theme') { theme = value; applyTheme(theme, content.module.accent); }
+      if (key === 'newPerDay') newPerDay = value;
+      if (key === 'voice') voice = value;
+      await renderRoute(view, currentRoute, deps);
+    },
+    // AI-generated items join the module in memory, then we practice them.
+    onGenerated: (topicId, items) => { content.module.items.push(...items); go('practice', topicId); },
+    // A finished session advances the daily streak and refreshes the header.
+    onStudyComplete: async (now) => { headerApi.setStreak(await recordStudyDay(store, now ?? new Date())); },
+  };
+
+  const startRouting = () => onRoute((route) => { currentRoute = route; renderRoute(view, route, deps); });
+
+  if (await maybeOnboard(store)) {
+    renderOnboarding(view, async ({ newPerDay: goal }) => {
+      await finishOnboarding(store, { newPerDay: goal });
+      newPerDay = goal;
+      startRouting();
+      go('hub');
+    });
+  } else {
+    startRouting();
+  }
+}
+
+/**
+ * Render one route into `view`, wiring the pure views to the store/navigation.
+ * Exported so the composition can be tested without the hash router.
+ * @param {HTMLElement} view
+ * @param {{ view: string, param?: string }} route
+ * @param {any} deps
+ */
+export async function renderRoute(view, route, deps) {
+  clear(view);
+  const { content, store, progress } = deps;
+  const now = deps.now;
+
+  switch (route.view) {
+    case 'topic': {
+      const topic = content.module.topics.find((t) => t.id === route.param);
+      if (!topic) { deps.navigate('hub'); return; }
+      const tutor = await getTutor(store);
+      renderTopic(view, {
+        topic,
+        onPractice: (id) => deps.navigate('practice', id),
+        tutor,
+        onGenerated: (items) => deps.onGenerated?.(topic.id, items),
+      });
+      return;
+    }
+    case 'practice': {
+      const items = await selectItems(route, {
+        content, progress, store, newPerDay: deps.newPerDay, cap: deps.cap, now,
+      });
+      const tutor = await getTutor(store);
+      renderPractice(view, {
+        items, progress, store, now, voice: deps.voice, tutor,
+        onWrong: (itemId, given) => logMistake(store, itemId, given),
+        onDone: async () => { await deps.onStudyComplete?.(now); },
+      });
+      return;
+    }
+    case 'insights': {
+      const stats = computeStats(content.module.items, progress, now ?? new Date());
+      renderInsights(view, {
+        stats,
+        onFocusWeak: (topic) => deps.navigate('practice', topic),
+        titleFor: (id) => content.module.topics.find((t) => t.id === id)?.title.es ?? id,
+      });
+      return;
+    }
+    case 'settings': {
+      const [themeM, lang, newPerDay, voice, aiKey, lastBackup] = await Promise.all([
+        store.getMeta('theme', 'dark'),
+        store.getMeta('lang', 'es'),
+        store.getMeta('newPerDay', HUB_DEFAULTS.newPerDay),
+        store.getMeta('voice', ''),
+        store.getMeta('aiKey', ''),
+        store.getMeta('lastBackup', undefined),
+      ]);
+      renderSettings(view, {
+        store,
+        settings: { theme: themeM, lang, newPerDay, voice, aiKey, lastBackup },
+        voices: listVoices().map((v) => v.name),
+        now,
+        onChange: async (key, value) => {
+          await store.setMeta(key, value);
+          await deps.onChanged?.(key, value);
+        },
+      });
+      return;
+    }
+    default: { // 'hub'
+      renderHub(view, {
+        content, progress, now,
+        newPerDay: deps.newPerDay, cap: deps.cap,
+        onPractice: () => deps.navigate('practice'),
+        onOpenTopic: (id) => deps.navigate('topic', id),
+      });
+    }
+  }
 }
 
 function applyTheme(theme, accent) {
@@ -56,7 +182,8 @@ function buildHeader(content, streak, onToggle) {
 
   const actions = document.createElement('div');
   actions.className = 'app-header-actions';
-  actions.append(streakChip(streak));
+  let chip = streakChip(streak);
+  actions.append(chip);
 
   const toggle = document.createElement('button');
   toggle.className = 'btn ghost';
@@ -68,32 +195,30 @@ function buildHeader(content, streak, onToggle) {
   actions.append(toggle);
 
   header.append(title, actions);
-  return header;
+  return {
+    header,
+    setStreak(n) { const next = streakChip(n); actions.replaceChild(next, chip); chip = next; },
+  };
 }
 
 function buildNav() {
   const nav = document.createElement('nav');
   nav.className = 'app-nav';
   nav.setAttribute('aria-label', 'Navegación principal');
-  for (const [view, label] of [['hub', 'Inicio'], ['insights', 'Progreso'], ['settings', 'Ajustes']]) {
+  const links = [
+    ['hub', 'Inicio', undefined],
+    ['practice', 'Mis errores', 'mistakes'],
+    ['insights', 'Progreso', undefined],
+    ['settings', 'Ajustes', undefined],
+  ];
+  for (const [view, label, param] of links) {
     const a = document.createElement('a');
-    a.href = `#/${view}`;
-    a.setAttribute('data-route', view);
+    a.href = `#/${view}${param ? '/' + param : ''}`;
+    a.setAttribute('data-route', param ?? view);
     a.textContent = label;
     nav.append(a);
   }
   return nav;
-}
-
-// Stub view dispatch — later tasks replace each branch with a real renderer.
-function renderView(view, route, _ui) {
-  clear(view);
-  const section = document.createElement('section');
-  section.setAttribute('data-view', route.view);
-  const h = document.createElement('h2');
-  h.textContent = route.view;
-  section.append(h);
-  view.append(section);
 }
 
 function clear(node) {

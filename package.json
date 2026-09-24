@@ -8,6 +8,7 @@
     "test": "node --test --test-timeout=8000 \"src/**/*.test.js\"",
     "test:deps": "python3 scripts/fetch_test_deps.py linkedom@0.18.5",
     "serve": "python3 -m http.server 8000",
-    "content:validate": "node scripts/validate_content.mjs"
+    "content:validate": "node scripts/validate_content.mjs",
+    "build": "python3 scripts/build_singlefile.py"
   }
 }
