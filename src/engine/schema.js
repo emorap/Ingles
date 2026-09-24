@@ -9,6 +9,26 @@ const TYPES = ['cloze', 'choice', 'natural', 'order', 'match'];
 const isBi = (v) => v && typeof v.en === 'string' && typeof v.es === 'string';
 
 /**
+ * Validate a single item in isolation — used to vet AI-generated items before
+ * they enter a session. Stricter than the content-file loop: it also requires
+ * a bilingual `prompt` (needed to render) and distractors for choice items.
+ * @param {any} it
+ * @returns {boolean}
+ */
+export function validateItem(it) {
+  return Boolean(
+    it
+    && typeof it.id === 'string' && it.id.length > 0
+    && TYPES.includes(it.type)
+    && isBi(it.prompt)
+    && typeof it.answer === 'string' && it.answer.length > 0
+    && isBi(it.why)
+    && (!it.accept || (Array.isArray(it.accept) && it.accept.includes(it.answer)))
+    && (it.type !== 'choice' || (Array.isArray(it.distractors) && it.distractors.length > 0)),
+  );
+}
+
+/**
  * Validate a parsed content file against Momentum's content invariants:
  * every item has a valid type, an answer, and a bilingual `why`; `accept`
  * (when present) includes the answer; every topic->item reference resolves.
