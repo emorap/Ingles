@@ -9,12 +9,13 @@ import { mistakeItemIds } from '../engine/mistakes.js';
 
 /**
  * @param {{ view: string, param?: string }} route
- * @param {{ content: any, progress: Map<string, any>, store: any,
+ * @param {{ items: import('../engine/types.js').Item[], progress: Map<string, any>, store: any,
  *           newPerDay: number, cap: number, now?: Date }} deps
- * @returns {Promise<import('../../engine/types.js').Item[]>}
+ *   `items` is the merged pool across all loaded modules (see catalog.allItems).
+ * @returns {Promise<import('../engine/types.js').Item[]>}
  */
-export async function selectItems(route, { content, progress, store, newPerDay, cap, now }) {
-  const all = content.module.items;
+export async function selectItems(route, { items, progress, store, newPerDay, cap, now }) {
+  const all = items;
 
   if (route.param === 'mistakes') {
     const byId = new Map(all.map((i) => [i.id, i]));

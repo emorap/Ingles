@@ -6,7 +6,7 @@
 import { mountApp } from './ui/app.js';
 import { Store } from './engine/db.js';
 import { MemoryStore } from './engine/memory-store.js';
-import { validateContent } from './engine/schema.js';
+import { loadCatalog } from './engine/catalog.js';
 import { requestPersist, idbAvailable, persistenceBanner, registerServiceWorker } from './pwa.js';
 
 registerServiceWorker();
@@ -22,18 +22,19 @@ async function boot(root) {
   if (banner) document.body.insertBefore(banner, document.body.firstChild);
 
   try {
-    const res = await fetch('./content/tenses.json');
-    const data = await res.json();
-    const result = validateContent(data);
-    if (!result.ok) throw new Error('Contenido inválido: ' + JSON.stringify(result.errors));
+    // Manifest-driven: load index.json then every `available` module. A single
+    // bad module file is skipped inside loadCatalog; this throws only if the
+    // manifest itself is unreadable or no module loaded.
+    const catalog = await loadCatalog((u) => fetch(u));
+    if (catalog.modules.size === 0) throw new Error('No se pudo cargar ningún módulo');
     // Without IndexedDB (e.g. private mode) — or if opening it fails — fall back
     // to an ephemeral in-memory store so the offline core still runs. The banner
     // above already warns that progress won't be saved between sessions.
     try {
-      await mountApp(root, result.content, hasIdb ? new Store() : new MemoryStore());
+      await mountApp(root, catalog, hasIdb ? new Store() : new MemoryStore());
     } catch (storageErr) {
       if (!banner) document.body.insertBefore(persistenceBanner({ idb: false, persisted: false }), document.body.firstChild);
-      await mountApp(root, result.content, new MemoryStore());
+      await mountApp(root, catalog, new MemoryStore());
     }
   } catch (err) {
     const msg = document.createElement('main');

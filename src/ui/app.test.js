@@ -12,6 +12,14 @@ const CONTENT = {
   module: { id: 'tenses', title: { en: 'Tenses', es: 'Tiempos verbales' }, accent: '#6366F1', topics: [], items: [] },
 };
 
+/** Wrap one content file in a single-available-module catalog for the shell. */
+function catalogOf(content, id = 'tenses') {
+  return {
+    manifest: [{ id, order: 1, status: 'available', file: `${id}.json`, title: content.module.title, accent: content.module.accent }],
+    modules: new Map([[id, content]]),
+  };
+}
+
 // Minimal in-memory Store double (real DB is exercised in db.test.js).
 function fakeStore(meta = {}) {
   const calls = { setMeta: [], open: 0 };
@@ -28,31 +36,31 @@ beforeEach(() => installDom());
 
 test('mountApp renders header, nav landmark, and a routed main#view', async () => {
   const root = document.createElement('div');
-  await mountApp(root, CONTENT, fakeStore());
+  await mountApp(root, catalogOf(CONTENT), fakeStore());
   assert.ok(root.querySelector('header'), 'has header');
   assert.ok(root.querySelector('nav'), 'has nav landmark');
   assert.ok(root.querySelector('main#view'), 'has main#view container');
-  assert.match(root.querySelector('header').textContent, /Tiempos verbales/);
+  assert.match(root.querySelector('header').textContent, /Momentum/);
 });
 
 test('mountApp opens the store and applies the persisted theme', async () => {
   const root = document.createElement('div');
   const store = fakeStore({ theme: 'light' });
-  await mountApp(root, CONTENT, store);
+  await mountApp(root, catalogOf(CONTENT), store);
   assert.equal(store.calls.open, 1);
   assert.equal(document.documentElement.getAttribute('data-theme'), 'light');
 });
 
 test('mountApp defaults to dark theme when none persisted', async () => {
   const root = document.createElement('div');
-  await mountApp(root, CONTENT, fakeStore());
+  await mountApp(root, catalogOf(CONTENT), fakeStore());
   assert.equal(document.documentElement.getAttribute('data-theme'), 'dark');
 });
 
 test('theme toggle flips data-theme and persists it', async () => {
   const root = document.createElement('div');
   const store = fakeStore({ theme: 'dark' });
-  await mountApp(root, CONTENT, store);
+  await mountApp(root, catalogOf(CONTENT), store);
   const toggle = root.querySelector('[data-action="toggle-theme"]');
   assert.ok(toggle, 'has a theme toggle');
   toggle.dispatchEvent(new window.Event('click'));
@@ -62,7 +70,7 @@ test('theme toggle flips data-theme and persists it', async () => {
 
 test('mountApp themes the app with the module accent', async () => {
   const root = document.createElement('div');
-  await mountApp(root, CONTENT, fakeStore());
+  await mountApp(root, catalogOf(CONTENT), fakeStore());
   assert.equal(document.documentElement.style.getPropertyValue('--color-primary'), '#6366F1');
 });
 
@@ -97,7 +105,7 @@ function richStore(meta = {}) {
 
 function baseDeps(store, over = {}) {
   return {
-    content: CONTENT2, store, progress: new Map(),
+    catalog: catalogOf(CONTENT2), store, progress: new Map(),
     newPerDay: 10, cap: 20, voice: '',
     navigate: () => {}, now: new Date('2026-09-23T10:00:00'),
     ...over,
@@ -116,6 +124,15 @@ test('renderRoute: topic renders the selected topic', async () => {
   await renderRoute(view, { view: 'topic', param: 'pt' }, baseDeps(richStore()));
   assert.ok(view.querySelector('[data-view="topic"]'), 'topic view');
   assert.match(view.textContent, /Presente simple/);
+});
+
+test('renderRoute: a topic id that does not exist redirects to the hub', async () => {
+  const view = document.createElement('main');
+  let nav = null;
+  await renderRoute(view, { view: 'topic', param: 'ghost' }, baseDeps(richStore(), {
+    navigate: (v) => { nav = v; },
+  }));
+  assert.equal(nav, 'hub');
 });
 
 test('renderRoute: insights renders the progress view', async () => {
@@ -170,7 +187,7 @@ test('renderRoute: insights "Reforzar" navigates to that topic\'s practice', asy
 test('mountApp shows onboarding on first run and finishing it records the goal', async () => {
   const root = document.createElement('div');
   const store = richStore(); // no 'onboarded' meta → first run
-  await mountApp(root, CONTENT2, store);
+  await mountApp(root, catalogOf(CONTENT2), store);
   const view = root.querySelector('main#view');
   assert.ok(view.querySelector('[data-view="onboarding"]'), 'onboarding shown first');
   const advance = view.querySelector('[data-role="advance"]');

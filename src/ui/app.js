@@ -14,6 +14,7 @@ import { renderInsights } from './views/insights.js';
 import { renderSettings } from './views/settings.js';
 import { renderOnboarding, maybeOnboard, finishOnboarding } from './views/onboarding.js';
 import { selectItems } from './session-select.js';
+import { allItems, findTopic } from '../engine/catalog.js';
 import { computeStats } from '../engine/analytics.js';
 import { logMistake } from '../engine/mistakes.js';
 import { recordStudyDay } from '../engine/streak.js';
@@ -22,11 +23,11 @@ import { listVoices } from '../audio/tts.js';
 
 /**
  * @param {HTMLElement} root
- * @param {import('../engine/types.js').ContentFile} content validated content
+ * @param {import('../engine/catalog.js').Catalog} catalog loaded module catalog
  * @param {InstanceType<typeof Store>} [store] injectable for tests
  * @returns {Promise<void>}
  */
-export async function mountApp(root, content, store = new Store()) {
+export async function mountApp(root, catalog, store = new Store()) {
   await store.open();
   const progress = await store.allProgress();
   let theme = await store.getMeta('theme', 'dark');
@@ -34,14 +35,18 @@ export async function mountApp(root, content, store = new Store()) {
   let voice = await store.getMeta('voice', '');
   const streak = await store.getMeta('streak', 0);
 
-  applyTheme(theme, content.module.accent);
+  // The global primary accent follows the first available module (indigo for
+  // Tiempos today). Per-module accents on the roadmap cards come from the
+  // manifest; a future module view can re-apply its own accent on entry.
+  const accent = activeModule(catalog)?.module.accent;
+  applyTheme(theme, accent);
 
   const view = document.createElement('main');
   view.id = 'view';
 
-  const headerApi = buildHeader(content, streak, () => {
+  const headerApi = buildHeader(streak, () => {
     theme = theme === 'dark' ? 'light' : 'dark';
-    applyTheme(theme, content.module.accent);
+    applyTheme(theme, accent);
     store.setMeta('theme', theme);
   });
 
@@ -52,7 +57,7 @@ export async function mountApp(root, content, store = new Store()) {
 
   /** @type {any} */
   const deps = {
-    content,
+    catalog,
     store,
     progress,
     cap: HUB_DEFAULTS.cap,
@@ -61,13 +66,17 @@ export async function mountApp(root, content, store = new Store()) {
     get voice() { return voice; },
     // Live-apply a settings change, then re-render the current view.
     onChanged: async (key, value) => {
-      if (key === 'theme') { theme = value; applyTheme(theme, content.module.accent); }
+      if (key === 'theme') { theme = value; applyTheme(theme, accent); }
       if (key === 'newPerDay') newPerDay = value;
       if (key === 'voice') voice = value;
       await renderRoute(view, currentRoute, deps);
     },
-    // AI-generated items join the module in memory, then we practice them.
-    onGenerated: (topicId, items) => { content.module.items.push(...items); go('practice', topicId); },
+    // AI-generated items join their topic's module in memory, then we practice them.
+    onGenerated: (topicId, items) => {
+      const found = findTopic(catalog, topicId);
+      if (found) found.content.module.items.push(...items);
+      go('practice', topicId);
+    },
     // A finished session advances the daily streak and refreshes the header.
     onStudyComplete: async (now) => { headerApi.setStreak(await recordStudyDay(store, now ?? new Date())); },
   };
@@ -95,13 +104,14 @@ export async function mountApp(root, content, store = new Store()) {
  */
 export async function renderRoute(view, route, deps) {
   clear(view);
-  const { content, store, progress } = deps;
+  const { catalog, store, progress } = deps;
   const now = deps.now;
 
   switch (route.view) {
     case 'topic': {
-      const topic = content.module.topics.find((t) => t.id === route.param);
-      if (!topic) { deps.navigate('hub'); return; }
+      const found = findTopic(catalog, route.param);
+      if (!found) { deps.navigate('hub'); return; }
+      const topic = found.topic;
       const tutor = await getTutor(store);
       renderTopic(view, {
         topic,
@@ -113,7 +123,7 @@ export async function renderRoute(view, route, deps) {
     }
     case 'practice': {
       const items = await selectItems(route, {
-        content, progress, store, newPerDay: deps.newPerDay, cap: deps.cap, now,
+        items: allItems(catalog), progress, store, newPerDay: deps.newPerDay, cap: deps.cap, now,
       });
       const tutor = await getTutor(store);
       renderPractice(view, {
@@ -124,11 +134,11 @@ export async function renderRoute(view, route, deps) {
       return;
     }
     case 'insights': {
-      const stats = computeStats(content.module.items, progress, now ?? new Date());
+      const stats = computeStats(allItems(catalog), progress, now ?? new Date());
       renderInsights(view, {
         stats,
         onFocusWeak: (topic) => deps.navigate('practice', topic),
-        titleFor: (id) => content.module.topics.find((t) => t.id === id)?.title.es ?? id,
+        titleFor: (id) => findTopic(catalog, id)?.topic.title.es ?? id,
       });
       return;
     }
@@ -153,15 +163,28 @@ export async function renderRoute(view, route, deps) {
       });
       return;
     }
-    default: { // 'hub'
+    default: { // 'hub' — for now renders the single active module's topics;
+      // Task 5 turns this into the multi-module roadmap.
       renderHub(view, {
-        content, progress, now,
+        content: activeModule(catalog), progress, now,
         newPerDay: deps.newPerDay, cap: deps.cap,
         onPractice: () => deps.navigate('practice'),
         onOpenTopic: (id) => deps.navigate('topic', id),
       });
     }
   }
+}
+
+/**
+ * The content file whose accent/topics drive single-module views. First module
+ * in recommended order that actually loaded, else any loaded module.
+ * @param {import('../engine/catalog.js').Catalog} catalog
+ * @returns {import('../engine/types.js').ContentFile | undefined}
+ */
+function activeModule(catalog) {
+  const ordered = [...catalog.manifest].sort((a, b) => a.order - b.order);
+  for (const e of ordered) if (catalog.modules.has(e.id)) return catalog.modules.get(e.id);
+  return catalog.modules.values().next().value;
 }
 
 function applyTheme(theme, accent) {
@@ -172,13 +195,13 @@ function applyTheme(theme, accent) {
   if (meta) meta.setAttribute('content', theme === 'light' ? '#F8FAFC' : '#0F172A');
 }
 
-function buildHeader(content, streak, onToggle) {
+function buildHeader(streak, onToggle) {
   const header = document.createElement('header');
   header.className = 'app-header surface';
 
   const title = document.createElement('h1');
   title.className = 'app-title';
-  title.textContent = content.module.title.es;
+  title.textContent = 'Momentum';
 
   const actions = document.createElement('div');
   actions.className = 'app-header-actions';
