@@ -47,15 +47,29 @@
           {
             "kind": "p",
             "text": {
-              "en": "Grammar books say Present Simple is 'for routines'. That is true, but it is not the whole truth. Its real job is to describe the world as generally, normally true — identity, habits, facts and opinions.",
-              "es": "Los libros dicen que el presente simple es 'para rutinas'. Es cierto, pero no es toda la verdad. Su función real es describir el mundo como algo generalmente cierto — identidad, hábitos, hechos y opiniones."
+              "en": "Grammar books say Present Simple is 'for routines'. That is true, but it is only one of four jobs it does: showing your identity, your habits, general facts, and your opinions.",
+              "es": "Los libros dicen que el presente simple es 'para rutinas'. Es cierto, pero es solo uno de los cuatro trabajos que hace: mostrar tu identidad, tus hábitos, hechos generales y tus opiniones."
             }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Job · Trabajo",
+              "Question · Pregunta",
+              "Examples · Ejemplos"
+            ],
+            "rows": [
+              ["Identity · Identidad", "Who am I? What defines me? · ¿Quién soy? ¿Qué me define?", "I work as an engineer. / We own a small business."],
+              ["Habits & routines · Hábitos y rutinas", "What usually happens? · ¿Qué pasa normalmente?", "We often eat together. / He goes to the gym on Mondays."],
+              ["Facts & general truths · Hechos y verdades generales", "Is this always true? · ¿Esto siempre es cierto?", "Water boils at 100°C. / The sun rises in the east."],
+              ["Opinions & beliefs · Opiniones y creencias", "What do I think or believe? · ¿Qué pienso o creo?", "I believe honesty is important. / She thinks the plan is risky."]
+            ]
           },
           {
             "kind": "callout",
             "text": {
-              "en": "The student's question: 'Am I describing my normal reality?' If yes, Present Simple is probably right.",
-              "es": "La pregunta del estudiante: '¿Estoy describiendo mi realidad normal?' Si la respuesta es sí, el presente simple suele ser el correcto."
+              "en": "Whichever of the four jobs above you're doing, the same test applies — the student's question: 'Am I describing my normal reality?' If yes, Present Simple is probably right.",
+              "es": "Sin importar cuál de los cuatro trabajos estés haciendo, aplica la misma prueba — la pregunta del estudiante: '¿Estoy describiendo mi realidad normal?' Si la respuesta es sí, el presente simple suele ser el correcto."
             }
           },
           {
@@ -123,9 +137,31 @@
           {
             "kind": "p",
             "text": {
-              "en": "Present Simple sees the whole landscape; Present Continuous zooms in. It shows life while it is moving: actions now, temporary situations, trends, changing situations, and planned arrangements.",
-              "es": "El presente simple ve todo el paisaje; el presente continuo hace zoom. Muestra la vida mientras se mueve: acciones ahora, situaciones temporales, tendencias, cambios y planes ya acordados."
+              "en": "Present Simple sees the whole landscape; Present Continuous zooms in. It shows life while it is moving, and it does that job in five different situations.",
+              "es": "El presente simple ve todo el paisaje; el presente continuo hace zoom. Muestra la vida mientras se mueve, y lo hace en cinco situaciones distintas."
             }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The flagship test, for action happening right now: 'Can we see the action?' If a camera pointed at the speaker would show it happening live, use Present Continuous.",
+              "es": "La prueba insignia, para la acción que ocurre justo ahora: '¿Podemos ver la acción?' Si una cámara apuntando al hablante la mostraría ocurriendo en vivo, usa el presente continuo."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Purpose · Propósito",
+              "Diagnostic · Pregunta clave",
+              "Example · Ejemplo"
+            ],
+            "rows": [
+              ["1. Right now · Ahora mismo", "Can we see the action? · ¿Podemos ver la acción?", "She's cooking dinner right now."],
+              ["2. Temporary situation · Situación temporal", "Is this true only for now? · ¿Es cierto solo por ahora?", "I'm living in Bogotá — just for six months."],
+              ["3. Current trend · Tendencia actual", "Is society itself moving? · ¿Se está moviendo la sociedad misma?", "Cities are becoming larger."],
+              ["4. Changing situation · Situación cambiante", "Is life moving in this direction for me? · ¿Mi vida se mueve en esta dirección?", "My English is improving."],
+              ["5. Planned arrangement · Plan ya acordado", "Is it already on the calendar? · ¿Ya está en la agenda?", "I'm meeting Sarah tomorrow."]
+            ]
           },
           {
             "kind": "callout",
@@ -200,8 +236,36 @@
           {
             "kind": "p",
             "text": {
-              "en": "Present Perfect is not really a past tense. It builds a bridge from the past into the present: 'this happened before, but I want you to think about now.' Use it for life experience, change over time, present results and unfinished time.",
-              "es": "El presente perfecto no es realmente un tiempo pasado. Construye un puente del pasado al presente: 'esto pasó antes, pero quiero que pienses en el ahora.' Úsalo para experiencias de vida, cambios en el tiempo, resultados presentes y tiempo sin terminar."
+              "en": "Present Perfect is not really a past tense. It builds a bridge from the past into the present, and it does that job for four communicative purposes.",
+              "es": "El presente perfecto no es realmente un tiempo pasado. Construye un puente del pasado al presente, y lo hace con cuatro propósitos comunicativos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The bridge test: 'Why does my listener need to know this today?' If it affects the present, use Present Perfect. If they don't need to know for today, use Past Simple.",
+              "es": "La prueba del puente: '¿Por qué mi interlocutor necesita saber esto hoy?' Si afecta el presente, usa presente perfecto. Si no necesita saberlo para hoy, usa pasado simple."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Purpose · Propósito",
+              "Example · Ejemplo",
+              "Why now · Por qué importa hoy"
+            ],
+            "rows": [
+              ["Life experience · Experiencia de vida", "I've visited fifteen countries.", "No specific date — it's part of who you are today."],
+              ["Change over time · Cambio en el tiempo", "Prices have increased a lot.", "Comparing then vs now."],
+              ["Present results · Resultado presente", "I lost my keys yesterday (finished story) vs I've lost my keys (still no keys).", "The result is still true right now."],
+              ["Unfinished time · Tiempo sin terminar", "I haven't finished the report yet.", "The time period (today, this week) is still open."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Two mini-tests find the border with Past Simple. The Reporter Test: Reporter One tells history (Past Simple); Reporter Two explains today's situation (Present Perfect). The Experience Test: if they asked about your life, use Present Perfect; if about one specific past occasion, use Past Simple.",
+              "es": "Dos mini-pruebas marcan la frontera con el pasado simple. La prueba del reportero: el Reportero Uno cuenta historia (pasado simple); el Reportero Dos explica la situación de hoy (presente perfecto). La prueba de la experiencia: si preguntaron por tu vida, presente perfecto; si preguntaron por una ocasión pasada específica, pasado simple."
             }
           },
           {
@@ -270,15 +334,43 @@
           {
             "kind": "p",
             "text": {
-              "en": "This tense answers: 'What has been happening over time until now?' It shows the journey, not the destination — ongoing activities, recent activity with visible evidence, repeated effort and temporary situations.",
-              "es": "Este tiempo responde: '¿Qué ha estado pasando a lo largo del tiempo hasta ahora?' Muestra el recorrido, no el destino — actividades en curso, actividad reciente con evidencia visible, esfuerzo repetido y situaciones temporales."
+              "en": "This tense answers: 'What has been happening over time until now?' It shows the journey, not the destination, across four communicative purposes.",
+              "es": "Este tiempo responde: '¿Qué ha estado pasando a lo largo del tiempo hasta ahora?' Muestra el recorrido, no el destino, en cuatro propósitos comunicativos."
             }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The decision question: 'Do I want people to notice what I achieved — or what I've been doing?' Achievement points to Present Perfect; activity points to Present Perfect Continuous.",
+              "es": "La pregunta clave: '¿Quiero que la gente note lo que logré, o lo que he estado haciendo?' Logro apunta al presente perfecto; actividad apunta al continuo."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Purpose · Propósito",
+              "Example · Ejemplo",
+              "Evidence/note · Evidencia/nota"
+            ],
+            "rows": [
+              ["Ongoing activity · Actividad en curso", "I've been studying English for three years.", "Still going — no end in sight."],
+              ["Recent activity, visible evidence · Actividad reciente, evidencia visible", "You've been crying.", "How do we know? Red eyes / heavy breathing / paint on his clothes — evidence of the process."],
+              ["Repeated behaviour · Comportamiento repetido", "I've been calling you all day.", "Same action, many times."],
+              ["Temporary ongoing situation · Situación temporal en curso", "I've been working from home this month.", "True for now, not forever."]
+            ]
           },
           {
             "kind": "callout",
             "text": {
               "en": "Present Perfect shows the certificate (result); Present Perfect Continuous shows your tired hands (process). 'I've cleaned the kitchen' vs 'I've been cleaning the kitchen.'",
               "es": "El presente perfecto muestra el certificado (resultado); el continuo muestra tus manos cansadas (proceso). 'I've cleaned the kitchen' vs 'I've been cleaning the kitchen.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "A useful checklist when in doubt: is it a completed result? Do I care about time/effort/repetition/development? Is it a finished achievement or an ongoing journey? Is the verb stative (then stay in plain Perfect)?",
+              "es": "Una lista útil en caso de duda: ¿es un resultado completado? ¿Me importa el tiempo/esfuerzo/repetición/desarrollo? ¿Es un logro terminado o un recorrido en curso? ¿El verbo es de estado (entonces se queda en el perfecto simple)?"
             }
           },
           {
@@ -354,8 +446,8 @@
           {
             "kind": "callout",
             "text": {
-              "en": "For a life that has changed, English adds two extra tools: 'used to' (past states and habits no longer true — 'I used to live in Madrid') and 'would' (repeated actions inside a story — 'Every summer we'd visit my grandparents').",
-              "es": "Para una vida que ha cambiado, el inglés añade dos herramientas: 'used to' (estados y hábitos pasados que ya no son ciertos — 'I used to live in Madrid') y 'would' (acciones repetidas dentro de una historia — 'Every summer we'd visit my grandparents')."
+              "en": "For a life that has changed, English adds two extra tools: 'used to' and 'would'. Each has its own diagnostic question and rules — see the dedicated topic below.",
+              "es": "Para una vida que ha cambiado, el inglés añade dos herramientas: 'used to' y 'would'. Cada una tiene su propia pregunta diagnóstica y reglas — ve el tema dedicado a continuación."
             }
           },
           {
@@ -391,7 +483,8 @@
         "related": [
           "past-continuous",
           "present-perfect",
-          "past-perfect"
+          "past-perfect",
+          "past-used-to-would"
         ],
         "items": [
           "pst-saw",
@@ -399,6 +492,74 @@
           "pst-ended",
           "pst-usedto",
           "pst-sat"
+        ]
+      },
+      {
+        "id": "past-used-to-would",
+        "title": {
+          "en": "Used To & Would — life before",
+          "es": "Used to y would — la vida de antes"
+        },
+        "group": "past",
+        "coreIdea": {
+          "en": "Used to and would both replay a past that's over now — but only used to can describe states; would is for repeated actions only.",
+          "es": "Used to y would repiten un pasado que ya terminó — pero solo used to puede describir estados; would es solo para acciones repetidas."
+        },
+        "source": "Past Tense Masterclass.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Past Simple tells a single finished event. When the story is 'my life used to look different', English reaches for two extra tools instead — each with its own formula and its own diagnostic question.",
+              "es": "El pasado simple cuenta un solo evento terminado. Cuando la historia es 'mi vida se veía distinta antes', el inglés usa dos herramientas adicionales — cada una con su propia fórmula y su propia pregunta diagnóstica."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Tool · Herramienta",
+              "Diagnostic · Pregunta",
+              "Covers · Cubre",
+              "Example · Ejemplo"
+            ],
+            "rows": [
+              ["used to + base verb", "Was this true before, but not now? · ¿Era cierto antes, pero ya no?", "habits, routines, states, beliefs · hábitos, rutinas, estados, creencias", "I used to live in Madrid."],
+              ["would + base verb", "Was this a repeated action, never a state? · ¿Fue una acción repetida, nunca un estado?", "repeated actions only · solo acciones repetidas", "Every Friday we'd go dancing."]
+            ]
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'Would' cannot express states: 'We'd live in London' is wrong — say 'We used to live in London.' Spelling trap in the affirmative: it's 'used to' with -d ('I used to play'), never 'I use to play'; but after did/didn't the -d disappears: 'I didn't use to like coffee', never 'I didn't used to.'",
+              "es": "'Would' no puede expresar estados: 'We'd live in London' está mal — di 'We used to live in London.' Trampa de ortografía en afirmativo: es 'used to' con -d ('I used to play'), nunca 'I use to play'; pero después de did/didn't la -d desaparece: 'I didn't use to like coffee', nunca 'I didn't used to.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I used to live in Madrid.",
+            "es": "Antes vivía en Madrid."
+          },
+          {
+            "en": "Every Friday we'd go dancing.",
+            "es": "Cada viernes salíamos a bailar."
+          },
+          {
+            "en": "She used to believe in ghosts.",
+            "es": "Antes creía en fantasmas."
+          },
+          {
+            "en": "We used to play in this park — now it's a parking lot.",
+            "es": "Antes jugábamos en este parque — ahora es un parqueadero."
+          }
+        ],
+        "related": [
+          "past-simple",
+          "past-continuous"
+        ],
+        "items": [
+          "pstuw-usedto",
+          "pstuw-usetospelling"
         ]
       },
       {
@@ -1650,6 +1811,50 @@
         "tags": [
           "sequence",
           "irregular"
+        ]
+      },
+      {
+        "id": "pstuw-usedto",
+        "topic": "past-used-to-would",
+        "type": "choice",
+        "prompt": {
+          "en": "When I was a child, I ___ in Madrid — not anymore.",
+          "es": "When I was a child, I ___ in Madrid — ya no."
+        },
+        "answer": "used to live",
+        "distractors": [
+          "would live"
+        ],
+        "why": {
+          "en": "'would' cannot express a state like 'live' — only 'used to' can talk about past states.",
+          "es": "'would' no puede expresar un estado como 'live' — solo 'used to' habla de estados pasados."
+        },
+        "tags": [
+          "used-to",
+          "would",
+          "error"
+        ]
+      },
+      {
+        "id": "pstuw-usetospelling",
+        "topic": "past-used-to-would",
+        "type": "choice",
+        "prompt": {
+          "en": "I ___ play football every weekend when I was a kid.",
+          "es": "I ___ play football every weekend when I was a kid."
+        },
+        "answer": "used to",
+        "distractors": [
+          "use to"
+        ],
+        "why": {
+          "en": "The affirmative form is spelled 'used to' with -d; 'use to' (no -d) only appears after did/didn't: 'I didn't use to like coffee.'",
+          "es": "La forma afirmativa se escribe 'used to' con -d; 'use to' (sin -d) solo aparece después de did/didn't: 'I didn't use to like coffee.'"
+        },
+        "tags": [
+          "used-to",
+          "spelling",
+          "error"
         ]
       },
       {

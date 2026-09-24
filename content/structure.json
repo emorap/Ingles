@@ -54,8 +54,22 @@
           {
             "kind": "callout",
             "text": {
+              "en": "Run the swap as a fixed four-step checklist: 1) find the object of the active sentence, 2) make it the new subject, 3) add the correct form of BE + V3, 4) decide whether to add 'by + agent' (only if the doer matters). Apply the four steps to 'The chef cooks the meal' and you land exactly on 'The meal is cooked (by the chef).'",
+              "es": "Aplica el intercambio como una lista fija de cuatro pasos: 1) identifica el objeto de la oración activa, 2) conviértelo en el nuevo sujeto, 3) añade la forma correcta de BE + V3, 4) decide si agregas 'by + agente' (solo si quien actúa importa). Aplica los cuatro pasos a 'The chef cooks the meal' y llegas exactamente a 'The meal is cooked (by the chef).'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
               "en": "Four real reasons to choose the passive: focus on the result ('A new law was passed yesterday'), the doer is unknown or irrelevant ('English is spoken in many countries'), a formal/scientific register ('The results were analysed carefully'), and softening blame ('A mistake was made').",
               "es": "Cuatro razones reales para elegir la pasiva: enfocarse en el resultado ('A new law was passed yesterday'), el actor es desconocido o irrelevante ('English is spoken in many countries'), un registro formal/científico ('The results were analysed carefully'), y suavizar la culpa ('A mistake was made')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Before you build the sentence, run this quick decision check: 1) Is the doer unknown, obvious or unimportant? → use the passive. 2) Do you want the result to be the topic? → use the passive. 3) Is the doer the actual point of the sentence? → keep the active voice. Three yes/no questions, one instant decision.",
+              "es": "Antes de armar la oración, corre esta prueba rápida: 1) ¿Quien actúa es desconocido, obvio o poco importante? → usa la pasiva. 2) ¿Quieres que el resultado sea el tema? → usa la pasiva. 3) ¿Quien actúa es el punto central de la oración? → mantén la voz activa. Tres preguntas de sí o no, una decisión inmediata."
             }
           },
           {
@@ -70,6 +84,13 @@
             "text": {
               "en": "Spanish impersonal 'se' does NOT translate word-by-word. 'Se vendieron todas las entradas' is never 'It was sold all the tickets' — say 'All the tickets were sold.' And 'Se dice que...' is never 'It says that...' — say 'It is said that...'.",
               "es": "El 'se' impersonal del español NO se traduce palabra por palabra. 'Se vendieron todas las entradas' nunca es 'It was sold all the tickets' — se dice 'All the tickets were sold.' Y 'Se dice que...' nunca es 'It says that...' — se dice 'It is said that...'."
+            }
+          },
+          {
+            "kind": "quote",
+            "text": {
+              "en": "Remember: the passive voice isn't about hiding who did it — it's about choosing what the sentence is really about.",
+              "es": "Recuerda: la voz pasiva no busca esconder quién lo hizo — busca elegir de qué se trata realmente la oración."
             }
           }
         ],
@@ -125,6 +146,13 @@
             "text": {
               "en": "Walk the tenses like a costume rack: am/is/are + V3 (present — 'The room is cleaned'), was/were + V3 (past — 'It was opened'), will be + V3 (future — 'It will be done'), has/have been + V3 (present perfect — 'It has been completed'), had been + V3 (past perfect — 'It had been repaired'), will have been + V3 (future perfect — 'It will have been finished'). The mask (V3) never changes; only the BE costume does.",
               "es": "Recorre los tiempos como un perchero de vestuario: am/is/are + V3 (presente — 'The room is cleaned'), was/were + V3 (pasado — 'It was opened'), will be + V3 (futuro — 'It will be done'), has/have been + V3 (presente perfecto — 'It has been completed'), had been + V3 (pasado perfecto — 'It had been repaired'), will have been + V3 (futuro perfecto — 'It will have been finished'). La máscara (V3) nunca cambia; solo cambia el vestuario de BE."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "One more costume worth knowing: 'going to' + be + V3 for planned future actions — 'A new mall is going to be built.' Practical guardrail: continuous-perfect passives (future continuous, past/present/future perfect continuous) are grammatically possible but almost never used in real English — rewrite them actively instead of forcing them.",
+              "es": "Un vestuario más que vale la pena conocer: 'going to' + be + V3 para acciones futuras planeadas — 'A new mall is going to be built.' Advertencia práctica: las pasivas continuas-perfectas (futuro continuo, pasado/presente/futuro perfecto continuo) son posibles gramaticalmente pero casi nunca se usan en inglés real — mejor reescríbelas en voz activa en lugar de forzarlas."
             }
           },
           {
@@ -201,6 +229,13 @@
             "text": {
               "en": "Direct speech is a live broadcast; reported speech is the recording played back later, one step behind. Quotation marks disappear, 'that' becomes optional, and because the reporting verb ('said') is already in the past, it pulls the reported clause one step further back too: present → past, present continuous → past continuous, past simple → past perfect, present perfect → past perfect, will → would, can → could, may → might.",
               "es": "El discurso directo es una transmisión en vivo; el estilo indirecto es la grabación reproducida después, un paso atrás. Las comillas desaparecen, 'that' se vuelve opcional, y como el verbo que reporta ('said') ya está en pasado, arrastra la cláusula reportada un paso más hacia atrás también: presente → pasado, presente continuo → pasado continuo, pasado simple → pasado perfecto, presente perfecto → pasado perfecto, will → would, can → could, may → might."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Two more rows complete the tape: 'must' → 'had to' (it can also stay 'must' for a strong deduction) — 'He must leave' → 'He said he had to leave.' And \"I'm going to...\" → 'was going to' — 'I'm going to call her' → 'She said she was going to call her.'",
+              "es": "Dos filas más completan la grabación: 'must' → 'had to' (también puede quedarse en 'must' para una deducción fuerte) — 'He must leave' → 'He said he had to leave.' Y \"I'm going to...\" → 'was going to' — 'I'm going to call her' → 'She said she was going to call her.'"
             }
           },
           {
@@ -439,6 +474,19 @@
             }
           },
           {
+            "kind": "table",
+            "headers": [
+              "Pronoun · Pronombre",
+              "Two sentences · Dos oraciones",
+              "Combined · Combinada"
+            ],
+            "rows": [
+              ["who", "I met a woman. She is an engineer.", "I met a woman who is an engineer."],
+              ["whose", "I know a man. His car was stolen.", "I know a man whose car was stolen."],
+              ["where", "This is the café. We met there.", "This is the café where we met."]
+            ]
+          },
+          {
             "kind": "callout",
             "text": {
               "en": "In defining clauses, you can drop the pronoun when it's the object of the clause: 'The movie (that) I watched was amazing.' You cannot drop it when it's the subject: 'The man who lives next door...' ('who' cannot disappear here).",
@@ -510,6 +558,13 @@
           {
             "kind": "callout",
             "text": {
+              "en": "Two words worth separating: cohesion is how well your sentences link together — connectors are one of the main tools for that; coherence is the overall clarity of your ideas — a coherent paragraph develops one central idea in a logical order. Grammar builds the bricks; connectors build the bridges between them.",
+              "es": "Dos palabras que vale la pena separar: cohesión es qué tan bien se enlazan tus oraciones — los conectores son una de las herramientas principales para eso; coherencia es la claridad general de tus ideas — un párrafo coherente desarrolla una sola idea central en un orden lógico. La gramática construye los ladrillos; los conectores construyen los puentes entre ellos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
               "en": "Memory trick: 'because' introduces a clause with a subject and a verb ('because it rained'); 'because of' and 'due to' introduce a noun ('because of the rain', 'due to heavy fog').",
               "es": "Truco de memoria: 'because' introduce una cláusula con sujeto y verbo ('because it rained'); 'because of' y 'due to' introducen un sustantivo ('because of the rain', 'due to heavy fog')."
             }
@@ -519,6 +574,30 @@
             "text": {
               "en": "Match the register to the situation: 'also' and 'but' for conversation, 'in addition' and 'however' for neutral emails, 'furthermore/moreover' and 'nevertheless' for reports and essays. Using 'furthermore' in a casual chat sounds as odd as 'plus' in a formal report.",
               "es": "Ajusta el registro a la situación: 'also' y 'but' para la conversación, 'in addition' y 'however' para correos neutrales, 'furthermore/moreover' y 'nevertheless' para informes y ensayos. Usar 'furthermore' en una charla casual suena tan raro como 'plus' en un informe formal."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "#",
+              "Family · Familia",
+              "Ask yourself · Pregúntate"
+            ],
+            "rows": [
+              ["1", "Addition · Adición", "What else?"],
+              ["2", "Contrast · Contraste", "How is this different?"],
+              ["3", "Reason · Razón", "Why?"],
+              ["4", "Result · Resultado", "What happened because of that?"],
+              ["5", "Example · Ejemplo", "Can I give an example?"],
+              ["6", "Sequence · Secuencia", "What comes next?"],
+              ["7", "Summary · Resumen", "What is my main point?"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "These seven families are a closed set — every English connector belongs to one of them. First identify which relationship you need; only then pick the register (casual, neutral or formal) that fits the situation.",
+              "es": "Estas siete familias son un conjunto cerrado — todo conector en inglés pertenece a una de ellas. Primero identifica qué relación necesitas; solo después elige el registro (casual, neutral o formal) que encaje con la situación."
             }
           },
           {
@@ -602,6 +681,13 @@
             "text": {
               "en": "More connectors do not mean better English. 'Furthermore, I like coffee. Furthermore, I enjoy tea. Furthermore, I like juice' is repetitive and unnatural → vary them and only connect where a real logical relationship exists: 'I enjoy coffee. In addition, I also drink tea. Overall, I simply enjoy hot drinks.'",
               "es": "Más conectores no significan mejor inglés. 'Furthermore, I like coffee. Furthermore, I enjoy tea. Furthermore, I like juice' es repetitivo y poco natural → varíalos y conecta solo donde exista una relación lógica real: 'I enjoy coffee. In addition, I also drink tea. Overall, I simply enjoy hot drinks.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Before choosing any connector — from either family — run the Golden Rule: 1) What relationship am I showing? 2) How formal is this situation? 3) Is there a more natural alternative? Answer those three, and you'll almost always land on the right connector.",
+              "es": "Antes de elegir cualquier conector — de cualquier familia — corre la Regla de Oro: 1) ¿Qué relación estoy mostrando? 2) ¿Qué tan formal es la situación? 3) ¿Hay una alternativa más natural? Responde esas tres preguntas y casi siempre acertarás con el conector correcto."
             }
           }
         ],

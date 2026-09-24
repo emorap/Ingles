@@ -47,8 +47,26 @@
           {
             "kind": "p",
             "text": {
-              "en": "Formula: If + Present Simple, Present Simple. Both halves stay in the present — like a machine that has no other setting. Use it for scientific facts, general truths, habits, and instructions: whenever the result is guaranteed, every single time.",
-              "es": "Fórmula: If + presente simple, presente simple. Las dos mitades se quedan en presente — como una máquina que no tiene otro modo. Se usa para hechos científicos, verdades generales, hábitos e instrucciones: cuando el resultado está garantizado, siempre."
+              "en": "Formula: If + Present Simple, Present Simple. Both halves stay in the present — like a machine that has no other setting. Chapter 2 names five distinct jobs for this pattern: scientific facts, general truths, habits, rules and instructions, and cause and effect — whenever the result is guaranteed, every single time.",
+              "es": "Fórmula: If + presente simple, presente simple. Las dos mitades se quedan en presente — como una máquina que no tiene otro modo. El capítulo nombra cinco trabajos distintos para este patrón: hechos científicos, verdades generales, hábitos, reglas e instrucciones, y causa y efecto — cuando el resultado está garantizado, siempre."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": ["Job / Trabajo", "Example / Ejemplo"],
+            "rows": [
+              ["🔬 Scientific Facts / Hechos científicos", "Water boils if you heat it to 100°C."],
+              ["🌍 General Truths / Verdades generales", "If people don't eat, they get hungry."],
+              ["🚶 Habits / Hábitos", "If I wake up early, I go for a run."],
+              ["📋 Rules and Instructions / Reglas e instrucciones", "If the alarm rings, everyone leaves the building."],
+              ["⚙️ Cause and Effect / Causa y efecto", "Plants die if they don't get water."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Memory tip: ask yourself 'Does this happen every time?' If the answer is yes, you're in Zero-Conditional territory — no matter which of the five jobs it is.",
+              "es": "Truco para recordar: pregúntate '¿Esto pasa siempre?' Si la respuesta es sí, estás en territorio del condicional cero — sin importar cuál de los cinco trabajos sea."
             }
           },
           {
@@ -92,9 +110,20 @@
           {
             "kind": "p",
             "text": {
-              "en": "Formula: If + Present Simple, will + base verb. The 'if' clause names a real condition that could genuinely happen; the 'will' clause is the real consequence. Use it for predictions, promises, warnings, and on-the-spot decisions.",
-              "es": "Fórmula: If + presente simple, will + verbo base. La cláusula 'if' nombra una condición real que de verdad podría pasar; la cláusula con 'will' es la consecuencia real. Se usa para predicciones, promesas, advertencias y decisiones tomadas en el momento."
+              "en": "Formula: If + Present Simple, will + base verb. The 'if' clause names a real condition that could genuinely happen; the 'will' clause is the real consequence. Chapter 3 names five jobs for this pattern: future possibilities, predictions, promises, warnings, and plans and decisions.",
+              "es": "Fórmula: If + presente simple, will + verbo base. La cláusula 'if' nombra una condición real que de verdad podría pasar; la cláusula con 'will' es la consecuencia real. El capítulo nombra cinco trabajos para este patrón: posibilidades futuras, predicciones, promesas, advertencias, y planes y decisiones."
             }
+          },
+          {
+            "kind": "table",
+            "headers": ["Job / Trabajo", "Example / Ejemplo"],
+            "rows": [
+              ["🔮 Future Possibilities / Posibilidades futuras", "If the weather is nice, we'll go to the beach."],
+              ["📈 Predictions / Predicciones", "If prices keep rising, people will spend less."],
+              ["🤝 Promises / Promesas", "If you help me move, I'll buy you lunch."],
+              ["⚠️ Warnings / Advertencias", "If you touch that wire, you'll get a shock."],
+              ["📅 Plans and Decisions / Planes y decisiones", "If it's sunny tomorrow, I'll work from the park."]
+            ]
           },
           {
             "kind": "callout",
@@ -144,8 +173,26 @@
           {
             "kind": "p",
             "text": {
-              "en": "Formula: If + Past Simple, would + base verb. The past tense doesn't mean past time here — it means distance from reality. You're describing an imaginary present or future: dreams, hypotheses, advice, opinions.",
-              "es": "Fórmula: If + pasado simple, would + verbo base. El pasado aquí no significa tiempo pasado — significa distancia de la realidad. Estás describiendo un presente o futuro imaginario: sueños, hipótesis, consejos, opiniones."
+              "en": "Formula: If + Past Simple, would + base verb. The past tense doesn't mean past time here — it means distance from reality. Chapter 4 names five jobs for this pattern: imaginary present situations, imaginary future situations, dreams and ambitions, giving advice, and opinions and debate.",
+              "es": "Fórmula: If + pasado simple, would + verbo base. El pasado aquí no significa tiempo pasado — significa distancia de la realidad. El capítulo nombra cinco trabajos para este patrón: situaciones presentes imaginarias, situaciones futuras imaginarias, sueños y ambiciones, dar consejos, y opiniones y debate."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": ["Job / Trabajo", "Example / Ejemplo"],
+            "rows": [
+              ["🪞 Imaginary Present Situations / Situaciones presentes imaginarias", "If I were taller, I'd play basketball."],
+              ["🔭 Imaginary Future Situations / Situaciones futuras imaginarias", "If I won a million dollars tomorrow, I'd buy a house."],
+              ["🌠 Dreams and Ambitions / Sueños y ambiciones", "If I had more money, I would travel the world."],
+              ["🧭 Giving Advice / Dar consejos", "If I were you, I'd apologize."],
+              ["💬 Opinions and Debate / Opiniones y debate", "If people worked less, they would be happier."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Present vs future, both imaginary: 'If I were taller...' pictures an alternate present (a trait that never changes); 'If I won a million dollars tomorrow...' pictures a single imagined future event. Same formula, different imaginary moment.",
+              "es": "Presente vs futuro, ambos imaginarios: 'If I were taller...' dibuja un presente alterno (un rasgo que nunca cambia); 'If I won a million dollars tomorrow...' dibuja un solo evento futuro imaginado. Misma fórmula, momento imaginario distinto."
             }
           },
           {
@@ -196,8 +243,26 @@
           {
             "kind": "p",
             "text": {
-              "en": "Formula: If + Past Perfect, would have + past participle. This is the grammar of regret: an imaginary past that never happened, used for missed opportunities, criticism, and 'what if' speculation about history — nothing here can actually be changed.",
-              "es": "Fórmula: If + pasado perfecto, would have + participio pasado. Es la gramática del arrepentimiento: un pasado imaginario que nunca ocurrió, usado para oportunidades perdidas, críticas, y especulación tipo '¿y si...?' sobre la historia — aquí nada se puede cambiar de verdad."
+              "en": "Formula: If + Past Perfect, would have + past participle. This is the grammar of regret: an imaginary past that never happened. Chapter 5 names five jobs for it: regret, missed opportunities, criticism, historical speculation, and learning from experience — nothing here can actually be changed.",
+              "es": "Fórmula: If + pasado perfecto, would have + participio pasado. Es la gramática del arrepentimiento: un pasado imaginario que nunca ocurrió. El capítulo nombra cinco trabajos para esto: arrepentimiento, oportunidades perdidas, crítica, especulación histórica, y aprender de la experiencia — aquí nada se puede cambiar de verdad."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": ["Job / Trabajo", "Example / Ejemplo"],
+            "rows": [
+              ["😔 Regret / Arrepentimiento", "If I had known you were coming, I would have cooked dinner."],
+              ["🚪 Missed Opportunities / Oportunidades perdidas", "If I had applied earlier, I would have gotten the scholarship."],
+              ["🗣️ Criticism / Crítica", "If you had listened to me, you wouldn't have lost the money."],
+              ["📜 Historical Speculation / Especulación histórica", "If the treaty hadn't failed, the war might not have happened."],
+              ["🌱 Learning from Experience / Aprender de la experiencia", "If I had known what I know now, I would have made different decisions."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The chapter's own diagnostic question: 'What would have happened if the past had been different?' If that's what you're answering, about a sealed past nothing can change, you're in Third-Conditional territory.",
+              "es": "La pregunta diagnóstica propia del capítulo: '¿Qué habría pasado si el pasado hubiera sido distinto?' Si eso es lo que estás respondiendo, sobre un pasado sellado que nada puede cambiar, estás en territorio del tercer condicional."
             }
           },
           {
@@ -227,7 +292,8 @@
           { "en": "If she had studied medicine, she would have become a doctor.", "es": "Si ella hubiera estudiado medicina, se habría convertido en médica." },
           { "en": "If they had left earlier, they wouldn't have missed the flight.", "es": "Si hubieran salido más temprano, no habrían perdido el vuelo." },
           { "en": "If I hadn't broken my leg, I would have run the marathon.", "es": "Si no me hubiera roto la pierna, habría corrido el maratón." },
-          { "en": "Would you have forgiven him if he had apologized?", "es": "¿Lo habrías perdonado si él se hubiera disculpado?" }
+          { "en": "Would you have forgiven him if he had apologized?", "es": "¿Lo habrías perdonado si él se hubiera disculpado?" },
+          { "en": "If I had known what I know now, I would have made different decisions.", "es": "Si hubiera sabido lo que sé ahora, habría tomado decisiones distintas." }
         ],
         "related": ["second-conditional", "mixed-conditionals", "wish-if-only"],
         "items": ["cnd-third-known", "cnd-third-came", "cnd-third-earlier", "cnd-third-leg", "cnd-third-forgive"]
@@ -345,8 +411,27 @@
           {
             "kind": "p",
             "text": {
-              "en": "'Unless' means 'if...not' — it names the one thing that would block the result. 'Unless you hurry, you'll miss the train' = 'If you don't hurry, you'll miss the train.'",
-              "es": "'Unless' significa 'si...no' — nombra lo único que bloquearía el resultado. 'Unless you hurry, you'll miss the train' = 'If you don't hurry, you'll miss the train.'"
+              "en": "Negative Conditions: 'unless' means 'if...not' — it names the one thing that would block the result ('Unless you hurry, you'll miss the train' = 'If you don't hurry, you'll miss the train'). 'Otherwise' does similar work from the result side: it names the negative consequence that follows if you ignore the instruction ('Leave now, otherwise you'll be late').",
+              "es": "Condiciones negativas: 'unless' significa 'si...no' — nombra lo único que bloquearía el resultado ('Unless you hurry, you'll miss the train' = 'If you don't hurry, you'll miss the train'). 'Otherwise' hace un trabajo parecido pero desde el lado del resultado: nombra la consecuencia negativa que sigue si ignoras la instrucción ('Leave now, otherwise you'll be late')."
+            }
+          },
+          {
+            "kind": "table",
+            "headers": ["Category / Categoría", "Expressions / Expresiones", "Example / Ejemplo"],
+            "rows": [
+              ["Negative Conditions / Condiciones negativas", "unless, otherwise", "Leave now, otherwise you'll be late."],
+              ["Requirements & Conditions / Requisitos y condiciones", "provided that, as long as, on condition that", "You can borrow my car provided that you fill up the tank."],
+              ["Imaginary Situations / Situaciones imaginarias", "suppose, supposing, imagine", "Suppose you won the lottery. What would you do?"],
+              ["Unexpected Conditions / Condiciones inesperadas", "even if", "Even if it rains, we're going hiking."],
+              ["Precautions / Precauciones", "in case", "Take your ID in case they ask for it."],
+              ["Alternatives & Formal English / Alternativas e inglés formal", "whether...or", "I'll go whether you come or not."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Imaginary Situations: 'suppose', 'supposing', and 'imagine' open a hypothetical scenario just like 'if', but with a more conversational, story-telling feel. 'Suppose you won the lottery. What would you do?' 'Imagine you could live anywhere in the world.'",
+              "es": "Situaciones imaginarias: 'suppose', 'supposing' e 'imagine' abren un escenario hipotético igual que 'if', pero con un tono más conversacional, de quien cuenta una historia. 'Suppose you won the lottery. What would you do?' 'Imagine you could live anywhere in the world.'"
             }
           },
           {
@@ -376,7 +461,9 @@
           { "en": "You can borrow my car provided that you fill up the tank.", "es": "Puedes tomar prestado mi carro siempre que llenes el tanque." },
           { "en": "I'll go to the party as long as you come with me.", "es": "Iré a la fiesta siempre y cuando vengas conmigo." },
           { "en": "Even if it rains, we're going hiking.", "es": "Aunque llueva, vamos a caminar por la montaña." },
-          { "en": "Take your ID in case they ask for it.", "es": "Lleva tu identificación por si te la piden." }
+          { "en": "Take your ID in case they ask for it.", "es": "Lleva tu identificación por si te la piden." },
+          { "en": "Leave now, otherwise you'll be late.", "es": "Sal ya; de lo contrario, llegarás tarde." },
+          { "en": "Suppose you won the lottery. What would you do?", "es": "Supongamos que te ganas la lotería. ¿Qué harías?" }
         ],
         "related": ["first-conditional", "formal-inversion", "zero-conditional"],
         "items": ["cnd-unless-hurry", "cnd-unless-double-neg", "cnd-unless-evenif", "cnd-unless-incase", "cnd-unless-provided"]

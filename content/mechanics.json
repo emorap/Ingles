@@ -148,6 +148,41 @@
               "en": "Advanced Spanish-speaking learners often avoid contractions completely, hyper-formalizing the language. The result is grammatically correct but rigid and unnatural — like leaving every zipper undone. 'I will send it this afternoon' is correct, but 'I'll send it this afternoon' is what a native speaker actually says.",
               "es": "Los estudiantes avanzados hispanohablantes suelen evitar las contracciones por completo, hiper-formalizando el idioma. El resultado es correcto pero rígido y poco natural — como dejar cada cremallera sin cerrar. 'I will send it this afternoon' es correcto, pero 'I'll send it this afternoon' es lo que un nativo realmente dice."
             }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "Just like future tenses, contraction use is context-driven: the challenge is not the form itself, but choosing the right register for each situation. Run every sentence through this quick diagnostic before you zip it closed or leave it open:",
+              "es": "Igual que con los tiempos futuros, el uso de las contracciones depende del contexto: el reto no es la forma en sí, sino elegir el registro correcto para cada situación. Pasa cada oración por este diagnóstico rápido antes de cerrar la cremallera o dejarla abierta:"
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Context / Contexto",
+              "Contractions? / ¿Contracciones?"
+            ],
+            "rows": [
+              ["Casual speech / habla casual", "Yes / sí"],
+              ["Professional emails / correos profesionales", "Often / a menudo"],
+              ["Academic writing / escritura académica", "No / no"],
+              ["Legal or contracts / documentos legales", "No / no"],
+              ["Marketing and UX / mercadeo y UX", "Yes / sí"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Double contractions such as I'd've (I would have), she shouldn't've (she should not have) and they might've (they might have) are common in fast native speech. Learn to recognise them when listening — Spanish has no equivalent, so they can sound chaotic — but don't try to produce them yourself: even native speakers treat them as risky in writing.",
+              "es": "Las contracciones dobles como I'd've (I would have), she shouldn't've (she should not have) y they might've (they might have) son comunes en el habla nativa rápida. Aprende a reconocerlas al escuchar —el español no tiene equivalente, así que pueden sonar caóticas— pero no intentes producirlas tú mismo: incluso los nativos las consideran riesgosas por escrito."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "English is a stress-timed language: the rhythm falls on stressed words, and contractions help keep that rhythm smooth. 'I will see you tomorrow' sounds stressed and emphatic; 'I'll see you tomorrow' is the neutral, natural flow most sentences actually use.",
+              "es": "El inglés es un idioma de ritmo acentual: el ritmo cae sobre las palabras con énfasis, y las contracciones ayudan a mantener ese ritmo fluido. 'I will see you tomorrow' suena marcado y enfático; 'I'll see you tomorrow' es el flujo neutral y natural que se usa en la mayoría de las oraciones."
+            }
           }
         ],
         "examples": [
@@ -224,6 +259,13 @@
             "text": {
               "en": "There is no perfect rule system — even native speakers learn silent letters through exposure. Because Spanish is highly phonetic (almost every letter is pronounced), Spanish speakers instinctively try to voice every letter, producing errors like a pronounced 't' in 'listen' or a pronounced 'w' in 'write'.",
               "es": "No hay un sistema de reglas perfecto — incluso los nativos aprenden las letras mudas por exposición. Como el español es muy fonético (casi cada letra se pronuncia), los hispanohablantes instintivamente intentan pronunciar cada letra, produciendo errores como una 't' pronunciada en 'listen' o una 'w' pronunciada en 'write'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "A practical way to close the gap: group words by their silent-letter pattern (all the kn- words together), get exposure through listening instead of memorising rules, and try a phonetic transcription of tricky words if that helps you.",
+              "es": "Una forma práctica de cerrar la brecha: agrupa las palabras por su patrón de letra muda (todas las palabras kn- juntas), consigue exposición escuchando en lugar de memorizar reglas, y prueba una transcripción fonética de las palabras difíciles si te ayuda."
             }
           }
         ],
@@ -467,6 +509,27 @@
             "text": {
               "en": "Three literal-translation errors from Spanish: 'Turn to left' instead of 'Turn left' (no preposition after turn), 'Go to straight' instead of 'Go straight' (straight is an adverb, not a noun), and 'In front the bank' instead of 'In front OF the bank' (the 'of' is never optional).",
               "es": "Tres errores de traducción literal desde el español: 'Turn to left' en lugar de 'Turn left' (sin preposición después de turn), 'Go to straight' en lugar de 'Go straight' (straight es adverbio, no sustantivo), y 'In front the bank' en lugar de 'In front OF the bank' (el 'of' nunca es opcional)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The framework's bookends are the easiest to skip: name the starting point before giving any movement ('From the main entrance...') and close with a confirmation check ('Does that make sense?') so the listener can flag confusion before walking the wrong way.",
+              "es": "Los extremos del marco son los más fáciles de omitir: nombra el punto de inicio antes de dar cualquier movimiento ('From the main entrance...') y cierra con una pregunta de confirmación ('Does that make sense?') para que quien escucha pueda señalar confusión antes de caminar en la dirección equivocada."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "Receiving directions is its own skill, not just the mirror of giving them. In fast speech, words blend together, so focus on verbs, sequence words and landmarks, and let small grammar words go. When something is unclear, ask directly: 'Sorry, could you repeat that?', 'Is that before or after the bank?', or 'Do you mean the first or second street?'",
+              "es": "Recibir direcciones es una destreza propia, no solo el espejo de darlas. En el habla rápida las palabras se mezclan, así que concéntrate en los verbos, las palabras de secuencia y las referencias, y deja pasar las palabras de gramática pequeñas. Cuando algo no quede claro, pregunta directamente: 'Sorry, could you repeat that?', 'Is that before or after the bank?', o 'Do you mean the first or second street?'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Directions shift register in specific real-world settings — office, airport, hospital — where the landmarks are corridors, signs and floors instead of streets: 'From reception, go straight down the corridor, then take the second door on your right'; 'Go through security, then follow the signs for departures'; 'Take the lift to the third floor, then turn left'.",
+              "es": "Las direcciones cambian de registro en entornos reales específicos —oficina, aeropuerto, hospital— donde las referencias son corredores, señales y pisos en lugar de calles: 'From reception, go straight down the corridor, then take the second door on your right'; 'Go through security, then follow the signs for departures'; 'Take the lift to the third floor, then turn left'."
             }
           }
         ],

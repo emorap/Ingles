@@ -426,6 +426,13 @@
             }
           },
           {
+            "kind": "callout",
+            "text": {
+              "en": "The costume has one more job besides being a noun: softening the message. A gerund can land less bluntly and more professionally than a flatter phrasing — 'I suggest changing the strategy' sounds more diplomatic than a blunter command about the same idea.",
+              "es": "El disfraz tiene un trabajo más además de hacer de sustantivo: suavizar el mensaje. Un gerundio puede aterrizar menos directo y más profesional que una frase más tajante — 'I suggest changing the strategy' suena más diplomático que una orden más directa sobre la misma idea."
+            }
+          },
+          {
             "kind": "pitfall",
             "text": {
               "en": "Because the infinitive is the 'thinking form' of the verb in Spanish, learners often drop the -ing costume right after a preposition ('interested in learn' or 'interested to learn'). After a preposition, only -ing survives — never the bare verb, never 'to + verb'.",
@@ -453,6 +460,10 @@
           {
             "en": "Having finished the report, he sent it immediately.",
             "es": "Habiendo terminado el informe, lo envió de inmediato."
+          },
+          {
+            "en": "I suggest changing the strategy.",
+            "es": "Sugiero cambiar la estrategia. (suena más suave y profesional que una orden directa)"
           }
         ],
         "related": [
@@ -475,8 +486,8 @@
         },
         "group": "get",
         "coreIdea": {
-          "en": "GET is a Swiss-army knife verb — the same four letters open a different blade (obtain, become, arrive, understand, buy) depending only on what word comes right after it.",
-          "es": "GET es un verbo navaja suiza — las mismas cuatro letras abren una hoja distinta (obtener, volverse, llegar, entender, comprar) dependiendo solo de la palabra que viene justo después."
+          "en": "GET is a Swiss-army knife verb — the same four letters open a different blade (obtain, become, arrive, understand, buy, bring, experience) depending only on what word comes right after it.",
+          "es": "GET es un verbo navaja suiza — las mismas cuatro letras abren una hoja distinta (obtener, volverse, llegar, entender, comprar, traer, experimentar) dependiendo solo de la palabra que viene justo después."
         },
         "source": "Understanding “GET”.pdf",
         "explanation": [
@@ -485,6 +496,13 @@
             "text": {
               "en": "Get + noun opens the 'obtain / receive / buy' blade: 'I got a promotion', 'I got a new car'. Get + adjective opens 'become': 'It's getting dark', 'I get tired easily'. Get + place opens 'arrive': 'What time did you get home?'. Get alone, in a question, can even open 'understand': 'Do you get what I mean?'.",
               "es": "Get + sustantivo abre la hoja de 'obtener / recibir / comprar': 'I got a promotion', 'I got a new car'. Get + adjetivo abre 'volverse': 'It's getting dark', 'I get tired easily'. Get + lugar abre 'llegar': 'What time did you get home?'. Get solo, en una pregunta, puede incluso abrir 'entender': 'Do you get what I mean?'."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "Two more blades close the set. Get + person + object opens 'bring/fetch' — go and get something for someone: 'Could you get me a glass of water?' 'Could you get my bag from the car?'. Get + illness or misfortune noun opens 'experience/suffer' — to be affected by something: 'I got a cold last week.' 'He got a shock when he saw the bill.'",
+              "es": "Dos hojas más cierran el set. Get + persona + objeto abre 'traer / ir a buscar' — ir y conseguir algo para alguien: 'Could you get me a glass of water?' 'Could you get my bag from the car?'. Get + sustantivo de enfermedad o desgracia abre 'experimentar/sufrir' — verse afectado por algo: 'I got a cold last week.' 'He got a shock when he saw the bill.'"
             }
           },
           {
@@ -522,6 +540,14 @@
           {
             "en": "I got used to the new schedule.",
             "es": "Me acostumbré al nuevo horario."
+          },
+          {
+            "en": "Could you get me a glass of water?",
+            "es": "¿Podrías traerme un vaso de agua?"
+          },
+          {
+            "en": "I got a cold last week and stayed home.",
+            "es": "Me enfermé de gripa la semana pasada y me quedé en casa."
           }
         ],
         "related": [
@@ -533,7 +559,8 @@
           "vbf-get1-become",
           "vbf-get1-getit",
           "vbf-get1-usedto",
-          "vbf-get1-gotacold"
+          "vbf-get1-gotacold",
+          "vbf-get1-bringfetch"
         ]
       },
       {
@@ -1328,6 +1355,27 @@
         },
         "tags": [
           "experience"
+        ]
+      },
+      {
+        "id": "vbf-get1-bringfetch",
+        "topic": "get-core-meanings",
+        "type": "cloze",
+        "prompt": {
+          "en": "Could you ___ (get) me a glass of water?",
+          "es": "Could you ___ (get) me a glass of water? (ve y tráemelo)"
+        },
+        "answer": "get",
+        "accept": [
+          "get"
+        ],
+        "why": {
+          "en": "Get + person + object means 'go and bring/fetch it for someone' — a blade of GET that doesn't show up with 'obtain' or 'buy'.",
+          "es": "Get + persona + objeto significa 've y tráelo para alguien' — una hoja de GET distinta de 'obtener' o 'comprar'."
+        },
+        "tags": [
+          "bring",
+          "core-meaning"
         ]
       },
       {

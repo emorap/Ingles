@@ -66,6 +66,28 @@
             }
           },
           {
+            "kind": "p",
+            "text": {
+              "en": "The choreographer directs five different kinds of movement, and each one answers its own diagnostic question — asking the right question tells you which adverb type the sentence needs:",
+              "es": "El coreógrafo dirige cinco tipos de movimiento distintos, y cada uno responde a su propia pregunta diagnóstica — hacer la pregunta correcta te dice qué tipo de adverbio necesita la oración:"
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Type · Tipo",
+              "Question · Pregunta",
+              "Example · Ejemplo"
+            ],
+            "rows": [
+              ["Manner · Modo", "How? · ¿Cómo?", "He runs quickly."],
+              ["Place · Lugar", "Where? · ¿Dónde?", "She's outside."],
+              ["Time · Tiempo", "When? · ¿Cuándo?", "I'll call you later."],
+              ["Frequency · Frecuencia", "How often? · ¿Con qué frecuencia?", "They always study at night."],
+              ["Degree · Grado", "To what extent? · ¿Hasta qué punto?", "I'm really tired."]
+            ]
+          },
+          {
             "kind": "pitfall",
             "text": {
               "en": "Spanish 'con cuidado' or 'bien' tricks the ear into dressing the wrong word. 'He is a carefully driver' ❌ (an adverb can't dress a noun) → 'He is a careful driver' ✅. And 'She speaks English very good' ❌ (an adjective can't direct a verb) → 'She speaks English very well' ✅ — 'good' is the tailor's word, 'well' is the choreographer's.",
@@ -159,6 +181,13 @@
             "text": {
               "en": "Full worked example: 'a lovely little old round green Italian ceramic cooking pot' → lovely (opinion) → little (size) → old (age) → round (shape) → green (colour) → Italian (origin) → ceramic (material) → cooking (purpose) → pot (noun). Every guest keeps its assigned place in the queue.",
               "es": "Ejemplo completo: 'a lovely little old round green Italian ceramic cooking pot' → lovely (opinión) → little (tamaño) → old (edad) → round (forma) → green (color) → Italian (origen) → ceramic (material) → cooking (propósito) → pot (sustantivo). Cada invitado guarda su lugar asignado en la fila."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "OSASCOMP only queues guests BEFORE the noun. English also stacks modification AFTER it — prepositional phrases or participles that attach once the noun already appeared: 'a company based in London', 'a market affected by inflation'. The two layers combine freely: 'a highly successful company based in London' (pre-noun opinion + post-noun detail).",
+              "es": "OSASCOMP solo hace fila ANTES del sustantivo. El inglés también apila modificación DESPUÉS de él — frases preposicionales o participios que se pegan una vez que el sustantivo ya apareció: 'a company based in London', 'a market affected by inflation'. Las dos capas se combinan libremente: 'a highly successful company based in London' (opinión antes + detalle después)."
             }
           },
           {
@@ -297,6 +326,13 @@
           {
             "kind": "p",
             "text": {
+              "en": "Comparatives, superlatives and equality are one system that answers three simple questions: Is something bigger? → comparative (this topic). Is something the biggest? → superlative (see 'superlatives'). Are two things equal? → equality (below). Everything about comparison expands on one of these three questions.",
+              "es": "Comparativos, superlativos e igualdad son un solo sistema que responde tres preguntas simples: ¿Es algo más grande? → comparativo (este tema). ¿Es algo lo más grande? → superlativo (ver 'superlatives'). ¿Son dos cosas iguales? → igualdad (más abajo). Todo lo demás sobre comparación se apoya en una de estas tres preguntas."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
               "en": "Short adjectives (1 syllable) add -er + than: taller than, colder than. Adjectives ending in -y change to -ier: happy → happier. Long adjectives (2+ syllables) use more + adjective + than: more beautiful than. Ask 'am I loading the scale with exactly two things?' — that's your signal for a comparative.",
               "es": "Los adjetivos cortos (1 sílaba) añaden -er + than: taller than, colder than. Los que terminan en -y cambian a -ier: happy → happier. Los adjetivos largos (2+ sílabas) usan more + adjetivo + than: more beautiful than. Pregúntate '¿estoy poniendo exactamente dos cosas en la balanza?' — esa es tu señal para un comparativo."
             }
@@ -314,6 +350,49 @@
               "en": "When the scale balances perfectly, switch to equality: as + adjective + as ('as tall as'), not as...as for the negative ('not as expensive as'), and twice as...as for double weight ('twice as large as'). 'Same as', not 'same than'.",
               "es": "Cuando la balanza queda perfectamente equilibrada, usa igualdad: as + adjetivo + as ('as tall as'), not as...as para lo negativo ('not as expensive as'), y twice as...as para el doble de peso ('twice as large as'). 'Same as', nunca 'same than'."
             }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Structure · Estructura",
+              "Example · Ejemplo"
+            ],
+            "rows": [
+              ["as...as", "This route is as long as that one."],
+              ["not as...as", "This route isn't as long as that one."],
+              ["less...than", "It is less expensive than before."],
+              ["the least", "This is the least practical option."],
+              ["the same as", "My answer is the same as yours."],
+              ["different from", "Life here is different from London."],
+              ["twice as...as", "This city is twice as large as mine."]
+            ]
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'Different' pairs with 'from', not 'than' — Spanish 'diferente a/que' pulls learners toward the wrong word. 'Life here is different than London' ❌ → 'Life here is different from London' ✅.",
+              "es": "'Different' se empareja con 'from', no con 'than' — el 'diferente a/que' del español empuja hacia la palabra equivocada. 'Life here is different than London' ❌ → 'Life here is different from London' ✅."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "The scale can also move or interact instead of just balancing — these advanced patterns show comparison in motion:",
+              "es": "La balanza también puede moverse o interactuar en lugar de solo equilibrarse — estos patrones avanzados muestran la comparación en movimiento:"
+            }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Pattern · Patrón",
+              "Example · Ejemplo"
+            ],
+            "rows": [
+              ["the more..., the more...", "The more you read, the better you write."],
+              ["more and more / less and less", "Cities are becoming more and more crowded."],
+              ["compared with (not 'compared than')", "Sales are low compared with last year."],
+              ["rather than (not 'than' alone)", "I'd walk rather than wait for the bus."]
+            ]
           },
           {
             "kind": "pitfall",
@@ -460,6 +539,20 @@
             "text": {
               "en": "Beyond in/on/at: place adds under, next to, behind, in front of, into, out of. Time adds by (no later than: 'finish by Friday'), since (starting point: 'since 2012'), for (duration: 'for two weeks') and ago (time before now: 'five minutes ago').",
               "es": "Más allá de in/on/at: lugar suma under, next to, behind, in front of, into, out of. Tiempo suma by (a más tardar: 'finish by Friday'), since (punto de partida: 'since 2012'), for (duración: 'for two weeks') y ago (tiempo antes de ahora: 'five minutes ago')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Static place freezes a position, but a separate category — direction — shows movement: into (movement inside: 'He walked into the room'), onto (movement onto a surface: 'He jumped onto the bed'), out of (movement from inside: 'She ran out of the house'), from (origin: 'He came from Bogotá'). Ask 'is this a fixed spot, or a body moving through it?'",
+              "es": "El lugar estático congela una posición, pero una categoría aparte — dirección (direction) — muestra movimiento: into (hacia dentro: 'He walked into the room'), onto (hacia una superficie: 'He jumped onto the bed'), out of (desde dentro: 'She ran out of the house'), from (origen: 'He came from Bogotá'). Pregúntate '¿es un punto fijo, o un cuerpo que se mueve a través de él?'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "A third category answers 'does this explain the cause or reason for something?': because of names an everyday cause ('The game was cancelled because of rain'), due to names a more formal one ('Delay due to technical issues'). Both point backward to a reason, unlike 'for', which points forward to a purpose.",
+              "es": "Una tercera categoría responde '¿esto explica la causa o razón de algo?': because of nombra una causa cotidiana ('The game was cancelled because of rain'), due to nombra una más formal ('Delay due to technical issues'). Ambas señalan hacia atrás, a una razón, a diferencia de 'for', que señala hacia adelante, a un propósito."
             }
           },
           {
