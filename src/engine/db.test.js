@@ -46,6 +46,25 @@ describe('Store', () => {
     assert.equal((await s.getProgress('keep'))?.itemId, 'keep');
   });
 
+  test('round-trips a per-item note', async () => {
+    await s.setNote('i1', 'recuerda la -s de tercera persona');
+    assert.equal(await s.getNote('i1'), 'recuerda la -s de tercera persona');
+    assert.equal(await s.getNote('missing'), undefined);
+  });
+
+  test('backup carries notes across a fresh device', async () => {
+    await s.putProgress(p('i1'));
+    await s.setNote('i1', 'nota importante');
+    const dump = await s.exportAll();
+    s.close();
+    indexedDB.deleteDatabase('momentum');
+    const s2 = new Store();
+    await s2.open();
+    assert.equal((await s2.importAll(dump)).ok, true);
+    assert.equal(await s2.getNote('i1'), 'nota importante');
+    s = s2; // hand off to afterEach for closing
+  });
+
   test('migrates ids on import', async () => {
     await s.putProgress(p('old'));
     const dump = await s.exportAll();

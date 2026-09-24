@@ -11,11 +11,12 @@ import { newCard, review } from '../../engine/scheduler.js';
  *   progress: Map<string, any>,
  *   store: { putProgress: (rec: any) => Promise<void> },
  *   onDone?: (results: { correct: number, total: number }) => void,
+ *   onWrong?: (itemId: string, given: string) => void | Promise<void>,
  *   now?: Date,
  *   voice?: string,
  * }} ctx
  */
-export function renderPractice(container, { items, progress, store, onDone, now = new Date(), voice }) {
+export function renderPractice(container, { items, progress, store, onDone, onWrong, now = new Date(), voice }) {
   let i = 0;
   const total = items.length;
   const results = { correct: 0, total };
@@ -52,9 +53,10 @@ export function renderPractice(container, { items, progress, store, onDone, now 
 
     section.append(practiceCard(item, {
       voice,
-      onRate: async (rating, wasCorrect) => {
+      onRate: async (rating, wasCorrect, given) => {
         await persist(item, rating, wasCorrect);
         if (wasCorrect) results.correct += 1;
+        else await onWrong?.(item.id, given);
         i += 1;
         showNext();
       },

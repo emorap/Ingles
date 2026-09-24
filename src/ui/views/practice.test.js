@@ -67,6 +67,32 @@ test('cloze: wrong answer reveals the correct answer and rating Again records co
   assert.equal(store.puts[0].seen, 1);
 });
 
+test('a wrong answer reports the item id and what the learner typed via onWrong', async () => {
+  const container = document.createElement('div');
+  const wrong = [];
+  renderPractice(container, {
+    items: [CLOZE], progress: new Map(), store: fakeStore(),
+    onDone: () => {}, onWrong: (id, given) => wrong.push({ id, given }), now: new Date(),
+  });
+  await type(container, 'boil');
+  container.querySelector('[data-rating="again"]').dispatchEvent(new window.Event('click'));
+  await tick();
+  assert.deepEqual(wrong, [{ id: 'c1', given: 'boil' }]);
+});
+
+test('a correct answer never calls onWrong', async () => {
+  const container = document.createElement('div');
+  let called = 0;
+  renderPractice(container, {
+    items: [CLOZE], progress: new Map(), store: fakeStore(),
+    onDone: () => {}, onWrong: () => { called++; }, now: new Date(),
+  });
+  await type(container, 'boils');
+  container.querySelector('[data-rating="good"]').dispatchEvent(new window.Event('click'));
+  await tick();
+  assert.equal(called, 0);
+});
+
 test('choice: renders a button per option (answer + distractors); correct choice reveals why', async () => {
   const container = document.createElement('div');
   renderPractice(container, { items: [CHOICE], progress: new Map(), store: fakeStore(), onDone: () => {}, now: new Date() });

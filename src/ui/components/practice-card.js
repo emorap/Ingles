@@ -46,12 +46,12 @@ export function practiceCard(item, { onRate, voice } = {}) {
   let answered = false;
   let keyHandler = null;
 
-  const rate = (rating, wasCorrect) => {
+  const rate = (rating, wasCorrect, given) => {
     if (keyHandler) { removeEventListener('keydown', keyHandler); keyHandler = null; }
-    onRate?.(rating, wasCorrect);
+    onRate?.(rating, wasCorrect, given);
   };
 
-  const reveal = (wasCorrect) => {
+  const reveal = (wasCorrect, given) => {
     if (answered) return;
     answered = true;
     for (const el of [...answerRegion.querySelectorAll('input, button')]) el.setAttribute('disabled', '');
@@ -73,14 +73,14 @@ export function practiceCard(item, { onRate, voice } = {}) {
       b.setAttribute('data-rating', key);
       b.setAttribute('aria-keyshortcuts', digit);
       b.textContent = `${digit} · ${label}`;
-      b.addEventListener('click', () => rate(rating, wasCorrect));
+      b.addEventListener('click', () => rate(rating, wasCorrect, given));
       ratings.append(b);
     }
     feedback.append(ratings);
 
     keyHandler = (e) => {
       const found = RATINGS.find((r) => r[3] === e.key);
-      if (found) rate(found[2], wasCorrect);
+      if (found) rate(found[2], wasCorrect, given);
     };
     addEventListener('keydown', keyHandler);
   };
@@ -92,7 +92,7 @@ export function practiceCard(item, { onRate, voice } = {}) {
       b.className = 'btn ghost choice';
       b.setAttribute('data-role', 'choice');
       b.textContent = opt;
-      b.addEventListener('click', () => reveal(isCorrect(opt, item)));
+      b.addEventListener('click', () => reveal(isCorrect(opt, item), opt));
       answerRegion.append(b);
     }
   } else {
@@ -110,7 +110,7 @@ export function practiceCard(item, { onRate, voice } = {}) {
     check.setAttribute('data-action', 'check');
     check.textContent = 'Comprobar';
 
-    const submit = () => reveal(isCorrect(input.value, item));
+    const submit = () => reveal(isCorrect(input.value, item), input.value);
     check.addEventListener('click', submit);
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter') submit(); });
     answerRegion.append(input, check);
