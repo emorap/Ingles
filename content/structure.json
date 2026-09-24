@@ -1,0 +1,1469 @@
+{
+  "version": 1,
+  "module": {
+    "id": "structure",
+    "title": {
+      "en": "Structure & voice",
+      "es": "Estructura y voz"
+    },
+    "accent": "#2DD4BF",
+    "groups": [
+      {
+        "id": "voz",
+        "title": {
+          "en": "Voice",
+          "es": "Voz"
+        }
+      },
+      {
+        "id": "discurso",
+        "title": {
+          "en": "Reporting & connecting nouns",
+          "es": "Reportar y conectar sustantivos"
+        }
+      },
+      {
+        "id": "conexion",
+        "title": {
+          "en": "Connection",
+          "es": "Conexión"
+        }
+      }
+    ],
+    "topics": [
+      {
+        "id": "passive-concept",
+        "title": {
+          "en": "The Passive Voice — the backstage swap",
+          "es": "La voz pasiva — el intercambio de escena"
+        },
+        "group": "voz",
+        "coreIdea": {
+          "en": "Passive voice sends the doer backstage and puts the result — or the receiver of the action — under the spotlight.",
+          "es": "La voz pasiva envía a quien hace la acción detrás del escenario y pone el resultado — o a quien recibe la acción — bajo los reflectores."
+        },
+        "source": "_The Passive Voice .pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "The golden formula never changes: PASSIVE = BE (correct tense) + past participle (V3). To build it, take the object of the active sentence and make it the subject — 'The chef cooks the meal' becomes 'The meal is cooked (by the chef)'. Imagine a stage: active voice puts the doer center stage under the spotlight; passive voice walks the doer backstage and pulls the result or receiver forward instead.",
+              "es": "La fórmula de oro nunca cambia: PASIVA = BE (tiempo correcto) + participio pasado (V3). Para construirla, toma el objeto de la oración activa y hazlo el sujeto — 'The chef cooks the meal' se vuelve 'The meal is cooked (by the chef)'. Imagina un escenario: la voz activa pone a quien actúa bajo los reflectores; la voz pasiva lo manda detrás del escenario y trae al frente el resultado o a quien recibe la acción."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Four real reasons to choose the passive: focus on the result ('A new law was passed yesterday'), the doer is unknown or irrelevant ('English is spoken in many countries'), a formal/scientific register ('The results were analysed carefully'), and softening blame ('A mistake was made').",
+              "es": "Cuatro razones reales para elegir la pasiva: enfocarse en el resultado ('A new law was passed yesterday'), el actor es desconocido o irrelevante ('English is spoken in many countries'), un registro formal/científico ('The results were analysed carefully'), y suavizar la culpa ('A mistake was made')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "KEEP 'by + agent' when the doer is important, surprising or named: 'The Mona Lisa was painted by Leonardo da Vinci.' DROP 'by + agent' when the doer is unknown, obvious or irrelevant: 'The room is cleaned every day' (not '...by the cleaning staff').",
+              "es": "MANTÉN 'by + agente' cuando quien actúa es importante, sorprendente o nombrado: 'The Mona Lisa was painted by Leonardo da Vinci.' OMITE 'by + agente' cuando es desconocido, obvio o irrelevante: 'The room is cleaned every day' (no '...by the cleaning staff')."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish impersonal 'se' does NOT translate word-by-word. 'Se vendieron todas las entradas' is never 'It was sold all the tickets' — say 'All the tickets were sold.' And 'Se dice que...' is never 'It says that...' — say 'It is said that...'.",
+              "es": "El 'se' impersonal del español NO se traduce palabra por palabra. 'Se vendieron todas las entradas' nunca es 'It was sold all the tickets' — se dice 'All the tickets were sold.' Y 'Se dice que...' nunca es 'It says that...' — se dice 'It is said that...'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The meal is cooked by the chef.",
+            "es": "La comida es cocinada por el chef."
+          },
+          {
+            "en": "English is spoken in many countries.",
+            "es": "El inglés se habla en muchos países."
+          },
+          {
+            "en": "A new law was passed yesterday.",
+            "es": "Se aprobó una nueva ley ayer."
+          },
+          {
+            "en": "A mistake was made.",
+            "es": "Se cometió un error."
+          },
+          {
+            "en": "The Mona Lisa was painted by Leonardo da Vinci.",
+            "es": "La Mona Lisa fue pintada por Leonardo da Vinci."
+          }
+        ],
+        "related": [
+          "passive-tenses"
+        ],
+        "items": [
+          "str-pv-1",
+          "str-pv-2",
+          "str-pv-3",
+          "str-pv-4",
+          "str-pv-5"
+        ]
+      },
+      {
+        "id": "passive-tenses",
+        "title": {
+          "en": "Passive across tenses — the costume change",
+          "es": "La pasiva en todos los tiempos — el cambio de vestuario"
+        },
+        "group": "voz",
+        "coreIdea": {
+          "en": "Only BE changes costume for every tense; the past participle (V3) is the actor's fixed mask that never changes underneath.",
+          "es": "Solo BE cambia de vestuario en cada tiempo; el participio pasado (V3) es la máscara fija del actor que nunca cambia debajo."
+        },
+        "source": "Passive Voice Visual Guide All Tenses.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Walk the tenses like a costume rack: am/is/are + V3 (present — 'The room is cleaned'), was/were + V3 (past — 'It was opened'), will be + V3 (future — 'It will be done'), has/have been + V3 (present perfect — 'It has been completed'), had been + V3 (past perfect — 'It had been repaired'), will have been + V3 (future perfect — 'It will have been finished'). The mask (V3) never changes; only the BE costume does.",
+              "es": "Recorre los tiempos como un perchero de vestuario: am/is/are + V3 (presente — 'The room is cleaned'), was/were + V3 (pasado — 'It was opened'), will be + V3 (futuro — 'It will be done'), has/have been + V3 (presente perfecto — 'It has been completed'), had been + V3 (pasado perfecto — 'It had been repaired'), will have been + V3 (futuro perfecto — 'It will have been finished'). La máscara (V3) nunca cambia; solo cambia el vestuario de BE."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Modal passive: modal + be + V3, always — 'A doctor should be called.' 'It must be returned.' Never modal + V3 alone, and never modal + being.",
+              "es": "Pasiva con modal: modal + be + V3, siempre — 'A doctor should be called.' 'It must be returned.' Nunca modal + V3 solo, y nunca modal + being."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Negatives add 'not' right after the first auxiliary: 'The food isn't prepared here.' 'The project hadn't been completed.' Questions invert BE (or the first auxiliary) with the subject: 'Is the room cleaned every day?' 'Has the email been sent?'",
+              "es": "Los negativos añaden 'not' justo después del primer auxiliar: 'The food isn't prepared here.' 'The project hadn't been completed.' Las preguntas invierten BE (o el primer auxiliar) con el sujeto: 'Is the room cleaned every day?' 'Has the email been sent?'"
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Two classic structural errors: word order — 'Is cleaned the room every day' is wrong → 'Is the room cleaned every day?' — and the verb form after was/were — 'Was send the message yesterday' is wrong → 'The message was sent yesterday' (V3, never the base verb).",
+              "es": "Dos errores estructurales clásicos: el orden de palabras — 'Is cleaned the room every day' está mal → 'Is the room cleaned every day?' — y la forma del verbo después de was/were — 'Was send the message yesterday' está mal → 'The message was sent yesterday' (V3, nunca el verbo base)."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The room is cleaned every day.",
+            "es": "La habitación se limpia todos los días."
+          },
+          {
+            "en": "The car was fixed yesterday.",
+            "es": "El carro fue arreglado ayer."
+          },
+          {
+            "en": "The report has been finished.",
+            "es": "El informe ha sido terminado."
+          },
+          {
+            "en": "The email will be sent tomorrow.",
+            "es": "El correo será enviado mañana."
+          },
+          {
+            "en": "A doctor should be called.",
+            "es": "Se debería llamar a un doctor."
+          }
+        ],
+        "related": [
+          "passive-concept"
+        ],
+        "items": [
+          "str-pvt-1",
+          "str-pvt-2",
+          "str-pvt-3",
+          "str-pvt-4",
+          "str-pvt-5"
+        ]
+      },
+      {
+        "id": "reported-statements",
+        "title": {
+          "en": "Reported speech: statements — the tape-delay echo",
+          "es": "Estilo indirecto: afirmaciones — el eco con retraso de grabación"
+        },
+        "group": "discurso",
+        "coreIdea": {
+          "en": "Reporting what someone said earlier plays their words back on a one-step delay: tenses shift one step into the past, and time/place words shift with them.",
+          "es": "Contar lo que alguien dijo antes reproduce sus palabras con un retraso de un paso: los tiempos retroceden un paso hacia el pasado, y las palabras de tiempo y lugar cambian con ellos."
+        },
+        "source": "_Reported Speech in English.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Direct speech is a live broadcast; reported speech is the recording played back later, one step behind. Quotation marks disappear, 'that' becomes optional, and because the reporting verb ('said') is already in the past, it pulls the reported clause one step further back too: present → past, present continuous → past continuous, past simple → past perfect, present perfect → past perfect, will → would, can → could, may → might.",
+              "es": "El discurso directo es una transmisión en vivo; el estilo indirecto es la grabación reproducida después, un paso atrás. Las comillas desaparecen, 'that' se vuelve opcional, y como el verbo que reporta ('said') ya está en pasado, arrastra la cláusula reportada un paso más hacia atrás también: presente → pasado, presente continuo → pasado continuo, pasado simple → pasado perfecto, presente perfecto → pasado perfecto, will → would, can → could, may → might."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Time and place words move with the delay too: today → that day, tomorrow → the next day, yesterday → the day before, now → then, here → there, this → that.",
+              "es": "Las palabras de tiempo y lugar también se mueven con el retraso: today → that day, tomorrow → the next day, yesterday → the day before, now → then, here → there, this → that."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "No backshift when reporting something still true or a general fact: 'Water boils at 100°C' → 'She said water boils at 100°C.' — the tense doesn't need to change because it's still true right now.",
+              "es": "No hay retroceso de tiempo cuando se reporta algo que sigue siendo cierto o un hecho general: 'Water boils at 100°C' → 'She said water boils at 100°C.' — el tiempo no cambia porque sigue siendo verdad ahora."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'Say' never takes a direct personal object. 'She said me that...' is wrong → 'She told me that...' or simply 'She said that...'.",
+              "es": "'Say' nunca lleva un objeto personal directo. 'She said me that...' está mal → 'She told me that...' o simplemente 'She said that...'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "\"I am happy.\" → He said (that) he was happy.",
+            "es": "\"I am happy.\" → Él dijo que estaba feliz."
+          },
+          {
+            "en": "\"We went home.\" → They said they had gone home.",
+            "es": "\"We went home.\" → Dijeron que se habían ido a casa."
+          },
+          {
+            "en": "\"I have seen it.\" → She said she had seen it.",
+            "es": "\"I have seen it.\" → Ella dijo que lo había visto."
+          },
+          {
+            "en": "\"They will come.\" → He said they would come.",
+            "es": "\"They will come.\" → Él dijo que vendrían."
+          },
+          {
+            "en": "\"Water boils at 100°C.\" → She said water boils at 100°C.",
+            "es": "\"Water boils at 100°C.\" → Ella dijo que el agua hierve a 100°C."
+          }
+        ],
+        "related": [
+          "reported-questions",
+          "reported-commands"
+        ],
+        "items": [
+          "str-rs-1",
+          "str-rs-2",
+          "str-rs-3",
+          "str-rs-4",
+          "str-rs-5"
+        ]
+      },
+      {
+        "id": "reported-questions",
+        "title": {
+          "en": "Reported speech: questions — the detective's flat note",
+          "es": "Estilo indirecto: preguntas — la nota plana del detective"
+        },
+        "group": "discurso",
+        "coreIdea": {
+          "en": "A reported question loses its question order and its question mark — it becomes a calm statement introduced by a question word, or by if/whether.",
+          "es": "Una pregunta en estilo indirecto pierde el orden de pregunta y el signo de interrogación — se convierte en una afirmación tranquila introducida por una palabra interrogativa, o por if/whether."
+        },
+        "source": "_Reported Speech in English.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Imagine a detective writing down a suspect's question in a notebook: no shouting, no question mark, no do/does/did — just a flat, calm note in statement word order. For wh-questions keep the question word (where, what, why) but flip back to subject-verb order: 'Where does she live?' → 'He asked where she lived.' For yes/no questions, add if or whether: 'Are they coming?' → 'He asked whether they were coming.'",
+              "es": "Imagina a un detective anotando la pregunta de un sospechoso en su libreta: sin gritos, sin signo de interrogación, sin do/does/did — solo una nota plana y tranquila en orden de afirmación. En preguntas con wh- mantén la palabra interrogativa (where, what, why) pero regresa al orden sujeto-verbo: 'Where does she live?' → 'He asked where she lived.' En preguntas de sí/no, añade if o whether: 'Are they coming?' → 'He asked whether they were coming.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "More examples: 'Did you call her?' → 'She asked if I had called her.' 'What time is it?' → 'She asked what time it was.' Notice the tense also backshifts, just like in reported statements.",
+              "es": "Más ejemplos: 'Did you call her?' → 'She asked if I had called her.' 'What time is it?' → 'She asked what time it was.' Nota que el tiempo también retrocede, igual que en las afirmaciones reportadas."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "'Whether' is required (not optional) right before 'or not', and it sounds more natural after a preposition: 'the question of whether...'. Everywhere else, 'if' works fine for yes/no questions in casual speech.",
+              "es": "'Whether' es obligatorio (no opcional) justo antes de 'or not', y suena más natural después de una preposición: 'the question of whether...'. En el resto de los casos, 'if' funciona bien para preguntas de sí/no en el habla casual."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Keeping the original question's word order is the #1 mistake: 'He asked me where did I go' is wrong → 'He asked me where I went.' No do/does/did, no inversion, no question mark.",
+              "es": "Mantener el orden de la pregunta original es el error número uno: 'He asked me where did I go' está mal → 'He asked me where I went.' Sin do/does/did, sin inversión, sin signo de interrogación."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "\"Where does she live?\" → He asked where she lived.",
+            "es": "\"Where does she live?\" → Preguntó dónde vivía ella."
+          },
+          {
+            "en": "\"Did you call her?\" → She asked if I had called her.",
+            "es": "\"Did you call her?\" → Preguntó si la había llamado."
+          },
+          {
+            "en": "\"Are they coming?\" → He asked whether they were coming.",
+            "es": "\"Are they coming?\" → Preguntó si ellos venían."
+          },
+          {
+            "en": "\"What time is it?\" → She asked what time it was.",
+            "es": "\"What time is it?\" → Preguntó qué hora era."
+          },
+          {
+            "en": "\"Have you finished?\" → He asked if I had finished.",
+            "es": "\"Have you finished?\" → Preguntó si yo había terminado."
+          }
+        ],
+        "related": [
+          "reported-statements",
+          "reported-commands"
+        ],
+        "items": [
+          "str-rq-1",
+          "str-rq-2",
+          "str-rq-3",
+          "str-rq-4",
+          "str-rq-5"
+        ]
+      },
+      {
+        "id": "reported-commands",
+        "title": {
+          "en": "Reported speech: commands & requests — the messenger's relay",
+          "es": "Estilo indirecto: órdenes y peticiones — el relevo del mensajero"
+        },
+        "group": "discurso",
+        "coreIdea": {
+          "en": "A messenger doesn't shout the original command again — they relay it calmly as told/asked/warned + person + to + verb.",
+          "es": "Un mensajero no repite el grito de la orden original — la transmite con calma como told/asked/warned + persona + to + verbo."
+        },
+        "source": "_Reported Speech in English.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Commands and requests report with the infinitive, not with a backshifted clause: told/asked/warned/advised + object + to + base verb. 'Close the door!' → 'She told me to close the door.' There's no tense to shift because an infinitive has no tense of its own.",
+              "es": "Las órdenes y peticiones se reportan con el infinitivo, no con una cláusula que retrocede en el tiempo: told/asked/warned/advised + objeto + to + verbo base. 'Close the door!' → 'She told me to close the door.' No hay tiempo verbal que cambiar porque un infinitivo no tiene tiempo propio."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Negative commands: keep 'not' right before 'to'. 'Don't be late.' → 'He warned me not to be late.' The messenger relays the prohibition the same way, just with 'not to'.",
+              "es": "Órdenes negativas: mantén 'not' justo antes de 'to'. 'Don't be late.' → 'He warned me not to be late.' El mensajero transmite la prohibición igual, solo con 'not to'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Choose the verb by tone: polite requests with 'please' usually report with 'asked' ('Please help me.' → 'She asked me to help her.'); firm orders or warnings report with 'told' or 'warned'.",
+              "es": "Elige el verbo según el tono: las peticiones educadas con 'please' normalmente se reportan con 'asked' ('Please help me.' → 'She asked me to help her.'); las órdenes firmes o advertencias se reportan con 'told' o 'warned'."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Two frequent errors: keeping 'that' and a full clause like a statement — 'She told me that I close the door' is wrong → 'She told me to close the door' — and using 'say' with a personal object — 'She said me to come' is wrong → 'She told me to come.'",
+              "es": "Dos errores frecuentes: mantener 'that' y una cláusula completa como si fuera una afirmación — 'She told me that I close the door' está mal → 'She told me to close the door' — y usar 'say' con objeto personal — 'She said me to come' está mal → 'She told me to come.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "\"Close the door!\" → She told me to close the door.",
+            "es": "\"Close the door!\" → Ella me dijo que cerrara la puerta."
+          },
+          {
+            "en": "\"Don't be late.\" → He warned me not to be late.",
+            "es": "\"Don't be late.\" → Me advirtió que no llegara tarde."
+          },
+          {
+            "en": "\"Please help me.\" → She asked me to help her.",
+            "es": "\"Please help me.\" → Ella me pidió que la ayudara."
+          },
+          {
+            "en": "\"Sit down.\" → The teacher told the students to sit down.",
+            "es": "\"Sit down.\" → La profesora les dijo a los estudiantes que se sentaran."
+          },
+          {
+            "en": "\"Don't touch that!\" → She warned him not to touch it.",
+            "es": "\"Don't touch that!\" → Ella le advirtió que no lo tocara."
+          }
+        ],
+        "related": [
+          "reported-statements",
+          "reported-questions"
+        ],
+        "items": [
+          "str-rc-1",
+          "str-rc-2",
+          "str-rc-3",
+          "str-rc-4",
+          "str-rc-5"
+        ]
+      },
+      {
+        "id": "relative-clauses",
+        "title": {
+          "en": "Relative clauses — the nickname tag and the sticky note",
+          "es": "Oraciones de relativo — la etiqueta de apodo y la nota adhesiva"
+        },
+        "group": "discurso",
+        "coreIdea": {
+          "en": "A defining clause is the nickname tag that IS the person's identity — remove it and you lose who they are; a non-defining clause is a sticky note of extra facts you could peel off without losing the person.",
+          "es": "Una cláusula especificativa es la etiqueta de apodo que ES la identidad de la persona — quítala y pierdes quién es; una cláusula explicativa es una nota adhesiva con datos extra que podrías despegar sin perder a la persona."
+        },
+        "source": "_Relative Clauses .pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "A relative clause connects two ideas into one sentence using who, which, that, whose, where or when. Defining clauses are the nickname tag: no commas, and the sentence loses its identity without them — 'The man who lives next door is a doctor' (which man? the one who lives next door). Non-defining clauses are the sticky note: commas on both sides, extra information you could peel off and the sentence would still make sense — 'My brother, who is a teacher, lives in Paris.'",
+              "es": "Una oración de relativo conecta dos ideas en una sola usando who, which, that, whose, where o when. Las cláusulas especificativas son la etiqueta de apodo: sin comas, y la oración pierde su identidad sin ellas — 'The man who lives next door is a doctor' (¿qué hombre? el que vive al lado). Las cláusulas explicativas son la nota adhesiva: comas de ambos lados, información extra que podrías despegar y la oración seguiría teniendo sentido — 'My brother, who is a teacher, lives in Paris.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Pronoun table: who (people), which (things/animals), that (people or things, defining only), whose (possession — 'cuyo'), where (place), when (time). 'That' can replace 'who' or 'which' only inside a defining, comma-free clause.",
+              "es": "Tabla de pronombres: who (personas), which (cosas/animales), that (personas o cosas, solo especificativa), whose (posesión — 'cuyo'), where (lugar), when (tiempo). 'That' puede reemplazar a 'who' o 'which' solo dentro de una cláusula especificativa, sin comas."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "In defining clauses, you can drop the pronoun when it's the object of the clause: 'The movie (that) I watched was amazing.' You cannot drop it when it's the subject: 'The man who lives next door...' ('who' cannot disappear here).",
+              "es": "En cláusulas especificativas, puedes omitir el pronombre cuando es el objeto de la cláusula: 'The movie (that) I watched was amazing.' No puedes omitirlo cuando es el sujeto: 'The man who lives next door...' ('who' no puede desaparecer aquí)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Two classic errors from Spanish 'que' covering both people and things: 'The man which lives here is nice' is wrong → 'The man who lives here is nice.' And 'that' is banned once you add commas: 'My friend, that lives in Spain, is coming' is wrong → 'My friend, who lives in Spain, is coming.'",
+              "es": "Dos errores clásicos porque el 'que' del español cubre tanto personas como cosas: 'The man which lives here is nice' está mal → 'The man who lives here is nice.' Y 'that' queda prohibido en cuanto agregas comas: 'My friend, that lives in Spain, is coming' está mal → 'My friend, who lives in Spain, is coming.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The man who lives next door is a doctor.",
+            "es": "El hombre que vive al lado es médico."
+          },
+          {
+            "en": "My brother, who is a teacher, lives in Paris.",
+            "es": "Mi hermano, que es profesor, vive en París."
+          },
+          {
+            "en": "The book that changed my life is on that shelf.",
+            "es": "El libro que cambió mi vida está en ese estante."
+          },
+          {
+            "en": "Paris, where I studied French, is beautiful.",
+            "es": "París, donde estudié francés, es hermoso."
+          },
+          {
+            "en": "The girl whose dog ran away was crying.",
+            "es": "La chica cuyo perro se escapó estaba llorando."
+          }
+        ],
+        "related": [
+          "reported-statements",
+          "connectors-logic"
+        ],
+        "items": [
+          "str-rel-1",
+          "str-rel-2",
+          "str-rel-3",
+          "str-rel-4",
+          "str-rel-5"
+        ]
+      },
+      {
+        "id": "connectors-logic",
+        "title": {
+          "en": "Connectors I — the traffic signals of thought",
+          "es": "Conectores I — los semáforos del pensamiento"
+        },
+        "group": "conexion",
+        "coreIdea": {
+          "en": "Connectors act like traffic signals for your ideas: some say 'keep going the same way' (addition), some say 'turn — this is different' (contrast), and some explain 'why the road bends here' (reason).",
+          "es": "Los conectores funcionan como semáforos para tus ideas: unos dicen 'sigue en la misma dirección' (adición), otros dicen 'gira — esto es diferente' (contraste), y otros explican 'por qué el camino se dobla aquí' (razón)."
+        },
+        "source": "📘 The Complete Guide to English Connectors.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Grammar builds correct sentences; connectors build the relationship between them. Before picking a word, ask the question each family answers: addition asks 'what else?' (also → in addition → furthermore/moreover), contrast asks 'how is this different?' (but → however → nevertheless/although), and reason asks 'why?' (because → since/as → due to/owing to).",
+              "es": "La gramática construye oraciones correctas; los conectores construyen la relación entre ellas. Antes de elegir una palabra, pregúntate qué responde cada familia: la adición pregunta '¿qué más?' (also → in addition → furthermore/moreover), el contraste pregunta '¿en qué es diferente?' (but → however → nevertheless/although), y la razón pregunta '¿por qué?' (because → since/as → due to/owing to)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Memory trick: 'because' introduces a clause with a subject and a verb ('because it rained'); 'because of' and 'due to' introduce a noun ('because of the rain', 'due to heavy fog').",
+              "es": "Truco de memoria: 'because' introduce una cláusula con sujeto y verbo ('because it rained'); 'because of' y 'due to' introducen un sustantivo ('because of the rain', 'due to heavy fog')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Match the register to the situation: 'also' and 'but' for conversation, 'in addition' and 'however' for neutral emails, 'furthermore/moreover' and 'nevertheless' for reports and essays. Using 'furthermore' in a casual chat sounds as odd as 'plus' in a formal report.",
+              "es": "Ajusta el registro a la situación: 'also' y 'but' para la conversación, 'in addition' y 'however' para correos neutrales, 'furthermore/moreover' y 'nevertheless' para informes y ensayos. Usar 'furthermore' en una charla casual suena tan raro como 'plus' en un informe formal."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'However' at the start of a sentence always needs a comma right after it: 'However I decided to stay' is wrong → 'However, I decided to stay.' Missing that comma is one of the most common English-learner mistakes.",
+              "es": "'However' al inicio de una oración siempre necesita una coma justo después: 'However I decided to stay' está mal → 'However, I decided to stay.' Olvidar esa coma es uno de los errores más comunes entre estudiantes de inglés."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I enjoy reading. Also, I love writing.",
+            "es": "Disfruto leer. Además, me encanta escribir."
+          },
+          {
+            "en": "Employee satisfaction increased. Furthermore, staff turnover declined.",
+            "es": "La satisfacción de los empleados aumentó. Es más, la rotación de personal disminuyó."
+          },
+          {
+            "en": "I studied all weekend. However, I still found the exam difficult.",
+            "es": "Estudié todo el fin de semana. Sin embargo, el examen me pareció difícil."
+          },
+          {
+            "en": "She enjoys city life, whereas her brother prefers the countryside.",
+            "es": "A ella le gusta la vida en la ciudad, mientras que a su hermano le gusta el campo."
+          },
+          {
+            "en": "The event was cancelled due to severe weather.",
+            "es": "El evento se canceló debido al mal tiempo severo."
+          }
+        ],
+        "related": [
+          "connectors-flow",
+          "relative-clauses"
+        ],
+        "items": [
+          "str-cl-1",
+          "str-cl-2",
+          "str-cl-3",
+          "str-cl-4",
+          "str-cl-5"
+        ]
+      },
+      {
+        "id": "connectors-flow",
+        "title": {
+          "en": "Connectors II — the recipe card",
+          "es": "Conectores II — la tarjeta de receta"
+        },
+        "group": "conexion",
+        "coreIdea": {
+          "en": "Result, sequence and summary connectors work like a recipe card: 'therefore' announces the dish that comes out of the ingredients, numbered steps guide the cooking order, and the final line wraps up what you served.",
+          "es": "Los conectores de resultado, secuencia y resumen funcionan como una tarjeta de receta: 'therefore' anuncia el plato que resulta de los ingredientes, los pasos numerados guían el orden de la cocción, y la línea final resume lo que serviste."
+        },
+        "source": "📘 The Complete Guide to English Connectors.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Result connectors answer 'what happened because of that?' — so (conversation) → therefore (email) → consequently (report) → thus (academic). Sequence connectors answer 'what comes next?' — firstly, next, meanwhile, afterwards, finally. Summary connectors answer 'what's my main point?' — overall, in conclusion, ultimately.",
+              "es": "Los conectores de resultado responden '¿qué pasó por eso?' — so (conversación) → therefore (correo) → consequently (informe) → thus (académico). Los de secuencia responden '¿qué sigue?' — firstly, next, meanwhile, afterwards, finally. Los de resumen responden '¿cuál es mi punto principal?' — overall, in conclusion, ultimately."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Example connectors (for example, for instance, such as, including, especially) are the seasoning: they support a claim with concrete evidence instead of adding a brand-new idea or a conclusion.",
+              "es": "Los conectores de ejemplo (for example, for instance, such as, including, especially) son el sazón: apoyan una afirmación con evidencia concreta en lugar de añadir una idea nueva o una conclusión."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Don't confuse 'finally' (the last step of a simple sequence, like a recipe) with 'in conclusion' (wrapping up an argument or an essay) — they answer different questions even though both sound like an ending.",
+              "es": "No confundas 'finally' (el último paso de una secuencia simple, como una receta) con 'in conclusion' (cerrar un argumento o un ensayo) — responden preguntas distintas aunque ambos suenen a final."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "More connectors do not mean better English. 'Furthermore, I like coffee. Furthermore, I enjoy tea. Furthermore, I like juice' is repetitive and unnatural → vary them and only connect where a real logical relationship exists: 'I enjoy coffee. In addition, I also drink tea. Overall, I simply enjoy hot drinks.'",
+              "es": "Más conectores no significan mejor inglés. 'Furthermore, I like coffee. Furthermore, I enjoy tea. Furthermore, I like juice' es repetitivo y poco natural → varíalos y conecta solo donde exista una relación lógica real: 'I enjoy coffee. In addition, I also drink tea. Overall, I simply enjoy hot drinks.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The road was closed, so we took another route.",
+            "es": "La carretera estaba cerrada, así que tomamos otra ruta."
+          },
+          {
+            "en": "Sales increased dramatically. Consequently, the company expanded into three new markets.",
+            "es": "Las ventas aumentaron mucho. En consecuencia, la empresa se expandió a tres mercados nuevos."
+          },
+          {
+            "en": "Firstly, we analysed the data. Next, we identified the problems. Finally, we presented our recommendations.",
+            "es": "Primero, analizamos los datos. Luego, identificamos los problemas. Finalmente, presentamos nuestras recomendaciones."
+          },
+          {
+            "en": "Many countries, such as Canada and Japan, have ageing populations.",
+            "es": "Muchos países, como Canadá y Japón, tienen poblaciones que envejecen."
+          },
+          {
+            "en": "Overall, the project was highly successful.",
+            "es": "En general, el proyecto fue muy exitoso."
+          }
+        ],
+        "related": [
+          "connectors-logic"
+        ],
+        "items": [
+          "str-cf-1",
+          "str-cf-2",
+          "str-cf-3",
+          "str-cf-4",
+          "str-cf-5"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "str-pv-1",
+        "topic": "passive-concept",
+        "type": "choice",
+        "prompt": {
+          "en": "Se vendieron todas las entradas. Choose the correct passive:",
+          "es": "Se vendieron todas las entradas. Elige la pasiva correcta:"
+        },
+        "answer": "All the tickets were sold.",
+        "distractors": [
+          "It was sold all the tickets.",
+          "All the tickets are sold."
+        ],
+        "why": {
+          "en": "Spanish impersonal 'se' maps to the full English passive with the object promoted to subject — never translated word-by-word.",
+          "es": "El 'se' impersonal del español se traduce con la pasiva completa en inglés, con el objeto convertido en sujeto — nunca palabra por palabra."
+        },
+        "tags": [
+          "se-impersonal",
+          "error"
+        ]
+      },
+      {
+        "id": "str-pv-2",
+        "topic": "passive-concept",
+        "type": "cloze",
+        "prompt": {
+          "en": "It ___ (say) that patience is a virtue.",
+          "es": "It ___ (say) that patience is a virtue."
+        },
+        "answer": "is said",
+        "accept": [
+          "is said"
+        ],
+        "why": {
+          "en": "'Se dice que' always takes the full passive 'it is said that', never the literal 'it says that'.",
+          "es": "'Se dice que' siempre lleva la pasiva completa 'it is said that', nunca la traducción literal 'it says that'."
+        },
+        "tags": [
+          "fixed-phrase",
+          "pitfall"
+        ]
+      },
+      {
+        "id": "str-pv-3",
+        "topic": "passive-concept",
+        "type": "choice",
+        "prompt": {
+          "en": "Your bike disappeared and you have no idea who took it. Which is more natural?",
+          "es": "Tu bicicleta desapareció y no sabes quién se la llevó. ¿Cuál es más natural?"
+        },
+        "answer": "My bike was stolen.",
+        "distractors": [
+          "Someone unknown stole my bike."
+        ],
+        "why": {
+          "en": "When the doer is unknown or irrelevant, the passive puts the focus where it belongs: on the result.",
+          "es": "Cuando quien actúa es desconocido o irrelevante, la pasiva enfoca donde debe: en el resultado."
+        },
+        "tags": [
+          "usage",
+          "decision"
+        ]
+      },
+      {
+        "id": "str-pv-4",
+        "topic": "passive-concept",
+        "type": "cloze",
+        "prompt": {
+          "en": "The Mona Lisa ___ (paint) by Leonardo da Vinci.",
+          "es": "The Mona Lisa ___ (paint) by Leonardo da Vinci."
+        },
+        "answer": "was painted",
+        "accept": [
+          "was painted"
+        ],
+        "why": {
+          "en": "The agent is famous and important here, so 'by Leonardo da Vinci' stays — the passive doesn't hide who did it, it chooses what the sentence is about.",
+          "es": "Aquí el agente es famoso e importante, así que 'by Leonardo da Vinci' se queda — la pasiva no esconde quién lo hizo, elige de qué trata la oración."
+        },
+        "tags": [
+          "by-agent"
+        ]
+      },
+      {
+        "id": "str-pv-5",
+        "topic": "passive-concept",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural sentence about a routine office task:",
+          "es": "Elige la oración natural sobre una tarea rutinaria de oficina:"
+        },
+        "answer": "The room is cleaned every day.",
+        "distractors": [
+          "The room is cleaned every day by the cleaning staff."
+        ],
+        "why": {
+          "en": "When the doer is obvious or routine, drop 'by + agent' — Spanish speakers often add it out of habit even when it's unnecessary.",
+          "es": "Cuando quien actúa es obvio o rutinario, se omite 'by + agente' — los hispanohablantes suelen añadirlo por costumbre aunque sea innecesario."
+        },
+        "tags": [
+          "by-agent",
+          "error"
+        ]
+      },
+      {
+        "id": "str-pvt-1",
+        "topic": "passive-tenses",
+        "type": "cloze",
+        "prompt": {
+          "en": "Look — the letter ___ (write) right now.",
+          "es": "Look — the letter ___ (write) right now."
+        },
+        "answer": "is being written",
+        "accept": [
+          "is being written"
+        ],
+        "why": {
+          "en": "An action in progress right now needs 'being' between BE and V3: am/is/are + being + V3.",
+          "es": "Una acción en progreso ahora mismo necesita 'being' entre BE y V3: am/is/are + being + V3."
+        },
+        "tags": [
+          "continuous"
+        ]
+      },
+      {
+        "id": "str-pvt-2",
+        "topic": "passive-tenses",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct passive question:",
+          "es": "Elige la pregunta pasiva correcta:"
+        },
+        "answer": "Is the room cleaned every day?",
+        "distractors": [
+          "Is cleaned the room every day?"
+        ],
+        "why": {
+          "en": "Passive questions invert BE with the subject (Is/Are + subject + V3?) — never Spanish-style verb-first-then-subject order.",
+          "es": "Las preguntas pasivas invierten BE con el sujeto (Is/Are + sujeto + V3?) — nunca el orden verbo-primero-luego-sujeto al estilo español."
+        },
+        "tags": [
+          "question",
+          "error"
+        ]
+      },
+      {
+        "id": "str-pvt-3",
+        "topic": "passive-tenses",
+        "type": "cloze",
+        "prompt": {
+          "en": "The message ___ (send) yesterday.",
+          "es": "The message ___ (send) yesterday."
+        },
+        "answer": "was sent",
+        "accept": [
+          "was sent"
+        ],
+        "why": {
+          "en": "After was/were use V3 (sent), never the base verb — 'was send' is a very common Spanish-speaker slip.",
+          "es": "Después de was/were se usa V3 (sent), nunca el verbo base — 'was send' es un error muy común entre hispanohablantes."
+        },
+        "tags": [
+          "pitfall",
+          "irregular-verb"
+        ]
+      },
+      {
+        "id": "str-pvt-4",
+        "topic": "passive-tenses",
+        "type": "choice",
+        "prompt": {
+          "en": "By Friday, the report ___ finished.",
+          "es": "By Friday, the report ___ finished."
+        },
+        "answer": "will have been",
+        "distractors": [
+          "will be",
+          "has been"
+        ],
+        "why": {
+          "en": "'By + future time' signals the future perfect passive: will have been + V3 — completed before that future point.",
+          "es": "'By + tiempo futuro' señala el futuro perfecto pasivo: will have been + V3 — completado antes de ese punto futuro."
+        },
+        "tags": [
+          "future-perfect"
+        ]
+      },
+      {
+        "id": "str-pvt-5",
+        "topic": "passive-tenses",
+        "type": "cloze",
+        "prompt": {
+          "en": "Safety rules ___ (must / follow) at all times.",
+          "es": "Safety rules ___ (must / follow) at all times."
+        },
+        "answer": "must be followed",
+        "accept": [
+          "must be followed"
+        ],
+        "why": {
+          "en": "Modal passive is always modal + be + V3 — never modal + V3 alone, and never modal + being.",
+          "es": "La pasiva con modal siempre es modal + be + V3 — nunca modal + V3 solo, y nunca modal + being."
+        },
+        "tags": [
+          "modal"
+        ]
+      },
+      {
+        "id": "str-rs-1",
+        "topic": "reported-statements",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"I am tired.\" → He said he ___ tired.",
+          "es": "\"I am tired.\" → He said he ___ tired."
+        },
+        "answer": "was",
+        "accept": [
+          "was"
+        ],
+        "why": {
+          "en": "Present simple backshifts one step to past simple when the reporting verb is in the past.",
+          "es": "El presente simple retrocede un paso a pasado simple cuando el verbo que reporta está en pasado."
+        },
+        "tags": [
+          "backshift"
+        ]
+      },
+      {
+        "id": "str-rs-2",
+        "topic": "reported-statements",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"We went home.\" → They said they ___ home.",
+          "es": "\"We went home.\" → They said they ___ home."
+        },
+        "answer": "had gone",
+        "accept": [
+          "had gone"
+        ],
+        "why": {
+          "en": "Past simple backshifts one step further back to past perfect.",
+          "es": "El pasado simple retrocede un paso más hacia atrás al pasado perfecto."
+        },
+        "tags": [
+          "backshift"
+        ]
+      },
+      {
+        "id": "str-rs-3",
+        "topic": "reported-statements",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "She told me that she was busy.",
+        "distractors": [
+          "She said me that she was busy."
+        ],
+        "why": {
+          "en": "'Say' never takes a direct personal object like 'me' — use 'tell + person' instead, or 'say' with no object at all.",
+          "es": "'Say' nunca lleva un objeto personal directo como 'me' — usa 'tell + persona', o 'say' sin ningún objeto."
+        },
+        "tags": [
+          "reporting-verb",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rs-4",
+        "topic": "reported-statements",
+        "type": "choice",
+        "prompt": {
+          "en": "\"Water boils at 100°C,\" she said. Choose the correct report:",
+          "es": "\"Water boils at 100°C,\" she said. Elige el reporte correcto:"
+        },
+        "answer": "She said water boils at 100°C.",
+        "distractors": [
+          "She said water had boiled at 100°C."
+        ],
+        "why": {
+          "en": "A scientific fact that's still true doesn't need to backshift — the tense can stay in the present.",
+          "es": "Un hecho científico que sigue siendo cierto no necesita retroceder de tiempo — el tiempo verbal puede quedarse en presente."
+        },
+        "tags": [
+          "exception",
+          "fact"
+        ]
+      },
+      {
+        "id": "str-rs-5",
+        "topic": "reported-statements",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"I'll call you tomorrow,\" she said. → She said she would call me ___.",
+          "es": "\"I'll call you tomorrow,\" she said. → She said she would call me ___."
+        },
+        "answer": "the next day",
+        "accept": [
+          "the next day"
+        ],
+        "why": {
+          "en": "'Tomorrow' in direct speech becomes 'the next day' in reported speech, because the moment of speaking has moved.",
+          "es": "'Tomorrow' en discurso directo se convierte en 'the next day' en estilo indirecto, porque el momento de hablar ya cambió."
+        },
+        "tags": [
+          "time-word"
+        ]
+      },
+      {
+        "id": "str-rq-1",
+        "topic": "reported-questions",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct reported question:",
+          "es": "Elige la pregunta reportada correcta:"
+        },
+        "answer": "He asked me where I went.",
+        "distractors": [
+          "He asked me where did I go."
+        ],
+        "why": {
+          "en": "Reported questions use statement word order — no do/does/did and no inversion of the original question.",
+          "es": "Las preguntas reportadas usan orden de afirmación — sin do/does/did y sin la inversión de la pregunta original."
+        },
+        "tags": [
+          "word-order",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rq-2",
+        "topic": "reported-questions",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"Did you call her?\" → She asked if I ___ her.",
+          "es": "\"Did you call her?\" → She asked if I ___ her."
+        },
+        "answer": "had called",
+        "accept": [
+          "had called"
+        ],
+        "why": {
+          "en": "A yes/no direct question reports with if/whether plus the backshifted statement order.",
+          "es": "Una pregunta directa de sí/no se reporta con if/whether más el orden de afirmación retrocedido en tiempo."
+        },
+        "tags": [
+          "yes-no"
+        ]
+      },
+      {
+        "id": "str-rq-3",
+        "topic": "reported-questions",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"What time is it?\" → She asked what time ___.",
+          "es": "\"What time is it?\" → She asked what time ___."
+        },
+        "answer": "it was",
+        "accept": [
+          "it was"
+        ],
+        "why": {
+          "en": "The wh-word stays, but the order goes back to subject-verb ('it was'), never verb-subject ('was it').",
+          "es": "La palabra wh- se mantiene, pero el orden vuelve a sujeto-verbo ('it was'), nunca verbo-sujeto ('was it')."
+        },
+        "tags": [
+          "wh-question"
+        ]
+      },
+      {
+        "id": "str-rq-4",
+        "topic": "reported-questions",
+        "type": "choice",
+        "prompt": {
+          "en": "I don't know ___ or not she's coming.",
+          "es": "I don't know ___ or not she's coming."
+        },
+        "answer": "whether",
+        "distractors": [
+          "if"
+        ],
+        "why": {
+          "en": "Right before 'or not', English strongly prefers 'whether', not 'if'.",
+          "es": "Justo antes de 'or not', el inglés casi siempre prefiere 'whether', no 'if'."
+        },
+        "tags": [
+          "if-vs-whether"
+        ]
+      },
+      {
+        "id": "str-rq-5",
+        "topic": "reported-questions",
+        "type": "choice",
+        "prompt": {
+          "en": "\"Are they coming?\" Choose the correct report:",
+          "es": "\"Are they coming?\" Elige el reporte correcto:"
+        },
+        "answer": "He asked whether they were coming.",
+        "distractors": [
+          "He asked they were coming."
+        ],
+        "why": {
+          "en": "Yes/no questions need if/whether — you can't drop it, even though Spanish sometimes has no equivalent word to translate.",
+          "es": "Las preguntas de sí/no necesitan if/whether — no se puede omitir, aunque en español a veces no haya una palabra equivalente para traducir."
+        },
+        "tags": [
+          "missing-if",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rc-1",
+        "topic": "reported-commands",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"Close the door!\" → She told me ___ the door.",
+          "es": "\"Close the door!\" → She told me ___ the door."
+        },
+        "answer": "to close",
+        "accept": [
+          "to close"
+        ],
+        "why": {
+          "en": "Reported commands use told + object + to + base verb, not 'that' plus a full clause.",
+          "es": "Las órdenes reportadas usan told + objeto + to + verbo base, no 'that' más una cláusula completa."
+        },
+        "tags": [
+          "structure"
+        ]
+      },
+      {
+        "id": "str-rc-2",
+        "topic": "reported-commands",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"Don't be late.\" → He warned me ___ late.",
+          "es": "\"Don't be late.\" → He warned me ___ late."
+        },
+        "answer": "not to be",
+        "accept": [
+          "not to be"
+        ],
+        "why": {
+          "en": "Negative commands become 'not to + verb', keeping 'not' right before 'to'.",
+          "es": "Las órdenes negativas se convierten en 'not to + verbo', manteniendo 'not' justo antes de 'to'."
+        },
+        "tags": [
+          "negative"
+        ]
+      },
+      {
+        "id": "str-rc-3",
+        "topic": "reported-commands",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "She told me to come.",
+        "distractors": [
+          "She said me to come."
+        ],
+        "why": {
+          "en": "'Say' cannot take a personal object like 'me' — reported commands directed at someone need 'tell'.",
+          "es": "'Say' no puede llevar un objeto personal como 'me' — las órdenes reportadas dirigidas a alguien necesitan 'tell'."
+        },
+        "tags": [
+          "reporting-verb",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rc-4",
+        "topic": "reported-commands",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct report of \"Close the door!\":",
+          "es": "Elige el reporte correcto de \"Close the door!\":"
+        },
+        "answer": "She told me to close the door.",
+        "distractors": [
+          "She told me that I close the door."
+        ],
+        "why": {
+          "en": "Commands report with the infinitive (to + verb), not with 'that' plus a backshifted clause — that pattern is only for statements.",
+          "es": "Las órdenes se reportan con el infinitivo (to + verbo), no con 'that' más una cláusula retrocedida en tiempo — ese patrón es solo para afirmaciones."
+        },
+        "tags": [
+          "structure",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rc-5",
+        "topic": "reported-commands",
+        "type": "cloze",
+        "prompt": {
+          "en": "\"Please help me.\" → She asked me ___ her.",
+          "es": "\"Please help me.\" → She asked me ___ her."
+        },
+        "answer": "to help",
+        "accept": [
+          "to help"
+        ],
+        "why": {
+          "en": "Polite requests with 'please' report as asked + object + to + verb, the same infinitive pattern as commands.",
+          "es": "Las peticiones educadas con 'please' se reportan como asked + objeto + to + verbo, el mismo patrón de infinitivo que las órdenes."
+        },
+        "tags": [
+          "request"
+        ]
+      },
+      {
+        "id": "str-rel-1",
+        "topic": "relative-clauses",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "The man who lives here is nice.",
+        "distractors": [
+          "The man which lives here is nice."
+        ],
+        "why": {
+          "en": "'Which' is for things or animals, never people — Spanish 'que' covers both, which causes this transfer error.",
+          "es": "'Which' es para cosas o animales, nunca personas — el 'que' del español cubre ambos, y eso causa este error de transferencia."
+        },
+        "tags": [
+          "pronoun",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rel-2",
+        "topic": "relative-clauses",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "I visited London, which is a big city.",
+        "distractors": [
+          "I visited London, that is a big city."
+        ],
+        "why": {
+          "en": "'That' cannot appear in a non-defining clause (the one with commas) — only 'which' works there.",
+          "es": "'That' no puede aparecer en una cláusula explicativa (la que lleva comas) — ahí solo funciona 'which'."
+        },
+        "tags": [
+          "non-defining",
+          "error"
+        ]
+      },
+      {
+        "id": "str-rel-3",
+        "topic": "relative-clauses",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "The book I bought is on the table.",
+        "distractors": [
+          "The book who I bought is on the table."
+        ],
+        "why": {
+          "en": "Defining clauses can drop the pronoun when it's the object ('I bought the book'); but a kept pronoun for a thing must be 'that/which', never 'who'.",
+          "es": "Las cláusulas especificativas pueden omitir el pronombre cuando es el objeto ('I bought the book'); pero si se mantiene un pronombre para una cosa, debe ser 'that/which', nunca 'who'."
+        },
+        "tags": [
+          "omission",
+          "pronoun"
+        ]
+      },
+      {
+        "id": "str-rel-4",
+        "topic": "relative-clauses",
+        "type": "cloze",
+        "prompt": {
+          "en": "That's the man ___ son plays for the team.",
+          "es": "That's the man ___ son plays for the team."
+        },
+        "answer": "whose",
+        "accept": [
+          "whose"
+        ],
+        "why": {
+          "en": "'Whose' shows possession — the man's son — and maps directly onto Spanish 'cuyo'.",
+          "es": "'Whose' muestra posesión — el hijo del hombre — y corresponde directamente al 'cuyo' del español."
+        },
+        "tags": [
+          "possession"
+        ]
+      },
+      {
+        "id": "str-rel-5",
+        "topic": "relative-clauses",
+        "type": "choice",
+        "prompt": {
+          "en": "My car, ___ I bought last year, is very fast.",
+          "es": "My car, ___ I bought last year, is very fast."
+        },
+        "answer": "which",
+        "distractors": [
+          "that"
+        ],
+        "why": {
+          "en": "The commas already signal a non-defining clause, so 'that' is not allowed here — only 'which'.",
+          "es": "Las comas ya indican una cláusula explicativa, así que 'that' no está permitido aquí — solo 'which'."
+        },
+        "tags": [
+          "punctuation",
+          "non-defining"
+        ]
+      },
+      {
+        "id": "str-cl-1",
+        "topic": "connectors-logic",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "However, I decided to stay.",
+        "distractors": [
+          "However I decided to stay."
+        ],
+        "why": {
+          "en": "'However' at the start of a sentence always needs a comma right after it.",
+          "es": "'However' al inicio de una oración siempre necesita una coma justo después."
+        },
+        "tags": [
+          "punctuation",
+          "error"
+        ]
+      },
+      {
+        "id": "str-cl-2",
+        "topic": "connectors-logic",
+        "type": "choice",
+        "prompt": {
+          "en": "The flight was delayed ___ heavy fog.",
+          "es": "The flight was delayed ___ heavy fog."
+        },
+        "answer": "due to",
+        "distractors": [
+          "because"
+        ],
+        "why": {
+          "en": "'Because' introduces a clause (subject + verb); 'due to' introduces a noun phrase like 'heavy fog'.",
+          "es": "'Because' introduce una cláusula (sujeto + verbo); 'due to' introduce un sustantivo como 'heavy fog'."
+        },
+        "tags": [
+          "because-vs-because-of"
+        ]
+      },
+      {
+        "id": "str-cl-3",
+        "topic": "connectors-logic",
+        "type": "cloze",
+        "prompt": {
+          "en": "I don't want to drive. ___, it's raining.",
+          "es": "I don't want to drive. ___, it's raining."
+        },
+        "answer": "Besides",
+        "accept": [
+          "Besides"
+        ],
+        "why": {
+          "en": "'Besides' adds a casual extra reason in conversation, much like 'plus'.",
+          "es": "'Besides' añade una razón extra casual en la conversación, algo similar a 'plus'."
+        },
+        "tags": [
+          "register"
+        ]
+      },
+      {
+        "id": "str-cl-4",
+        "topic": "connectors-logic",
+        "type": "choice",
+        "prompt": {
+          "en": "In a formal business report: \"Sales increased. ___, customer satisfaction improved.\"",
+          "es": "En un informe formal de negocios: \"Sales increased. ___, customer satisfaction improved.\""
+        },
+        "answer": "Furthermore",
+        "distractors": [
+          "Also",
+          "Plus"
+        ],
+        "why": {
+          "en": "'Furthermore' fits a formal report; 'also' and 'plus' feel too casual for that register.",
+          "es": "'Furthermore' encaja en un informe formal; 'also' y 'plus' se sienten demasiado casuales para ese registro."
+        },
+        "tags": [
+          "register",
+          "formal"
+        ]
+      },
+      {
+        "id": "str-cl-5",
+        "topic": "connectors-logic",
+        "type": "choice",
+        "prompt": {
+          "en": "She enjoys city life, ___ her brother prefers the countryside.",
+          "es": "She enjoys city life, ___ her brother prefers the countryside."
+        },
+        "answer": "whereas",
+        "distractors": [
+          "because",
+          "so"
+        ],
+        "why": {
+          "en": "'Whereas' directly compares two contrasting situations — a job neither 'because' (reason) nor 'so' (result) can do.",
+          "es": "'Whereas' compara directamente dos situaciones opuestas — algo que ni 'because' (razón) ni 'so' (resultado) pueden hacer."
+        },
+        "tags": [
+          "contrast",
+          "comparison"
+        ]
+      },
+      {
+        "id": "str-cf-1",
+        "topic": "connectors-flow",
+        "type": "choice",
+        "prompt": {
+          "en": "In a professional email: \"Sales declined. ___, the company revised its strategy.\"",
+          "es": "En un correo profesional: \"Sales declined. ___, the company revised its strategy.\""
+        },
+        "answer": "Therefore",
+        "distractors": [
+          "So",
+          "Thus"
+        ],
+        "why": {
+          "en": "'Therefore' matches a professional email register; 'so' is too casual and 'thus' feels overly academic here.",
+          "es": "'Therefore' encaja con el registro de un correo profesional; 'so' es demasiado casual y 'thus' suena demasiado académico aquí."
+        },
+        "tags": [
+          "register"
+        ]
+      },
+      {
+        "id": "str-cf-2",
+        "topic": "connectors-flow",
+        "type": "cloze",
+        "prompt": {
+          "en": "Production stopped. ___, deliveries were delayed.",
+          "es": "Production stopped. ___, deliveries were delayed."
+        },
+        "answer": "Consequently",
+        "accept": [
+          "Consequently"
+        ],
+        "why": {
+          "en": "'Consequently' signals a direct consequence and is common in reports.",
+          "es": "'Consequently' señala una consecuencia directa y es común en informes."
+        },
+        "tags": [
+          "result"
+        ]
+      },
+      {
+        "id": "str-cf-3",
+        "topic": "connectors-flow",
+        "type": "choice",
+        "prompt": {
+          "en": "Which fits the last step of a numbered instructions list?",
+          "es": "¿Cuál encaja en el último paso de una lista de instrucciones numerada?"
+        },
+        "answer": "Finally, add the salt.",
+        "distractors": [
+          "In conclusion, add the salt."
+        ],
+        "why": {
+          "en": "'Finally' organises the last step of a sequence; 'in conclusion' wraps up an argument or essay, not a cooking step.",
+          "es": "'Finally' organiza el último paso de una secuencia; 'in conclusion' cierra un argumento o ensayo, no un paso de cocina."
+        },
+        "tags": [
+          "sequence-vs-summary",
+          "error"
+        ]
+      },
+      {
+        "id": "str-cf-4",
+        "topic": "connectors-flow",
+        "type": "choice",
+        "prompt": {
+          "en": "Which paragraph sounds natural?",
+          "es": "¿Cuál párrafo suena natural?"
+        },
+        "answer": "I enjoy coffee. In addition, I also drink tea. Overall, I simply enjoy hot drinks.",
+        "distractors": [
+          "Furthermore, I like coffee. Furthermore, I enjoy tea. Furthermore, I like juice."
+        ],
+        "why": {
+          "en": "Repeating the same connector in every sentence sounds robotic — vary connectors and use them only where a real relationship exists.",
+          "es": "Repetir el mismo conector en cada oración suena robótico — varíalos y úsalos solo donde exista una relación real."
+        },
+        "tags": [
+          "overuse",
+          "error"
+        ]
+      },
+      {
+        "id": "str-cf-5",
+        "topic": "connectors-flow",
+        "type": "cloze",
+        "prompt": {
+          "en": "Many countries, ___ Canada and Japan, have ageing populations.",
+          "es": "Many countries, ___ Canada and Japan, have ageing populations."
+        },
+        "answer": "such as",
+        "accept": [
+          "such as"
+        ],
+        "why": {
+          "en": "'Such as' introduces specific examples inside a list, supporting the general claim with evidence.",
+          "es": "'Such as' introduce ejemplos concretos dentro de una lista, apoyando la afirmación general con evidencia."
+        },
+        "tags": [
+          "example"
+        ]
+      }
+    ]
+  }
+}

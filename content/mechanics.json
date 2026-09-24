@@ -1,0 +1,1115 @@
+{
+  "version": 1,
+  "module": {
+    "id": "mechanics",
+    "title": {
+      "en": "Real-world mechanics",
+      "es": "Mecánica del inglés real"
+    },
+    "accent": "#F59E0B",
+    "groups": [
+      {
+        "id": "escritura",
+        "title": {
+          "en": "Writing mechanics",
+          "es": "Mecánica de la escritura"
+        }
+      },
+      {
+        "id": "numeros",
+        "title": {
+          "en": "Numbers & dates",
+          "es": "Números y fechas"
+        }
+      },
+      {
+        "id": "situaciones",
+        "title": {
+          "en": "Real situations",
+          "es": "Situaciones reales"
+        }
+      }
+    ],
+    "topics": [
+      {
+        "id": "punctuation-signals",
+        "title": {
+          "en": "Punctuation — the traffic signals of a sentence",
+          "es": "Puntuación — las señales de tráfico de una oración"
+        },
+        "group": "escritura",
+        "coreIdea": {
+          "en": "Punctuation is the traffic-signal system of a sentence: each mark tells the reader when to slow down, stop, merge, or keep moving.",
+          "es": "La puntuación es el sistema de señales de tráfico de una oración: cada signo le dice al lector cuándo frenar, detenerse, fusionarse o seguir."
+        },
+        "source": "🔵 PUNCTUATION IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "English punctuation is less flexible than Spanish and controls meaning, not just style. Commas mark clauses, lists and introductory elements ('If you arrive early, call me'). Semicolons connect two related independent clauses without a conjunction. Colons introduce an explanation or a list ('There is one issue: timing').",
+              "es": "La puntuación del inglés es menos flexible que la del español y controla el significado, no solo el estilo. Las comas marcan cláusulas, listas y elementos introductorios ('If you arrive early, call me'). Los puntos y coma conectan dos oraciones independientes relacionadas sin conjunción. Los dos puntos introducen una explicación o una lista ('There is one issue: timing')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Think of it as traffic control: a comma is a yield sign (slow down, don't stop), a period is a stop sign (full stop), a semicolon is a merge sign (join two related lanes with no connector word), and a colon is an arrow pointing forward to what comes next.",
+              "es": "Piénsalo como control de tráfico: la coma es una señal de ceda el paso (frena, no te detengas), el punto es una señal de alto (parada total), el punto y coma es una señal de fusión (une dos carriles relacionados sin palabra conectora), y los dos puntos son una flecha que señala hacia lo que viene."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Hyphens build compound adjectives before a noun: a high-level meeting, a long-term strategy. Spanish has no direct equivalent to this construction, so it needs deliberate practice. Apostrophes do two separate jobs: possession (John's book) and contractions (I'm).",
+              "es": "Los guiones construyen adjetivos compuestos antes de un sustantivo: a high-level meeting, a long-term strategy. El español no tiene un equivalente directo a esta construcción, así que requiere práctica deliberada. Los apóstrofes cumplen dos funciones distintas: posesión (John's book) y contracciones (I'm)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "In Spanish, two full sentences can be joined with just a comma. In English that is a 'comma splice' — a real error: 'I finished the report, I sent it to the client.' Fix it with a semicolon, a period, or a comma plus a conjunction: 'I finished the report; I sent it to the client.'",
+              "es": "En español, dos oraciones completas se pueden unir con solo una coma. En inglés eso es un 'comma splice' — un error real: 'I finished the report, I sent it to the client.' Se corrige con punto y coma, punto, o coma más conjunción: 'I finished the report; I sent it to the client.'"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "The plan was risky; the client accepted it.",
+            "es": "El plan era arriesgado; el cliente lo aceptó."
+          },
+          {
+            "en": "There is one issue: timing.",
+            "es": "Hay un problema: el tiempo."
+          },
+          {
+            "en": "We need a long-term strategy, not a quick fix.",
+            "es": "Necesitamos una estrategia a largo plazo, no una solución rápida."
+          },
+          {
+            "en": "If you arrive early, call me.",
+            "es": "Si llegas temprano, llámame."
+          },
+          {
+            "en": "This is Maria's car, not John's.",
+            "es": "Este es el carro de María, no el de John."
+          }
+        ],
+        "related": [
+          "contractions-zipper",
+          "silent-letters-fossils"
+        ],
+        "items": [
+          "mec-1",
+          "mec-2",
+          "mec-3",
+          "mec-4",
+          "mec-5"
+        ]
+      },
+      {
+        "id": "contractions-zipper",
+        "title": {
+          "en": "Contractions — the zipper of spoken English",
+          "es": "Contracciones — la cremallera del inglés hablado"
+        },
+        "group": "escritura",
+        "coreIdea": {
+          "en": "A contraction is a zipper: it pulls two separate words together into one smooth sound, and — like a zipper — you can always open it back up to see the two pieces underneath.",
+          "es": "Una contracción es una cremallera: junta dos palabras separadas en un solo sonido fluido, y —como una cremallera— siempre puedes abrirla para ver las dos piezas de abajo."
+        },
+        "source": "_CONTRACTIONS IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Contractions are standard grammar, not slang. They signal register, attitude and fluency. The core system (I'm, you're, he's, we're, they've, I'll, I'd) forms the backbone of neutral spoken and written English, and native speakers use it automatically.",
+              "es": "Las contracciones son gramática estándar, no lenguaje coloquial. Señalan registro, actitud y fluidez. El sistema central (I'm, you're, he's, we're, they've, I'll, I'd) es la base del inglés neutral hablado y escrito, y los nativos lo usan automáticamente."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Negative contractions soften negation: 'I don't agree' is neutral, while 'I do not agree' unzips the words back apart to add emphasis or correction. The full form is the tool you reach for when you want extra force.",
+              "es": "Las contracciones negativas suavizan la negación: 'I don't agree' es neutral, mientras que 'I do not agree' vuelve a separar las palabras para añadir énfasis o corrección. La forma completa es la herramienta que usas cuando quieres más fuerza."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Modal + have contractions (should've, could've, might've, must've) are essential for listening comprehension. 'Should of' does not exist grammatically — it's a phonetic misunderstanding of 'should have'.",
+              "es": "Las contracciones de modal + have (should've, could've, might've, must've) son esenciales para la comprensión auditiva. 'Should of' no existe gramaticalmente — es un malentendido fonético de 'should have'."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Advanced Spanish-speaking learners often avoid contractions completely, hyper-formalizing the language. The result is grammatically correct but rigid and unnatural — like leaving every zipper undone. 'I will send it this afternoon' is correct, but 'I'll send it this afternoon' is what a native speaker actually says.",
+              "es": "Los estudiantes avanzados hispanohablantes suelen evitar las contracciones por completo, hiper-formalizando el idioma. El resultado es correcto pero rígido y poco natural — como dejar cada cremallera sin cerrar. 'I will send it this afternoon' es correcto, pero 'I'll send it this afternoon' es lo que un nativo realmente dice."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I'll see you tomorrow.",
+            "es": "Te veo mañana."
+          },
+          {
+            "en": "I don't agree with that plan.",
+            "es": "No estoy de acuerdo con ese plan."
+          },
+          {
+            "en": "She should've called first.",
+            "es": "Ella debería haber llamado primero."
+          },
+          {
+            "en": "They've already left the office.",
+            "es": "Ellos ya salieron de la oficina."
+          },
+          {
+            "en": "I'd never seen snow before I moved to Canada.",
+            "es": "Nunca había visto la nieve antes de mudarme a Canadá."
+          }
+        ],
+        "related": [
+          "punctuation-signals",
+          "silent-letters-fossils"
+        ],
+        "items": [
+          "mec-6",
+          "mec-7",
+          "mec-8",
+          "mec-9",
+          "mec-10"
+        ]
+      },
+      {
+        "id": "silent-letters-fossils",
+        "title": {
+          "en": "Silent letters — fossils hidden in spelling",
+          "es": "Letras mudas — fósiles escondidos en la ortografía"
+        },
+        "group": "escritura",
+        "coreIdea": {
+          "en": "A silent letter is a linguistic fossil: it shows how a word used to sound centuries ago, even though that sound itself went extinct.",
+          "es": "Una letra muda es un fósil lingüístico: muestra cómo se pronunciaba una palabra hace siglos, aunque ese sonido en sí ya se extinguió."
+        },
+        "source": "Silent Letters in English.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "English spelling comes from Old English, French and Latin (plus Arabic, Greek, Celtic and Scandinavian influences). Words kept their original, imported spelling even as pronunciation simplified over time — kn- became just /n/, wr- became just /r/. The letters are fossils of a pronunciation that no longer exists.",
+              "es": "La ortografía del inglés viene del inglés antiguo, el francés y el latín (además de influencias árabes, griegas, celtas y escandinavas). Las palabras conservaron su ortografía original importada aunque la pronunciación se simplificó con el tiempo — kn- se volvió solo /n/, wr- se volvió solo /r/. Las letras son fósiles de una pronunciación que ya no existe."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Common fossil patterns: silent K before N (know, knife, knee), silent B after M (lamb, thumb, climb), silent W before R (write, wrong, wrist), silent GH (night, thought, through), silent H (hour, honest, heir), silent L (half, talk, calm), and silent T (listen, castle).",
+              "es": "Patrones fósiles comunes: K muda antes de N (know, knife, knee), B muda después de M (lamb, thumb, climb), W muda antes de R (write, wrong, wrist), GH muda (night, thought, through), H muda (hour, honest, heir), L muda (half, talk, calm) y T muda (listen, castle)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Silent letters sometimes exist purely to distinguish words that would otherwise be spelled the same: write vs right, hour vs our. The fossil is the only thing keeping the two words apart on the page.",
+              "es": "A veces las letras mudas existen únicamente para distinguir palabras que de otro modo se escribirían igual: write vs right, hour vs our. El fósil es lo único que mantiene separadas a las dos palabras en el papel."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "There is no perfect rule system — even native speakers learn silent letters through exposure. Because Spanish is highly phonetic (almost every letter is pronounced), Spanish speakers instinctively try to voice every letter, producing errors like a pronounced 't' in 'listen' or a pronounced 'w' in 'write'.",
+              "es": "No hay un sistema de reglas perfecto — incluso los nativos aprenden las letras mudas por exposición. Como el español es muy fonético (casi cada letra se pronuncia), los hispanohablantes instintivamente intentan pronunciar cada letra, produciendo errores como una 't' pronunciada en 'listen' o una 'w' pronunciada en 'write'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I cut the bread with a knife.",
+            "es": "Corté el pan con un cuchillo."
+          },
+          {
+            "en": "She hurt her knee climbing the wall.",
+            "es": "Se lastimó la rodilla escalando el muro."
+          },
+          {
+            "en": "He is an honest man.",
+            "es": "Es un hombre honesto."
+          },
+          {
+            "en": "I need to write a letter, not read it.",
+            "es": "Necesito escribir una carta, no leerla."
+          },
+          {
+            "en": "It took half an hour to walk there.",
+            "es": "Tomó media hora caminar hasta allá."
+          }
+        ],
+        "related": [
+          "contractions-zipper",
+          "punctuation-signals"
+        ],
+        "items": [
+          "mec-11",
+          "mec-12",
+          "mec-13",
+          "mec-14",
+          "mec-15"
+        ]
+      },
+      {
+        "id": "reading-numbers-assembly",
+        "title": {
+          "en": "Reading numbers aloud — the assembly line",
+          "es": "Leer números en voz alta — la línea de ensamblaje"
+        },
+        "group": "numeros",
+        "coreIdea": {
+          "en": "A big number in English is built like a product on an assembly line: each station — thousands, hundreds, tens and units — bolts on its piece in a fixed order, and 'and' is the small screw that joins the hundreds to whatever follows.",
+          "es": "Un número grande en inglés se construye como un producto en una línea de ensamblaje: cada estación —miles, centenas, decenas y unidades— coloca su pieza en un orden fijo, y 'and' es el pequeño tornillo que une las centenas con lo que sigue."
+        },
+        "source": "How to Read Numbers in English.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "The units (0–9) and teens (10–19) are memorised as single words. From 20–90, tens combine with units using a hyphen: twenty-one, forty-seven. Hundreds follow [number] + hundred, and British English inserts 'and' before the remainder: 105 = one hundred and five.",
+              "es": "Las unidades (0–9) y los números del 10 al 19 se memorizan como palabras únicas. Del 20 al 90, las decenas se combinan con las unidades usando un guion: twenty-one, forty-seven. Las centenas siguen [número] + hundred, y el inglés británico inserta 'and' antes del resto: 105 = one hundred and five."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Thousands follow the same assembly logic: [number] thousand + [rest]. 1,250 = one thousand two hundred and fifty. A full number like 103,242 is read station by station: one hundred and three thousand two hundred and forty-two.",
+              "es": "Los miles siguen la misma lógica de ensamblaje: [número] thousand + [resto]. 1,250 = one thousand two hundred and fifty. Un número completo como 103,242 se lee estación por estación: one hundred and three thousand two hundred and forty-two."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Pronunciation confusion is common between teens and tens that share a root: thirteen (13) vs thirty (30), fourteen (14) vs forty (40) — the stress moves to a different syllable and changes the meaning completely.",
+              "es": "Es común la confusión de pronunciación entre los números del 10 al 19 y las decenas que comparten raíz: thirteen (13) vs thirty (30), fourteen (14) vs forty (40) — el acento se mueve a otra sílaba y cambia por completo el significado."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'Thousand' never takes a plural -s when it works as a multiplier: ten thousand, not 'ten thousands'. And because Spanish connectors like 'cien mil' need no equivalent of 'and', learners often skip every 'and' in British English, producing the unnatural 'one hundred three thousand two hundred forty-two' instead of 'one hundred AND three thousand two hundred AND forty-two'.",
+              "es": "'Thousand' nunca lleva -s de plural cuando funciona como multiplicador: ten thousand, no 'ten thousands'. Y como conectores en español como 'cien mil' no necesitan un equivalente de 'and', los estudiantes suelen omitir cada 'and' en inglés británico, produciendo el antinatural 'one hundred three thousand two hundred forty-two' en lugar de 'one hundred AND three thousand two hundred AND forty-two'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "It costs one hundred and five dollars.",
+            "es": "Cuesta ciento cinco dólares."
+          },
+          {
+            "en": "The city has about ten thousand five hundred residents.",
+            "es": "La ciudad tiene alrededor de diez mil quinientos habitantes."
+          },
+          {
+            "en": "We sold one thousand two hundred and fifty units.",
+            "es": "Vendimos mil doscientas cincuenta unidades."
+          },
+          {
+            "en": "The population reached one hundred thousand.",
+            "es": "La población llegó a cien mil."
+          },
+          {
+            "en": "Be careful: thirteen and thirty sound very different in English.",
+            "es": "Cuidado: thirteen y thirty suenan muy distinto en inglés."
+          }
+        ],
+        "related": [
+          "dates-ordinal-podium"
+        ],
+        "items": [
+          "mec-16",
+          "mec-17",
+          "mec-18",
+          "mec-19",
+          "mec-20"
+        ]
+      },
+      {
+        "id": "dates-ordinal-podium",
+        "title": {
+          "en": "Dates — the ordinal podium",
+          "es": "Fechas — el podio de los ordinales"
+        },
+        "group": "numeros",
+        "coreIdea": {
+          "en": "An ordinal number is a medal on a podium: which medal you get — st, nd, rd or th — depends only on the last digit you finish on, never on how big the whole number is.",
+          "es": "Un número ordinal es una medalla en el podio: qué medalla recibes —st, nd, rd o th— depende solo del último dígito con el que terminas, nunca de qué tan grande sea el número completo."
+        },
+        "source": "🔵 DATES IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "The ordinal rule: 1 wins gold (st), 2 wins silver (nd), 3 wins bronze (rd), and everything else just gets the participation ribbon (th). But 11, 12 and 13 are permanent exceptions — no matter what, they always get the ribbon (th), never a medal.",
+              "es": "La regla del ordinal: 1 gana oro (st), 2 gana plata (nd), 3 gana bronce (rd), y todo lo demás recibe la cinta de participación (th). Pero 11, 12 y 13 son excepciones permanentes — sin importar nada, siempre reciben la cinta (th), nunca una medalla."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The rule repeats forever, based only on the final digit(s): 22nd, 23rd, 24th, 101st, 1,012th (because 12 is always 'th'). The size of the number is irrelevant — only the finish line matters.",
+              "es": "La regla se repite para siempre, basada solo en el/los último(s) dígito(s): 22nd, 23rd, 24th, 101st, 1,012th (porque 12 siempre es 'th'). El tamaño del número es irrelevante — solo importa la línea de meta."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Date formats differ by country: UK writes '5 April 2026' (day first); US writes 'April 5, 2026' (month first). Spoken aloud, both become 'April the fifth' or 'the fifth of April' — the ordinal always appears in speech, even when the written digit doesn't show it.",
+              "es": "Los formatos de fecha varían según el país: el Reino Unido escribe '5 April 2026' (día primero); EE. UU. escribe 'April 5, 2026' (mes primero). Al hablarlo, ambos se dicen 'April the fifth' o 'the fifth of April' — el ordinal siempre aparece al hablar, aunque el dígito escrito no lo muestre."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Two real errors: saying '5 of April' instead of '5th of April' (the ordinal suffix is never optional in speech), and misapplying the 2→nd / 3→rd pattern to 12 and 13, which always take 'th' no matter what.",
+              "es": "Dos errores reales: decir '5 of April' en lugar de '5th of April' (el sufijo ordinal nunca es opcional al hablar), y aplicar mal el patrón 2→nd / 3→rd a 12 y 13, que siempre llevan 'th' sin importar nada."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "Her birthday is on the 3rd of May.",
+            "es": "Su cumpleaños es el 3 de mayo."
+          },
+          {
+            "en": "The meeting is on April 5, 2026.",
+            "es": "La reunión es el 5 de abril de 2026."
+          },
+          {
+            "en": "Today is the 21st of September.",
+            "es": "Hoy es 21 de septiembre."
+          },
+          {
+            "en": "We celebrate our 12th anniversary this year.",
+            "es": "Celebramos nuestro décimo segundo aniversario este año."
+          },
+          {
+            "en": "The report is due on the 1st of the month.",
+            "es": "El informe se entrega el primer día del mes."
+          }
+        ],
+        "related": [
+          "reading-numbers-assembly"
+        ],
+        "items": [
+          "mec-21",
+          "mec-22",
+          "mec-23",
+          "mec-24",
+          "mec-25"
+        ]
+      },
+      {
+        "id": "giving-directions-gps",
+        "title": {
+          "en": "Giving & receiving directions — the human GPS",
+          "es": "Dar y recibir direcciones — el GPS humano"
+        },
+        "group": "situaciones",
+        "coreIdea": {
+          "en": "Giving directions is being a human GPS: you supply the movement verbs (the engine), the sequence (the route), the landmarks (the waypoints), and a tone that matches your passenger.",
+          "es": "Dar direcciones es ser un GPS humano: aportas los verbos de movimiento (el motor), la secuencia (la ruta), las referencias (los puntos de paso) y un tono que se ajusta a tu pasajero."
+        },
+        "source": "🔵 GIVING & RECEIVING DIRECTIONS IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Every set of directions follows the same framework: starting point, movement verb, sequence, landmarks, confirmation. Native speakers compress this into a few words; learners must expand and structure it explicitly. The verb you choose carries nuance: go (neutral), walk (on foot), head towards (natural, directional), continue (clear, formal), proceed (very formal).",
+              "es": "Todo conjunto de direcciones sigue el mismo marco: punto de inicio, verbo de movimiento, secuencia, referencias, confirmación. Los nativos comprimen esto en pocas palabras; los estudiantes deben expandirlo y estructurarlo explícitamente. El verbo que elijas transmite matiz: go (neutral), walk (a pie), head towards (natural, direccional), continue (claro, formal), proceed (muy formal)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "English has a complex preposition system for space: at the corner (a point), on the street (a surface/line), in the building (inside), across from (the opposite side), just past (slightly beyond). Spanish doesn't map these one-to-one, so each needs deliberate practice.",
+              "es": "El inglés tiene un sistema complejo de preposiciones para el espacio: at the corner (un punto), on the street (una superficie/línea), in the building (adentro), across from (el lado opuesto), just past (un poco más allá). El español no las mapea de forma directa, así que cada una requiere práctica deliberada."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Professional English softens directions with hedges — 'you might want to...', 'it's probably easier if you...', 'I'd recommend...' — instead of bare imperatives, and it approximates distance ('about', 'a bit further', 'just after') instead of giving exact numbers.",
+              "es": "El inglés profesional suaviza las direcciones con expresiones indirectas —'you might want to...', 'it's probably easier if you...', 'I'd recommend...'— en lugar de imperativos secos, y aproxima la distancia ('about', 'a bit further', 'just after') en lugar de dar números exactos."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Three literal-translation errors from Spanish: 'Turn to left' instead of 'Turn left' (no preposition after turn), 'Go to straight' instead of 'Go straight' (straight is an adverb, not a noun), and 'In front the bank' instead of 'In front OF the bank' (the 'of' is never optional).",
+              "es": "Tres errores de traducción literal desde el español: 'Turn to left' en lugar de 'Turn left' (sin preposición después de turn), 'Go to straight' en lugar de 'Go straight' (straight es adverbio, no sustantivo), y 'In front the bank' en lugar de 'In front OF the bank' (el 'of' nunca es opcional)."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "Go straight ahead and turn right at the corner.",
+            "es": "Sigue derecho y gira a la derecha en la esquina."
+          },
+          {
+            "en": "The bank is just past the traffic light.",
+            "es": "El banco está justo después del semáforo."
+          },
+          {
+            "en": "I'd recommend taking the second left.",
+            "es": "Te recomendaría tomar la segunda calle a la izquierda."
+          },
+          {
+            "en": "The pharmacy is across from the hospital.",
+            "es": "La farmacia está frente al hospital, del otro lado."
+          },
+          {
+            "en": "Sorry, could you repeat that? Is that before or after the bank?",
+            "es": "Perdón, ¿puedes repetir? ¿Es antes o después del banco?"
+          }
+        ],
+        "related": [
+          "contractions-zipper"
+        ],
+        "items": [
+          "mec-26",
+          "mec-27",
+          "mec-28",
+          "mec-29",
+          "mec-30"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "mec-1",
+        "topic": "punctuation-signals",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correctly punctuated sentence:",
+          "es": "Elige la oración con la puntuación correcta:"
+        },
+        "answer": "I finished the report; I sent it to the client.",
+        "distractors": [
+          "I finished the report, I sent it to the client."
+        ],
+        "why": {
+          "en": "A comma alone cannot join two independent clauses in English — that's called a comma splice. Use a semicolon, a period, or comma + conjunction instead.",
+          "es": "Una sola coma no puede unir dos oraciones independientes en inglés — eso se llama 'comma splice'. Usa punto y coma, punto, o coma + conjunción en su lugar."
+        },
+        "tags": [
+          "comma-splice",
+          "error"
+        ]
+      },
+      {
+        "id": "mec-2",
+        "topic": "punctuation-signals",
+        "type": "choice",
+        "prompt": {
+          "en": "Which mark correctly introduces the explanation? 'There is one issue ___ timing.'",
+          "es": "¿Qué signo introduce correctamente la explicación? 'There is one issue ___ timing.'"
+        },
+        "answer": ":",
+        "distractors": [
+          ";"
+        ],
+        "why": {
+          "en": "A colon introduces an explanation or a list; a semicolon connects two complete sentences, not an explanation.",
+          "es": "Los dos puntos introducen una explicación o una lista; el punto y coma conecta dos oraciones completas, no una explicación."
+        },
+        "tags": [
+          "colon",
+          "semicolon"
+        ]
+      },
+      {
+        "id": "mec-3",
+        "topic": "punctuation-signals",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct compound adjective:",
+          "es": "Elige el adjetivo compuesto correcto:"
+        },
+        "answer": "a long-term strategy",
+        "distractors": [
+          "a long term strategy"
+        ],
+        "why": {
+          "en": "Compound adjectives before a noun need a hyphen in English — Spanish has no equivalent construction, so learners often drop it.",
+          "es": "Los adjetivos compuestos antes de un sustantivo necesitan guion en inglés — el español no tiene una construcción equivalente, así que los estudiantes suelen omitirlo."
+        },
+        "tags": [
+          "hyphen",
+          "error"
+        ]
+      },
+      {
+        "id": "mec-4",
+        "topic": "punctuation-signals",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the sentence with correct possession:",
+          "es": "Elige la oración con posesión correcta:"
+        },
+        "answer": "This is Maria's car.",
+        "distractors": [
+          "This is Maria car."
+        ],
+        "why": {
+          "en": "Spanish shows possession with 'de' (el carro de María), so learners often forget the apostrophe -s entirely in English.",
+          "es": "El español muestra posesión con 'de' (el carro de María), así que los estudiantes suelen olvidar por completo el apóstrofe -s en inglés."
+        },
+        "tags": [
+          "apostrophe",
+          "possession",
+          "error"
+        ]
+      },
+      {
+        "id": "mec-5",
+        "topic": "punctuation-signals",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correctly punctuated sentence:",
+          "es": "Elige la oración con la puntuación correcta:"
+        },
+        "answer": "If you arrive early, call me.",
+        "distractors": [
+          "If you arrive early call me."
+        ],
+        "why": {
+          "en": "An introductory clause (If you arrive early) needs a comma before the main clause.",
+          "es": "Una cláusula introductoria (If you arrive early) necesita una coma antes de la cláusula principal."
+        },
+        "tags": [
+          "comma",
+          "introductory-clause"
+        ]
+      },
+      {
+        "id": "mec-6",
+        "topic": "contractions-zipper",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the grammatically correct form:",
+          "es": "Elige la forma gramaticalmente correcta:"
+        },
+        "answer": "You should've told me earlier.",
+        "distractors": [
+          "You should of told me earlier."
+        ],
+        "why": {
+          "en": "'Should of' doesn't exist in grammar — it's a phonetic misunderstanding of 'should have', contracted as should've.",
+          "es": "'Should of' no existe gramaticalmente — es un malentendido fonético de 'should have', contraído como should've."
+        },
+        "tags": [
+          "modal",
+          "error"
+        ]
+      },
+      {
+        "id": "mec-7",
+        "topic": "contractions-zipper",
+        "type": "choice",
+        "prompt": {
+          "en": "Which sentence sounds neutral and conversational, not emphatic?",
+          "es": "¿Qué oración suena neutral y conversacional, no enfática?"
+        },
+        "answer": "I don't agree.",
+        "distractors": [
+          "I do not agree."
+        ],
+        "why": {
+          "en": "The full form 'do not' adds emphasis or contradiction; the contraction 'don't' is the neutral, everyday choice.",
+          "es": "La forma completa 'do not' añade énfasis o contradicción; la contracción 'don't' es la opción neutral y cotidiana."
+        },
+        "tags": [
+          "register",
+          "negative"
+        ]
+      },
+      {
+        "id": "mec-8",
+        "topic": "contractions-zipper",
+        "type": "cloze",
+        "prompt": {
+          "en": "___ never seen snow before I moved to Canada. (contract 'I had')",
+          "es": "___ never seen snow before I moved to Canada. (contract 'I had')"
+        },
+        "answer": "I'd",
+        "accept": [
+          "I'd"
+        ],
+        "why": {
+          "en": "Here 'I'd' = 'I had' (past perfect), not 'I would' — the context (a completed experience before another past event) resolves the ambiguity.",
+          "es": "Aquí 'I'd' = 'I had' (pasado perfecto), no 'I would' — el contexto (una experiencia completada antes de otro momento pasado) resuelve la ambigüedad."
+        },
+        "tags": [
+          "ambiguity",
+          "context"
+        ]
+      },
+      {
+        "id": "mec-9",
+        "topic": "contractions-zipper",
+        "type": "choice",
+        "prompt": {
+          "en": "In casual conversation with a colleague, which sounds more natural?",
+          "es": "En una conversación casual con un colega, ¿cuál suena más natural?"
+        },
+        "answer": "I'll send it this afternoon.",
+        "distractors": [
+          "I will send it this afternoon."
+        ],
+        "why": {
+          "en": "Avoiding contractions entirely, even in casual speech, is a common advanced-learner error — it makes correct English sound stiff and unnatural.",
+          "es": "Evitar las contracciones por completo, incluso en el habla casual, es un error común de estudiantes avanzados — hace que un inglés correcto suene rígido y poco natural."
+        },
+        "tags": [
+          "register",
+          "fluency"
+        ]
+      },
+      {
+        "id": "mec-10",
+        "topic": "contractions-zipper",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct contraction: '___ leaving at six.' (we are)",
+          "es": "Elige la contracción correcta: '___ leaving at six.' (we are)"
+        },
+        "answer": "We're",
+        "distractors": [
+          "Were"
+        ],
+        "why": {
+          "en": "'We're' (we are) and 'were' (past tense of 'be') sound identical in fast speech but are completely different words — a classic listening trap.",
+          "es": "'We're' (we are) y 'were' (pasado de 'be') suenan igual en el habla rápida pero son palabras completamente distintas — una trampa auditiva clásica."
+        },
+        "tags": [
+          "homophone",
+          "listening"
+        ]
+      },
+      {
+        "id": "mec-11",
+        "topic": "silent-letters-fossils",
+        "type": "choice",
+        "prompt": {
+          "en": "Which word has a silent letter?",
+          "es": "¿Qué palabra tiene una letra muda?"
+        },
+        "answer": "knife",
+        "distractors": [
+          "nice"
+        ],
+        "why": {
+          "en": "'knife' has a silent k (kn- is always silent at the start of a word); 'nice' has no hidden letter — it's pronounced exactly as it looks.",
+          "es": "'knife' tiene una k muda (kn- siempre es muda al inicio de palabra); 'nice' no tiene letra oculta — se pronuncia tal como se ve."
+        },
+        "tags": [
+          "silent-k",
+          "recognition"
+        ]
+      },
+      {
+        "id": "mec-12",
+        "topic": "silent-letters-fossils",
+        "type": "cloze",
+        "prompt": {
+          "en": "In 'climb', the silent letter is ___.",
+          "es": "In 'climb', the silent letter is ___."
+        },
+        "answer": "b",
+        "accept": [
+          "b"
+        ],
+        "why": {
+          "en": "'b' after 'm' is silent, as in climb, thumb, lamb.",
+          "es": "La 'b' después de 'm' es muda, como en climb, thumb, lamb."
+        },
+        "tags": [
+          "silent-b"
+        ]
+      },
+      {
+        "id": "mec-13",
+        "topic": "silent-letters-fossils",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the word that means 'correct', not 'to put words on paper':",
+          "es": "Elige la palabra que significa 'correcto', no 'escribir':"
+        },
+        "answer": "right",
+        "distractors": [
+          "write"
+        ],
+        "why": {
+          "en": "'write' and 'right' sound identical, but the silent 'w' in 'write' is the only thing that separates them in spelling — Spanish speakers who pronounce every letter often mix them up.",
+          "es": "'write' y 'right' suenan igual, pero la 'w' muda en 'write' es lo único que las separa en la escritura — los hispanohablantes que pronuncian cada letra suelen confundirlas."
+        },
+        "tags": [
+          "homophone",
+          "write-right"
+        ]
+      },
+      {
+        "id": "mec-14",
+        "topic": "silent-letters-fossils",
+        "type": "choice",
+        "prompt": {
+          "en": "How should a native speaker pronounce 'listen'?",
+          "es": "¿Cómo pronuncia un hablante nativo 'listen'?"
+        },
+        "answer": "without the 't' sound",
+        "distractors": [
+          "with a clear 't' sound, like in Spanish"
+        ],
+        "why": {
+          "en": "The 't' in 'listen' is silent. Spanish is a highly phonetic language, so learners often try to pronounce every letter — a natural but incorrect instinct here.",
+          "es": "La 't' en 'listen' es muda. El español es muy fonético, así que los estudiantes suelen intentar pronunciar cada letra — un instinto natural pero incorrecto aquí."
+        },
+        "tags": [
+          "silent-t",
+          "pitfall"
+        ]
+      },
+      {
+        "id": "mec-15",
+        "topic": "silent-letters-fossils",
+        "type": "cloze",
+        "prompt": {
+          "en": "'Hour' starts with a silent ___.",
+          "es": "'Hour' starts with a silent ___."
+        },
+        "answer": "h",
+        "accept": [
+          "h"
+        ],
+        "why": {
+          "en": "The 'h' in 'hour' is silent, which is why 'hour' and 'our' sound exactly the same.",
+          "es": "La 'h' en 'hour' es muda, por eso 'hour' y 'our' suenan exactamente igual."
+        },
+        "tags": [
+          "silent-h"
+        ]
+      },
+      {
+        "id": "mec-16",
+        "topic": "reading-numbers-assembly",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct way to say 10,500:",
+          "es": "Elige la forma correcta de decir 10,500:"
+        },
+        "answer": "ten thousand five hundred",
+        "distractors": [
+          "ten thousands five hundred"
+        ],
+        "why": {
+          "en": "'Thousand' never takes an -s when it's acting as a multiplier (ten thousand, five thousand) — only 'thousands of people' (a vague quantity) uses the plural.",
+          "es": "'Thousand' nunca lleva -s cuando funciona como multiplicador (ten thousand, five thousand) — solo 'thousands of people' (una cantidad vaga) usa el plural."
+        },
+        "tags": [
+          "thousand",
+          "plural-error"
+        ]
+      },
+      {
+        "id": "mec-17",
+        "topic": "reading-numbers-assembly",
+        "type": "cloze",
+        "prompt": {
+          "en": "13 in words is ___.",
+          "es": "13 in words is ___."
+        },
+        "answer": "thirteen",
+        "accept": [
+          "thirteen"
+        ],
+        "why": {
+          "en": "Don't confuse 13 (thirteen) with 30 (thirty) — the stress falls on a different syllable and the spelling changes.",
+          "es": "No confundas 13 (thirteen) con 30 (thirty) — el acento cae en una sílaba distinta y cambia la ortografía."
+        },
+        "tags": [
+          "teens",
+          "tens"
+        ]
+      },
+      {
+        "id": "mec-18",
+        "topic": "reading-numbers-assembly",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural British reading of 342:",
+          "es": "Elige la lectura británica natural de 342:"
+        },
+        "answer": "three hundred and forty-two",
+        "distractors": [
+          "three hundred forty-two"
+        ],
+        "why": {
+          "en": "British English usually inserts 'and' between the hundreds and the rest of the number: three hundred AND forty-two.",
+          "es": "El inglés británico normalmente inserta 'and' entre las centenas y el resto del número: three hundred AND forty-two."
+        },
+        "tags": [
+          "and-rule",
+          "hundreds"
+        ]
+      },
+      {
+        "id": "mec-19",
+        "topic": "reading-numbers-assembly",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct way to read 103,242:",
+          "es": "Elige la forma correcta de leer 103,242:"
+        },
+        "answer": "one hundred and three thousand two hundred and forty-two",
+        "distractors": [
+          "one hundred three thousand two hundred forty-two"
+        ],
+        "why": {
+          "en": "Skipping every 'and' (a common Spanish-speaker habit, since 'cien mil' needs no connector) makes long numbers sound unnatural in British English.",
+          "es": "Omitir cada 'and' (un hábito común entre hispanohablantes, porque 'cien mil' no necesita conector) hace que los números largos suenen poco naturales en inglés británico."
+        },
+        "tags": [
+          "and-rule",
+          "large-numbers"
+        ]
+      },
+      {
+        "id": "mec-20",
+        "topic": "reading-numbers-assembly",
+        "type": "cloze",
+        "prompt": {
+          "en": "Write 47 in words: ___.",
+          "es": "Write 47 in words: ___."
+        },
+        "answer": "forty-seven",
+        "accept": [
+          "forty-seven"
+        ],
+        "why": {
+          "en": "Compound numbers from 21–99 (except multiples of ten) are hyphenated: forty-seven, not forty seven.",
+          "es": "Los números compuestos del 21 al 99 (excepto múltiplos de diez) llevan guion: forty-seven, no forty seven."
+        },
+        "tags": [
+          "hyphen",
+          "compound-numbers"
+        ]
+      },
+      {
+        "id": "mec-21",
+        "topic": "dates-ordinal-podium",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct ordinal for 12:",
+          "es": "Elige el ordinal correcto para 12:"
+        },
+        "answer": "12th",
+        "distractors": [
+          "12nd"
+        ],
+        "why": {
+          "en": "11, 12 and 13 are always exceptions — they take 'th' even though 2 usually means 'nd'.",
+          "es": "11, 12 y 13 son siempre excepciones — llevan 'th' aunque el 2 normalmente signifique 'nd'."
+        },
+        "tags": [
+          "ordinal-exception"
+        ]
+      },
+      {
+        "id": "mec-22",
+        "topic": "dates-ordinal-podium",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct ordinal for 22:",
+          "es": "Elige el ordinal correcto para 22:"
+        },
+        "answer": "22nd",
+        "distractors": [
+          "22th"
+        ],
+        "why": {
+          "en": "After 21, the pattern repeats based on the last digit: 22 ends in 2, so it's 22nd, not 22th.",
+          "es": "Después de 21, el patrón se repite según el último dígito: 22 termina en 2, así que es 22nd, no 22th."
+        },
+        "tags": [
+          "ordinal-pattern"
+        ]
+      },
+      {
+        "id": "mec-23",
+        "topic": "dates-ordinal-podium",
+        "type": "choice",
+        "prompt": {
+          "en": "In US English, '4/5/2026' means:",
+          "es": "En inglés americano, '4/5/2026' significa:"
+        },
+        "answer": "April 5, 2026",
+        "distractors": [
+          "4 May 2026"
+        ],
+        "why": {
+          "en": "US format is month/day/year, so 4/5 means April 5th — the opposite order from the UK/Spanish day/month convention, a classic source of confusion.",
+          "es": "El formato estadounidense es mes/día/año, así que 4/5 significa 5 de abril — el orden opuesto a la convención de día/mes del Reino Unido y del español, una fuente clásica de confusión."
+        },
+        "tags": [
+          "date-format",
+          "us-uk"
+        ]
+      },
+      {
+        "id": "mec-24",
+        "topic": "dates-ordinal-podium",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correctly spoken date:",
+          "es": "Elige la fecha correctamente pronunciada:"
+        },
+        "answer": "the 5th of April",
+        "distractors": [
+          "5 of April"
+        ],
+        "why": {
+          "en": "Spoken and written dates always need the ordinal suffix — '5 of April' is a literal, incomplete translation; English needs '5th of April' or 'April the fifth'.",
+          "es": "Las fechas habladas y escritas siempre necesitan el sufijo ordinal — '5 of April' es una traducción literal e incompleta; el inglés necesita '5th of April' o 'April the fifth'."
+        },
+        "tags": [
+          "ordinal-suffix",
+          "error"
+        ]
+      },
+      {
+        "id": "mec-25",
+        "topic": "dates-ordinal-podium",
+        "type": "cloze",
+        "prompt": {
+          "en": "100 as an ordinal is written ___.",
+          "es": "100 as an ordinal is written ___."
+        },
+        "answer": "100th",
+        "accept": [
+          "100th"
+        ],
+        "why": {
+          "en": "Size doesn't matter — only the last digit(s) decide the ending. 100 ends in a plain zero, so it takes 'th'.",
+          "es": "El tamaño no importa — solo el(los) último(s) dígito(s) decide(n) la terminación. 100 termina en cero, así que lleva 'th'."
+        },
+        "tags": [
+          "ordinal-large-numbers"
+        ]
+      },
+      {
+        "id": "mec-26",
+        "topic": "giving-directions-gps",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct instruction:",
+          "es": "Elige la instrucción correcta:"
+        },
+        "answer": "Turn left at the corner.",
+        "distractors": [
+          "Turn to left at the corner."
+        ],
+        "why": {
+          "en": "English 'turn left/right' takes no preposition — 'turn to left' is a direct, incorrect translation of 'girar a la izquierda'.",
+          "es": "En inglés 'turn left/right' no lleva preposición — 'turn to left' es una traducción directa e incorrecta de 'girar a la izquierda'."
+        },
+        "tags": [
+          "preposition-error",
+          "literal-translation"
+        ]
+      },
+      {
+        "id": "mec-27",
+        "topic": "giving-directions-gps",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct instruction:",
+          "es": "Elige la instrucción correcta:"
+        },
+        "answer": "Go straight for two blocks.",
+        "distractors": [
+          "Go to straight for two blocks."
+        ],
+        "why": {
+          "en": "'Straight' is an adverb here, not a noun — it needs no 'to'. 'Go to straight' is a literal translation error.",
+          "es": "'Straight' es un adverbio aquí, no un sustantivo — no necesita 'to'. 'Go to straight' es un error de traducción literal."
+        },
+        "tags": [
+          "preposition-error",
+          "literal-translation"
+        ]
+      },
+      {
+        "id": "mec-28",
+        "topic": "giving-directions-gps",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct sentence:",
+          "es": "Elige la oración correcta:"
+        },
+        "answer": "The café is in front of the bank.",
+        "distractors": [
+          "The café is in front the bank."
+        ],
+        "why": {
+          "en": "'In front of' always needs 'of' before the noun — dropping it is a very common Spanish-speaker error.",
+          "es": "'In front of' siempre necesita 'of' antes del sustantivo — omitirlo es un error muy común entre hispanohablantes."
+        },
+        "tags": [
+          "preposition-error"
+        ]
+      },
+      {
+        "id": "mec-29",
+        "topic": "giving-directions-gps",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the correct preposition: 'Wait for me ___ the corner.'",
+          "es": "Elige la preposición correcta: 'Wait for me ___ the corner.'"
+        },
+        "answer": "at",
+        "distractors": [
+          "in"
+        ],
+        "why": {
+          "en": "'At the corner' treats it as a point in space; 'in the corner' would mean inside a small enclosed area, like a room — not how English describes a street corner.",
+          "es": "'At the corner' lo trata como un punto en el espacio; 'in the corner' significaría dentro de un área pequeña y cerrada, como una habitación — no es así como el inglés describe una esquina."
+        },
+        "tags": [
+          "preposition-nuance"
+        ]
+      },
+      {
+        "id": "mec-30",
+        "topic": "giving-directions-gps",
+        "type": "choice",
+        "prompt": {
+          "en": "In a professional context, which sounds more appropriate?",
+          "es": "En un contexto profesional, ¿cuál suena más apropiado?"
+        },
+        "answer": "You might want to take the elevator to the third floor.",
+        "distractors": [
+          "Take the elevator to the third floor."
+        ],
+        "why": {
+          "en": "Bare imperatives ('Take the elevator') sound fine casually, but professional English softens instructions with hedges like 'you might want to' or 'I'd recommend'.",
+          "es": "Los imperativos secos ('Take the elevator') suenan bien en contextos casuales, pero el inglés profesional suaviza las instrucciones con expresiones como 'you might want to' o 'I'd recommend'."
+        },
+        "tags": [
+          "register",
+          "politeness"
+        ]
+      }
+    ]
+  }
+}

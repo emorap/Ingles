@@ -1,0 +1,1434 @@
+{
+  "version": 1,
+  "module": {
+    "id": "verbforms",
+    "title": {
+      "en": "Verb forms",
+      "es": "Formas verbales"
+    },
+    "accent": "#38BDF8",
+    "groups": [
+      {
+        "id": "modales",
+        "title": {
+          "en": "Modal verbs",
+          "es": "Verbos modales"
+        }
+      },
+      {
+        "id": "ing-infinitivo",
+        "title": {
+          "en": "Gerund vs infinitive",
+          "es": "Gerundio vs infinitivo"
+        }
+      },
+      {
+        "id": "get",
+        "title": {
+          "en": "The verb GET",
+          "es": "El verbo GET"
+        }
+      }
+    ],
+    "topics": [
+      {
+        "id": "modals-ability-permission",
+        "title": {
+          "en": "Can, could, may — the key ring of ability and permission",
+          "es": "Can, could, may — el llavero de la habilidad y el permiso"
+        },
+        "group": "modales",
+        "coreIdea": {
+          "en": "Can, could and may are three keys on the same ring: one opens 'I'm able to', another opens 'I have permission to', and turning any of them more gently just makes the request more polite.",
+          "es": "Can, could y may son tres llaves del mismo llavero: una abre 'puedo hacerlo', otra abre 'tengo permiso', y girar cualquiera con más suavidad solo hace la petición más educada."
+        },
+        "source": "Modal Verbs.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Can is the everyday key for present ability ('I can speak English'). Could is the same key turned for the past ('She could run 10km when she was younger') or turned gently as a soft request or offer. Be able to is the spare key that fits every lock can and could can't reach — other tenses.",
+              "es": "Can es la llave de todos los días para la habilidad presente ('I can speak English'). Could es la misma llave girada hacia el pasado ('She could run 10km when she was younger') o girada con suavidad como petición u ofrecimiento educado. Be able to es la llave de repuesto que abre las cerraduras a las que can y could no llegan — los demás tiempos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "For permission, the same three keys reappear on a formality dial: can is casual ('Can I go to the bathroom?'), could is more polite ('Could I borrow your pen?'), and may is the most formal — and a little old-fashioned ('May I speak to you?').",
+              "es": "Para el permiso, las mismas tres llaves reaparecen en un dial de formalidad: can es casual ('Can I go to the bathroom?'), could es más educado ('Could I borrow your pen?'), y may es la más formal — y un poco anticuada ('May I speak to you?')."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Because 'poder' conjugates like a normal Spanish verb, learners try to conjugate modals too. Modal verbs never change form (no -s, no -ed) and never combine with do/does or 'to': 'She cans swim' and 'Did she can help?' are both wrong — say 'She can swim' and 'Could she help?'.",
+              "es": "Como 'poder' se conjuga como un verbo normal en español, los estudiantes intentan conjugar los modales también. Los verbos modales nunca cambian de forma (sin -s, sin -ed) y nunca se combinan con do/does ni con 'to': 'She cans swim' y 'Did she can help?' están mal — se dice 'She can swim' y 'Could she help?'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I can speak English.",
+            "es": "Puedo hablar inglés."
+          },
+          {
+            "en": "She could run 10 km when she was younger.",
+            "es": "Ella podía correr 10 km cuando era más joven."
+          },
+          {
+            "en": "We will be able to help tomorrow.",
+            "es": "Podremos ayudar mañana."
+          },
+          {
+            "en": "Could I borrow your pen?",
+            "es": "¿Podrías prestarme tu bolígrafo?"
+          },
+          {
+            "en": "May I speak to you?",
+            "es": "¿Puedo hablar contigo? (formal, un poco anticuado)"
+          }
+        ],
+        "related": [
+          "modals-obligation-advice",
+          "modals-possibility"
+        ],
+        "items": [
+          "vbf-mod1-cans",
+          "vbf-mod1-couldpast",
+          "vbf-mod1-beableto",
+          "vbf-mod1-bareinf",
+          "vbf-mod1-didcan"
+        ]
+      },
+      {
+        "id": "modals-obligation-advice",
+        "title": {
+          "en": "Must, have to, should — two alarms and a whisper",
+          "es": "Must, have to, should — dos alarmas y un susurro"
+        },
+        "group": "modales",
+        "coreIdea": {
+          "en": "Must is the alarm you set for yourself, have to is the alarm the world sets off around you, and should is only a friend's whisper — three different volumes of 'you need to do this'.",
+          "es": "Must es la alarma que tú mismo programas, have to es la alarma que el mundo activa a tu alrededor, y should es solo el susurro de un amigo — tres volúmenes distintos de 'necesitas hacer esto'."
+        },
+        "source": "Modal Verbs.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Must is strong obligation that feels internal or formal ('You must wear a seatbelt'). Have to is obligation imposed from outside — rules, laws, other people ('I have to pay my taxes'). Need to is plain practical necessity ('She needs to submit the form').",
+              "es": "Must es una obligación fuerte que se siente interna o formal ('You must wear a seatbelt'). Have to es una obligación impuesta desde afuera — reglas, leyes, otras personas ('I have to pay my taxes'). Need to es simplemente necesidad práctica ('She needs to submit the form')."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "For advice, should and ought to are near-twins ('You should see a doctor' / 'He ought to study more'), and had better adds real urgency — a warning that something bad happens if you don't ('You had better leave now, or you'll miss the bus').",
+              "es": "Para consejo, should y ought to son casi gemelos ('You should see a doctor' / 'He ought to study more'), y had better añade urgencia real — una advertencia de que algo malo pasará si no obedeces ('You had better leave now, or you'll miss the bus')."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "The negatives are NOT symmetrical, and this is the trap. Mustn't = prohibited (the alarm goes off if you do it): 'You mustn't smoke here.' Don't have to = optional, no alarm at all: 'You don't have to come.' Spanish 'no debo' and 'no tengo que' feel almost the same, so learners often say 'mustn't' when they only mean 'it's optional' — flipping the meaning completely.",
+              "es": "Los negativos NO son simétricos, y ahí está la trampa. Mustn't = prohibido (la alarma suena si lo haces): 'You mustn't smoke here.' Don't have to = opcional, sin alarma: 'You don't have to come.' 'No debo' y 'no tengo que' se sienten casi iguales en español, así que los estudiantes a veces dicen 'mustn't' cuando solo quieren decir 'es opcional' — invirtiendo el significado por completo."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "You must wear a seatbelt.",
+            "es": "Debes ponerte el cinturón."
+          },
+          {
+            "en": "I have to pay my taxes.",
+            "es": "Tengo que pagar mis impuestos."
+          },
+          {
+            "en": "You mustn't smoke here.",
+            "es": "Está prohibido fumar aquí."
+          },
+          {
+            "en": "You don't have to come — it's optional.",
+            "es": "No tienes que venir — es opcional."
+          },
+          {
+            "en": "You had better leave now, or you'll miss the bus.",
+            "es": "Será mejor que te vayas ya, o perderás el bus."
+          }
+        ],
+        "related": [
+          "modals-ability-permission",
+          "modals-possibility",
+          "modals-deduction"
+        ],
+        "items": [
+          "vbf-mod2-mustnt-vs-dont",
+          "vbf-mod2-oughtto",
+          "vbf-mod2-hadbetter",
+          "vbf-mod2-shouldto",
+          "vbf-mod2-needsto"
+        ]
+      },
+      {
+        "id": "modals-possibility",
+        "title": {
+          "en": "Might, could, may — the probability meter",
+          "es": "Might, could, may — el medidor de probabilidad"
+        },
+        "group": "modales",
+        "coreIdea": {
+          "en": "Might, could and may are the 50% needle on a probability meter — guesses about what could be true right now — while can states a general fact about what is possible in the world.",
+          "es": "Might, could y may son la aguja del 50% en un medidor de probabilidad — suposiciones sobre lo que podría ser cierto ahora mismo — mientras que can afirma un hecho general sobre lo que es posible en el mundo."
+        },
+        "source": "Modal Verbs.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Might, could and may suggest a possible outcome, roughly a coin-flip of certainty: 'It might rain later.' 'You may win the prize!' Can, in contrast, states a general truth or recurring possibility about the world, not a guess about one moment: 'Fires can start easily in summer.'",
+              "es": "Might, could y may sugieren un resultado posible, más o menos con la certeza de lanzar una moneda: 'It might rain later.' 'You may win the prize!' Can, en cambio, afirma una verdad general o una posibilidad recurrente del mundo, no una suposición sobre un momento: 'Fires can start easily in summer.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Might vs. may: may leans a little more formal or optimistic (and slightly old-fashioned); might feels more uncertain or purely hypothetical. Could sits close to might — often the most tentative guess of the three.",
+              "es": "Might vs. may: may se inclina un poco más formal u optimista (y algo anticuado); might se siente más incierto o puramente hipotético. Could está cerca de might — a menudo la suposición más tentativa de las tres."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish speakers often reach for 'can' to make a guess about a specific moment ('ella can be tired' for 'tal vez está cansada'), because 'puede' covers both facts and guesses in Spanish. English keeps them separate: a specific speculation needs might/could/may; can is reserved for general facts and capability.",
+              "es": "Los hispanohablantes a menudo usan 'can' para adivinar sobre un momento específico ('ella can be tired' por 'tal vez está cansada'), porque 'puede' cubre tanto hechos como suposiciones en español. El inglés los separa: una especulación específica necesita might/could/may; can se reserva para hechos generales y capacidad."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "It might rain later.",
+            "es": "Tal vez llueva más tarde."
+          },
+          {
+            "en": "You may win the prize!",
+            "es": "¡Tal vez ganes el premio!"
+          },
+          {
+            "en": "Fires can start easily in summer.",
+            "es": "Los incendios pueden empezar fácilmente en verano."
+          },
+          {
+            "en": "They could be on vacation.",
+            "es": "Podrían estar de vacaciones."
+          },
+          {
+            "en": "She might be at home right now.",
+            "es": "Tal vez esté en casa ahora mismo."
+          }
+        ],
+        "related": [
+          "modals-obligation-advice",
+          "modals-deduction"
+        ],
+        "items": [
+          "vbf-mod3-canguess",
+          "vbf-mod3-generalfact",
+          "vbf-mod3-mightrain",
+          "vbf-mod3-couldhypo",
+          "vbf-mod3-mayoptimistic"
+        ]
+      },
+      {
+        "id": "modals-deduction",
+        "title": {
+          "en": "Modals of deduction — the detective's notebook",
+          "es": "Modales de deducción — el cuaderno del detective"
+        },
+        "group": "modales",
+        "coreIdea": {
+          "en": "Deduction modals are a detective's notebook: must/might/can't rate how sure you are about NOW from the evidence, and the same modals plus 'have' rate how sure you are about a PAST event you're reconstructing.",
+          "es": "Los modales de deducción son el cuaderno de un detective: must/might/can't califican cuán seguro estás sobre el AHORA según la evidencia, y esos mismos modales más 'have' califican cuán seguro estás sobre un evento PASADO que estás reconstruyendo."
+        },
+        "source": "Modal Verbs.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Reading the present scene: must ≈ 90% sure ('She must be tired'), might/could/may ≈ 50% ('They might be on vacation'), can't = impossible given the evidence ('He can't be at home'). It's the detective looking at the room right now.",
+              "es": "Leyendo la escena presente: must ≈ 90% seguro ('She must be tired'), might/could/may ≈ 50% ('They might be on vacation'), can't = imposible según la evidencia ('He can't be at home'). Es el detective mirando la habitación ahora mismo."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Reopening a past case uses the same certainty scale plus 'have' + past participle: must have forgotten, might have missed, can't have seen. The detective is now reconstructing what probably happened before now.",
+              "es": "Reabrir un caso pasado usa la misma escala de certeza más 'have' + participio pasado: must have forgotten, might have missed, can't have seen. El detective ahora reconstruye lo que probablemente pasó antes de ahora."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "A separate file in the same notebook: past modals of regret. Should have / ought to have = advice not taken ('You should have called me'). Could have = a possibility that didn't happen ('I could have helped, but nobody asked'). Would have = a pure hypothetical ('I would have gone, but I was sick').",
+              "es": "Un archivo distinto en el mismo cuaderno: modales pasados de arrepentimiento. Should have / ought to have = consejo que no se siguió ('You should have called me'). Could have = una posibilidad que no ocurrió ('I could have helped, but nobody asked'). Would have = un hipotético puro ('I would have gone, but I was sick')."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish often guesses about the past with a plain past verb ('Ella debió olvidarlo' → the tempting but wrong 'She must forgot'). After must/might/can't when you're deducing about the past, English always needs have + past participle: 'She must have forgotten', never 'She must forgot'.",
+              "es": "El español suele adivinar sobre el pasado con un verbo simple ('Ella debió olvidarlo' → la tentadora pero incorrecta 'She must forgot'). Después de must/might/can't cuando deduces sobre el pasado, el inglés siempre necesita have + participio pasado: 'She must have forgotten', nunca 'She must forgot'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "She must be tired.",
+            "es": "Ella debe de estar cansada."
+          },
+          {
+            "en": "He can't be at home.",
+            "es": "Él no puede estar en casa."
+          },
+          {
+            "en": "She must have forgotten.",
+            "es": "Seguro que se le olvidó."
+          },
+          {
+            "en": "They might have missed the train.",
+            "es": "Quizá perdieron el tren."
+          },
+          {
+            "en": "You should have called me.",
+            "es": "Deberías haberme llamado."
+          }
+        ],
+        "related": [
+          "modals-possibility",
+          "modals-obligation-advice"
+        ],
+        "items": [
+          "vbf-mod4-musthaveerror",
+          "vbf-mod4-cantbe",
+          "vbf-mod4-shouldhave",
+          "vbf-mod4-mighthavemissed",
+          "vbf-mod4-natural"
+        ]
+      },
+      {
+        "id": "gerund-vs-infinitive",
+        "title": {
+          "en": "Gerund vs infinitive — the snapshot and the signpost",
+          "es": "Gerundio vs infinitivo — la fotografía y el letrero"
+        },
+        "group": "ing-infinitivo",
+        "coreIdea": {
+          "en": "A gerund is a snapshot of the activity itself; an infinitive is a signpost pointing toward a purpose — and with verbs like stop, choosing between them completely changes the picture.",
+          "es": "El gerundio es una fotografía de la actividad misma; el infinitivo es un letrero que señala un propósito — y con verbos como stop, elegir entre uno u otro cambia por completo el significado."
+        },
+        "source": "THE -ING (GERUND) SYSTEM IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Some verbs simply require the gerund — it's not logical, it's lexical: finish, enjoy, avoid, suggest. 'I finished reading', 'She avoided answering', 'They suggested leaving.' There is no 'finished to read'.",
+              "es": "Algunos verbos simplemente exigen el gerundio — no es lógico, es cuestión de uso: finish, enjoy, avoid, suggest. 'I finished reading', 'She avoided answering', 'They suggested leaving.' No existe 'finished to read'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Start/begin can take either form because they point to a beginning — an intention, future-oriented, like a signpost. Finish/complete only take the gerund because they describe a completed activity, past-oriented, like a snapshot. You can start an intention; you can only finish an activity.",
+              "es": "Start/begin pueden llevar cualquiera de las dos formas porque señalan un comienzo — una intención, orientada al futuro, como un letrero. Finish/complete solo llevan gerundio porque describen una actividad completada, orientada al pasado, como una fotografía. Puedes empezar una intención; solo puedes terminar una actividad."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish speakers translate 'terminé de leer' and expect an infinitive-shaped answer, because Spanish infinitives already work like nouns. English gerunds do that job instead — after finish, enjoy, avoid and suggest, the verb must be -ing, never 'to + verb'.",
+              "es": "Los hispanohablantes traducen 'terminé de leer' y esperan una respuesta con infinitivo, porque el infinitivo en español ya funciona como sustantivo. El gerundio en inglés hace ese trabajo — después de finish, enjoy, avoid y suggest, el verbo debe ser -ing, nunca 'to + verbo'."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "With a handful of verbs like stop, both forms exist but the meaning flips: 'I stopped smoking' (the snapshot activity itself ends — quit the habit) vs 'I stopped to smoke' (the signpost of purpose — paused in order to smoke).",
+              "es": "Con un puñado de verbos como stop, ambas formas existen pero el significado cambia por completo: 'I stopped smoking' (la actividad misma termina — dejar el hábito) vs 'I stopped to smoke' (el letrero del propósito — se detuvo para fumar)."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I finished reading the book.",
+            "es": "Terminé de leer el libro."
+          },
+          {
+            "en": "She avoided answering the question.",
+            "es": "Ella evitó responder la pregunta."
+          },
+          {
+            "en": "I stopped smoking two years ago.",
+            "es": "Dejé de fumar hace dos años."
+          },
+          {
+            "en": "I stopped to smoke on the way home.",
+            "es": "Me detuve para fumar en el camino a casa."
+          },
+          {
+            "en": "They suggested leaving early.",
+            "es": "Ellos sugirieron salir temprano."
+          }
+        ],
+        "related": [
+          "ing-noun-system"
+        ],
+        "items": [
+          "vbf-ing1-finishread",
+          "vbf-ing1-enjoyworking",
+          "vbf-ing1-stopmeaning",
+          "vbf-ing1-stoppurpose",
+          "vbf-ing1-suggestleave"
+        ]
+      },
+      {
+        "id": "ing-noun-system",
+        "title": {
+          "en": "The -ing noun system — the noun costume",
+          "es": "El sistema -ing como sustantivo — el disfraz de sustantivo"
+        },
+        "group": "ing-infinitivo",
+        "coreIdea": {
+          "en": "-ing is the costume an English verb puts on to disguise itself as a noun — only then can it stand as the subject of a sentence or survive right after a preposition.",
+          "es": "-ing es el disfraz que se pone un verbo en inglés para hacerse pasar por sustantivo — solo así puede ser el sujeto de una oración o sobrevivir justo después de una preposición."
+        },
+        "source": "THE -ING (GERUND) SYSTEM IN ENGLISH.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Spanish infinitives already behave like nouns ('Trabajar es agotador'). English verbs cannot do that undressed, so when an action is the idea or the subject of the sentence, English dresses it in -ing: 'Working late is exhausting.' 'Managing people requires patience.'",
+              "es": "El infinitivo en español ya funciona como sustantivo ('Trabajar es agotador'). El verbo en inglés no puede hacer eso sin disfraz, así que cuando la acción es la idea o el sujeto de la oración, el inglés la viste de -ing: 'Working late is exhausting.' 'Managing people requires patience.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "After ANY preposition, English always uses -ing — a 100% rule with no exceptions: 'interested in learning', 'responsible for managing'. A verb never survives naked right after a preposition; it always wears the -ing costume.",
+              "es": "Después de CUALQUIER preposición, el inglés siempre usa -ing — una regla del 100% sin excepciones: 'interested in learning', 'responsible for managing'. Un verbo nunca sobrevive desnudo justo después de una preposición; siempre lleva el disfraz -ing."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "Reduced -ing clauses compress a whole Spanish connector clause into one phrase: 'Working remotely, she became more productive' instead of a clumsy 'Because she was working remotely...'. The advanced version, perfect -ing, marks one action as finished before the next: 'Having finished the report, he sent it immediately.'",
+              "es": "Las cláusulas reducidas con -ing comprimen toda una oración con conector del español en una sola frase: 'Working remotely, she became more productive' en vez de un torpe 'Because she was working remotely...'. La versión avanzada, el -ing perfecto, marca una acción terminada antes de la siguiente: 'Having finished the report, he sent it immediately.'"
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Because the infinitive is the 'thinking form' of the verb in Spanish, learners often drop the -ing costume right after a preposition ('interested in learn' or 'interested to learn'). After a preposition, only -ing survives — never the bare verb, never 'to + verb'.",
+              "es": "Como el infinitivo es la 'forma de pensar' del verbo en español, los estudiantes a menudo se quitan el disfraz -ing justo después de una preposición ('interested in learn' o 'interested to learn'). Después de una preposición, solo sobrevive -ing — nunca el verbo desnudo, nunca 'to + verbo'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "Working late is exhausting.",
+            "es": "Trabajar hasta tarde es agotador."
+          },
+          {
+            "en": "Managing people requires patience.",
+            "es": "Gestionar personas requiere paciencia."
+          },
+          {
+            "en": "She's interested in learning Portuguese.",
+            "es": "Ella está interesada en aprender portugués."
+          },
+          {
+            "en": "Working remotely, she became more productive.",
+            "es": "Al trabajar remotamente, ella se volvió más productiva."
+          },
+          {
+            "en": "Having finished the report, he sent it immediately.",
+            "es": "Habiendo terminado el informe, lo envió de inmediato."
+          }
+        ],
+        "related": [
+          "gerund-vs-infinitive",
+          "get-core-meanings"
+        ],
+        "items": [
+          "vbf-ing2-subject",
+          "vbf-ing2-afterprep",
+          "vbf-ing2-natural",
+          "vbf-ing2-reducedclause",
+          "vbf-ing2-havingfinished"
+        ]
+      },
+      {
+        "id": "get-core-meanings",
+        "title": {
+          "en": "GET's core meanings — the Swiss-army verb",
+          "es": "Los significados de GET — el verbo navaja suiza"
+        },
+        "group": "get",
+        "coreIdea": {
+          "en": "GET is a Swiss-army knife verb — the same four letters open a different blade (obtain, become, arrive, understand, buy) depending only on what word comes right after it.",
+          "es": "GET es un verbo navaja suiza — las mismas cuatro letras abren una hoja distinta (obtener, volverse, llegar, entender, comprar) dependiendo solo de la palabra que viene justo después."
+        },
+        "source": "Understanding “GET”.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Get + noun opens the 'obtain / receive / buy' blade: 'I got a promotion', 'I got a new car'. Get + adjective opens 'become': 'It's getting dark', 'I get tired easily'. Get + place opens 'arrive': 'What time did you get home?'. Get alone, in a question, can even open 'understand': 'Do you get what I mean?'.",
+              "es": "Get + sustantivo abre la hoja de 'obtener / recibir / comprar': 'I got a promotion', 'I got a new car'. Get + adjetivo abre 'volverse': 'It's getting dark', 'I get tired easily'. Get + lugar abre 'llegar': 'What time did you get home?'. Get solo, en una pregunta, puede incluso abrir 'entender': 'Do you get what I mean?'."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "In everyday speech, get quietly replaces become: 'It's getting cold' sounds natural, while 'It's becoming cold' is correct but stiff and formal.",
+              "es": "En el habla cotidiana, get reemplaza discretamente a become: 'It's getting cold' suena natural, mientras que 'It's becoming cold' es correcto pero rígido y formal."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Spanish 'llegué a la oficina' carries the preposition 'a' straight into English as 'I arrived to the office' — wrong. English needs 'I got to the office' or 'I arrived AT the office'; 'arrive' never takes 'to'.",
+              "es": "El español 'llegué a la oficina' arrastra la preposición 'a' directo al inglés como 'I arrived to the office' — incorrecto. El inglés necesita 'I got to the office' o 'I arrived AT the office'; 'arrive' nunca lleva 'to'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "I got a promotion last week.",
+            "es": "Conseguí un ascenso la semana pasada."
+          },
+          {
+            "en": "It's getting dark.",
+            "es": "Se está poniendo oscuro."
+          },
+          {
+            "en": "What time did you get home?",
+            "es": "¿A qué hora llegaste a casa?"
+          },
+          {
+            "en": "Do you get what I mean?",
+            "es": "¿Entiendes lo que quiero decir?"
+          },
+          {
+            "en": "I got used to the new schedule.",
+            "es": "Me acostumbré al nuevo horario."
+          }
+        ],
+        "related": [
+          "ing-noun-system",
+          "get-phrasal-passive"
+        ],
+        "items": [
+          "vbf-get1-arriveto",
+          "vbf-get1-become",
+          "vbf-get1-getit",
+          "vbf-get1-usedto",
+          "vbf-get1-gotacold"
+        ]
+      },
+      {
+        "id": "get-phrasal-passive",
+        "title": {
+          "en": "GET's phrasal verbs and passive — the social chameleon",
+          "es": "Los phrasal verbs y el pasivo de GET — el camaleón social"
+        },
+        "group": "get",
+        "coreIdea": {
+          "en": "Once GET starts pairing up with little words — up, along, over, married, fired — it becomes a social chameleon, changing into an unrelated meaning with every new partner.",
+          "es": "Cuando GET empieza a emparejarse con palabras pequeñas — up, along, over, married, fired — se convierte en un camaleón social, cambiando a un significado completamente distinto con cada nueva pareja."
+        },
+        "source": "Understanding “GET”.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Get + past participle forms an informal, very natural passive, more common in speech than the formal 'be' passive: get married, get fired, get paid, get hurt. 'They got married in June.' 'He got fired last month.'",
+              "es": "Get + participio pasado forma un pasivo informal y muy natural, más común en el habla que el pasivo formal con 'be': get married, get fired, get paid, get hurt. 'They got married in June.' 'He got fired last month.'"
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "Phrasal verbs with get must be learned as whole chunks, because each partner word gives get a completely unrelated personality: get up (levantarse), get along with (llevarse bien), get over (recuperarse), get around (moverse), get by (arreglárselas), get together (reunirse).",
+              "es": "Los phrasal verbs con get deben aprenderse como bloques completos, porque cada palabra compañera le da a get una personalidad completamente distinta: get up (levantarse), get along with (llevarse bien), get over (recuperarse), get around (moverse), get by (arreglárselas), get together (reunirse)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "'Me casé CON él' pulls the wrong preposition into English: 'I got married WITH him' is a classic error. English fixes the preposition as TO: 'I got married TO him.' A second trap: get never pairs with 'fun' — say 'I had a lot of fun', never 'I got a lot of fun'.",
+              "es": "'Me casé CON él' arrastra la preposición equivocada al inglés: 'I got married WITH him' es un error clásico. El inglés fija la preposición en TO: 'I got married TO him.' Una segunda trampa: get nunca se combina con 'fun' — se dice 'I had a lot of fun', nunca 'I got a lot of fun'."
+            }
+          }
+        ],
+        "examples": [
+          {
+            "en": "They got married in June.",
+            "es": "Se casaron en junio."
+          },
+          {
+            "en": "He got fired last month.",
+            "es": "Lo despidieron el mes pasado."
+          },
+          {
+            "en": "I get along with my boss.",
+            "es": "Me llevo bien con mi jefe."
+          },
+          {
+            "en": "It took her weeks to get over the flu.",
+            "es": "Le tomó semanas superar la gripe."
+          },
+          {
+            "en": "I had a lot of fun at the party.",
+            "es": "Me divertí mucho en la fiesta."
+          }
+        ],
+        "related": [
+          "get-core-meanings"
+        ],
+        "items": [
+          "vbf-get2-natural",
+          "vbf-get2-lotoffun",
+          "vbf-get2-catchbus",
+          "vbf-get2-getalong",
+          "vbf-get2-getoverfired"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "vbf-mod1-cans",
+        "topic": "modals-ability-permission",
+        "type": "choice",
+        "prompt": {
+          "en": "She ___ swim very well.",
+          "es": "She ___ swim very well."
+        },
+        "answer": "can",
+        "distractors": [
+          "cans"
+        ],
+        "why": {
+          "en": "Modals never add -s, not even with he/she/it. 'She can swim', never 'She cans swim'.",
+          "es": "Los modales nunca añaden -s, ni siquiera con he/she/it. 'She can swim', nunca 'She cans swim'."
+        },
+        "tags": [
+          "form",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod1-couldpast",
+        "topic": "modals-ability-permission",
+        "type": "cloze",
+        "prompt": {
+          "en": "When I was a child, I ___ (can) swim very fast.",
+          "es": "When I was a child, I ___ (can) swim very fast."
+        },
+        "answer": "could",
+        "accept": [
+          "could"
+        ],
+        "why": {
+          "en": "Can has no past form of its own — could is the past-ability key on the same ring.",
+          "es": "Can no tiene forma propia de pasado — could es la llave de habilidad pasada del mismo llavero."
+        },
+        "tags": [
+          "past",
+          "ability"
+        ]
+      },
+      {
+        "id": "vbf-mod1-beableto",
+        "topic": "modals-ability-permission",
+        "type": "choice",
+        "prompt": {
+          "en": "Next year, after training, I ___ run a marathon.",
+          "es": "Next year, after training, I ___ run a marathon."
+        },
+        "answer": "will be able to",
+        "distractors": [
+          "will can"
+        ],
+        "why": {
+          "en": "Can/could have no future form; 'be able to' fills that gap — English never says 'will can'.",
+          "es": "Can/could no tienen forma de futuro; 'be able to' llena ese vacío — el inglés nunca dice 'will can'."
+        },
+        "tags": [
+          "future",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod1-bareinf",
+        "topic": "modals-ability-permission",
+        "type": "choice",
+        "prompt": {
+          "en": "Could you ___ me with this bag?",
+          "es": "Could you ___ me with this bag?"
+        },
+        "answer": "help",
+        "distractors": [
+          "to help"
+        ],
+        "why": {
+          "en": "A modal is always followed by the bare infinitive, never by 'to + verb'.",
+          "es": "Un modal siempre va seguido del infinitivo sin 'to', nunca de 'to + verbo'."
+        },
+        "tags": [
+          "form",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod1-didcan",
+        "topic": "modals-ability-permission",
+        "type": "choice",
+        "prompt": {
+          "en": "___ she help you yesterday?",
+          "es": "___ she help you yesterday? (pregunta en pasado)"
+        },
+        "answer": "Could",
+        "distractors": [
+          "Did she can"
+        ],
+        "why": {
+          "en": "Modals form questions by inverting the subject, not with do/does. 'Did she can help?' double-marks the modal — a common Spanish-speaker error.",
+          "es": "Los modales forman preguntas invirtiendo el sujeto, no con do/does. 'Did she can help?' marca el modal dos veces — un error común de hispanohablantes."
+        },
+        "tags": [
+          "question",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod2-mustnt-vs-dont",
+        "topic": "modals-obligation-advice",
+        "type": "choice",
+        "prompt": {
+          "en": "It's fine, you ___ come to the party if you're tired.",
+          "es": "It's fine, you ___ come to the party if you're tired."
+        },
+        "answer": "don't have to",
+        "distractors": [
+          "mustn't"
+        ],
+        "why": {
+          "en": "Coming is optional here, not forbidden. 'Mustn't' would mean 'it's prohibited' — the opposite meaning.",
+          "es": "Venir es opcional aquí, no está prohibido. 'Mustn't' significaría 'está prohibido' — el significado opuesto."
+        },
+        "tags": [
+          "negative",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod2-oughtto",
+        "topic": "modals-obligation-advice",
+        "type": "natural",
+        "prompt": {
+          "en": "What formal advice modal means 'debería + verbo' and is always followed by 'to' before the base verb?",
+          "es": "¿Qué modal formal de consejo significa 'debería + verbo' y siempre va seguido de 'to' antes del verbo base?"
+        },
+        "answer": "ought to",
+        "why": {
+          "en": "Ought to is the formal counterpart of should, and it is the one common modal that keeps 'to' right before the base verb: 'He ought to study more.'",
+          "es": "Ought to es el equivalente formal de should, y es el único modal común que conserva 'to' justo antes del verbo base: 'He ought to study more.'"
+        },
+        "tags": [
+          "advice",
+          "form"
+        ]
+      },
+      {
+        "id": "vbf-mod2-hadbetter",
+        "topic": "modals-obligation-advice",
+        "type": "choice",
+        "prompt": {
+          "en": "You ___ leave now, or you'll miss the flight.",
+          "es": "You ___ leave now, or you'll miss the flight."
+        },
+        "answer": "had better",
+        "distractors": [
+          "would better"
+        ],
+        "why": {
+          "en": "The fixed expression is 'had better', not 'would better' — a confusion learners make because Spanish 'sería mejor' suggests 'would'.",
+          "es": "La expresión fija es 'had better', no 'would better' — una confusión que surge porque 'sería mejor' en español sugiere 'would'."
+        },
+        "tags": [
+          "advice",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod2-shouldto",
+        "topic": "modals-obligation-advice",
+        "type": "choice",
+        "prompt": {
+          "en": "I think you ___ see a doctor.",
+          "es": "I think you ___ see a doctor."
+        },
+        "answer": "should",
+        "distractors": [
+          "should to"
+        ],
+        "why": {
+          "en": "Modals are never followed by 'to'. Say 'should see', never 'should to see'.",
+          "es": "Los modales nunca van seguidos de 'to'. Se dice 'should see', nunca 'should to see'."
+        },
+        "tags": [
+          "form",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod2-needsto",
+        "topic": "modals-obligation-advice",
+        "type": "cloze",
+        "prompt": {
+          "en": "She ___ (need) to submit the form by Friday.",
+          "es": "She ___ (need) to submit the form by Friday."
+        },
+        "answer": "needs",
+        "accept": [
+          "needs"
+        ],
+        "why": {
+          "en": "'Need to' expresses practical necessity; unlike true modals, 'need' is a regular verb and takes -s in third person singular.",
+          "es": "'Need to' expresa necesidad práctica; a diferencia de los modales verdaderos, 'need' es un verbo regular y lleva -s en tercera persona del singular."
+        },
+        "tags": [
+          "necessity",
+          "form"
+        ]
+      },
+      {
+        "id": "vbf-mod3-canguess",
+        "topic": "modals-possibility",
+        "type": "choice",
+        "prompt": {
+          "en": "I'm not sure where she is — she ___ be at home.",
+          "es": "I'm not sure where she is — she ___ be at home."
+        },
+        "answer": "might",
+        "distractors": [
+          "can"
+        ],
+        "why": {
+          "en": "A specific guess about right now needs might/could/may. Can states general facts or capability, not a one-time speculation.",
+          "es": "Una suposición específica sobre este momento necesita might/could/may. Can afirma hechos generales o capacidad, no una especulación puntual."
+        },
+        "tags": [
+          "possibility",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod3-generalfact",
+        "topic": "modals-possibility",
+        "type": "choice",
+        "prompt": {
+          "en": "Fires ___ start easily in dry summers (a general fact).",
+          "es": "Fires ___ start easily in dry summers (a general fact)."
+        },
+        "answer": "can",
+        "distractors": [
+          "might"
+        ],
+        "why": {
+          "en": "A general, recurring truth about the world uses can; might would reduce it to a single uncertain guess.",
+          "es": "Una verdad general y recurrente sobre el mundo usa can; might la reduciría a una sola suposición incierta."
+        },
+        "tags": [
+          "fact",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod3-mightrain",
+        "topic": "modals-possibility",
+        "type": "cloze",
+        "prompt": {
+          "en": "It ___ (might/rain) tomorrow — the forecast isn't sure.",
+          "es": "It ___ (might/rain) tomorrow — the forecast isn't sure."
+        },
+        "answer": "might rain",
+        "accept": [
+          "might rain"
+        ],
+        "why": {
+          "en": "Might/could/may express a roughly 50% guess, matching an unsure forecast.",
+          "es": "Might/could/may expresan una suposición de más o menos 50%, igual que un pronóstico incierto."
+        },
+        "tags": [
+          "possibility"
+        ]
+      },
+      {
+        "id": "vbf-mod3-couldhypo",
+        "topic": "modals-possibility",
+        "type": "choice",
+        "prompt": {
+          "en": "This ___ be the reason the printer isn't working.",
+          "es": "This ___ be the reason the printer isn't working."
+        },
+        "answer": "could",
+        "distractors": [
+          "can"
+        ],
+        "why": {
+          "en": "A specific hypothesis about one situation needs could/might/may, not can.",
+          "es": "Una hipótesis específica sobre una situación necesita could/might/may, no can."
+        },
+        "tags": [
+          "hypothesis",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod3-mayoptimistic",
+        "topic": "modals-possibility",
+        "type": "choice",
+        "prompt": {
+          "en": "Good news — you ___ get the job! (hopeful, a little formal)",
+          "es": "Good news — you ___ get the job! (esperanzador, algo formal)"
+        },
+        "answer": "may",
+        "distractors": [
+          "might"
+        ],
+        "why": {
+          "en": "May leans slightly more formal and optimistic than might, which sounds more uncertain.",
+          "es": "May se inclina un poco más formal y optimista que might, que suena más incierto."
+        },
+        "tags": [
+          "possibility",
+          "register"
+        ]
+      },
+      {
+        "id": "vbf-mod4-musthaveerror",
+        "topic": "modals-deduction",
+        "type": "choice",
+        "prompt": {
+          "en": "He ___ forgotten the meeting (deduction about the past).",
+          "es": "He ___ forgotten the meeting (deducción sobre el pasado)."
+        },
+        "answer": "must have",
+        "distractors": [
+          "must forgot"
+        ],
+        "why": {
+          "en": "Deducing about the past needs must have + past participle, never must + simple past.",
+          "es": "Deducir sobre el pasado necesita must have + participio pasado, nunca must + pasado simple."
+        },
+        "tags": [
+          "deduction",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod4-cantbe",
+        "topic": "modals-deduction",
+        "type": "choice",
+        "prompt": {
+          "en": "That ___ be true — I saw her at home five minutes ago.",
+          "es": "That ___ be true — I saw her at home five minutes ago."
+        },
+        "answer": "can't",
+        "distractors": [
+          "mustn't"
+        ],
+        "why": {
+          "en": "Can't expresses 'impossible' based on evidence; mustn't means 'prohibited' — a completely different idea.",
+          "es": "Can't expresa 'imposible' según la evidencia; mustn't significa 'prohibido' — una idea completamente distinta."
+        },
+        "tags": [
+          "deduction",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod4-shouldhave",
+        "topic": "modals-deduction",
+        "type": "choice",
+        "prompt": {
+          "en": "I failed the exam. I ___ studied more.",
+          "es": "I failed the exam. I ___ studied more."
+        },
+        "answer": "should have",
+        "distractors": [
+          "should"
+        ],
+        "why": {
+          "en": "Regret about a past action needs should have + participle; Spanish 'debí' doesn't require an extra auxiliary, so learners often drop 'have'.",
+          "es": "El arrepentimiento por una acción pasada necesita should have + participio; 'debí' en español no exige un auxiliar extra, así que a veces se omite 'have'."
+        },
+        "tags": [
+          "regret",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-mod4-mighthavemissed",
+        "topic": "modals-deduction",
+        "type": "cloze",
+        "prompt": {
+          "en": "They're very late — they ___ (might/miss) the train.",
+          "es": "They're very late — they ___ (might/miss) the train."
+        },
+        "answer": "might have missed",
+        "accept": [
+          "might have missed"
+        ],
+        "why": {
+          "en": "An uncertain guess about a past event uses might have + past participle.",
+          "es": "Una suposición incierta sobre un evento pasado usa might have + participio pasado."
+        },
+        "tags": [
+          "deduction",
+          "past"
+        ]
+      },
+      {
+        "id": "vbf-mod4-natural",
+        "topic": "modals-deduction",
+        "type": "natural",
+        "prompt": {
+          "en": "What's the phrase for a past possibility that never actually happened — as in 'I had the option, but nobody asked me'?",
+          "es": "¿Cuál es la frase para una posibilidad pasada que nunca ocurrió — como en 'tenía la opción, pero nadie me lo pidió'?"
+        },
+        "answer": "could have",
+        "why": {
+          "en": "Could have names a past possibility that didn't happen; add the past participle for a full sentence: 'I could have helped.'",
+          "es": "Could have nombra una posibilidad pasada que no ocurrió; añade el participio pasado para una oración completa: 'I could have helped.'"
+        },
+        "tags": [
+          "regret",
+          "hypothesis"
+        ]
+      },
+      {
+        "id": "vbf-ing1-finishread",
+        "topic": "gerund-vs-infinitive",
+        "type": "choice",
+        "prompt": {
+          "en": "I finished ___ the report last night.",
+          "es": "I finished ___ the report last night."
+        },
+        "answer": "reading",
+        "distractors": [
+          "to read"
+        ],
+        "why": {
+          "en": "Finish is lexically fixed with the gerund — 'finish to read' does not exist in English.",
+          "es": "Finish exige gerundio por cuestión de uso — 'finish to read' no existe en inglés."
+        },
+        "tags": [
+          "gerund",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-ing1-enjoyworking",
+        "topic": "gerund-vs-infinitive",
+        "type": "cloze",
+        "prompt": {
+          "en": "I really enjoy ___ (work) from home.",
+          "es": "I really enjoy ___ (work) from home."
+        },
+        "answer": "working",
+        "accept": [
+          "working"
+        ],
+        "why": {
+          "en": "Enjoy always takes the gerund, even though Spanish 'disfruto trabajar/trabajando' could suggest otherwise.",
+          "es": "Enjoy siempre lleva gerundio, aunque 'disfruto trabajar/trabajando' en español podría sugerir otra cosa."
+        },
+        "tags": [
+          "gerund"
+        ]
+      },
+      {
+        "id": "vbf-ing1-stopmeaning",
+        "topic": "gerund-vs-infinitive",
+        "type": "choice",
+        "prompt": {
+          "en": "After years of trying, she finally stopped ___. (quit the habit)",
+          "es": "After years of trying, she finally stopped ___. (dejó el hábito)"
+        },
+        "answer": "smoking",
+        "distractors": [
+          "to smoke"
+        ],
+        "why": {
+          "en": "'Stop + gerund' ends the activity itself — quitting the habit. 'Stop + infinitive' would mean pausing in order to do it.",
+          "es": "'Stop + gerundio' termina la actividad misma — dejar el hábito. 'Stop + infinitivo' significaría detenerse para hacerla."
+        },
+        "tags": [
+          "meaning-change"
+        ]
+      },
+      {
+        "id": "vbf-ing1-stoppurpose",
+        "topic": "gerund-vs-infinitive",
+        "type": "choice",
+        "prompt": {
+          "en": "On the road trip, we stopped ___ at a diner. (paused in order to eat)",
+          "es": "On the road trip, we stopped ___ at a diner. (nos detuvimos para comer)"
+        },
+        "answer": "to eat",
+        "distractors": [
+          "eating"
+        ],
+        "why": {
+          "en": "Here 'stop' is followed by the infinitive of purpose — we paused driving in order to eat, we didn't quit eating as a habit.",
+          "es": "Aquí 'stop' va seguido del infinitivo de propósito — dejamos de conducir para comer, no dejamos el hábito de comer."
+        },
+        "tags": [
+          "meaning-change"
+        ]
+      },
+      {
+        "id": "vbf-ing1-suggestleave",
+        "topic": "gerund-vs-infinitive",
+        "type": "choice",
+        "prompt": {
+          "en": "They suggested ___ early to avoid traffic.",
+          "es": "They suggested ___ early to avoid traffic."
+        },
+        "answer": "leaving",
+        "distractors": [
+          "to leave"
+        ],
+        "why": {
+          "en": "Suggest is another lexically-fixed gerund verb, like finish, enjoy and avoid.",
+          "es": "Suggest es otro verbo que exige gerundio por uso fijo, como finish, enjoy y avoid."
+        },
+        "tags": [
+          "gerund",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-ing2-subject",
+        "topic": "ing-noun-system",
+        "type": "choice",
+        "prompt": {
+          "en": "___ late every night is exhausting.",
+          "es": "___ late every night is exhausting."
+        },
+        "answer": "Working",
+        "distractors": [
+          "To work"
+        ],
+        "why": {
+          "en": "When the action is the subject or idea of the sentence, English dresses it in -ing rather than the infinitive.",
+          "es": "Cuando la acción es el sujeto o la idea de la oración, el inglés la viste de -ing en vez de infinitivo."
+        },
+        "tags": [
+          "subject",
+          "gerund"
+        ]
+      },
+      {
+        "id": "vbf-ing2-afterprep",
+        "topic": "ing-noun-system",
+        "type": "choice",
+        "prompt": {
+          "en": "She's responsible for ___ the whole team.",
+          "es": "She's responsible for ___ the whole team."
+        },
+        "answer": "managing",
+        "distractors": [
+          "to manage"
+        ],
+        "why": {
+          "en": "After ANY preposition (for, in, about, of...), English always uses -ing — a 100% rule.",
+          "es": "Después de CUALQUIER preposición (for, in, about, of...), el inglés siempre usa -ing — una regla del 100%."
+        },
+        "tags": [
+          "preposition",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-ing2-natural",
+        "topic": "ing-noun-system",
+        "type": "natural",
+        "prompt": {
+          "en": "Complete the rule-following phrase, using the -ing form of 'travel': 'interested in ___.'",
+          "es": "Completa la frase que sigue la regla, usando la forma -ing de 'travel': 'interested in ___.'"
+        },
+        "answer": "traveling",
+        "accept": [
+          "traveling",
+          "travelling"
+        ],
+        "why": {
+          "en": "After the preposition 'in', English always uses -ing, never the infinitive.",
+          "es": "Después de la preposición 'in', el inglés siempre usa -ing, nunca el infinitivo."
+        },
+        "tags": [
+          "preposition"
+        ]
+      },
+      {
+        "id": "vbf-ing2-reducedclause",
+        "topic": "ing-noun-system",
+        "type": "choice",
+        "prompt": {
+          "en": "Choose the natural, compact sentence:",
+          "es": "Elige la oración natural y compacta:"
+        },
+        "answer": "Working remotely, she became more productive.",
+        "distractors": [
+          "To work remotely, she became more productive."
+        ],
+        "why": {
+          "en": "A reduced -ing clause replaces a 'while/because' clause; starting with the bare infinitive here doesn't express that background reason.",
+          "es": "Una cláusula reducida con -ing sustituye a una cláusula con 'mientras/porque'; empezar con el infinitivo desnudo aquí no expresa esa razón de fondo."
+        },
+        "tags": [
+          "reduced-clause",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-ing2-havingfinished",
+        "topic": "ing-noun-system",
+        "type": "cloze",
+        "prompt": {
+          "en": "___ (have/finish) the report, he sent it immediately.",
+          "es": "___ (have/finish) the report, he sent it immediately."
+        },
+        "answer": "Having finished",
+        "accept": [
+          "Having finished"
+        ],
+        "why": {
+          "en": "Perfect -ing (having + past participle) shows one action was completed before the next one — an advanced but common structure.",
+          "es": "El -ing perfecto (having + participio pasado) muestra que una acción terminó antes de la siguiente — una estructura avanzada pero común."
+        },
+        "tags": [
+          "advanced",
+          "gerund"
+        ]
+      },
+      {
+        "id": "vbf-get1-arriveto",
+        "topic": "get-core-meanings",
+        "type": "choice",
+        "prompt": {
+          "en": "We ___ the airport really early.",
+          "es": "We ___ the airport really early."
+        },
+        "answer": "got to",
+        "distractors": [
+          "arrived to"
+        ],
+        "why": {
+          "en": "'Arrive' pairs with 'at', never 'to'; 'get to' is the natural everyday way to say you reached a place.",
+          "es": "'Arrive' se combina con 'at', nunca con 'to'; 'get to' es la forma natural y cotidiana de decir que llegaste a un lugar."
+        },
+        "tags": [
+          "arrive",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-get1-become",
+        "topic": "get-core-meanings",
+        "type": "choice",
+        "prompt": {
+          "en": "It's ___ cold outside — grab a jacket.",
+          "es": "It's ___ cold outside — grab a jacket."
+        },
+        "answer": "getting",
+        "distractors": [
+          "becoming"
+        ],
+        "why": {
+          "en": "Get is the natural, informal way to say 'become'; 'becoming' is correct but sounds stiff in casual speech.",
+          "es": "Get es la forma natural e informal de decir 'become'; 'becoming' es correcto pero suena rígido en el habla casual."
+        },
+        "tags": [
+          "become",
+          "register"
+        ]
+      },
+      {
+        "id": "vbf-get1-getit",
+        "topic": "get-core-meanings",
+        "type": "cloze",
+        "prompt": {
+          "en": "Do you ___ (understand, informal) what I mean?",
+          "es": "Do you ___ (understand, informal) what I mean?"
+        },
+        "answer": "get",
+        "accept": [
+          "get"
+        ],
+        "why": {
+          "en": "'Get' informally means 'understand' — very natural in spoken English.",
+          "es": "'Get' significa 'entender' de manera informal — muy natural en el inglés hablado."
+        },
+        "tags": [
+          "understand"
+        ]
+      },
+      {
+        "id": "vbf-get1-usedto",
+        "topic": "get-core-meanings",
+        "type": "choice",
+        "prompt": {
+          "en": "After a month, I finally ___ the new schedule.",
+          "es": "After a month, I finally ___ the new schedule."
+        },
+        "answer": "got used to",
+        "distractors": [
+          "used to"
+        ],
+        "why": {
+          "en": "'Get used to' means to become accustomed (a process). 'Used to' (without get) describes a past habit that no longer happens — a completely different meaning.",
+          "es": "'Get used to' significa acostumbrarse (un proceso). 'Used to' (sin get) describe un hábito pasado que ya no ocurre — un significado completamente distinto."
+        },
+        "tags": [
+          "error",
+          "false-friend"
+        ]
+      },
+      {
+        "id": "vbf-get1-gotacold",
+        "topic": "get-core-meanings",
+        "type": "cloze",
+        "prompt": {
+          "en": "I ___ (get/a cold) last week and stayed home.",
+          "es": "I ___ (get/a cold) last week and stayed home."
+        },
+        "answer": "got a cold",
+        "accept": [
+          "got a cold"
+        ],
+        "why": {
+          "en": "'Get' + illness noun means to catch/suffer it — 'get a cold' = enfermarse de gripa.",
+          "es": "'Get' + sustantivo de enfermedad significa contraerla/sufrirla — 'get a cold' = enfermarse de gripa."
+        },
+        "tags": [
+          "experience"
+        ]
+      },
+      {
+        "id": "vbf-get2-natural",
+        "topic": "get-phrasal-passive",
+        "type": "natural",
+        "prompt": {
+          "en": "What preposition must always follow 'get married' in English, even though Spanish uses 'con'?",
+          "es": "¿Qué preposición debe seguir siempre a 'get married' en inglés, aunque el español use 'con'?"
+        },
+        "answer": "to",
+        "why": {
+          "en": "English fixes 'get married TO someone'; using 'with' — mirroring Spanish 'con' — is the classic Spanish-speaker error.",
+          "es": "El inglés fija 'get married TO someone'; usar 'with' — reflejando el 'con' del español — es el error clásico de hispanohablantes."
+        },
+        "tags": [
+          "preposition",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-get2-lotoffun",
+        "topic": "get-phrasal-passive",
+        "type": "choice",
+        "prompt": {
+          "en": "We ___ a lot of fun at the party.",
+          "es": "We ___ a lot of fun at the party."
+        },
+        "answer": "had",
+        "distractors": [
+          "got"
+        ],
+        "why": {
+          "en": "'Get' never pairs with 'fun' — English uses 'have fun', even though 'get' fits almost everywhere else.",
+          "es": "'Get' nunca se combina con 'fun' — el inglés usa 'have fun', aunque 'get' funcione casi en todo lo demás."
+        },
+        "tags": [
+          "false-friend",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-get2-catchbus",
+        "topic": "get-phrasal-passive",
+        "type": "choice",
+        "prompt": {
+          "en": "I was late and I didn't ___ the bus.",
+          "es": "I was late and I didn't ___ the bus."
+        },
+        "answer": "catch",
+        "distractors": [
+          "get"
+        ],
+        "why": {
+          "en": "For missing a bus or train, English prefers 'catch'; 'get the bus' usually just means 'take the bus', not 'catch it in time'.",
+          "es": "Para perder un bus o un tren, el inglés prefiere 'catch'; 'get the bus' normalmente solo significa 'tomar el bus', no 'alcanzarlo a tiempo'."
+        },
+        "tags": [
+          "phrasal",
+          "error"
+        ]
+      },
+      {
+        "id": "vbf-get2-getalong",
+        "topic": "get-phrasal-passive",
+        "type": "cloze",
+        "prompt": {
+          "en": "I really ___ (get along) with my new roommate.",
+          "es": "I really ___ (get along) with my new roommate."
+        },
+        "answer": "get along",
+        "accept": [
+          "get along"
+        ],
+        "why": {
+          "en": "'Get along with' means to have a good relationship — a fixed phrasal chunk with its own meaning.",
+          "es": "'Get along with' significa llevarse bien — un bloque fijo con significado propio."
+        },
+        "tags": [
+          "phrasal"
+        ]
+      },
+      {
+        "id": "vbf-get2-getoverfired",
+        "topic": "get-phrasal-passive",
+        "type": "choice",
+        "prompt": {
+          "en": "He was very upset after he ___ last month.",
+          "es": "He was very upset after he ___ last month."
+        },
+        "answer": "got fired",
+        "distractors": [
+          "got fire"
+        ],
+        "why": {
+          "en": "The informal passive is 'get + past participle' — 'fired', not the bare noun/verb 'fire'.",
+          "es": "El pasivo informal es 'get + participio pasado' — 'fired', no el sustantivo/verbo desnudo 'fire'."
+        },
+        "tags": [
+          "passive",
+          "error"
+        ]
+      }
+    ]
+  }
+}

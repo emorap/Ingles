@@ -1,11 +1,11 @@
 {
   "version": 1,
   "modules": [
-    { "id": "tenses",        "order": 1, "status": "available",  "file": "tenses.json",        "title": { "en": "Tense system", "es": "Sistema de tiempos" }, "accent": "#6366F1" },
-    { "id": "conditionals",  "order": 2, "status": "coming-soon", "file": "conditionals.json",  "title": { "en": "Conditionals & hypotheticals", "es": "Condicionales e hipótesis" }, "accent": "#8B5CF6" },
-    { "id": "structure",     "order": 3, "status": "coming-soon", "file": "structure.json",     "title": { "en": "Structure & voice", "es": "Estructura y voz" }, "accent": "#2DD4BF" },
-    { "id": "verbforms",     "order": 4, "status": "coming-soon", "file": "verbforms.json",     "title": { "en": "Verb forms", "es": "Formas verbales" }, "accent": "#38BDF8" },
-    { "id": "modifiers",     "order": 5, "status": "coming-soon", "file": "modifiers.json",     "title": { "en": "Words & modifiers", "es": "Palabras y modificadores" }, "accent": "#10B981" },
-    { "id": "mechanics",     "order": 6, "status": "coming-soon", "file": "mechanics.json",     "title": { "en": "Real-world mechanics", "es": "Mecánica del inglés real" }, "accent": "#F59E0B" }
+    { "id": "tenses",        "order": 1, "status": "available", "file": "tenses.json",        "title": { "en": "Tense system", "es": "Sistema de tiempos" }, "accent": "#6366F1" },
+    { "id": "conditionals",  "order": 2, "status": "available", "file": "conditionals.json",  "title": { "en": "Conditionals & hypotheticals", "es": "Condicionales e hipótesis" }, "accent": "#8B5CF6" },
+    { "id": "structure",     "order": 3, "status": "available", "file": "structure.json",     "title": { "en": "Structure & voice", "es": "Estructura y voz" }, "accent": "#2DD4BF" },
+    { "id": "verbforms",     "order": 4, "status": "available", "file": "verbforms.json",     "title": { "en": "Verb forms", "es": "Formas verbales" }, "accent": "#38BDF8" },
+    { "id": "modifiers",     "order": 5, "status": "available", "file": "modifiers.json",     "title": { "en": "Words & modifiers", "es": "Palabras y modificadores" }, "accent": "#10B981" },
+    { "id": "mechanics",     "order": 6, "status": "available", "file": "mechanics.json",     "title": { "en": "Real-world mechanics", "es": "Mecánica del inglés real" }, "accent": "#F59E0B" }
   ]
 }
