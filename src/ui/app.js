@@ -163,21 +163,20 @@ export async function renderRoute(view, route, deps) {
       });
       return;
     }
-    default: { // 'hub' — for now renders the single active module's topics;
-      // Task 5 turns this into the multi-module roadmap.
+    default: { // 'hub' — the multi-module roadmap
       renderHub(view, {
-        content: activeModule(catalog), progress, now,
+        catalog, progress, now,
         newPerDay: deps.newPerDay, cap: deps.cap,
         onPractice: () => deps.navigate('practice'),
-        onOpenTopic: (id) => deps.navigate('topic', id),
+        onOpenModule: (id) => deps.navigate('module', id),
       });
     }
   }
 }
 
 /**
- * The content file whose accent/topics drive single-module views. First module
- * in recommended order that actually loaded, else any loaded module.
+ * The content file whose accent drives the global primary. First module in
+ * recommended order that actually loaded, else any loaded module.
  * @param {import('../engine/catalog.js').Catalog} catalog
  * @returns {import('../engine/types.js').ContentFile | undefined}
  */

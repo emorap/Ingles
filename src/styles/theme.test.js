@@ -25,10 +25,10 @@ test('the app shell lays out its navigation (not raw stacked links)', () => {
   assert.match(nav, /display\s*:\s*(flex|grid)/, '.app-nav needs a flex/grid layout');
 });
 
-test('the hub arranges topic cards in a responsive grid', () => {
-  const cards = body('.topic-cards');
-  assert.ok(cards, '.topic-cards must be styled');
-  assert.match(cards, /grid|flex/, '.topic-cards needs a grid/flex layout');
+test('the hub arranges module cards in a responsive grid', () => {
+  const cards = body('.module-cards');
+  assert.ok(cards, '.module-cards must be styled');
+  assert.match(cards, /grid|flex/, '.module-cards needs a grid/flex layout');
   assert.match(norm, /@media/, 'stylesheet needs at least one responsive breakpoint');
 });
 

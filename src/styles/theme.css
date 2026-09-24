@@ -171,6 +171,37 @@ button{font:inherit;color:inherit;cursor:pointer}
 .topic-title{font-weight:600;text-align:center;font-size:.95rem}
 .progress-ring{display:block}
 
+/* ---- Module roadmap cards ------------------------------------------------- */
+.module-cards{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--sp-3);
+}
+.module-card{position:relative;padding:0;overflow:hidden;transition:transform .12s ease,box-shadow .15s ease}
+.module-card[data-status="available"]:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.4)}
+.module-card[data-next="true"]{outline:2px solid var(--color-primary);outline-offset:-2px}
+.module-card-btn,.module-card-soon{
+  width:100%;height:100%;background:none;border:0;
+  display:flex;flex-direction:column;align-items:center;gap:var(--sp-2);
+  padding:var(--sp-3);text-align:center;
+}
+.module-order{
+  align-self:flex-start;font-size:.75rem;font-weight:800;color:var(--color-muted);
+  width:22px;height:22px;border-radius:999px;background:var(--surface-2);
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.module-title{font-weight:700;font-size:1rem}
+.module-next-badge{
+  font-size:.7rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--color-primary);
+  background:color-mix(in srgb,var(--color-primary) 16%,transparent);
+  padding:.15rem .5rem;border-radius:999px;
+}
+.module-card[data-status="coming-soon"]{opacity:.6}
+.module-coming{
+  font-size:.72rem;font-weight:700;color:var(--color-muted);
+  padding:.15rem .5rem;border-radius:999px;border:1px dashed var(--border);
+}
+
 /* ---- Topic (teach) -------------------------------------------------------- */
 .topic{display:flex;flex-direction:column;gap:var(--sp-2)}
 .topic>header{margin-bottom:var(--sp-2)}
@@ -326,7 +357,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   h2{font-size:1.7rem}
 }
 @media (max-width:400px){
-  .topic-cards{grid-template-columns:repeat(2,1fr)}
+  .topic-cards,.module-cards{grid-template-columns:repeat(2,1fr)}
   .app-nav a{padding:0 var(--sp-2);font-size:.88rem}
 }
 
