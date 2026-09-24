@@ -97,7 +97,8 @@
         ],
         "related": [
           "adjective-order",
-          "countable-uncountable-quantifiers"
+          "countable-uncountable-quantifiers",
+          "comparatives"
         ],
         "items": [
           "mdf-adjadv-1",
@@ -126,6 +127,25 @@
               "en": "The queue follows OSASCOMP: Opinion → Size → Age → Shape → Colour → Origin → Material → Purpose → Noun. It moves from subjective to objective and from general to specific — your personal impression goes first (like a doorman's first glance), then hard physical facts, then the reason the guest is even there (purpose, right next to the noun).",
               "es": "La fila sigue OSASCOMP: Opinión → Tamaño → Edad → Forma → Color → Origen → Material → Propósito → Sustantivo. Avanza de lo subjetivo a lo objetivo y de lo general a lo específico — tu impresión personal va primero (como la primera mirada del portero), luego los hechos físicos duros, y al final el motivo de la visita (propósito, justo al lado del sustantivo)."
             }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "# · Puesto",
+              "Category · Categoría",
+              "Example · Ejemplo"
+            ],
+            "rows": [
+              ["1", "Opinion · Opinión", "beautiful, lovely"],
+              ["2", "Size · Tamaño", "small, big"],
+              ["3", "Age · Edad", "old, new"],
+              ["4", "Shape · Forma", "round, rectangular"],
+              ["5", "Colour · Color", "blue, red"],
+              ["6", "Origin · Origen", "French, Italian"],
+              ["7", "Material · Material", "wooden, ceramic"],
+              ["8", "Purpose · Propósito", "writing, cooking"],
+              ["9", "Noun · Sustantivo", "desk, pot"]
+            ]
           },
           {
             "kind": "callout",
@@ -173,7 +193,8 @@
         ],
         "related": [
           "adjectives-vs-adverbs",
-          "countable-uncountable-quantifiers"
+          "countable-uncountable-quantifiers",
+          "prepositions-place-time"
         ],
         "items": [
           "mdf-order-1",
@@ -249,7 +270,8 @@
         ],
         "related": [
           "adjectives-vs-adverbs",
-          "adjective-order"
+          "adjective-order",
+          "comparatives"
         ],
         "items": [
           "mdf-count-1",
@@ -324,7 +346,9 @@
           }
         ],
         "related": [
-          "superlatives"
+          "superlatives",
+          "countable-uncountable-quantifiers",
+          "adjectives-vs-adverbs"
         ],
         "items": [
           "mdf-comp-1",
@@ -399,7 +423,9 @@
           }
         ],
         "related": [
-          "comparatives"
+          "comparatives",
+          "countable-uncountable-quantifiers",
+          "adjectives-vs-adverbs"
         ],
         "items": [
           "mdf-sup-1",
@@ -474,7 +500,8 @@
           }
         ],
         "related": [
-          "for-vs-to"
+          "for-vs-to",
+          "adjective-order"
         ],
         "items": [
           "mdf-prep-1",
@@ -549,7 +576,8 @@
           }
         ],
         "related": [
-          "prepositions-place-time"
+          "prepositions-place-time",
+          "adjective-order"
         ],
         "items": [
           "mdf-forto-1",

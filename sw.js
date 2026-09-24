@@ -13,7 +13,11 @@
 // Bumped v2 -> v3 when the five remaining modules shipped: every module's
 // JSON is now precached so the whole corpus works offline from the first
 // visit (not just after a learner happens to open each module online).
-const CACHE = 'momentum-v3';
+// Bumped v3 -> v4 after the content-enrichment pass (every topic raised to
+// 5 examples, cross-linking + two reference tables). The precache list is
+// unchanged, but the bump forces returning users to re-precache the updated
+// JSON on activate instead of waiting a load behind for stale-while-revalidate.
+const CACHE = 'momentum-v4';
 const SHELL = [
   './',
   './index.html',

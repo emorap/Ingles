@@ -97,7 +97,8 @@
         ],
         "related": [
           "contractions-zipper",
-          "silent-letters-fossils"
+          "silent-letters-fossils",
+          "dates-ordinal-podium"
         ],
         "items": [
           "mec-1",
@@ -173,7 +174,8 @@
         ],
         "related": [
           "punctuation-signals",
-          "silent-letters-fossils"
+          "silent-letters-fossils",
+          "giving-directions-gps"
         ],
         "items": [
           "mec-6",
@@ -324,7 +326,8 @@
           }
         ],
         "related": [
-          "dates-ordinal-podium"
+          "dates-ordinal-podium",
+          "punctuation-signals"
         ],
         "items": [
           "mec-16",
@@ -364,9 +367,23 @@
           {
             "kind": "callout",
             "text": {
-              "en": "Date formats differ by country: UK writes '5 April 2026' (day first); US writes 'April 5, 2026' (month first). Spoken aloud, both become 'April the fifth' or 'the fifth of April' — the ordinal always appears in speech, even when the written digit doesn't show it.",
-              "es": "Los formatos de fecha varían según el país: el Reino Unido escribe '5 April 2026' (día primero); EE. UU. escribe 'April 5, 2026' (mes primero). Al hablarlo, ambos se dicen 'April the fifth' o 'the fifth of April' — el ordinal siempre aparece al hablar, aunque el dígito escrito no lo muestre."
+              "en": "Date formats differ by country: UK writes '5 April 2026' (day first); US writes 'April 5, 2026' (month first) — note the comma before the year in the US format. Spoken aloud, both become 'April the fifth' or 'the fifth of April' — the ordinal always appears in speech, even when the written digit doesn't show it.",
+              "es": "Los formatos de fecha varían según el país: el Reino Unido escribe '5 April 2026' (día primero); EE. UU. escribe 'April 5, 2026' (mes primero) — nota la coma antes del año en el formato estadounidense. Al hablarlo, ambos se dicen 'April the fifth' o 'the fifth of April' — el ordinal siempre aparece al hablar, aunque el dígito escrito no lo muestre."
             }
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Last digit / Último dígito",
+              "Suffix / Sufijo",
+              "Example / Ejemplo"
+            ],
+            "rows": [
+              ["1 (not 11)", "-st", "21st, 31st, 101st"],
+              ["2 (not 12)", "-nd", "2nd, 22nd, 102nd"],
+              ["3 (not 13)", "-rd", "3rd, 23rd, 103rd"],
+              ["0, 4-9, 11, 12, 13", "-th", "4th, 11th, 12th, 13th, 20th, 24th"]
+            ]
           },
           {
             "kind": "pitfall",
@@ -399,7 +416,9 @@
           }
         ],
         "related": [
-          "reading-numbers-assembly"
+          "reading-numbers-assembly",
+          "punctuation-signals",
+          "giving-directions-gps"
         ],
         "items": [
           "mec-21",
@@ -474,7 +493,8 @@
           }
         ],
         "related": [
-          "contractions-zipper"
+          "contractions-zipper",
+          "dates-ordinal-podium"
         ],
         "items": [
           "mec-26",
