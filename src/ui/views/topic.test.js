@@ -87,6 +87,52 @@ test('renderTopic: diagrams render as lazy-loaded images', () => {
   assert.equal(img.getAttribute('src'), 'content/assets/ps-1.png');
 });
 
+const tick = () => new Promise((r) => setTimeout(r, 0));
+
+function fakeGenTutor(items) {
+  const calls = [];
+  return { calls, async generateItems(topic, n) { calls.push([topic.id, n]); return items; } };
+}
+
+test('renderTopic: no "Generar práctica" button when no tutor is available', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  renderTopic(c, { topic: TOPIC, onPractice: () => {} });
+  assert.equal(c.querySelector('[data-action="generate-practice"]'), null);
+});
+
+test('renderTopic: shows "Generar práctica" when a tutor is available', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  renderTopic(c, { topic: TOPIC, onPractice: () => {}, tutor: fakeGenTutor([]) });
+  assert.ok(c.querySelector('[data-action="generate-practice"]'));
+});
+
+test('renderTopic: "Generar práctica" passes generated items to onGenerated and reports the count', async () => {
+  stubSynth();
+  const c = document.createElement('div');
+  const items = [{ id: 'g1' }, { id: 'g2' }];
+  const tutor = fakeGenTutor(items);
+  let received = null;
+  renderTopic(c, { topic: TOPIC, onPractice: () => {}, tutor, onGenerated: (its) => { received = its; } });
+  c.querySelector('[data-action="generate-practice"]').dispatchEvent(new window.Event('click'));
+  await tick(); await tick();
+  assert.deepEqual(tutor.calls[0][0], 'present-simple');
+  assert.deepEqual(received, items);
+  assert.match(c.querySelector('[data-role="ai-status"]').textContent, /2/);
+});
+
+test('renderTopic: "Generar práctica" reports when the AI returns no valid items', async () => {
+  stubSynth();
+  const c = document.createElement('div');
+  let received = 'untouched';
+  renderTopic(c, { topic: TOPIC, onPractice: () => {}, tutor: fakeGenTutor([]), onGenerated: (its) => { received = its; } });
+  c.querySelector('[data-action="generate-practice"]').dispatchEvent(new window.Event('click'));
+  await tick(); await tick();
+  assert.equal(received, 'untouched', 'onGenerated not called with an empty set');
+  assert.match(c.querySelector('[data-role="ai-status"]').textContent, /no.*ejercicios|Intenta/i);
+});
+
 test('renderTopic: "Practicar este tema" invokes onPractice', () => {
   stubSynth();
   const c = document.createElement('div');

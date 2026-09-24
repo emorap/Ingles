@@ -4,11 +4,18 @@
 import { bilingualCallout } from '../components/bilingual-callout.js';
 import { audioButton } from '../components/audio-button.js';
 
+const GEN_COUNT = 5; // how many extra items to ask the tutor for
+
 /**
  * @param {HTMLElement} container
- * @param {{ topic: any, onPractice?: (topicId: string) => void }} ctx
+ * @param {{
+ *   topic: any,
+ *   onPractice?: (topicId: string) => void,
+ *   tutor?: import('../../ai/provider.js').AITutorProvider | null,
+ *   onGenerated?: (items: import('../../engine/types.js').Item[]) => void,
+ * }} ctx
  */
-export function renderTopic(container, { topic, onPractice }) {
+export function renderTopic(container, { topic, onPractice, tutor, onGenerated }) {
   clear(container);
   const voice = topic.audio?.voice;
 
@@ -69,7 +76,48 @@ export function renderTopic(container, { topic, onPractice }) {
   practice.addEventListener('click', () => onPractice?.(topic.id));
   section.append(practice);
 
+  // AI realce: generate extra practice items for this topic. Items are already
+  // validated by the provider (validateItem); anything malformed is dropped.
+  if (tutor) section.append(generatePanel(tutor, topic, onGenerated));
+
   container.append(section);
+}
+
+function generatePanel(tutor, topic, onGenerated) {
+  const panel = document.createElement('div');
+  panel.className = 'topic-generate';
+  panel.setAttribute('data-role', 'generate-panel');
+
+  const status = document.createElement('p');
+  status.className = 'ai-status muted';
+  status.setAttribute('data-role', 'ai-status');
+  status.setAttribute('aria-live', 'polite');
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'btn ghost';
+  btn.setAttribute('data-action', 'generate-practice');
+  btn.textContent = 'Generar práctica con IA';
+  btn.addEventListener('click', async () => {
+    btn.setAttribute('disabled', '');
+    status.textContent = 'Generando ejercicios…';
+    try {
+      const items = await tutor.generateItems(topic, GEN_COUNT);
+      if (items && items.length) {
+        onGenerated?.(items);
+        status.textContent = `Generé ${items.length} ejercicios nuevos. ¡A practicar!`;
+      } else {
+        status.textContent = 'La IA no devolvió ejercicios válidos. Intenta de nuevo.';
+      }
+    } catch (err) {
+      status.textContent = (err && err.message) ? err.message : 'No se pudo contactar la IA.';
+    } finally {
+      btn.removeAttribute('disabled');
+    }
+  });
+
+  panel.append(btn, status);
+  return panel;
 }
 
 function renderBlock(block, voice) {

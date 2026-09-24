@@ -128,6 +128,56 @@ test('session completion calls onDone after the last item is rated', async () =>
   assert.equal(done, 1);
 });
 
+function fakeTutor() {
+  const calls = [];
+  return {
+    calls,
+    async whyWrong(item, given) { calls.push(['whyWrong', item.id, given]); return `Escribiste "${given}".`; },
+    async explain(topic, ctx) { calls.push(['explain', topic.id]); return 'Más contexto en inglés.'; },
+  };
+}
+
+test('AI buttons are absent from the reveal panel when no tutor is available', async () => {
+  const container = document.createElement('div');
+  renderPractice(container, { items: [CLOZE], progress: new Map(), store: fakeStore(), onDone: () => {}, now: new Date() });
+  await type(container, 'boil'); // wrong answer → reveal
+  assert.equal(container.querySelector('[data-action="ai-why"]'), null);
+  assert.equal(container.querySelector('[data-action="ai-explain"]'), null);
+});
+
+test('with a tutor, a wrong answer reveal shows both "¿Por qué fallé?" and "Explícame más"', async () => {
+  const container = document.createElement('div');
+  renderPractice(container, {
+    items: [CLOZE], progress: new Map(), store: fakeStore(), onDone: () => {}, now: new Date(), tutor: fakeTutor(),
+  });
+  await type(container, 'boil');
+  assert.ok(container.querySelector('[data-action="ai-why"]'), '¿Por qué fallé? present');
+  assert.ok(container.querySelector('[data-action="ai-explain"]'), 'Explícame más present');
+});
+
+test('with a tutor, a correct answer reveal offers "Explícame más" but not "¿Por qué fallé?"', async () => {
+  const container = document.createElement('div');
+  renderPractice(container, {
+    items: [CLOZE], progress: new Map(), store: fakeStore(), onDone: () => {}, now: new Date(), tutor: fakeTutor(),
+  });
+  await type(container, 'boils'); // correct
+  assert.equal(container.querySelector('[data-action="ai-why"]'), null);
+  assert.ok(container.querySelector('[data-action="ai-explain"]'));
+});
+
+test('clicking "¿Por qué fallé?" renders the tutor explanation in the output area', async () => {
+  const container = document.createElement('div');
+  const tutor = fakeTutor();
+  renderPractice(container, {
+    items: [CLOZE], progress: new Map(), store: fakeStore(), onDone: () => {}, now: new Date(), tutor,
+  });
+  await type(container, 'boil');
+  container.querySelector('[data-action="ai-why"]').dispatchEvent(new window.Event('click'));
+  await tick(); await tick();
+  assert.deepEqual(tutor.calls[0], ['whyWrong', 'c1', 'boil']);
+  assert.match(container.querySelector('[data-role="ai-output"]').textContent, /Escribiste "boil"/);
+});
+
 test('offline (Review Focus #2): a full cycle never touches the network', async () => {
   globalThis.fetch = () => { throw new Error('network call during practice!'); };
   const container = document.createElement('div');

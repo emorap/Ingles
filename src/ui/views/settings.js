@@ -59,7 +59,7 @@ const GOAL_OPTIONS = [5, 10, 15, 20].map((n) => ({ value: String(n), label: `${n
  * @param {HTMLElement} container
  * @param {{
  *   store: any,
- *   settings?: { theme?: string, lang?: string, newPerDay?: number, voice?: string, lastBackup?: number },
+ *   settings?: { theme?: string, lang?: string, newPerDay?: number, voice?: string, lastBackup?: number, aiKey?: string },
  *   voices?: string[],
  *   onChange?: (key: string, value: any) => void,
  *   download?: (filename: string, text: string) => void,
@@ -128,9 +128,68 @@ export function renderSettings(container, { store, settings = {}, voices = [], o
   importLabel.append(importInput);
 
   actions.append(exportBtn, importLabel);
-  section.append(actions, toastArea);
+  section.append(actions);
 
+  // AI Tutor (Gemini) — optional online realce. The key is the learner's own.
+  section.append(aiTutorSection(store, settings, toastArea, onChange));
+
+  section.append(toastArea);
   container.append(section);
+}
+
+/**
+ * Section to paste / save the learner's own Gemini key, with a security note.
+ * The key lives only in this device's IndexedDB (meta 'aiKey'), unencrypted.
+ */
+function aiTutorSection(store, settings, toastArea, onChange) {
+  const wrap = document.createElement('section');
+  wrap.className = 'settings-ai';
+  wrap.setAttribute('data-role', 'ai-section');
+
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Tutor IA (Gemini)';
+  wrap.append(h3);
+
+  const field = document.createElement('div');
+  field.className = 'setting-group';
+
+  const label = document.createElement('label');
+  label.className = 'setting-label';
+  label.textContent = 'Tu clave de Gemini';
+  const input = document.createElement('input');
+  input.type = 'password';
+  input.className = 'text-input';
+  input.setAttribute('data-role', 'ai-key');
+  input.setAttribute('autocomplete', 'off');
+  input.setAttribute('placeholder', 'AI...');
+  input.value = settings.aiKey ?? '';
+  label.append(input);
+  field.append(label);
+
+  const save = document.createElement('button');
+  save.type = 'button';
+  save.className = 'btn';
+  save.setAttribute('data-action', 'save-ai-key');
+  save.textContent = 'Guardar clave';
+  save.addEventListener('click', async () => {
+    const value = input.value.trim();
+    await store.setMeta('aiKey', value);
+    onChange?.('aiKey', value);
+    showToast(toastArea, value ? 'Clave guardada en este dispositivo.' : 'Clave borrada.', 'ok');
+  });
+  field.append(save);
+  wrap.append(field);
+
+  const note = document.createElement('p');
+  note.className = 'ai-note';
+  note.setAttribute('data-role', 'ai-note');
+  note.setAttribute('role', 'note');
+  note.textContent = 'Tu clave se guarda solo en este dispositivo y se usa para '
+    + 'hablar directamente con Google. No se cifra: evita usarla en un equipo '
+    + 'compartido. El tutor es un extra opcional; la app funciona sin conexión.';
+  wrap.append(note);
+
+  return wrap;
 }
 
 function buttonGroup(label, role, options, current, onPick) {

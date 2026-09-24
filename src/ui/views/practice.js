@@ -14,9 +14,10 @@ import { newCard, review } from '../../engine/scheduler.js';
  *   onWrong?: (itemId: string, given: string) => void | Promise<void>,
  *   now?: Date,
  *   voice?: string,
+ *   tutor?: import('../../ai/provider.js').AITutorProvider | null,
  * }} ctx
  */
-export function renderPractice(container, { items, progress, store, onDone, onWrong, now = new Date(), voice }) {
+export function renderPractice(container, { items, progress, store, onDone, onWrong, now = new Date(), voice, tutor }) {
   let i = 0;
   const total = items.length;
   const results = { correct: 0, total };
@@ -53,6 +54,7 @@ export function renderPractice(container, { items, progress, store, onDone, onWr
 
     section.append(practiceCard(item, {
       voice,
+      tutor,
       onRate: async (rating, wasCorrect, given) => {
         await persist(item, rating, wasCorrect);
         if (wasCorrect) results.correct += 1;

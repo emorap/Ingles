@@ -92,6 +92,32 @@ test('changing the daily-goal control reports the new value via onChange', () =>
   assert.deepEqual(changed, { k: 'newPerDay', v: 15 });
 });
 
+test('AI Tutor section saves the pasted Gemini key and confirms', async () => {
+  const container = document.createElement('div');
+  const store = fakeStore();
+  let changed = null;
+  renderSettings(container, {
+    store, settings: {}, voices: [], onChange: (k, v) => { changed = { k, v }; }, download: () => {}, now: new Date(),
+  });
+  const input = container.querySelector('[data-role="ai-key"]');
+  input.value = 'MY-GEMINI-KEY';
+  container.querySelector('[data-action="save-ai-key"]').dispatchEvent(new window.Event('click'));
+  await tick();
+  assert.equal(store.meta.get('aiKey'), 'MY-GEMINI-KEY');
+  assert.deepEqual(changed, { k: 'aiKey', v: 'MY-GEMINI-KEY' });
+  assert.ok(container.querySelector('[data-role="toast"]'));
+});
+
+test('AI Tutor section shows the security note about the key', () => {
+  const container = document.createElement('div');
+  renderSettings(container, {
+    store: fakeStore(), settings: {}, voices: [], onChange: () => {}, download: () => {}, now: new Date(),
+  });
+  const note = container.querySelector('[data-role="ai-note"]');
+  assert.ok(note);
+  assert.match(note.textContent, /clave|Google|dispositivo/i);
+});
+
 test('shows a backup reminder when nothing has been backed up yet', () => {
   const container = document.createElement('div');
   renderSettings(container, {

@@ -15,10 +15,14 @@ const RATINGS = [
 
 /**
  * @param {import('../../engine/types.js').Item} item
- * @param {{ onRate?: (rating: number, wasCorrect: boolean) => void, voice?: string }} [ctx]
+ * @param {{
+ *   onRate?: (rating: number, wasCorrect: boolean, given: string) => void,
+ *   voice?: string,
+ *   tutor?: import('../../ai/provider.js').AITutorProvider | null,
+ * }} [ctx]
  * @returns {HTMLElement}
  */
-export function practiceCard(item, { onRate, voice } = {}) {
+export function practiceCard(item, { onRate, voice, tutor } = {}) {
   const card = document.createElement('article');
   card.className = 'practice-card surface';
   card.setAttribute('data-item', item.id);
@@ -78,6 +82,10 @@ export function practiceCard(item, { onRate, voice } = {}) {
     }
     feedback.append(ratings);
 
+    // AI tutor realce — only when a tutor is available (online + key). The
+    // offline core is untouched; these buttons simply don't exist otherwise.
+    if (tutor) feedback.append(aiPanel(tutor, item, wasCorrect, given));
+
     keyHandler = (e) => {
       const found = RATINGS.find((r) => r[3] === e.key);
       if (found) rate(found[2], wasCorrect, given);
@@ -117,6 +125,61 @@ export function practiceCard(item, { onRate, voice } = {}) {
   }
 
   return card;
+}
+
+/**
+ * The optional AI tutor panel shown under a revealed card. "¿Por qué fallé?"
+ * appears only on a wrong answer; "Explícame más" always. Each call is async
+ * and time-boxed by the provider; failures render their Spanish message.
+ */
+function aiPanel(tutor, item, wasCorrect, given) {
+  const panel = document.createElement('div');
+  panel.className = 'practice-ai';
+  panel.setAttribute('data-role', 'ai-panel');
+
+  const output = document.createElement('div');
+  output.className = 'practice-ai-output muted';
+  output.setAttribute('data-role', 'ai-output');
+  output.setAttribute('aria-live', 'polite');
+
+  const run = (btn, fn) => async () => {
+    for (const b of panel.querySelectorAll('button')) b.setAttribute('disabled', '');
+    output.textContent = 'Pensando…';
+    try {
+      output.textContent = await fn();
+    } catch (err) {
+      output.textContent = (err && err.message) ? err.message : 'No se pudo contactar la IA.';
+    } finally {
+      for (const b of panel.querySelectorAll('button')) b.removeAttribute('disabled');
+    }
+  };
+
+  const buttons = document.createElement('div');
+  buttons.className = 'practice-ai-actions';
+
+  if (!wasCorrect) {
+    const whyBtn = document.createElement('button');
+    whyBtn.type = 'button';
+    whyBtn.className = 'btn ghost';
+    whyBtn.setAttribute('data-action', 'ai-why');
+    whyBtn.textContent = '¿Por qué fallé?';
+    whyBtn.addEventListener('click', run(whyBtn, () => tutor.whyWrong(item, given)));
+    buttons.append(whyBtn);
+  }
+
+  const moreBtn = document.createElement('button');
+  moreBtn.type = 'button';
+  moreBtn.className = 'btn ghost';
+  moreBtn.setAttribute('data-action', 'ai-explain');
+  moreBtn.textContent = 'Explícame más';
+  moreBtn.addEventListener('click', run(moreBtn, () => tutor.explain(
+    { id: item.topic },
+    { prompt: item.prompt, answer: item.answer, why: item.why },
+  )));
+  buttons.append(moreBtn);
+
+  panel.append(buttons, output);
+  return panel;
 }
 
 function shuffle(arr) {
