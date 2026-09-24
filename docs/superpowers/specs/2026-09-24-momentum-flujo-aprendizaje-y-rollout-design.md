@@ -51,10 +51,10 @@ Hub (módulos)  →  Módulo (temas)  →  Tema (lección)  →  Práctica
 ```
 
 ### 3.1 Hub — `#/`
-- Muestra los **6 módulos** como tarjetas (color de acento por módulo, anillo de progreso agregado).
-- Cada módulo lleva su **número de orden recomendado** (1→6) y una marca sutil de **"siguiente sugerido"** (el primer módulo con temas sin dominar).
-- **Todos los módulos están siempre abiertos y tocables. Sin candados.**
-- Conserva: buscador global (busca temas en **todos** los módulos), CTA "Practicar lo de hoy (N ítems · ~X min)", chip de racha.
+- Muestra los **6 módulos** como tarjetas (color de acento por módulo, anillo de progreso agregado), para comunicar la **ruta completa** desde el primer día.
+- Cada módulo lleva su **número de orden recomendado** (1→6) y una marca sutil de **"siguiente sugerido"** (el primer módulo `available` con temas sin dominar).
+- Módulos `available`: **siempre abiertos y tocables, sin candados.** Módulos `coming-soon`: se ven en la ruta con una etiqueta **"Próximamente"**, no navegables (aún sin contenido) — no es un candado pedagógico, es que todavía no existen.
+- Conserva: buscador global (busca temas en todos los módulos `available`), CTA "Practicar lo de hoy (N ítems · ~X min)", chip de racha.
 
 ### 3.2 Módulo — `#/module/<moduleId>` *(vista nueva)*
 - Lista los **temas** del módulo, en orden recomendado y numerados, con estado por tema: **Por aprender · Aprendido · Practicando · Dominado**.
@@ -117,15 +117,19 @@ Sobre el esquema de la spec base §7, cada `topic` añade **un** campo obligator
 {
   "version": 1,
   "modules": [
-    { "id": "tenses",       "order": 1, "file": "tenses.json",
+    { "id": "tenses",       "order": 1, "status": "available",   "file": "tenses.json",
       "title": { "en": "Tense system", "es": "Sistema de tiempos" }, "accent": "#6366F1" },
-    { "id": "conditionals", "order": 2, "file": "conditionals.json", "title": { ... }, "accent": "#8B5CF6" }
-    // ... 6 módulos
+    { "id": "conditionals", "order": 2, "status": "coming-soon",  "file": "conditionals.json",
+      "title": { "en": "Conditionals", "es": "Condicionales" }, "accent": "#8B5CF6" }
+    // ... hasta 6 módulos
   ]
 }
 ```
 
-- El manifiesto es la **única fuente del orden recomendado** y de qué archivos existen.
+- El manifiesto es la **única fuente del orden recomendado** y del estado de cada módulo.
+- `status`: `"available"` (tiene contenido y es navegable) o `"coming-soon"` (aún no construido).
+- **El manifiesto lista los 6 módulos desde la primera entrega** para mostrar la **ruta completa** en el Hub (motiva y es honesto), aunque solo los `available` sean navegables.
+- Solo se cargan (§5.2) los `<módulo>.json` de módulos `available`; los `coming-soon` no tienen archivo aún.
 
 ### 5.2 Carga
 
@@ -177,8 +181,8 @@ Refina la agrupación de la spec base §6 según lo acordado en esta conversaci�
 Módulo por módulo, empezando por **la base + completar Tiempos**:
 
 ### 8.1 Infraestructura de aprendizaje (habilita los 6 módulos)
-- Manifiesto `content/index.json` + carga multi-módulo (§5).
-- Hub de **módulos** con orden recomendado sin candados (§3.1).
+- Manifiesto `content/index.json` con los 6 módulos (`tenses` = `available`, los otros 5 = `coming-soon`) + carga multi-módulo (§5).
+- Hub de **módulos** con orden recomendado sin candados, mostrando la ruta completa (`available` navegables, `coming-soon` con etiqueta "Próximamente") (§3.1).
 - Vista de **módulo** nueva (§3.2).
 - Vista de **tema lección-primero** con `coreIdea` destacado + botón "Practicar este tema" (§3.3, §4).
 - Estado de **lección vista** + etiquetas de estado por tema (§6).
@@ -201,7 +205,8 @@ Módulo por módulo, empezando por **la base + completar Tiempos**:
 Bajo el mismo stack sin-build (`node:test` / `node:assert`, linkedom, fake-indexeddb) y TDD:
 
 - **Guard de contenido "ni práctica sin concepto, ni concepto sin práctica":** cada tema de cada módulo tiene `coreIdea` (EN y ES), al menos un bloque `explanation`, al menos un `example`, y **al menos un ítem** de práctica. *(Esta es la prueba que impide que se repita "no conozco los conceptos".)*
-- **Guard del manifiesto:** cada módulo de `index.json` resuelve a un archivo existente; `order` es una permutación 1..N; los `id` de módulo y de ítem son únicos en todo el corpus.
+- **Guard del manifiesto:** cada módulo `available` de `index.json` resuelve a un archivo existente; `order` es una permutación 1..N; los `id` de módulo y de ítem son únicos en todo el corpus; todo módulo es `available` o `coming-soon`.
+- **Guard "próximamente":** un módulo `coming-soon` aparece en el Hub con su etiqueta, no es navegable, y **no** se intenta cargar su archivo.
 - **Guard de navegación (guiar sin bloquear):** toda vista de módulo y tema es alcanzable por ruta; ningún módulo/tema queda gated; existe ruta directa a práctica (global y por tema).
 - **Carga multi-módulo:** con un `<módulo>.json` inválido/ausente, la app carga los demás sin romper (degradación).
 - **Progreso de lección:** abrir un tema fija `lessonViewedAt`; el estado derivado por tema se calcula correctamente en los cuatro casos.
