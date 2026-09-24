@@ -59,12 +59,20 @@ export async function mountApp(root, catalog, store = new Store()) {
 
   let currentRoute = { view: 'hub' };
 
+  // Opening a topic's lesson marks it viewed (drives the "Aprendido" status on
+  // the roadmap even before any practice) and persists the map.
+  const markViewed = (id) => {
+    lessonViewed[id] = Date.now();
+    store.setMeta('lessonViewed', lessonViewed);
+  };
+
   /** @type {any} */
   const deps = {
     catalog,
     store,
     progress,
     lessonViewed,
+    markViewed,
     cap: HUB_DEFAULTS.cap,
     navigate: go,
     get newPerDay() { return newPerDay; },
@@ -130,6 +138,7 @@ export async function renderRoute(view, route, deps) {
       const found = findTopic(catalog, route.param);
       if (!found) { deps.navigate('hub'); return; }
       const topic = found.topic;
+      deps.markViewed?.(topic.id); // learn-first: opening the lesson counts
       const tutor = await getTutor(store);
       renderTopic(view, {
         topic,

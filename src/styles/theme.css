@@ -251,6 +251,15 @@ button{font:inherit;color:inherit;cursor:pointer}
 }
 .ai-status{margin:0;font-size:.9rem}
 
+/* ---- Core idea (topic essence) -------------------------------------------- */
+.topic-core-idea{
+  margin:0 0 var(--sp-3);padding:var(--sp-3) var(--sp-4);
+  border-left:4px solid var(--color-primary);border-radius:0 var(--radius) var(--radius) 0;
+  background:color-mix(in srgb,var(--color-primary) 12%,transparent);
+}
+.core-idea-es{margin:0;font-size:1.2rem;font-weight:700;line-height:1.35}
+.core-idea-en{display:flex;align-items:center;gap:.4rem;margin:.35rem 0 0;font-size:.95rem}
+
 /* ---- Bilingual callout ---------------------------------------------------- */
 .callout{
   border-left:3px solid var(--color-primary);
@@ -259,6 +268,8 @@ button{font:inherit;color:inherit;cursor:pointer}
   margin:var(--sp-2) 0;
 }
 .callout-why{border-left-color:var(--color-success);background:color-mix(in srgb,var(--color-success) 10%,transparent)}
+.callout-pitfall{border-left-color:var(--color-error);background:color-mix(in srgb,var(--color-error) 10%,transparent)}
+.callout-pitfall .callout-en::before{content:"⚠ ";}
 .callout-en{display:flex;align-items:center;gap:.4rem;font-weight:600;margin:0}
 .callout-es{color:var(--color-muted);margin:.15rem 0 0}
 

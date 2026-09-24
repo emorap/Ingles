@@ -142,6 +142,16 @@ test('renderRoute: an unknown or not-loaded (coming-soon) module id redirects to
   }
 });
 
+test('mountApp: opening a topic route persists it as a viewed lesson', async () => {
+  const root = document.createElement('div');
+  const store = richStore({ onboarded: true }); // skip onboarding → routing is live
+  await mountApp(root, catalogOf(CONTENT2), store);
+  window.location.hash = '#/topic/pt';
+  await tick(); await tick();
+  assert.ok(store.meta.lessonViewed, 'lessonViewed persisted');
+  assert.ok('pt' in store.meta.lessonViewed, 'includes the opened topic id');
+});
+
 test('renderRoute: a topic id that does not exist redirects to the hub', async () => {
   const view = document.createElement('main');
   let nav = null;

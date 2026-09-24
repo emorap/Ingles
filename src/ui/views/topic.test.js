@@ -143,3 +143,42 @@ test('renderTopic: "Practicar este tema" invokes onPractice', () => {
   practice.dispatchEvent(new window.Event('click'));
   assert.equal(called, 1);
 });
+
+// --- Task 7: lesson-first (coreIdea header, pitfall blocks, guards) ---
+
+test('renderTopic: shows the coreIdea in a highlighted block at the top', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  const topic = { ...TOPIC, coreIdea: { en: 'Your normal reality.', es: 'Tu realidad normal.' } };
+  renderTopic(c, { topic, onPractice: () => {} });
+  const core = c.querySelector('.topic-core-idea');
+  assert.ok(core, 'has a core-idea block');
+  assert.match(core.textContent, /Tu realidad normal\./);
+  // It must sit before the first explanation block (concept before detail).
+  const first = c.querySelector('.topic > *:not(header)');
+  assert.ok(first?.classList.contains('topic-core-idea'), 'core idea comes first');
+});
+
+test('renderTopic: a pitfall block renders as a warning callout', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  const topic = { ...TOPIC, explanation: [{ kind: 'pitfall', text: { en: 'Do not use -ing here.', es: 'No uses -ing aquí.' } }] };
+  renderTopic(c, { topic, onPractice: () => {} });
+  const warn = c.querySelector('.callout-pitfall');
+  assert.ok(warn, 'has a pitfall callout');
+  assert.match(warn.textContent, /No uses -ing aquí\./);
+});
+
+test('renderTopic: a topic with no practice items disables the practice button', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  renderTopic(c, { topic: { ...TOPIC, items: [] }, onPractice: () => {} });
+  const practice = c.querySelector('[data-action="practice-topic"]');
+  assert.ok(practice.hasAttribute('disabled'), 'practice button is disabled when there is nothing to practice');
+});
+
+test('renderTopic: a dangling related id does not throw', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  assert.doesNotThrow(() => renderTopic(c, { topic: { ...TOPIC, related: ['no-existe'] }, onPractice: () => {} }));
+});

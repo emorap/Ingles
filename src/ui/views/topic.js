@@ -34,6 +34,10 @@ export function renderTopic(container, { topic, onPractice, tutor, onGenerated }
   header.append(h2, sub);
   section.append(header);
 
+  // Learn-first: the one-sentence essence sits at the very top, before any
+  // detail. ES is the anchor (large), EN underneath as comprehensible input.
+  if (topic.coreIdea) section.append(coreIdeaBlock(topic.coreIdea, voice));
+
   for (const block of topic.explanation ?? []) section.append(renderBlock(block, voice));
 
   for (const src of topic.diagrams ?? []) {
@@ -72,8 +76,15 @@ export function renderTopic(container, { topic, onPractice, tutor, onGenerated }
   practice.type = 'button';
   practice.className = 'btn';
   practice.setAttribute('data-action', 'practice-topic');
-  practice.textContent = 'Practicar este tema';
-  practice.addEventListener('click', () => onPractice?.(topic.id));
+  // No practice items yet (e.g. a lesson-only topic) → guide, don't dead-end:
+  // keep the button visible but disabled with an honest label.
+  if (topic.items?.length) {
+    practice.textContent = 'Practicar este tema';
+    practice.addEventListener('click', () => onPractice?.(topic.id));
+  } else {
+    practice.textContent = 'Aún no hay práctica';
+    practice.setAttribute('disabled', '');
+  }
   section.append(practice);
 
   // AI realce: generate extra practice items for this topic. Items are already
@@ -122,9 +133,29 @@ function generatePanel(tutor, topic, onGenerated) {
 
 function renderBlock(block, voice) {
   if (block.kind === 'callout') return bilingualCallout(block.text, { voice, kind: 'callout' });
+  if (block.kind === 'pitfall') return bilingualCallout(block.text, { voice, kind: 'pitfall' });
   if (block.kind === 'quote') return bilingualPara(block.text, voice, 'blockquote', 'topic-quote');
   if (block.kind === 'table') return renderTable(block);
   return bilingualPara(block.text, voice, 'div', 'topic-p'); // 'p' and unknown → paragraph
+}
+
+// The topic's essence: ES big and bold, EN (with audio) underneath.
+function coreIdeaBlock(text, voice) {
+  const box = document.createElement('div');
+  box.className = 'topic-core-idea';
+  box.setAttribute('data-role', 'core-idea');
+  const es = document.createElement('p');
+  es.className = 'core-idea-es';
+  es.setAttribute('lang', 'es');
+  es.textContent = text.es;
+  const en = document.createElement('p');
+  en.className = 'core-idea-en muted';
+  en.setAttribute('lang', 'en');
+  const enText = document.createElement('span');
+  enText.textContent = text.en;
+  en.append(enText, audioButton(text.en, { voice }));
+  box.append(es, en);
+  return box;
 }
 
 function bilingualPara(text, voice, wrapperTag, className) {
