@@ -1,0 +1,1088 @@
+{
+  "version": 1,
+  "module": {
+    "id": "conditionals",
+    "title": {
+      "en": "Conditionals & hypotheticals",
+      "es": "Condicionales e hipótesis"
+    },
+    "accent": "#8B5CF6",
+    "groups": [
+      {
+        "id": "reales",
+        "title": {
+          "en": "Real conditions",
+          "es": "Condiciones reales"
+        }
+      },
+      {
+        "id": "irreales",
+        "title": {
+          "en": "Unreal & hypothetical",
+          "es": "Irreales e hipotéticas"
+        }
+      },
+      {
+        "id": "extensiones",
+        "title": {
+          "en": "Beyond if",
+          "es": "Más allá de if"
+        }
+      }
+    ],
+    "topics": [
+      {
+        "id": "zero-conditional",
+        "title": {
+          "en": "Zero Conditional — the vending machine",
+          "es": "Condicional cero — la máquina expendedora"
+        },
+        "group": "reales",
+        "coreIdea": {
+          "en": "The Zero Conditional is a vending machine: put in the same coin, always get the same result — no exceptions, no doubt, no future tense involved.",
+          "es": "El condicional cero es una máquina expendedora: metes la misma moneda y siempre sale el mismo resultado — sin excepciones, sin duda, y sin tiempo futuro."
+        },
+        "source": "The Complete Guide to Conditionals.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Formula: If + Present Simple, Present Simple. Both halves stay in the present — like a machine that has no other setting. Use it for scientific facts, general truths, habits, and instructions: whenever the result is guaranteed, every single time.",
+              "es": "Fórmula: If + presente simple, presente simple. Las dos mitades se quedan en presente — como una máquina que no tiene otro modo. Se usa para hechos científicos, verdades generales, hábitos e instrucciones: cuando el resultado está garantizado, siempre."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "You can flip the order: 'If you heat ice, it melts' = 'Ice melts if you heat it.' Only add a comma when 'if' opens the sentence.",
+              "es": "Puedes invertir el orden: 'If you heat ice, it melts' = 'Ice melts if you heat it.' Solo pones coma cuando 'if' abre la frase."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "The #1 error: adding 'will' anywhere in a Zero Conditional. ❌ 'If you heat water, it will boil.' The machine has no future setting — it's always true, right now and every time. ✅ 'If you heat water, it boils.'",
+              "es": "El error #1: meter 'will' en cualquier parte del condicional cero. ❌ 'If you heat water, it will boil.' La máquina no tiene modo futuro — es siempre cierto, ahora y en todo momento. ✅ 'If you heat water, it boils.'"
+            }
+          }
+        ],
+        "examples": [
+          { "en": "If you heat ice, it melts.", "es": "Si calientas el hielo, se derrite." },
+          { "en": "If people don't eat, they get hungry.", "es": "Si las personas no comen, les da hambre." },
+          { "en": "Plants die if they don't get water.", "es": "Las plantas se mueren si no reciben agua." },
+          { "en": "If you mix blue and yellow, you get green.", "es": "Si mezclas azul y amarillo, obtienes verde." },
+          { "en": "If the alarm rings, everyone leaves the building.", "es": "Si suena la alarma, todos salen del edificio." }
+        ],
+        "related": ["first-conditional"],
+        "items": ["cnd-zero-boil", "cnd-zero-mix", "cnd-zero-plants", "cnd-zero-rule", "cnd-zero-sleep"]
+      },
+      {
+        "id": "first-conditional",
+        "title": {
+          "en": "First Conditional — the real fork ahead",
+          "es": "Primer condicional — la bifurcación real más adelante"
+        },
+        "group": "reales",
+        "coreIdea": {
+          "en": "The First Conditional stands you at a fork in the road that genuinely lies ahead: a real possibility in the future, with a real consequence if it happens.",
+          "es": "El primer condicional te para en una bifurcación que realmente está más adelante: una posibilidad real en el futuro, con una consecuencia real si ocurre."
+        },
+        "source": "The Complete Guide to Conditionals.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Formula: If + Present Simple, will + base verb. The 'if' clause names a real condition that could genuinely happen; the 'will' clause is the real consequence. Use it for predictions, promises, warnings, and on-the-spot decisions.",
+              "es": "Fórmula: If + presente simple, will + verbo base. La cláusula 'if' nombra una condición real que de verdad podría pasar; la cláusula con 'will' es la consecuencia real. Se usa para predicciones, promesas, advertencias y decisiones tomadas en el momento."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Quick test: 'life in general' (always true) → Zero. 'Tomorrow, this weekend, if this happens' (one real future chance) → First.",
+              "es": "Prueba rápida: 'la vida en general' (siempre cierto) → cero. 'Mañana, este fin de semana, si esto pasa' (una posibilidad real en el futuro) → primero."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Never put 'will' inside the 'if' clause. ❌ 'If it will rain, I'll take an umbrella.' The condition stays in Present Simple; only the result gets 'will'. ✅ 'If it rains, I'll take an umbrella.'",
+              "es": "Nunca metas 'will' dentro de la cláusula 'if'. ❌ 'If it will rain, I'll take an umbrella.' La condición se queda en presente simple; solo el resultado lleva 'will'. ✅ 'If it rains, I'll take an umbrella.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "The result clause always needs 'will' too — don't drop it. ❌ 'If I study, I pass the exam' (sounds like a guaranteed Zero-Conditional fact). ✅ 'If I study, I'll pass the exam' — a real, one-time prediction.",
+              "es": "La cláusula de resultado también necesita 'will' siempre — no la quites. ❌ 'If I study, I pass the exam' (suena a un hecho garantizado del condicional cero). ✅ 'If I study, I'll pass the exam' — una predicción real, de una sola vez."
+            }
+          }
+        ],
+        "examples": [
+          { "en": "If it rains, I'll take an umbrella.", "es": "Si llueve, llevaré un paraguas." },
+          { "en": "If you don't hurry, you'll miss the bus.", "es": "Si no te apuras, perderás el bus." },
+          { "en": "If she calls, I'll tell her the news.", "es": "Si ella llama, le contaré la noticia." },
+          { "en": "If we finish early, we'll go for a coffee.", "es": "Si terminamos temprano, iremos por un café." },
+          { "en": "If you touch that wire, you'll get a shock.", "es": "Si tocas ese cable, te vas a electrocutar." }
+        ],
+        "related": ["zero-conditional", "second-conditional"],
+        "items": ["cnd-first-rain", "cnd-first-hurry", "cnd-first-study", "cnd-first-touch", "cnd-first-decision"]
+      },
+      {
+        "id": "second-conditional",
+        "title": {
+          "en": "Second Conditional — the parallel-universe postcard",
+          "es": "Segundo condicional — la postal del universo paralelo"
+        },
+        "group": "irreales",
+        "coreIdea": {
+          "en": "The Second Conditional sends you a postcard from a parallel universe — one where the present or future is different from real life, purely imagined.",
+          "es": "El segundo condicional te manda una postal de un universo paralelo — uno donde el presente o el futuro es distinto a la vida real, puramente imaginado."
+        },
+        "source": "The Complete Guide to Conditionals.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Formula: If + Past Simple, would + base verb. The past tense doesn't mean past time here — it means distance from reality. You're describing an imaginary present or future: dreams, hypotheses, advice, opinions.",
+              "es": "Fórmula: If + pasado simple, would + verbo base. El pasado aquí no significa tiempo pasado — significa distancia de la realidad. Estás describiendo un presente o futuro imaginario: sueños, hipótesis, consejos, opiniones."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Giving advice: 'If I were you, I'd...' — 'were' is the classic, safest form for 'I/he/she/it' in this structure (informal speech also allows 'was', but 'were' is the standard choice).",
+              "es": "Para dar consejos: 'If I were you, I'd...' — 'were' es la forma clásica y más segura para 'I/he/she/it' en esta estructura (en habla informal también se oye 'was', pero 'were' es la opción estándar)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Never put 'would' inside the 'if' clause. ❌ 'If I would have more money, I would travel.' The imagined condition stays in Past Simple; only the result gets 'would'. ✅ 'If I had more money, I would travel.'",
+              "es": "Nunca metas 'would' dentro de la cláusula 'if'. ❌ 'If I would have more money, I would travel.' La condición imaginada se queda en pasado simple; solo el resultado lleva 'would'. ✅ 'If I had more money, I would travel.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Quick test: 'Do I believe this will really happen?' Yes → First Conditional. No, I'm just imagining → Second Conditional.",
+              "es": "Prueba rápida: '¿Creo que esto realmente va a pasar?' Sí → primer condicional. No, solo lo estoy imaginando → segundo condicional."
+            }
+          }
+        ],
+        "examples": [
+          { "en": "If I had more money, I would travel the world.", "es": "Si tuviera más dinero, viajaría por el mundo." },
+          { "en": "If I were you, I'd apologize.", "es": "Si yo fuera tú, me disculparía." },
+          { "en": "If she spoke French, she could get that job.", "es": "Si ella hablara francés, podría conseguir ese trabajo." },
+          { "en": "What would you do if you won the lottery?", "es": "¿Qué harías si te ganaras la lotería?" },
+          { "en": "If I didn't have to work, I would sleep all day.", "es": "Si no tuviera que trabajar, dormiría todo el día." }
+        ],
+        "related": ["first-conditional", "third-conditional", "mixed-conditionals"],
+        "items": ["cnd-second-money", "cnd-second-were", "cnd-second-french", "cnd-second-would-if", "cnd-second-lottery"]
+      },
+      {
+        "id": "third-conditional",
+        "title": {
+          "en": "Third Conditional — the sealed door to yesterday",
+          "es": "Tercer condicional — la puerta sellada de ayer"
+        },
+        "group": "irreales",
+        "coreIdea": {
+          "en": "The Third Conditional stands you in front of a sealed door to yesterday: you can only imagine what was behind it, because the past is locked and nothing can change it now.",
+          "es": "El tercer condicional te pone frente a una puerta sellada de ayer: solo puedes imaginar qué había detrás, porque el pasado está sellado y ya nada puede cambiarlo."
+        },
+        "source": "The Complete Guide to Conditionals.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "Formula: If + Past Perfect, would have + past participle. This is the grammar of regret: an imaginary past that never happened, used for missed opportunities, criticism, and 'what if' speculation about history — nothing here can actually be changed.",
+              "es": "Fórmula: If + pasado perfecto, would have + participio pasado. Es la gramática del arrepentimiento: un pasado imaginario que nunca ocurrió, usado para oportunidades perdidas, críticas, y especulación tipo '¿y si...?' sobre la historia — aquí nada se puede cambiar de verdad."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Quick test: 'Can I still change this situation?' Yes, it's still open → Second Conditional. No, it's finished, sealed in the past → Third Conditional.",
+              "es": "Prueba rápida: '¿Todavía puedo cambiar esta situación?' Sí, sigue abierta → segundo condicional. No, ya terminó, sellada en el pasado → tercer condicional."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Never put 'would have' inside the 'if' clause. ❌ 'If I would have known, I would have told you.' The sealed-past condition needs Past Perfect ('had known'); only the result gets 'would have'. ✅ 'If I had known, I would have told you.'",
+              "es": "Nunca metas 'would have' dentro de la cláusula 'if'. ❌ 'If I would have known, I would have told you.' La condición del pasado sellado necesita pasado perfecto ('had known'); solo el resultado lleva 'would have'. ✅ 'If I had known, I would have told you.'"
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Past Perfect needs the past participle, not the simple past. ❌ 'If she had came earlier, she wouldn't have missed the train.' ✅ 'If she had come earlier...'",
+              "es": "El pasado perfecto necesita el participio pasado, no el pasado simple. ❌ 'If she had came earlier, she wouldn't have missed the train.' ✅ 'If she had come earlier...'"
+            }
+          }
+        ],
+        "examples": [
+          { "en": "If I had known you were coming, I would have cooked dinner.", "es": "Si hubiera sabido que venías, habría cocinado la cena." },
+          { "en": "If she had studied medicine, she would have become a doctor.", "es": "Si ella hubiera estudiado medicina, se habría convertido en médica." },
+          { "en": "If they had left earlier, they wouldn't have missed the flight.", "es": "Si hubieran salido más temprano, no habrían perdido el vuelo." },
+          { "en": "If I hadn't broken my leg, I would have run the marathon.", "es": "Si no me hubiera roto la pierna, habría corrido el maratón." },
+          { "en": "Would you have forgiven him if he had apologized?", "es": "¿Lo habrías perdonado si él se hubiera disculpado?" }
+        ],
+        "related": ["second-conditional", "mixed-conditionals"],
+        "items": ["cnd-third-known", "cnd-third-came", "cnd-third-earlier", "cnd-third-leg", "cnd-third-forgive"]
+      },
+      {
+        "id": "mixed-conditionals",
+        "title": {
+          "en": "Mixed Conditionals — the time-traveling domino",
+          "es": "Condicionales mixtos — el dominó que viaja en el tiempo"
+        },
+        "group": "irreales",
+        "coreIdea": {
+          "en": "A Mixed Conditional is a domino that falls in one time period and knocks over a domino standing in a completely different one — a past cause with a present result, or a present truth with a past result.",
+          "es": "Un condicional mixto es un dominó que cae en una época y tumba a otro dominó parado en una época completamente distinta — una causa pasada con resultado presente, o una verdad presente con resultado pasado."
+        },
+        "source": "The Complete Guide to Conditionals.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "There are two patterns. Type 1 — Past cause, present result: If + Past Perfect, would + base verb ('If I had studied medicine, I would be a doctor now'). Type 2 — Present situation, past result: If + Past Simple, would have + past participle ('If I were more organised, I would have remembered the meeting').",
+              "es": "Hay dos patrones. Tipo 1 — causa pasada, resultado presente: If + pasado perfecto, would + verbo base ('If I had studied medicine, I would be a doctor now'). Tipo 2 — situación presente, resultado pasado: If + pasado simple, would have + participio pasado ('If I were more organised, I would have remembered the meeting')."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Quick test: 'Does the consequence happen now, or did it happen in the past?' Now → Type 1 (past cause / present result). In the past → Type 2 (present situation / past result).",
+              "es": "Prueba rápida: '¿La consecuencia pasa ahora, o pasó en el pasado?' Ahora → tipo 1 (causa pasada / resultado presente). En el pasado → tipo 2 (situación presente / resultado pasado)."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Don't force a pure Third Conditional onto a sentence where the result is clearly true right now. ❌ 'If I had studied medicine, I would have been a doctor' (sounds like a one-time attempt that's over). If the point is 'and that's why I'm NOT a doctor today', the result needs the present form: ✅ 'I would be a doctor now.'",
+              "es": "No fuerces un tercer condicional puro en una frase donde el resultado es claramente cierto ahora mismo. ❌ 'If I had studied medicine, I would have been a doctor' (suena a un intento único ya terminado). Si el punto es 'y por eso NO soy médico hoy', el resultado necesita la forma presente: ✅ 'I would be a doctor now.'"
+            }
+          }
+        ],
+        "examples": [
+          { "en": "If I had studied medicine, I would be a doctor now.", "es": "Si hubiera estudiado medicina, sería médico ahora." },
+          { "en": "If I were more organised, I would have remembered the meeting.", "es": "Si fuera más organizado, habría recordado la reunión." },
+          { "en": "If she hadn't moved to Canada, she wouldn't be fluent in French now.", "es": "Si ella no se hubiera mudado a Canadá, no hablaría francés con fluidez ahora." },
+          { "en": "If he weren't so shy, he would have asked her out years ago.", "es": "Si él no fuera tan tímido, la habría invitado a salir hace años." },
+          { "en": "If we hadn't missed the flight, we would be on the beach right now.", "es": "Si no hubiéramos perdido el vuelo, estaríamos en la playa en este momento." }
+        ],
+        "related": ["second-conditional", "third-conditional"],
+        "items": ["cnd-mixed-doctor", "cnd-mixed-organised", "cnd-mixed-canada", "cnd-mixed-flight", "cnd-mixed-shy"]
+      },
+      {
+        "id": "wish-if-only",
+        "title": {
+          "en": "Wish & If Only — the complaint genie",
+          "es": "Wish e If Only — el genio de las quejas"
+        },
+        "group": "extensiones",
+        "coreIdea": {
+          "en": "'Wish' is a genie who only grants complaints: it never talks about the future you want, only the present or past you don't like — and 'if only' is the same genie shouting louder.",
+          "es": "'Wish' es un genio que solo concede quejas: nunca habla del futuro que quieres, solo del presente o pasado que no te gusta — e 'if only' es el mismo genio pero gritando más fuerte."
+        },
+        "source": "General English grammar reference (extends the backshift logic taught for Second/Third Conditionals in the source PDFs; wish/if only is not itself covered by those PDFs).",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "I wish + Past Simple talks about a present situation you'd like to be different (dissatisfaction now): 'I wish I spoke English fluently' (I don't). Don't confuse this with 'hope', which IS about the future you want.",
+              "es": "I wish + pasado simple habla de una situación presente que te gustaría que fuera distinta (insatisfacción ahora): 'I wish I spoke English fluently' (no lo hablo). No confundas esto con 'hope', que SÍ habla del futuro que quieres."
+            }
+          },
+          {
+            "kind": "p",
+            "text": {
+              "en": "I wish + Past Perfect talks about a past situation you regret — the same 'sealed door' logic as the Third Conditional: 'I wish I had studied harder' (I didn't, and it's over).",
+              "es": "I wish + pasado perfecto habla de una situación pasada que lamentas — la misma lógica de la 'puerta sellada' del tercer condicional: 'I wish I had studied harder' (no lo hice, y ya pasó)."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "I wish + would + base verb complains about someone else's annoying behaviour (not about yourself): 'I wish you would stop interrupting me.' 'If only' works the same way as 'wish', just more emotional and emphatic.",
+              "es": "I wish + would + verbo base se queja del comportamiento molesto de otra persona (no de ti mismo): 'I wish you would stop interrupting me.' 'If only' funciona igual que 'wish', solo que más emotivo y enfático."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Never use 'wish' + Present Simple to mean 'I want'. ❌ 'I wish I have more time' (sounds like a literal translation of 'ojalá tenga'). The verb after 'wish' backshifts, just like the Second/Third Conditional: ✅ 'I wish I had more time.'",
+              "es": "Nunca uses 'wish' + presente simple para decir 'quiero'. ❌ 'I wish I have more time' (suena a una traducción literal de 'ojalá tenga'). El verbo después de 'wish' retrocede un tiempo, igual que en el segundo/tercer condicional: ✅ 'I wish I had more time.'"
+            }
+          }
+        ],
+        "examples": [
+          { "en": "I wish I spoke English fluently.", "es": "Ojalá hablara inglés con fluidez." },
+          { "en": "I wish I had studied harder for that exam.", "es": "Ojalá hubiera estudiado más para ese examen." },
+          { "en": "I wish you would stop interrupting me.", "es": "Ojalá dejaras de interrumpirme." },
+          { "en": "If only I had more free time.", "es": "Si tan solo tuviera más tiempo libre." },
+          { "en": "If only she hadn't quit her job.", "es": "Si tan solo ella no hubiera renunciado a su trabajo." }
+        ],
+        "related": ["second-conditional", "third-conditional"],
+        "items": ["cnd-wish-fluently", "cnd-wish-studied", "cnd-wish-interrupt", "cnd-wish-time", "cnd-wish-hope"]
+      },
+      {
+        "id": "unless-and-conditions",
+        "title": {
+          "en": "Unless & Friends — the spice rack of conditions",
+          "es": "Unless y sus amigos — el especiero de las condiciones"
+        },
+        "group": "extensiones",
+        "coreIdea": {
+          "en": "'If' is the plain salt of conditions — unless, provided that, as long as, even if, in case and whether are the spice rack: same basic dish, different flavour and formality.",
+          "es": "'If' es la sal básica de las condiciones — unless, provided that, as long as, even if, in case y whether son el especiero: el mismo plato de fondo, pero con sabor y formalidad distintos."
+        },
+        "source": "⭐ OPTIONAL CONDITIONAL  EXTENSION.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "'Unless' means 'if...not' — it names the one thing that would block the result. 'Unless you hurry, you'll miss the train' = 'If you don't hurry, you'll miss the train.'",
+              "es": "'Unless' significa 'si...no' — nombra lo único que bloquearía el resultado. 'Unless you hurry, you'll miss the train' = 'If you don't hurry, you'll miss the train.'"
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "'Provided that' and 'providing (that)' are formal/business ('only if this requirement is met'); 'as long as' is the everyday, conversational version of the same idea; 'on condition that' is even more formal, typical of contracts.",
+              "es": "'Provided that' y 'providing (that)' son formales/de negocios ('solo si se cumple este requisito'); 'as long as' es la versión cotidiana y conversacional de la misma idea; 'on condition that' es aún más formal, típica de contratos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "'Even if' means the result does NOT change no matter what — the opposite logic of plain 'if'. 'In case' is not the same as 'if': it means 'because this MIGHT happen' — a precaution, not a condition ('Take an umbrella in case it rains' ≠ 'Take an umbrella if it rains'). 'Whether...or...' presents two alternatives where the outcome doesn't depend on which one happens.",
+              "es": "'Even if' significa que el resultado NO cambia sin importar qué pase — la lógica contraria de un 'if' normal. 'In case' no es lo mismo que 'if': significa 'porque esto PODRÍA pasar' — una precaución, no una condición ('Take an umbrella in case it rains' ≠ 'Take an umbrella if it rains'). 'Whether...or...' presenta dos alternativas donde el resultado no depende de cuál ocurra."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "The classic double-negative trap: because 'unless' already means 'if...not', never add another negative after it. ❌ 'Unless you don't study, you'll fail' (this actually means the opposite of what most students intend). ✅ 'Unless you study, you'll fail.'",
+              "es": "La trampa clásica de la doble negación: como 'unless' ya significa 'si...no', nunca le agregues otra negación. ❌ 'Unless you don't study, you'll fail' (esto en realidad dice lo contrario de lo que casi todos quieren decir). ✅ 'Unless you study, you'll fail.'"
+            }
+          }
+        ],
+        "examples": [
+          { "en": "Unless you hurry, you'll miss the train.", "es": "A menos que te apures, perderás el tren." },
+          { "en": "You can borrow my car provided that you fill up the tank.", "es": "Puedes tomar prestado mi carro siempre que llenes el tanque." },
+          { "en": "I'll go to the party as long as you come with me.", "es": "Iré a la fiesta siempre y cuando vengas conmigo." },
+          { "en": "Even if it rains, we're going hiking.", "es": "Aunque llueva, vamos a caminar por la montaña." },
+          { "en": "Take your ID in case they ask for it.", "es": "Lleva tu identificación por si te la piden." }
+        ],
+        "related": ["first-conditional", "formal-inversion"],
+        "items": ["cnd-unless-hurry", "cnd-unless-double-neg", "cnd-unless-evenif", "cnd-unless-incase", "cnd-unless-provided"]
+      },
+      {
+        "id": "formal-inversion",
+        "title": {
+          "en": "Formal Inversion — the tuxedo sentence",
+          "es": "Inversión formal — la oración de esmoquin"
+        },
+        "group": "extensiones",
+        "coreIdea": {
+          "en": "Formal inversion is a conditional sentence putting on a tuxedo: drop 'if', swap the subject and auxiliary, and the whole sentence sounds dressed up for a business email, a contract, or literature.",
+          "es": "La inversión formal es una oración condicional poniéndose un esmoquin: se quita 'if', se intercambian el sujeto y el auxiliar, y toda la frase suena elegante, lista para un correo de negocios, un contrato o literatura."
+        },
+        "source": "⭐ OPTIONAL CONDITIONAL  EXTENSION.pdf",
+        "explanation": [
+          {
+            "kind": "p",
+            "text": {
+              "en": "In formal English, you can drop 'if' and invert the subject with an auxiliary instead: 'Should' (Should you need any assistance... = If you need...), 'Were' (Were I you... = If I were you...), 'Had' (Had I known... = If I had known...). The meaning doesn't change — only the register does.",
+              "es": "En inglés formal, puedes quitar 'if' e invertir el sujeto con un auxiliar: 'Should' (Should you need any assistance... = If you need...), 'Were' (Were I you... = If I were you...), 'Had' (Had I known... = If I had known...). El significado no cambia — solo el registro."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "You'll meet this in business emails, legal contracts, academic writing, and literature — not in everyday spoken conversation. Using plain 'if' is never wrong; inversion is an optional upgrade.",
+              "es": "Lo vas a encontrar en correos de negocios, contratos legales, escritura académica y literatura — no en la conversación cotidiana. Usar un 'if' normal nunca está mal; la inversión es un adorno opcional."
+            }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Don't keep 'if' AND invert at the same time — pick one. ❌ 'If should you need assistance...' Either 'If you need assistance...' or 'Should you need assistance...', never both together.",
+              "es": "No dejes 'if' Y inviertas al mismo tiempo — elige uno. ❌ 'If should you need assistance...' Es 'If you need assistance...' o 'Should you need assistance...', nunca los dos juntos."
+            }
+          },
+          {
+            "kind": "callout",
+            "text": {
+              "en": "Match the auxiliary to the conditional type: 'Should' replaces First-Conditional 'if' (real future possibility); 'Were' replaces Second-Conditional 'if' (imaginary present); 'Had' replaces Third-Conditional 'if' (sealed past).",
+              "es": "Haz coincidir el auxiliar con el tipo de condicional: 'Should' reemplaza el 'if' del primer condicional (posibilidad real futura); 'Were' reemplaza el del segundo (presente imaginario); 'Had' reemplaza el del tercero (pasado sellado)."
+            }
+          }
+        ],
+        "examples": [
+          { "en": "Should you need any assistance, please contact reception.", "es": "Si necesita cualquier asistencia, por favor contacte a recepción." },
+          { "en": "Were I in your position, I would accept the offer.", "es": "Si yo estuviera en tu posición, aceptaría la oferta." },
+          { "en": "Had I known about the delay, I would have booked an earlier flight.", "es": "Si hubiera sabido sobre el retraso, habría reservado un vuelo más temprano." },
+          { "en": "Should the client cancel, a full refund will be issued.", "es": "Si el cliente cancela, se emitirá un reembolso completo." },
+          { "en": "Had she arrived on time, she wouldn't have missed the introduction.", "es": "Si ella hubiera llegado a tiempo, no se habría perdido la introducción." }
+        ],
+        "related": ["first-conditional", "second-conditional", "third-conditional"],
+        "items": ["cnd-inv-should", "cnd-inv-were", "cnd-inv-had", "cnd-inv-doubleif"]
+      }
+    ],
+    "items": [
+      {
+        "id": "cnd-zero-boil",
+        "topic": "zero-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "If you heat water, it ___ (a scientific fact).",
+          "es": "If you heat water, it ___ (un hecho científico)."
+        },
+        "answer": "boils",
+        "distractors": ["will boil"],
+        "why": {
+          "en": "Zero Conditional describes a fact that's always true — no future tense needed. 'If you heat water, it boils,' every time, guaranteed.",
+          "es": "El condicional cero describe un hecho siempre cierto — no necesita futuro. 'If you heat water, it boils,' siempre, garantizado."
+        },
+        "tags": ["fact", "pitfall-will"]
+      },
+      {
+        "id": "cnd-zero-mix",
+        "topic": "zero-conditional",
+        "type": "cloze",
+        "prompt": {
+          "en": "If you mix blue and yellow, you ___ (get) green.",
+          "es": "If you mix blue and yellow, you ___ (get) green."
+        },
+        "answer": "get",
+        "accept": ["get"],
+        "why": {
+          "en": "Present Simple in both halves: mixing these colors always produces green — a fixed rule of color, not a prediction.",
+          "es": "Presente simple en ambas partes: mezclar estos colores siempre produce verde — una regla fija del color, no una predicción."
+        },
+        "tags": ["fact"]
+      },
+      {
+        "id": "cnd-zero-plants",
+        "topic": "zero-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "Plants die if they ___ (not/get) water.",
+          "es": "Plants die if they ___ (not/get) water."
+        },
+        "answer": "don't get",
+        "distractors": ["won't get"],
+        "why": {
+          "en": "Even in the 'if' clause with a negative condition, Zero Conditional stays present: 'don't get', not 'won't get' — the rule never shifts to future.",
+          "es": "Incluso en la cláusula 'if' con condición negativa, el condicional cero se queda en presente: 'don't get', no 'won't get' — la regla nunca cambia a futuro."
+        },
+        "tags": ["pitfall-will", "negative"]
+      },
+      {
+        "id": "cnd-zero-rule",
+        "topic": "zero-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "Which sentence correctly follows workplace safety instructions (Zero Conditional)?",
+          "es": "¿Cuál oración sigue correctamente las instrucciones de seguridad (condicional cero)?"
+        },
+        "answer": "If the alarm rings, everyone leaves the building.",
+        "distractors": [
+          "If the alarm will ring, everyone leaves the building.",
+          "If the alarm rings, everyone will leave the building."
+        ],
+        "why": {
+          "en": "Instructions and rules use Zero Conditional: both halves present, no 'will' anywhere — the rule always applies the same way.",
+          "es": "Las instrucciones y reglas usan el condicional cero: ambas mitades en presente, sin 'will' en ninguna parte — la regla siempre aplica igual."
+        },
+        "tags": ["rule", "pitfall-will"]
+      },
+      {
+        "id": "cnd-zero-sleep",
+        "topic": "zero-conditional",
+        "type": "cloze",
+        "prompt": {
+          "en": "If people don't sleep enough, they ___ (get) irritable.",
+          "es": "If people don't sleep enough, they ___ (get) irritable."
+        },
+        "answer": "get",
+        "accept": ["get"],
+        "why": {
+          "en": "A general truth about human behaviour — Present Simple in both halves, no future needed.",
+          "es": "Una verdad general sobre el comportamiento humano — presente simple en ambas partes, sin necesidad de futuro."
+        },
+        "tags": ["fact"]
+      },
+      {
+        "id": "cnd-first-rain",
+        "topic": "first-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "If it ___ tomorrow, I'll take an umbrella.",
+          "es": "If it ___ tomorrow, I'll take an umbrella."
+        },
+        "answer": "rains",
+        "distractors": ["will rain"],
+        "why": {
+          "en": "The 'if' clause never takes 'will' — the condition itself stays in Present Simple, even though we're talking about tomorrow.",
+          "es": "La cláusula 'if' nunca lleva 'will' — la condición se queda en presente simple, aunque hablemos de mañana."
+        },
+        "tags": ["pitfall-will-in-if"]
+      },
+      {
+        "id": "cnd-first-hurry",
+        "topic": "first-conditional",
+        "type": "cloze",
+        "prompt": {
+          "en": "If you don't hurry, you ___ (miss) the bus.",
+          "es": "If you don't hurry, you ___ (miss) the bus."
+        },
+        "answer": "'ll miss",
+        "accept": ["'ll miss", "will miss"],
+        "why": {
+          "en": "The result of a real future possibility needs 'will' (or 'll) — it's a genuine warning, not a general fact.",
+          "es": "El resultado de una posibilidad real en el futuro necesita 'will' (o 'll) — es una advertencia genuina, no un hecho general."
+        },
+        "tags": ["warning"]
+      },
+      {
+        "id": "cnd-first-study",
+        "topic": "first-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "Which sentence is a real prediction about tomorrow's exam?",
+          "es": "¿Cuál oración es una predicción real sobre el examen de mañana?"
+        },
+        "answer": "If I study tonight, I'll pass the exam.",
+        "distractors": [
+          "If I study tonight, I pass the exam.",
+          "If I will study tonight, I'll pass the exam."
+        ],
+        "why": {
+          "en": "'I pass' (no will) sounds like a guaranteed Zero-Conditional fact; 'If I will study' puts 'will' in the wrong clause. Only 'If I study..., I'll pass' is correct First Conditional.",
+          "es": "'I pass' (sin will) suena a un hecho garantizado del condicional cero; 'If I will study' pone 'will' en la cláusula equivocada. Solo 'If I study..., I'll pass' es el primer condicional correcto."
+        },
+        "tags": ["pitfall-will", "zero-vs-first"]
+      },
+      {
+        "id": "cnd-first-touch",
+        "topic": "first-conditional",
+        "type": "natural",
+        "prompt": {
+          "en": "Warn a friend: touching that wire → an electric shock. Use First Conditional.",
+          "es": "Advierte a un amigo: tocar ese cable → una descarga eléctrica. Usa el primer condicional."
+        },
+        "answer": "If you touch that wire, you'll get a shock.",
+        "accept": [
+          "If you touch that wire, you'll get a shock.",
+          "If you touch that wire, you will get a shock."
+        ],
+        "why": {
+          "en": "A real warning about a real possible action: condition in Present Simple, consequence with 'will'.",
+          "es": "Una advertencia real sobre una acción realmente posible: condición en presente simple, consecuencia con 'will'."
+        },
+        "tags": ["warning", "production"]
+      },
+      {
+        "id": "cnd-first-decision",
+        "topic": "first-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "Someone says 'I'm cold.' You reply with a spontaneous decision:",
+          "es": "Alguien dice 'I'm cold.' Tú respondes con una decisión espontánea:"
+        },
+        "answer": "If you're cold, I'll close the window.",
+        "distractors": [
+          "If you're cold, I close the window.",
+          "If you're cold, I'm closing the window."
+        ],
+        "why": {
+          "en": "A real, spontaneous decision made right now needs 'will' in the result — 'I close' sounds like a habit/fact, and 'I'm closing' sounds like an action already in progress, not a fresh decision.",
+          "es": "Una decisión real y espontánea tomada en el momento necesita 'will' en el resultado — 'I close' suena a hábito/hecho, y 'I'm closing' suena a una acción ya en curso, no a una decisión nueva."
+        },
+        "tags": ["decision"]
+      },
+      {
+        "id": "cnd-second-money",
+        "topic": "second-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "If I ___ more money, I would travel the world.",
+          "es": "If I ___ more money, I would travel the world."
+        },
+        "answer": "had",
+        "distractors": ["would have"],
+        "why": {
+          "en": "The 'if' clause never takes 'would' — the imagined condition stays in Past Simple ('had'), even though we mean right now, not the past.",
+          "es": "La cláusula 'if' nunca lleva 'would' — la condición imaginada se queda en pasado simple ('had'), aunque hablemos de ahora, no del pasado."
+        },
+        "tags": ["pitfall-would-in-if"]
+      },
+      {
+        "id": "cnd-second-were",
+        "topic": "second-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "If I ___ you, I'd apologize right away.",
+          "es": "If I ___ you, I'd apologize right away."
+        },
+        "answer": "were",
+        "distractors": ["am", "would be"],
+        "why": {
+          "en": "'If I were you' is the standard, safest form for giving advice — 'am' breaks the imaginary-distance pattern, and 'would be' puts 'would' in the wrong clause.",
+          "es": "'If I were you' es la forma estándar y más segura para dar consejos — 'am' rompe el patrón de distancia imaginaria, y 'would be' pone 'would' en la cláusula equivocada."
+        },
+        "tags": ["advice", "if-i-were-you"]
+      },
+      {
+        "id": "cnd-second-french",
+        "topic": "second-conditional",
+        "type": "cloze",
+        "prompt": {
+          "en": "If she ___ (speak) French, she could get that job.",
+          "es": "If she ___ (speak) French, she could get that job."
+        },
+        "answer": "spoke",
+        "accept": ["spoke"],
+        "why": {
+          "en": "An imagined present ability (she doesn't speak French) needs Past Simple in the 'if' clause — distance from reality, not past time.",
+          "es": "Una habilidad presente imaginada (ella no habla francés) necesita pasado simple en la cláusula 'if' — distancia de la realidad, no tiempo pasado."
+        },
+        "tags": ["ability"]
+      },
+      {
+        "id": "cnd-second-would-if",
+        "topic": "second-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "Which sentence correctly imagines an alternate life?",
+          "es": "¿Cuál oración imagina correctamente una vida alterna?"
+        },
+        "answer": "If I didn't have to work, I would sleep all day.",
+        "distractors": [
+          "If I wouldn't have to work, I would sleep all day.",
+          "If I don't have to work, I would sleep all day."
+        ],
+        "why": {
+          "en": "'Wouldn't' never belongs in the 'if' clause, and 'don't' (Present Simple) breaks the imaginary distance — 'didn't' (Past Simple) is what signals 'this isn't real.'",
+          "es": "'Wouldn't' nunca va en la cláusula 'if', y 'don't' (presente simple) rompe la distancia imaginaria — 'didn't' (pasado simple) es lo que marca 'esto no es real.'"
+        },
+        "tags": ["pitfall-would-in-if"]
+      },
+      {
+        "id": "cnd-second-lottery",
+        "topic": "second-conditional",
+        "type": "cloze",
+        "prompt": {
+          "en": "What ___ (you/do) if you won the lottery?",
+          "es": "What ___ (you/do) if you won the lottery?"
+        },
+        "answer": "would you do",
+        "accept": ["would you do"],
+        "why": {
+          "en": "Asking about an imaginary future event uses 'would' in the question too — 'What would you do if...' is the standard hypothetical question pattern.",
+          "es": "Preguntar sobre un evento futuro imaginario también usa 'would' en la pregunta — 'What would you do if...' es el patrón estándar de pregunta hipotética."
+        },
+        "tags": ["question-form"]
+      },
+      {
+        "id": "cnd-third-known",
+        "topic": "third-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "If I ___ you were coming, I would have cooked dinner.",
+          "es": "If I ___ you were coming, I would have cooked dinner."
+        },
+        "answer": "had known",
+        "distractors": ["would have known", "knew"],
+        "why": {
+          "en": "The 'if' clause needs Past Perfect ('had known'), never 'would have' — and plain Past Simple ('knew') isn't strong enough to seal this as unchangeable history.",
+          "es": "La cláusula 'if' necesita pasado perfecto ('had known'), nunca 'would have' — y el pasado simple ('knew') no es suficiente para sellar esto como historia inmodificable."
+        },
+        "tags": ["pitfall-would-have-in-if"]
+      },
+      {
+        "id": "cnd-third-came",
+        "topic": "third-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "If she ___ earlier, she wouldn't have missed the train.",
+          "es": "If she ___ earlier, she wouldn't have missed the train."
+        },
+        "answer": "had come",
+        "distractors": ["had came"],
+        "why": {
+          "en": "Past Perfect uses the past participle: 'come', not the simple-past form 'came'. ❌ 'had came' is a very common mixing of the two past forms.",
+          "es": "El pasado perfecto usa el participio pasado: 'come', no la forma de pasado simple 'came'. ❌ 'had came' es una mezcla muy común de las dos formas de pasado."
+        },
+        "tags": ["past-participle"]
+      },
+      {
+        "id": "cnd-third-earlier",
+        "topic": "third-conditional",
+        "type": "cloze",
+        "prompt": {
+          "en": "If they had left earlier, they ___ (not/miss) the flight.",
+          "es": "If they had left earlier, they ___ (not/miss) the flight."
+        },
+        "answer": "wouldn't have missed",
+        "accept": ["wouldn't have missed", "would not have missed"],
+        "why": {
+          "en": "The result of an imaginary, unchangeable past needs 'would have' + past participle — a consequence that never actually happened.",
+          "es": "El resultado de un pasado imaginario e inmodificable necesita 'would have' + participio pasado — una consecuencia que nunca ocurrió en realidad."
+        },
+        "tags": ["regret"]
+      },
+      {
+        "id": "cnd-third-leg",
+        "topic": "third-conditional",
+        "type": "natural",
+        "prompt": {
+          "en": "Express regret: you broke your leg, so you didn't run the marathon. Use Third Conditional.",
+          "es": "Expresa arrepentimiento: te rompiste la pierna, por eso no corriste el maratón. Usa el tercer condicional."
+        },
+        "answer": "If I hadn't broken my leg, I would have run the marathon.",
+        "accept": [
+          "If I hadn't broken my leg, I would have run the marathon.",
+          "If I had not broken my leg, I would have run the marathon."
+        ],
+        "why": {
+          "en": "A sealed, unchangeable past: the negative condition needs Past Perfect ('hadn't broken'), the result needs 'would have' + participle.",
+          "es": "Un pasado sellado e inmodificable: la condición negativa necesita pasado perfecto ('hadn't broken'), el resultado necesita 'would have' + participio."
+        },
+        "tags": ["regret", "production"]
+      },
+      {
+        "id": "cnd-third-forgive",
+        "topic": "third-conditional",
+        "type": "choice",
+        "prompt": {
+          "en": "Would you have forgiven him if he ___ ?",
+          "es": "Would you have forgiven him if he ___ ?"
+        },
+        "answer": "had apologized",
+        "distractors": ["would have apologized", "apologized"],
+        "why": {
+          "en": "The 'if' clause of a question in Third Conditional still needs Past Perfect ('had apologized'), never 'would have', and plain Past Simple isn't strong enough to mark this unchangeable past.",
+          "es": "La cláusula 'if' de una pregunta en tercer condicional todavía necesita pasado perfecto ('had apologized'), nunca 'would have', y el pasado simple no es suficiente para marcar este pasado inmodificable."
+        },
+        "tags": ["question-form", "pitfall-would-have-in-if"]
+      },
+      {
+        "id": "cnd-mixed-doctor",
+        "topic": "mixed-conditionals",
+        "type": "choice",
+        "prompt": {
+          "en": "If I had studied medicine, I ___ a doctor now.",
+          "es": "If I had studied medicine, I ___ a doctor now."
+        },
+        "answer": "would be",
+        "distractors": ["would have been"],
+        "why": {
+          "en": "'Now' signals the result is a present state — use 'would be', not 'would have been' (which would push the result into the past too).",
+          "es": "'Now' marca que el resultado es un estado presente — usa 'would be', no 'would have been' (que empujaría el resultado también al pasado)."
+        },
+        "tags": ["mixed-type1"]
+      },
+      {
+        "id": "cnd-mixed-organised",
+        "topic": "mixed-conditionals",
+        "type": "choice",
+        "prompt": {
+          "en": "If I ___ more organised, I would have remembered the meeting.",
+          "es": "If I ___ more organised, I would have remembered the meeting."
+        },
+        "answer": "were",
+        "distractors": ["had been"],
+        "why": {
+          "en": "The cause here is a present, ongoing trait ('I'm not organised'), so the 'if' clause uses Past Simple ('were'), not Past Perfect — only the result reaches back into the past.",
+          "es": "La causa aquí es un rasgo presente y constante ('no soy organizado'), así que la cláusula 'if' usa pasado simple ('were'), no pasado perfecto — solo el resultado se mete en el pasado."
+        },
+        "tags": ["mixed-type2"]
+      },
+      {
+        "id": "cnd-mixed-canada",
+        "topic": "mixed-conditionals",
+        "type": "cloze",
+        "prompt": {
+          "en": "If she hadn't moved to Canada, she ___ (not/be) fluent in French now.",
+          "es": "If she hadn't moved to Canada, she ___ (not/be) fluent in French now."
+        },
+        "answer": "wouldn't be",
+        "accept": ["wouldn't be", "would not be"],
+        "why": {
+          "en": "Past cause ('hadn't moved'), present result ('now') — the result stays in the present form 'wouldn't be', not 'wouldn't have been'.",
+          "es": "Causa pasada ('hadn't moved'), resultado presente ('now') — el resultado se queda en la forma presente 'wouldn't be', no 'wouldn't have been'."
+        },
+        "tags": ["mixed-type1"]
+      },
+      {
+        "id": "cnd-mixed-flight",
+        "topic": "mixed-conditionals",
+        "type": "natural",
+        "prompt": {
+          "en": "Combine: you missed a flight in the past; because of that, you are not on the beach right now. Use a Mixed Conditional.",
+          "es": "Combina: perdiste un vuelo en el pasado; por eso, no estás en la playa en este momento. Usa un condicional mixto."
+        },
+        "answer": "If we hadn't missed the flight, we would be on the beach right now.",
+        "accept": [
+          "If we hadn't missed the flight, we would be on the beach right now.",
+          "If we had not missed the flight, we would be on the beach right now."
+        ],
+        "why": {
+          "en": "Past cause (Past Perfect: 'hadn't missed') + present result (would + base verb: 'would be') — the domino that fell yesterday still knocks something over today.",
+          "es": "Causa pasada (pasado perfecto: 'hadn't missed') + resultado presente (would + verbo base: 'would be') — el dominó que cayó ayer todavía tumba algo hoy."
+        },
+        "tags": ["mixed-type1", "production"]
+      },
+      {
+        "id": "cnd-mixed-shy",
+        "topic": "mixed-conditionals",
+        "type": "cloze",
+        "prompt": {
+          "en": "If he ___ (not/be) so shy, he would have asked her out years ago.",
+          "es": "If he ___ (not/be) so shy, he would have asked her out years ago."
+        },
+        "answer": "weren't",
+        "accept": ["weren't", "were not"],
+        "why": {
+          "en": "The cause is a present, ongoing personality trait ('he's shy'), so the 'if' clause uses Past Simple ('weren't'), even though the missed result is in the past.",
+          "es": "La causa es un rasgo de personalidad presente y constante ('él es tímido'), así que la cláusula 'if' usa pasado simple ('weren't'), aunque el resultado perdido esté en el pasado."
+        },
+        "tags": ["mixed-type2"]
+      },
+      {
+        "id": "cnd-wish-fluently",
+        "topic": "wish-if-only",
+        "type": "choice",
+        "prompt": {
+          "en": "I wish I ___ English fluently (but I don't).",
+          "es": "I wish I ___ English fluently (but I don't)."
+        },
+        "answer": "spoke",
+        "distractors": ["speak"],
+        "why": {
+          "en": "'Wish' about a present dissatisfaction backshifts the verb to Past Simple, just like Second Conditional — 'speak' (Present) would wrongly sound like a literal translation of 'ojalá hablo'.",
+          "es": "'Wish' sobre una insatisfacción presente retrocede el verbo a pasado simple, igual que el segundo condicional — 'speak' (presente) sonaría como una mala traducción literal de 'ojalá hablo'."
+        },
+        "tags": ["pitfall-backshift"]
+      },
+      {
+        "id": "cnd-wish-studied",
+        "topic": "wish-if-only",
+        "type": "cloze",
+        "prompt": {
+          "en": "I wish I ___ (study) harder for that exam.",
+          "es": "I wish I ___ (study) harder for that exam."
+        },
+        "answer": "had studied",
+        "accept": ["had studied"],
+        "why": {
+          "en": "Regret about a finished, sealed past needs Past Perfect after 'wish' — the same logic as the Third Conditional.",
+          "es": "El arrepentimiento sobre un pasado terminado y sellado necesita pasado perfecto después de 'wish' — la misma lógica del tercer condicional."
+        },
+        "tags": ["regret"]
+      },
+      {
+        "id": "cnd-wish-interrupt",
+        "topic": "wish-if-only",
+        "type": "choice",
+        "prompt": {
+          "en": "I wish you ___ interrupting me all the time.",
+          "es": "I wish you ___ interrupting me all the time."
+        },
+        "answer": "would stop",
+        "distractors": ["stopped", "stop"],
+        "why": {
+          "en": "Complaining about someone else's repeated, annoying behaviour uses 'wish' + would — 'stopped' sounds like a one-time regret and 'stop' is simply wrong here.",
+          "es": "Quejarse del comportamiento repetido y molesto de otra persona usa 'wish' + would — 'stopped' suena a un lamento de una sola vez y 'stop' simplemente está mal aquí."
+        },
+        "tags": ["annoyance", "wish-would"]
+      },
+      {
+        "id": "cnd-wish-time",
+        "topic": "wish-if-only",
+        "type": "natural",
+        "prompt": {
+          "en": "Express a stronger, more emotional wish about not having enough free time. Use 'If only'.",
+          "es": "Expresa un deseo más fuerte y emotivo sobre no tener suficiente tiempo libre. Usa 'If only'."
+        },
+        "answer": "If only I had more free time.",
+        "accept": ["If only I had more free time."],
+        "why": {
+          "en": "'If only' works exactly like 'wish' but sounds more emphatic and emotional — the same backshifted Past Simple for a present complaint.",
+          "es": "'If only' funciona igual que 'wish' pero suena más enfático y emotivo — el mismo pasado simple retrocedido para una queja presente."
+        },
+        "tags": ["if-only", "production"]
+      },
+      {
+        "id": "cnd-wish-hope",
+        "topic": "wish-if-only",
+        "type": "choice",
+        "prompt": {
+          "en": "You have a flight tomorrow and you genuinely believe good weather is possible. Which sentence fits?",
+          "es": "Tienes un vuelo mañana y de verdad crees que el buen clima es posible. ¿Cuál oración corresponde?"
+        },
+        "answer": "I hope it doesn't rain tomorrow.",
+        "distractors": ["I wish it didn't rain tomorrow."],
+        "why": {
+          "en": "'I wish it didn't rain' sounds like a literal translation of 'ojalá no lloviera', but 'wish' is reserved for things that ARE true or unlikely — a realistic hope about a real future event needs 'hope', not 'wish'.",
+          "es": "'I wish it didn't rain' suena a una traducción literal de 'ojalá no lloviera', pero 'wish' se reserva para cosas que SÍ son ciertas o poco probables — una esperanza realista sobre un evento futuro real necesita 'hope', no 'wish'."
+        },
+        "tags": ["wish-vs-hope", "false-friend"]
+      },
+      {
+        "id": "cnd-unless-hurry",
+        "topic": "unless-and-conditions",
+        "type": "choice",
+        "prompt": {
+          "en": "___ you hurry, you'll miss the train.",
+          "es": "___ you hurry, you'll miss the train."
+        },
+        "answer": "Unless",
+        "distractors": ["If"],
+        "why": {
+          "en": "The result 'you'll miss the train' only makes sense with the negative-condition word: 'Unless you hurry' = 'If you don't hurry'. Plain 'If you hurry' would (wrongly) mean hurrying causes you to miss it.",
+          "es": "El resultado 'you'll miss the train' solo tiene sentido con la palabra de condición negativa: 'Unless you hurry' = 'If you don't hurry'. Un 'If you hurry' normal (incorrectamente) diría que apurarse hace que lo pierdas."
+        },
+        "tags": ["unless"]
+      },
+      {
+        "id": "cnd-unless-double-neg",
+        "topic": "unless-and-conditions",
+        "type": "choice",
+        "prompt": {
+          "en": "Which sentence correctly warns a student about failing?",
+          "es": "¿Cuál oración advierte correctamente a un estudiante sobre reprobar?"
+        },
+        "answer": "Unless you study, you'll fail.",
+        "distractors": ["Unless you don't study, you'll fail."],
+        "why": {
+          "en": "'Unless' already contains a hidden 'not' ('if...not'), so adding 'don't' creates a double negative that flips the meaning. ❌ 'Unless you don't study' actually means 'if you don't study, you won't fail' — the opposite of the warning.",
+          "es": "'Unless' ya contiene un 'not' escondido ('si...no'), así que agregar 'don't' crea una doble negación que invierte el significado. ❌ 'Unless you don't study' en realidad dice 'si no estudias, no reprobarás' — lo contrario de la advertencia."
+        },
+        "tags": ["pitfall-double-negative"]
+      },
+      {
+        "id": "cnd-unless-evenif",
+        "topic": "unless-and-conditions",
+        "type": "cloze",
+        "prompt": {
+          "en": "___ (even/if) it rains, we're going hiking — nothing will stop us.",
+          "es": "___ (even/if) it rains, we're going hiking — nothing will stop us."
+        },
+        "answer": "Even if",
+        "accept": ["Even if"],
+        "why": {
+          "en": "'Even if' signals that the result stays exactly the same no matter what happens with the condition — unlike plain 'if', where the result depends on the condition.",
+          "es": "'Even if' señala que el resultado se mantiene igual sin importar qué pase con la condición — a diferencia de un 'if' normal, donde el resultado sí depende de la condición."
+        },
+        "tags": ["even-if"]
+      },
+      {
+        "id": "cnd-unless-incase",
+        "topic": "unless-and-conditions",
+        "type": "choice",
+        "prompt": {
+          "en": "Take your ID ___ they ask for it at the door (it's just a precaution).",
+          "es": "Take your ID ___ they ask for it at the door (it's just a precaution)."
+        },
+        "answer": "in case",
+        "distractors": ["if"],
+        "why": {
+          "en": "'In case' means 'because this might happen' — you carry the ID as a precaution whether or not they actually ask. 'If they ask for it' would (wrongly) suggest you only bring it after knowing they'll ask.",
+          "es": "'In case' significa 'porque esto podría pasar' — llevas la identificación como precaución sin importar si te la piden o no. 'If they ask for it' (incorrectamente) sugeriría que solo la llevas después de saber que te la van a pedir."
+        },
+        "tags": ["in-case", "false-friend"]
+      },
+      {
+        "id": "cnd-unless-provided",
+        "topic": "unless-and-conditions",
+        "type": "choice",
+        "prompt": {
+          "en": "You'll get a full refund ___ you keep the receipt (a formal business condition).",
+          "es": "You'll get a full refund ___ you keep the receipt (una condición formal de negocios)."
+        },
+        "answer": "provided that",
+        "distractors": ["even if"],
+        "why": {
+          "en": "'Provided that' means the refund is guaranteed ONLY when this requirement is met. 'Even if' says the opposite logic — it would (wrongly) promise the refund no matter what, even without the receipt.",
+          "es": "'Provided that' significa que el reembolso está garantizado SOLO si se cumple este requisito. 'Even if' tiene la lógica contraria — prometería (incorrectamente) el reembolso sin importar qué, incluso sin el recibo."
+        },
+        "tags": ["provided-that", "formal-condition"]
+      },
+      {
+        "id": "cnd-inv-should",
+        "topic": "formal-inversion",
+        "type": "choice",
+        "prompt": {
+          "en": "___ you need any assistance, please contact reception (formal).",
+          "es": "___ you need any assistance, please contact reception (formal)."
+        },
+        "answer": "Should",
+        "distractors": ["If should", "Would"],
+        "why": {
+          "en": "'Should' inverted with the subject formally replaces 'If you need...' — no 'if' is needed once you invert, and 'would' is the wrong auxiliary for a real future possibility.",
+          "es": "'Should' invertido con el sujeto reemplaza formalmente 'If you need...' — no necesitas 'if' una vez que inviertes, y 'would' es el auxiliar equivocado para una posibilidad real futura."
+        },
+        "tags": ["inversion-should"]
+      },
+      {
+        "id": "cnd-inv-were",
+        "topic": "formal-inversion",
+        "type": "cloze",
+        "prompt": {
+          "en": "___ (were/I) in your position, I would accept the offer (formal).",
+          "es": "___ (were/I) in your position, I would accept the offer (formal)."
+        },
+        "answer": "Were I",
+        "accept": ["Were I"],
+        "why": {
+          "en": "Formal inversion of Second Conditional swaps 'If I were' for 'Were I' — the imaginary distance from reality stays, just dressed up.",
+          "es": "La inversión formal del segundo condicional cambia 'If I were' por 'Were I' — la distancia imaginaria de la realidad se mantiene, solo más elegante."
+        },
+        "tags": ["inversion-were"]
+      },
+      {
+        "id": "cnd-inv-had",
+        "topic": "formal-inversion",
+        "type": "choice",
+        "prompt": {
+          "en": "Which is the correct formal inversion of 'If I had known about the delay, I would have booked an earlier flight'?",
+          "es": "¿Cuál es la inversión formal correcta de 'If I had known about the delay, I would have booked an earlier flight'?"
+        },
+        "answer": "Had I known about the delay, I would have booked an earlier flight.",
+        "distractors": [
+          "Had I know about the delay, I would have booked an earlier flight.",
+          "If had I known about the delay, I would have booked an earlier flight."
+        ],
+        "why": {
+          "en": "The inverted auxiliary 'Had' still needs the past participle 'known' (not 'know'), and 'if' must disappear completely once you invert.",
+          "es": "El auxiliar invertido 'Had' todavía necesita el participio pasado 'known' (no 'know'), y 'if' debe desaparecer por completo una vez que inviertes."
+        },
+        "tags": ["inversion-had"]
+      },
+      {
+        "id": "cnd-inv-doubleif",
+        "topic": "formal-inversion",
+        "type": "choice",
+        "prompt": {
+          "en": "Which sentence correctly upgrades 'If the client cancels, a full refund will be issued' to formal inversion?",
+          "es": "¿Cuál oración convierte correctamente 'If the client cancels, a full refund will be issued' a inversión formal?"
+        },
+        "answer": "Should the client cancel, a full refund will be issued.",
+        "distractors": ["If should the client cancel, a full refund will be issued."],
+        "why": {
+          "en": "You either keep 'if' or invert with 'should' — never both. ❌ 'If should the client cancel...' mixes the two registers into an error.",
+          "es": "O te quedas con 'if' o inviertes con 'should' — nunca los dos juntos. ❌ 'If should the client cancel...' mezcla los dos registros en un error."
+        },
+        "tags": ["pitfall-double-if"]
+      }
+    ]
+  }
+}
