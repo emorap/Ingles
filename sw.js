@@ -6,13 +6,18 @@
 // and served offline forever after. Navigations fall back to the cached shell
 // when the network is gone. Cross-origin requests (e.g. the AI tutor) are left
 // to the network so failures degrade gracefully upstream.
-const CACHE = 'momentum-v1';
+// Bumped v1 -> v2 when the app became manifest-driven: boot now loads
+// content/index.json first (loadCatalog throws without it), so it must be
+// precached. The version bump purges the stale v1 cache (old present-only
+// content) on activate and guarantees a fresh precache for returning users.
+const CACHE = 'momentum-v2';
 const SHELL = [
   './',
   './index.html',
   './public/manifest.webmanifest',
   './src/styles/theme.css',
   './src/main.js',
+  './content/index.json',
   './content/tenses.json',
   './public/icons/icon-192.png',
   './public/icons/icon-512.png',
