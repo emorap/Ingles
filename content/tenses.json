@@ -2321,11 +2321,11 @@
         },
         "answer": "will have been living",
         "distractors": [
-          "will have lived"
+          "will have living"
         ],
         "why": {
-          "en": "Duration (three years) continuing up to a future point → will have been + -ing.",
-          "es": "Una duración (tres años) que continúa hasta un punto futuro → will have been + -ing."
+          "en": "Duration up to a future point uses will have BEEN + -ing; don't drop 'been' ('will have living' is wrong).",
+          "es": "La duración hasta un punto futuro usa will have BEEN + -ing; no omitas 'been' ('will have living' está mal)."
         },
         "tags": [
           "duration"
