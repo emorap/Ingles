@@ -13,6 +13,7 @@
  * @typedef {(
  *   { kind: 'p', text: Bilingual } |
  *   { kind: 'callout', text: Bilingual } |
+ *   { kind: 'pitfall', text: Bilingual } |
  *   { kind: 'quote', text: Bilingual } |
  *   { kind: 'table', headers: string[], rows: string[][] }
  * )} Block
@@ -36,6 +37,7 @@
  * @typedef {object} Topic
  * @property {string} id
  * @property {Bilingual} title
+ * @property {Bilingual} coreIdea one-sentence essence, shown above the lesson
  * @property {string} [source]
  * @property {Block[]} explanation
  * @property {string[]} [diagrams]
