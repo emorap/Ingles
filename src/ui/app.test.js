@@ -142,6 +142,26 @@ test('renderRoute: an unknown or not-loaded (coming-soon) module id redirects to
   }
 });
 
+test('renderRoute: module view has a back control that navigates to the hub', async () => {
+  const view = document.createElement('main');
+  let nav = null;
+  await renderRoute(view, { view: 'module', param: 'tenses' }, baseDeps(richStore(), {
+    navigate: (v, p) => { nav = { v, p }; },
+  }));
+  view.querySelector('[data-action="back"]').dispatchEvent(new window.Event('click'));
+  assert.deepEqual(nav, { v: 'hub', p: undefined });
+});
+
+test('renderRoute: topic view has a back control that navigates to its module', async () => {
+  const view = document.createElement('main');
+  let nav = null;
+  await renderRoute(view, { view: 'topic', param: 'pt' }, baseDeps(richStore(), {
+    navigate: (v, p) => { nav = { v, p }; },
+  }));
+  view.querySelector('[data-action="back"]').dispatchEvent(new window.Event('click'));
+  assert.deepEqual(nav, { v: 'module', p: 'tenses' });
+});
+
 test('mountApp: opening a topic route persists it as a viewed lesson', async () => {
   const root = document.createElement('div');
   const store = richStore({ onboarded: true }); // skip onboarding → routing is live

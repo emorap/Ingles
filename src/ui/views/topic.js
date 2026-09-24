@@ -15,7 +15,7 @@ const GEN_COUNT = 5; // how many extra items to ask the tutor for
  *   onGenerated?: (items: import('../../engine/types.js').Item[]) => void,
  * }} ctx
  */
-export function renderTopic(container, { topic, onPractice, tutor, onGenerated }) {
+export function renderTopic(container, { topic, onPractice, tutor, onGenerated, onBack }) {
   clear(container);
   const voice = topic.audio?.voice;
 
@@ -25,6 +25,9 @@ export function renderTopic(container, { topic, onPractice, tutor, onGenerated }
   section.setAttribute('data-topic', topic.id);
 
   const header = document.createElement('header');
+  // Back control lives inside the header so the learn-first order (coreIdea as
+  // the first non-header block) is preserved. Step back one level: topic → module.
+  if (onBack) header.append(backButton(onBack));
   const h2 = document.createElement('h2');
   h2.textContent = topic.title.es;
   const sub = document.createElement('p');
@@ -129,6 +132,18 @@ function generatePanel(tutor, topic, onGenerated) {
 
   panel.append(btn, status);
   return panel;
+}
+
+// A contextual "← Volver" control (topic → its module). The PWA has no browser
+// back button, so each sub-view carries its own way back one level.
+function backButton(onBack) {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'btn ghost back';
+  btn.setAttribute('data-action', 'back');
+  btn.textContent = '← Volver';
+  btn.addEventListener('click', () => onBack());
+  return btn;
 }
 
 function renderBlock(block, voice) {

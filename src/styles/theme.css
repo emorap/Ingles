@@ -227,6 +227,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .topic-group{display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-3)}
 .topic-group-title{margin:0 0 var(--sp-1);font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted)}
 .topic-group-en{font-weight:600;letter-spacing:0;text-transform:none}
+/* Contextual back control (module/topic headers): small, left-aligned. */
+.btn.back{align-self:flex-start;padding:.35rem .7rem;font-size:.85rem;margin-bottom:var(--sp-1)}
 
 /* ---- Topic (teach) -------------------------------------------------------- */
 .topic{display:flex;flex-direction:column;gap:var(--sp-2)}

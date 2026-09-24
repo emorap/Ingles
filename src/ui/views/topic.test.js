@@ -146,6 +146,22 @@ test('renderTopic: "Practicar este tema" invokes onPractice', () => {
 
 // --- Task 7: lesson-first (coreIdea header, pitfall blocks, guards) ---
 
+test('renderTopic shows a "Volver" button that calls onBack, without displacing the coreIdea', () => {
+  stubSynth();
+  const c = document.createElement('div');
+  let backed = 0;
+  const topic = { ...TOPIC, coreIdea: { en: 'Your normal reality.', es: 'Tu realidad normal.' } };
+  renderTopic(c, { topic, onPractice: () => {}, onBack: () => { backed++; } });
+  const back = c.querySelector('[data-action="back"]');
+  assert.ok(back, 'has a back button');
+  back.dispatchEvent(new window.Event('click'));
+  assert.equal(backed, 1);
+  // Nav chrome must not push the concept below the fold: coreIdea is still the
+  // first non-header child of .topic.
+  const first = c.querySelector('.topic > *:not(header)');
+  assert.ok(first?.classList.contains('topic-core-idea'), 'core idea still comes first');
+});
+
 test('renderTopic: shows the coreIdea in a highlighted block at the top', () => {
   stubSynth();
   const c = document.createElement('div');

@@ -131,6 +131,7 @@ export async function renderRoute(view, route, deps) {
         moduleContent, entry, progress,
         lessonViewed: deps.lessonViewed ?? {},
         onOpenTopic: (id) => deps.navigate('topic', id),
+        onBack: () => deps.navigate('hub'), // module → hub
       });
       return;
     }
@@ -145,6 +146,7 @@ export async function renderRoute(view, route, deps) {
         onPractice: (id) => deps.navigate('practice', id),
         tutor,
         onGenerated: (items) => deps.onGenerated?.(topic.id, items),
+        onBack: () => deps.navigate('module', found.moduleId), // topic → its module
       });
       return;
     }

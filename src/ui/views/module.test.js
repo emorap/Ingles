@@ -110,3 +110,13 @@ test('renderModule groups topics under their family heading, in family order', (
   // Every topic still renders exactly once overall.
   assert.equal(container.querySelectorAll('[data-topic]').length, 3);
 });
+
+test('renderModule shows a "Volver" button that calls onBack', () => {
+  const container = document.createElement('div');
+  let backed = 0;
+  renderModule(container, ctx({ onBack: () => { backed++; } }));
+  const back = container.querySelector('[data-action="back"]');
+  assert.ok(back, 'has a back button');
+  back.dispatchEvent(new window.Event('click'));
+  assert.equal(backed, 1);
+});
