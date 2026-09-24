@@ -73,7 +73,7 @@
           { "en": "If you mix blue and yellow, you get green.", "es": "Si mezclas azul y amarillo, obtienes verde." },
           { "en": "If the alarm rings, everyone leaves the building.", "es": "Si suena la alarma, todos salen del edificio." }
         ],
-        "related": ["first-conditional"],
+        "related": ["first-conditional", "unless-and-conditions"],
         "items": ["cnd-zero-boil", "cnd-zero-mix", "cnd-zero-plants", "cnd-zero-rule", "cnd-zero-sleep"]
       },
       {
@@ -125,7 +125,7 @@
           { "en": "If we finish early, we'll go for a coffee.", "es": "Si terminamos temprano, iremos por un café." },
           { "en": "If you touch that wire, you'll get a shock.", "es": "Si tocas ese cable, te vas a electrocutar." }
         ],
-        "related": ["zero-conditional", "second-conditional"],
+        "related": ["zero-conditional", "second-conditional", "unless-and-conditions"],
         "items": ["cnd-first-rain", "cnd-first-hurry", "cnd-first-study", "cnd-first-touch", "cnd-first-decision"]
       },
       {
@@ -229,7 +229,7 @@
           { "en": "If I hadn't broken my leg, I would have run the marathon.", "es": "Si no me hubiera roto la pierna, habría corrido el maratón." },
           { "en": "Would you have forgiven him if he had apologized?", "es": "¿Lo habrías perdonado si él se hubiera disculpado?" }
         ],
-        "related": ["second-conditional", "mixed-conditionals"],
+        "related": ["second-conditional", "mixed-conditionals", "wish-if-only"],
         "items": ["cnd-third-known", "cnd-third-came", "cnd-third-earlier", "cnd-third-leg", "cnd-third-forgive"]
       },
       {
@@ -378,7 +378,7 @@
           { "en": "Even if it rains, we're going hiking.", "es": "Aunque llueva, vamos a caminar por la montaña." },
           { "en": "Take your ID in case they ask for it.", "es": "Lleva tu identificación por si te la piden." }
         ],
-        "related": ["first-conditional", "formal-inversion"],
+        "related": ["first-conditional", "formal-inversion", "zero-conditional"],
         "items": ["cnd-unless-hurry", "cnd-unless-double-neg", "cnd-unless-evenif", "cnd-unless-incase", "cnd-unless-provided"]
       },
       {
@@ -431,7 +431,7 @@
           { "en": "Had she arrived on time, she wouldn't have missed the introduction.", "es": "Si ella hubiera llegado a tiempo, no se habría perdido la introducción." }
         ],
         "related": ["first-conditional", "second-conditional", "third-conditional"],
-        "items": ["cnd-inv-should", "cnd-inv-were", "cnd-inv-had", "cnd-inv-doubleif"]
+        "items": ["cnd-inv-should", "cnd-inv-were", "cnd-inv-had", "cnd-inv-doubleif", "cnd-inv-hadshe"]
       }
     ],
     "items": [
@@ -1082,6 +1082,22 @@
           "es": "O te quedas con 'if' o inviertes con 'should' — nunca los dos juntos. ❌ 'If should the client cancel...' mezcla los dos registros en un error."
         },
         "tags": ["pitfall-double-if"]
+      },
+      {
+        "id": "cnd-inv-hadshe",
+        "topic": "formal-inversion",
+        "type": "natural",
+        "prompt": {
+          "en": "Upgrade to formal register: 'If she had arrived on time, she wouldn't have missed the introduction.'",
+          "es": "Sube al registro formal: 'If she had arrived on time, she wouldn't have missed the introduction.'"
+        },
+        "answer": "Had she arrived on time, she wouldn't have missed the introduction.",
+        "accept": ["Had she arrived on time, she wouldn't have missed the introduction."],
+        "why": {
+          "en": "Formal inversion of the Third Conditional just drops 'if' and moves 'had' before the subject — the sealed, unchangeable past stays exactly the same; only the register gets dressed up.",
+          "es": "La inversión formal del tercer condicional solo quita 'if' y mueve 'had' antes del sujeto — el pasado sellado e inmodificable se mantiene igual; solo el registro se viste de gala."
+        },
+        "tags": ["inversion-had", "production"]
       }
     ]
   }

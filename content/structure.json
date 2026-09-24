@@ -96,7 +96,8 @@
           }
         ],
         "related": [
-          "passive-tenses"
+          "passive-tenses",
+          "reported-statements"
         ],
         "items": [
           "str-pv-1",
@@ -171,7 +172,8 @@
           }
         ],
         "related": [
-          "passive-concept"
+          "passive-concept",
+          "connectors-flow"
         ],
         "items": [
           "str-pvt-1",
@@ -626,7 +628,8 @@
           }
         ],
         "related": [
-          "connectors-logic"
+          "connectors-logic",
+          "passive-tenses"
         ],
         "items": [
           "str-cf-1",

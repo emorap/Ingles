@@ -64,6 +64,13 @@
               "en": "Stative verbs (know, believe, love, own, want…) describe states, not visible actions, so they normally avoid the continuous form.",
               "es": "Los verbos de estado (know, believe, love, own, want…) describen estados, no acciones visibles, por eso normalmente no van en forma continua."
             }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Because Spanish marks person on every verb ending, learners often forget English's one exception: the third-person -s. 'She teach French' or 'He don't like coffee' are common slips — he/she/it always takes -s (or does/doesn't), even though I/you/we/they need nothing extra.",
+              "es": "Como el español marca la persona en cada terminación verbal, muchos estudiantes olvidan la única excepción del inglés: la -s de la tercera persona. 'She teach French' o 'He don't like coffee' son errores frecuentes — con he/she/it siempre va -s (o does/doesn't), aunque con I/you/we/they no se añade nada."
+            }
           }
         ],
         "examples": [
@@ -78,10 +85,19 @@
           {
             "en": "My brother lives in London.",
             "es": "Mi hermano vive en Londres."
+          },
+          {
+            "en": "We often eat together.",
+            "es": "Solemos comer juntos."
+          },
+          {
+            "en": "I believe honesty is important.",
+            "es": "Creo que la honestidad es importante."
           }
         ],
         "related": [
-          "present-continuous"
+          "present-continuous",
+          "present-perfect"
         ],
         "items": [
           "ps-lives",
@@ -124,6 +140,13 @@
               "en": "The emotional continuous: with always/constantly/forever it stops being about frequency and starts being about feeling — usually irritation. 'He's always arriving late!'",
               "es": "El continuo emocional: con always/constantly/forever ya no habla de frecuencia sino de emoción — normalmente irritación. '¡He's always arriving late!'"
             }
+          },
+          {
+            "kind": "pitfall",
+            "text": {
+              "en": "Stative verbs resist the continuous, but Spanish's estar + gerundio tempts learners to force one anyway: 'I'm knowing the answer' or 'I'm wanting a coffee' sound natural to a Spanish speaker but are wrong — say 'I know the answer' and 'I want a coffee.'",
+              "es": "Los verbos de estado se resisten al continuo, pero el estar + gerundio del español tienta a forzarlo: 'I'm knowing the answer' o 'I'm wanting a coffee' suenan naturales para un hispanohablante, pero son incorrectos — di 'I know the answer' y 'I want a coffee.'"
+            }
           }
         ],
         "examples": [
@@ -138,11 +161,20 @@
           {
             "en": "I'm meeting Sarah tomorrow.",
             "es": "Me veo con Sarah mañana (ya está acordado)."
+          },
+          {
+            "en": "My English is improving.",
+            "es": "Mi inglés está mejorando."
+          },
+          {
+            "en": "She's constantly losing her phone!",
+            "es": "¡Siempre está perdiendo el teléfono!"
           }
         ],
         "related": [
           "present-simple",
-          "present-perfect"
+          "present-perfect",
+          "future-arrangements"
         ],
         "items": [
           "pc-living",
@@ -173,7 +205,7 @@
             }
           },
           {
-            "kind": "callout",
+            "kind": "pitfall",
             "text": {
               "en": "A finished time word closes the bridge. 'yesterday', 'in 2018' → Past Simple. That is why 'I have seen him yesterday' is wrong; say 'I saw him yesterday.'",
               "es": "Una palabra de tiempo terminado cierra el puente. 'yesterday', 'in 2018' → pasado simple. Por eso 'I have seen him yesterday' está mal; se dice 'I saw him yesterday.'"
@@ -199,10 +231,20 @@
           {
             "en": "Prices have increased a lot.",
             "es": "Los precios han subido mucho."
+          },
+          {
+            "en": "I've never tried skiing.",
+            "es": "Nunca he probado a esquiar."
+          },
+          {
+            "en": "The baby has fallen asleep.",
+            "es": "El bebé se ha quedado dormido."
           }
         ],
         "related": [
-          "present-perfect-continuous"
+          "present-perfect-continuous",
+          "present-simple",
+          "past-simple"
         ],
         "items": [
           "pp-saw",
@@ -240,7 +282,7 @@
             }
           },
           {
-            "kind": "callout",
+            "kind": "pitfall",
             "text": {
               "en": "Stative verbs stay in the plain Perfect: 'I've known her for years', never 'I've been knowing her.'",
               "es": "Los verbos de estado se quedan en el perfecto simple: 'I've known her for years', nunca 'I've been knowing her.'"
@@ -259,10 +301,20 @@
           {
             "en": "I've been calling you all day.",
             "es": "Te he estado llamando todo el día."
+          },
+          {
+            "en": "I've been thinking about changing jobs.",
+            "es": "He estado pensando en cambiar de trabajo."
+          },
+          {
+            "en": "We've been trying to contact customer service all morning.",
+            "es": "Hemos estado intentando contactar a servicio al cliente toda la mañana."
           }
         ],
         "related": [
-          "present-perfect"
+          "present-perfect",
+          "past-perfect-continuous",
+          "future-perfect-continuous"
         ],
         "items": [
           "ppc-working",
@@ -326,11 +378,20 @@
           {
             "en": "The Second World War ended in 1945.",
             "es": "La Segunda Guerra Mundial terminó en 1945."
+          },
+          {
+            "en": "When I was younger, I played football every weekend.",
+            "es": "Cuando era joven, jugaba fútbol todos los fines de semana."
+          },
+          {
+            "en": "The lights suddenly went out.",
+            "es": "Las luces se apagaron de repente."
           }
         ],
         "related": [
           "past-continuous",
-          "present-perfect"
+          "present-perfect",
+          "past-perfect"
         ],
         "items": [
           "pst-saw",
@@ -394,10 +455,20 @@
           {
             "en": "The sun was shining and the birds were singing.",
             "es": "El sol brillaba y los pájaros cantaban."
+          },
+          {
+            "en": "While I was cooking, my husband was setting the table.",
+            "es": "Mientras yo cocinaba, mi esposo ponía la mesa."
+          },
+          {
+            "en": "He was always borrowing my clothes — it drove me crazy.",
+            "es": "Siempre me pedía prestada la ropa — me volvía loca."
           }
         ],
         "related": [
-          "past-simple"
+          "past-simple",
+          "past-perfect",
+          "future-continuous"
         ],
         "items": [
           "pstc-cooking",
@@ -461,11 +532,20 @@
           {
             "en": "We couldn't enter because somebody had locked the doors.",
             "es": "No pudimos entrar porque alguien había cerrado las puertas."
+          },
+          {
+            "en": "The train had already departed by the time we got to the station.",
+            "es": "El tren ya había salido cuando llegamos a la estación."
+          },
+          {
+            "en": "By the age of thirty, she had visited twenty countries.",
+            "es": "A los treinta años, ya había visitado veinte países."
           }
         ],
         "related": [
           "past-simple",
-          "past-perfect-continuous"
+          "past-perfect-continuous",
+          "present-perfect"
         ],
         "items": [
           "pstp-left",
@@ -529,10 +609,20 @@
           {
             "en": "He was tired because he had been running.",
             "es": "Estaba cansado porque había estado corriendo."
+          },
+          {
+            "en": "It had been raining all morning before the sun finally appeared.",
+            "es": "Había estado lloviendo toda la mañana antes de que finalmente saliera el sol."
+          },
+          {
+            "en": "They'd been arguing before we arrived.",
+            "es": "Habían estado discutiendo antes de que llegáramos."
           }
         ],
         "related": [
-          "past-perfect"
+          "past-perfect",
+          "present-perfect-continuous",
+          "future-perfect-continuous"
         ],
         "items": [
           "pstpc-waiting",
@@ -553,7 +643,7 @@
           "en": "Use 'will' when the future doesn't exist yet — you create it while speaking: a decision, an offer, a promise or an opinion.",
           "es": "Usa 'will' cuando el futuro aún no existe — lo creas al hablar: una decisión, un ofrecimiento, una promesa o una opinión."
         },
-        "source": "Future Tenses Masterclass.pdf",
+        "source": "Future Tense Masterclass.pdf",
         "explanation": [
           {
             "kind": "p",
@@ -596,11 +686,20 @@
           {
             "en": "I think people will live longer in the future.",
             "es": "Creo que la gente vivirá más en el futuro."
+          },
+          {
+            "en": "You look tired — I'll carry your bags.",
+            "es": "Te ves cansado — yo cargo tus maletas."
+          },
+          {
+            "en": "I'm sure AI will change education.",
+            "es": "Estoy segura de que la IA cambiará la educación."
           }
         ],
         "related": [
           "future-going-to",
-          "future-arrangements"
+          "future-arrangements",
+          "future-continuous"
         ],
         "items": [
           "fut-answer",
@@ -621,7 +720,7 @@
           "en": "Use 'going to' when the decision already exists — it was made before this conversation: a plan, an intention, or a prediction based on present evidence.",
           "es": "Usa 'going to' cuando la decisión ya existe — se tomó antes de esta conversación: un plan, una intención o una predicción basada en evidencia presente."
         },
-        "source": "Future Tenses Masterclass.pdf",
+        "source": "Future Tense Masterclass.pdf",
         "explanation": [
           {
             "kind": "p",
@@ -664,11 +763,20 @@
           {
             "en": "Look at that cyclist! He's going to fall.",
             "es": "¡Mira ese ciclista! Se va a caer."
+          },
+          {
+            "en": "We're going to renovate the house.",
+            "es": "Vamos a renovar la casa."
+          },
+          {
+            "en": "Those clouds are dark — it's going to rain.",
+            "es": "Esas nubes están oscuras — va a llover."
           }
         ],
         "related": [
           "future-simple",
-          "future-arrangements"
+          "future-arrangements",
+          "present-continuous"
         ],
         "items": [
           "futg-greece",
@@ -689,7 +797,7 @@
           "en": "Use the present continuous (am/is/are + -ing) for a fixed arrangement — something in your diary, usually with a time and often another person.",
           "es": "Usa el presente continuo (am/is/are + -ing) para una cita fija — algo en tu agenda, normalmente con hora y a menudo con otra persona."
         },
-        "source": "Future Tenses Masterclass.pdf",
+        "source": "Future Tense Masterclass.pdf",
         "explanation": [
           {
             "kind": "p",
@@ -732,11 +840,20 @@
           {
             "en": "I'm having dinner with my parents tonight.",
             "es": "Ceno con mis padres esta noche."
+          },
+          {
+            "en": "I'm seeing the dentist tomorrow.",
+            "es": "Tengo cita con el dentista mañana."
+          },
+          {
+            "en": "He's starting university in September.",
+            "es": "Él empieza la universidad en septiembre."
           }
         ],
         "related": [
           "future-going-to",
-          "present-continuous"
+          "present-continuous",
+          "future-simple"
         ],
         "items": [
           "futa-dentist",
@@ -757,7 +874,7 @@
           "en": "Use will be + -ing to place yourself inside a future moment and describe what will already be happening — the middle of the action, not its start or end.",
           "es": "Usa will be + -ing para meterte dentro de un momento futuro y describir lo que ya estará ocurriendo — la mitad de la acción, no su inicio ni su final."
         },
-        "source": "Future Tenses Masterclass.pdf",
+        "source": "Future Tense Masterclass.pdf",
         "explanation": [
           {
             "kind": "p",
@@ -800,11 +917,20 @@
           {
             "en": "I'll be working from home all next week.",
             "es": "Estaré trabajando desde casa toda la próxima semana."
+          },
+          {
+            "en": "Will you be using the car later?",
+            "es": "¿Vas a estar usando el carro más tarde?"
+          },
+          {
+            "en": "This time next year, thousands of tourists will be visiting Colombia.",
+            "es": "El año que viene por estas fechas, miles de turistas estarán visitando Colombia."
           }
         ],
         "related": [
           "future-simple",
-          "past-continuous"
+          "past-continuous",
+          "future-perfect"
         ],
         "items": [
           "futc-flying",
@@ -825,7 +951,7 @@
           "en": "Use will have + past participle for something completed before a future point — travel forward in time, look back, and see what has already finished.",
           "es": "Usa will have + participio pasado para algo completado antes de un punto futuro — viaja al futuro, mira atrás y ve qué ya ha terminado."
         },
-        "source": "Future Tenses Masterclass.pdf",
+        "source": "Future Tense Masterclass.pdf",
         "explanation": [
           {
             "kind": "p",
@@ -868,11 +994,20 @@
           {
             "en": "By retirement, I'll have worked for forty years.",
             "es": "Para la jubilación, habré trabajado cuarenta años."
+          },
+          {
+            "en": "By next year, she'll have graduated.",
+            "es": "Para el año que viene, ya se habrá graduado."
+          },
+          {
+            "en": "By the time you arrive tonight, we'll have cooked dinner.",
+            "es": "Para cuando llegues esta noche, ya habremos cocinado la cena."
           }
         ],
         "related": [
           "future-perfect-continuous",
-          "present-perfect"
+          "present-perfect",
+          "future-continuous"
         ],
         "items": [
           "futp-finished",
@@ -893,7 +1028,7 @@
           "en": "Use will have been + -ing for how long an activity will have continued before a future point — the focus is the length of time, not completion.",
           "es": "Usa will have been + -ing para cuánto tiempo llevará una actividad antes de un punto futuro — el foco es la duración, no la finalización."
         },
-        "source": "Future Tenses Masterclass.pdf",
+        "source": "Future Tense Masterclass.pdf",
         "explanation": [
           {
             "kind": "p",
@@ -936,11 +1071,20 @@
           {
             "en": "By next Friday, you'll have been studying English for six months.",
             "es": "Para el próximo viernes, llevarás seis meses estudiando inglés."
+          },
+          {
+            "en": "By next month, she'll have been working here for a decade.",
+            "es": "Para el próximo mes, llevará una década trabajando aquí."
+          },
+          {
+            "en": "By tomorrow, I'll have been writing reports all week.",
+            "es": "Para mañana, llevaré toda la semana escribiendo informes."
           }
         ],
         "related": [
           "future-perfect",
-          "past-perfect-continuous"
+          "past-perfect-continuous",
+          "present-perfect-continuous"
         ],
         "items": [
           "futpc-living",

@@ -380,7 +380,8 @@
           }
         ],
         "related": [
-          "ing-noun-system"
+          "ing-noun-system",
+          "get-phrasal-passive"
         ],
         "items": [
           "vbf-ing1-finishread",
@@ -593,7 +594,8 @@
           }
         ],
         "related": [
-          "get-core-meanings"
+          "get-core-meanings",
+          "gerund-vs-infinitive"
         ],
         "items": [
           "vbf-get2-natural",
