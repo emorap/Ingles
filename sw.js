@@ -25,7 +25,13 @@
 // audio/gemini-tts.js, audio/voice.js) join the module graph and are cached
 // on-demand by the fetch handler — no SHELL change needed. The bump purges the
 // stale v5 cache on activate so returning users pick up the new app code.
-const CACHE = 'momentum-v6';
+// Bumped v6 -> v7 with Fase 2 (diálogo por voz): new ES modules
+// (audio/speech.js, ui/views/dialogue.js) and the scenarios data module
+// (content/scenarios.js) join the module graph and are cached on-demand by the
+// fetch handler — no SHELL change needed (the voice dialogue is an online
+// realce, so it is never needed offline before the first online visit). The
+// bump purges the stale v6 cache on activate so returning users get the new code.
+const CACHE = 'momentum-v7';
 const SHELL = [
   './',
   './index.html',
