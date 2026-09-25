@@ -3,7 +3,10 @@ import { openDB } from '../../vendor/idb.js';
 /** @typedef {import('./types.js').ItemProgress} ItemProgress */
 
 const DB = 'momentum';
-export const VERSION = 2;
+// v2 -> v3 adds the `audio` store: a cache of generated natural-voice clips
+// (Gemini TTS), keyed by `${voice}::${text}`, so audio replays offline without
+// re-hitting the API. It is NOT part of a backup (regenerable + heavy).
+export const VERSION = 3;
 
 // Meta keys that must never leave the device in a backup: the AI key is the
 // learner's own Gemini credential, and a backup is meant to be shared between
@@ -27,6 +30,7 @@ export class Store {
         if (!db.objectStoreNames.contains('sessions')) db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true });
         if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta');
         if (!db.objectStoreNames.contains('notes')) db.createObjectStore('notes', { keyPath: 'itemId' });
+        if (!db.objectStoreNames.contains('audio')) db.createObjectStore('audio');
       },
     });
   }
@@ -92,6 +96,24 @@ export class Store {
    */
   async setMeta(k, v) {
     await this.#db.put('meta', v, k);
+  }
+
+  /**
+   * A cached natural-voice clip, or undefined. Keyed by `${voice}::${text}`.
+   * @param {string} key
+   * @returns {Promise<{ blob: Blob, mime: string } | undefined>}
+   */
+  getAudio(key) {
+    return /** @type {Promise<{ blob: Blob, mime: string } | undefined>} */ (this.#db.get('audio', key));
+  }
+
+  /**
+   * Cache a generated clip so it replays offline without re-hitting the API.
+   * @param {string} key
+   * @param {{ blob: Blob, mime: string }} clip
+   */
+  async putAudio(key, clip) {
+    await this.#db.put('audio', clip, key);
   }
 
   /** @returns {Promise<string>} a JSON backup of all progress + notes + meta */
