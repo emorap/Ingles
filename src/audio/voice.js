@@ -1,9 +1,11 @@
 // The voice router: one entry point the UI calls to "say this English text",
 // which picks the best available source and always degrades gracefully.
 //
-//   1. cached clip   → play it (works OFFLINE, no quota)          source: 'cache'
-//   2. online + key  → Gemini natural voice, then cache it         source: 'gemini'
-//   3. otherwise     → the browser's Web Speech voice (robotic)    source: 'browser'
+//   1. cached clip        → play it (works OFFLINE, no quota)          source: 'cache'
+//   2. online+key+ttsVoice→ Gemini natural voice, then cache it        source: 'gemini'
+//   3. otherwise          → the browser's Web Speech voice (robotic)   source: 'browser'
+// An empty ttsVoice means the learner chose "Voz del navegador", so step 2 is
+// skipped and a stored key (used by the text tutor) never spends TTS quota.
 //
 // A network/quota failure in step 2 falls through to step 3. speakSmart never
 // throws: the audio layer is a realce, never a dependency. Dependencies
@@ -32,21 +34,33 @@ export async function speakSmart(text, opts = {}) {
 
   const cacheKey = `${ttsVoice}::${text}`;
 
-  // 1. Cached clip — works offline, costs nothing.
+  // 1. Cached clip — works offline, costs nothing. A rejected read (idb
+  //    transaction/connection failure) must NOT throw to the UI: swallow it and
+  //    fall through, so the audio layer stays a realce, never a dependency.
   if (store) {
-    const hit = await store.getAudio(cacheKey);
-    if (hit?.blob) { await play(hit.blob); return { source: 'cache' }; }
+    try {
+      const hit = await store.getAudio(cacheKey);
+      if (hit?.blob) { await play(hit.blob); return { source: 'cache' }; }
+    } catch {
+      // unreadable cache → try the online/browser path instead
+    }
   }
 
-  // 2. Natural voice via Gemini, cached for next time.
-  if (online && key) {
+  // 2. Natural voice via Gemini — only when the learner has PICKED one (empty
+  //    ttsVoice = the browser voice, so having a key for the text tutor never
+  //    silently spends TTS quota). Play first, then cache best-effort: a full
+  //    IndexedDB must never discard the clip we already fetched and paid for.
+  if (online && key && ttsVoice) {
     try {
-      const clip = await ttsFn(key, text, { voice: ttsVoice || undefined });
-      if (store) await store.putAudio(cacheKey, { blob: clip.blob, mime: clip.mime });
+      const clip = await ttsFn(key, text, { voice: ttsVoice });
       await play(clip.blob);
+      if (store) {
+        try { await store.putAudio(cacheKey, { blob: clip.blob, mime: clip.mime }); }
+        catch { /* cache full/unavailable: it already played, just skip caching */ }
+      }
       return { source: 'gemini' };
     } catch {
-      // fall through to the browser voice
+      // network/quota/parse failure → browser voice
     }
   }
 
