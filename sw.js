@@ -21,7 +21,11 @@
 // frameworks from the PDFs (57 explanation blocks across the 6 modules:
 // the "N purposes/jobs" tables + diagnostic-question callouts). Same
 // precache list; the bump re-precaches the deepened JSON for returning users.
-const CACHE = 'momentum-v5';
+// Bumped v5 -> v6 with Fase 1 (voz natural): new ES modules (audio/wav.js,
+// audio/gemini-tts.js, audio/voice.js) join the module graph and are cached
+// on-demand by the fetch handler — no SHELL change needed. The bump purges the
+// stale v5 cache on activate so returning users pick up the new app code.
+const CACHE = 'momentum-v6';
 const SHELL = [
   './',
   './index.html',
