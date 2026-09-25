@@ -118,8 +118,20 @@ function whyWrongPrompt(item, given) {
 }
 
 function chatPrompt(history) {
-  const convo = (history ?? []).map((m) => `${m.role === 'user' ? 'Estudiante' : 'Tutor'}: ${m.text}`).join('\n');
-  return `${LEARNER}\nEres un tutor de inglés paciente. Continúa la conversación.\n${convo}\nTutor:`;
+  const turns = history ?? [];
+  // A system turn (e.g. the voice role-play's "Reply ONLY in English, stay in
+  // character") is an authoritative instruction. When present, honor it as the
+  // leading directive and DROP the default LEARNER bias — "Explica en español"
+  // would directly contradict an English-only role-play, and the model, seeing
+  // the Spanish instruction first, may answer in Spanish. Without a system turn,
+  // keep the Spanish-explaining tutor framing for generic chat (e.g. translations).
+  const system = turns.filter((m) => m.role === 'system').map((m) => m.text).join(' ');
+  const convo = turns
+    .filter((m) => m.role !== 'system')
+    .map((m) => `${m.role === 'user' ? 'Estudiante' : 'Tutor'}: ${m.text}`)
+    .join('\n');
+  const framing = system || `${LEARNER}\nEres un tutor de inglés paciente. Continúa la conversación.`;
+  return `${framing}\n${convo}\nTutor:`;
 }
 
 function generatePrompt(topic, n) {
