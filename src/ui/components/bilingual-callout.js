@@ -4,7 +4,7 @@ import { audioButton } from './audio-button.js';
 
 /**
  * @param {{ en: string, es: string }} text
- * @param {{ voice?: string, kind?: string }} [opts]
+ * @param {{ voice?: string, kind?: string, speak?: (text: string) => void }} [opts]
  * @returns {HTMLElement}
  */
 export function bilingualCallout(text, opts = {}) {
@@ -17,7 +17,7 @@ export function bilingualCallout(text, opts = {}) {
   en.setAttribute('lang', 'en');
   const enText = document.createElement('span');
   enText.textContent = text.en;
-  en.append(enText, audioButton(text.en, { voice: opts.voice }));
+  en.append(enText, audioButton(text.en, { voice: opts.voice, speak: opts.speak }));
 
   const es = document.createElement('p');
   es.className = 'callout-es';

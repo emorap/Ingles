@@ -15,9 +15,10 @@ import { newCard, review } from '../../engine/scheduler.js';
  *   now?: Date,
  *   voice?: string,
  *   tutor?: import('../../ai/provider.js').AITutorProvider | null,
+ *   speak?: (text: string) => void,
  * }} ctx
  */
-export function renderPractice(container, { items, progress, store, onDone, onWrong, now = new Date(), voice, tutor }) {
+export function renderPractice(container, { items, progress, store, onDone, onWrong, now = new Date(), voice, tutor, speak }) {
   let i = 0;
   const total = items.length;
   const results = { correct: 0, total };
@@ -55,6 +56,7 @@ export function renderPractice(container, { items, progress, store, onDone, onWr
     section.append(practiceCard(item, {
       voice,
       tutor,
+      speak,
       onRate: async (rating, wasCorrect, given) => {
         await persist(item, rating, wasCorrect);
         if (wasCorrect) results.correct += 1;

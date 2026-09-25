@@ -245,6 +245,52 @@ test('mountApp shows onboarding on first run and finishing it records the goal',
   assert.equal(typeof store.meta.newPerDay, 'number');
 });
 
+// --- Fase 1: natural-voice wiring (speakSmart threaded to the views) ---
+
+const CONTENT_AUDIO = {
+  version: 1,
+  module: {
+    id: 'tenses', title: { en: 'Tenses', es: 'Tiempos verbales' }, accent: '#6366F1',
+    topics: [{
+      id: 'pt', title: { en: 'Present Simple', es: 'Presente simple' },
+      coreIdea: { en: 'We use it for routines.', es: 'Lo usamos para rutinas.' },
+    }],
+    items: [],
+  },
+};
+
+test('renderRoute: topic audio buttons invoke the injected speak (natural-voice wiring)', async () => {
+  const view = document.createElement('main');
+  const spoken = [];
+  await renderRoute(view, { view: 'topic', param: 'pt' }, {
+    catalog: catalogOf(CONTENT_AUDIO), store: richStore(), progress: new Map(),
+    newPerDay: 10, cap: 20, voice: '', navigate: () => {}, now: new Date('2026-09-23T10:00:00'),
+    speak: (t) => spoken.push(t),
+  });
+  const audioBtn = view.querySelector('[data-role="audio"]');
+  assert.ok(audioBtn, 'the core idea has an audio button');
+  assert.equal(audioBtn.hasAttribute('hidden'), false, 'visible because speak is wired');
+  audioBtn.dispatchEvent(new window.Event('click'));
+  assert.deepEqual(spoken, ['We use it for routines.']);
+});
+
+test('mountApp builds a speak that reaches topic audio buttons even without browser TTS', async () => {
+  const root = document.createElement('div');
+  // aiKey + ttsVoice persisted; getAudio/putAudio present so speakSmart's cache
+  // path is exercised (miss → falls through). Offline forces the browser branch,
+  // which is a safe no-op here — the point is the click does not throw.
+  const store = richStore({ onboarded: true, aiKey: '', ttsVoice: 'Kore' });
+  store.getAudio = async () => undefined;
+  store.putAudio = async () => {};
+  await mountApp(root, catalogOf(CONTENT_AUDIO), store);
+  window.location.hash = '#/topic/pt';
+  await tick(); await tick();
+  const audioBtn = root.querySelector('main#view [data-role="audio"]');
+  assert.ok(audioBtn, 'topic core idea audio button present');
+  assert.equal(audioBtn.hasAttribute('hidden'), false, 'visible because app wired speak');
+  audioBtn.dispatchEvent(new window.Event('click')); // must not throw
+});
+
 test('progressRing renders an accessible SVG whose ring encodes the percent', () => {
   const svg = progressRing(75, '#10B981');
   assert.equal(svg.getAttribute('role'), 'img');

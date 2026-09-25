@@ -19,10 +19,11 @@ const RATINGS = [
  *   onRate?: (rating: number, wasCorrect: boolean, given: string) => void,
  *   voice?: string,
  *   tutor?: import('../../ai/provider.js').AITutorProvider | null,
+ *   speak?: (text: string) => void,
  * }} [ctx]
  * @returns {HTMLElement}
  */
-export function practiceCard(item, { onRate, voice, tutor } = {}) {
+export function practiceCard(item, { onRate, voice, tutor, speak } = {}) {
   const card = document.createElement('article');
   card.className = 'practice-card surface';
   card.setAttribute('data-item', item.id);
@@ -65,7 +66,7 @@ export function practiceCard(item, { onRate, voice, tutor } = {}) {
     verdict.textContent = wasCorrect ? '¡Correcto!' : `No exactamente. Respuesta: ${item.answer}`;
     feedback.append(verdict);
 
-    const why = bilingualCallout(item.why, { voice, kind: 'why' });
+    const why = bilingualCallout(item.why, { voice, kind: 'why', speak });
     feedback.append(why);
 
     const ratings = document.createElement('div');

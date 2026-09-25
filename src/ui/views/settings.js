@@ -59,14 +59,15 @@ const GOAL_OPTIONS = [5, 10, 15, 20].map((n) => ({ value: String(n), label: `${n
  * @param {HTMLElement} container
  * @param {{
  *   store: any,
- *   settings?: { theme?: string, lang?: string, newPerDay?: number, voice?: string, lastBackup?: number, aiKey?: string },
+ *   settings?: { theme?: string, lang?: string, newPerDay?: number, voice?: string, ttsVoice?: string, lastBackup?: number, aiKey?: string },
  *   voices?: string[],
+ *   ttsVoices?: string[],
  *   onChange?: (key: string, value: any) => void,
  *   download?: (filename: string, text: string) => void,
  *   now?: Date,
  * }} ctx
  */
-export function renderSettings(container, { store, settings = {}, voices = [], onChange, download = defaultDownload, now = new Date() }) {
+export function renderSettings(container, { store, settings = {}, voices = [], ttsVoices = [], onChange, download = defaultDownload, now = new Date() }) {
   clear(container);
   const section = document.createElement('section');
   section.className = 'settings';
@@ -91,6 +92,14 @@ export function renderSettings(container, { store, settings = {}, voices = [], o
 
   const voiceOptions = [{ value: '', label: 'Voz automática' }, ...voices.map((v) => ({ value: v, label: v }))];
   section.append(buttonGroup('Voz (inglés)', 'voice', voiceOptions, settings.voice ?? '', (v) => onChange?.('voice', v)));
+
+  // Voz natural (IA): Gemini TTS voices. Empty = the browser voice (robotic but
+  // always offline). A chosen voice is used online with the learner's key, then
+  // cached so it replays offline; without a key it silently falls back.
+  if (ttsVoices.length) {
+    const ttsVoiceOptions = [{ value: '', label: 'Voz del navegador' }, ...ttsVoices.map((v) => ({ value: v, label: v }))];
+    section.append(buttonGroup('Voz natural (IA)', 'tts-voice', ttsVoiceOptions, settings.ttsVoice ?? '', (v) => onChange?.('ttsVoice', v)));
+  }
 
   // Data safety
   const dataH = document.createElement('h3');

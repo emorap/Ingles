@@ -92,6 +92,23 @@ test('changing the daily-goal control reports the new value via onChange', () =>
   assert.deepEqual(changed, { k: 'newPerDay', v: 15 });
 });
 
+test('the natural-voice (IA) picker lists the Gemini voices and reports the choice', () => {
+  const container = document.createElement('div');
+  let changed = null;
+  renderSettings(container, {
+    store: fakeStore(), settings: { ttsVoice: '' }, voices: [], ttsVoices: ['Kore', 'Puck'],
+    onChange: (k, v) => { changed = { k, v }; }, download: () => {}, now: new Date(),
+  });
+  const group = container.querySelector('[data-role="tts-voice"]');
+  assert.ok(group, 'has a natural-voice picker');
+  const puck = [...group.querySelectorAll('[data-value]')].find((b) => b.getAttribute('data-value') === 'Puck');
+  assert.ok(puck, 'lists the Puck voice');
+  // Empty value = fall back to the browser voice, always available offline.
+  assert.ok([...group.querySelectorAll('[data-value]')].some((b) => b.getAttribute('data-value') === ''), 'has an automatic/browser option');
+  puck.dispatchEvent(new window.Event('click'));
+  assert.deepEqual(changed, { k: 'ttsVoice', v: 'Puck' });
+});
+
 test('AI Tutor section saves the pasted Gemini key and confirms', async () => {
   const container = document.createElement('div');
   const store = fakeStore();

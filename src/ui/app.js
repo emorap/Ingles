@@ -19,8 +19,10 @@ import { allItems, findTopic } from '../engine/catalog.js';
 import { computeStats } from '../engine/analytics.js';
 import { logMistake } from '../engine/mistakes.js';
 import { recordStudyDay } from '../engine/streak.js';
-import { getTutor } from '../ai/tutor.js';
+import { getTutor, isOnline } from '../ai/tutor.js';
 import { listVoices } from '../audio/tts.js';
+import { speakSmart } from '../audio/voice.js';
+import { TTS_VOICES } from '../audio/gemini-tts.js';
 
 /**
  * @param {HTMLElement} root
@@ -34,6 +36,11 @@ export async function mountApp(root, catalog, store = new Store()) {
   let theme = await store.getMeta('theme', 'dark');
   let newPerDay = await store.getMeta('newPerDay', HUB_DEFAULTS.newPerDay);
   let voice = await store.getMeta('voice', '');
+  // Natural-voice (Gemini TTS) settings: the prebuilt voice name and the
+  // learner's own key. Both feed speakSmart; empty ttsVoice/key just means the
+  // browser voice is used. Kept in `let`s so onChanged applies edits live.
+  let ttsVoice = await store.getMeta('ttsVoice', '');
+  let aiKey = await store.getMeta('aiKey', '');
   const streak = await store.getMeta('streak', 0);
   // Which topics the learner has already opened the lesson for — drives the
   // "Aprendido" status on the module roadmap even before any practice.
@@ -77,11 +84,20 @@ export async function mountApp(root, catalog, store = new Store()) {
     navigate: go,
     get newPerDay() { return newPerDay; },
     get voice() { return voice; },
+    get ttsVoice() { return ttsVoice; },
+    // The one "say this English text" entry point handed to the views. Reads the
+    // current settings at call time (closure over the mutable lets), so a voice
+    // or key change in Ajustes applies to the next click without a rebuild.
+    speak: (text) => speakSmart(text, {
+      ttsVoice, browserVoice: voice, key: aiKey, online: isOnline(), store,
+    }),
     // Live-apply a settings change, then re-render the current view.
     onChanged: async (key, value) => {
       if (key === 'theme') { theme = value; applyTheme(theme, accent); }
       if (key === 'newPerDay') newPerDay = value;
       if (key === 'voice') voice = value;
+      if (key === 'ttsVoice') ttsVoice = value;
+      if (key === 'aiKey') aiKey = value;
       await renderRoute(view, currentRoute, deps);
     },
     // AI-generated items join their topic's module in memory, then we practice them.
@@ -145,6 +161,7 @@ export async function renderRoute(view, route, deps) {
         topic,
         onPractice: (id) => deps.navigate('practice', id),
         tutor,
+        speak: deps.speak,
         onGenerated: (items) => deps.onGenerated?.(topic.id, items),
         onBack: () => deps.navigate('module', found.moduleId), // topic → its module
       });
@@ -156,7 +173,7 @@ export async function renderRoute(view, route, deps) {
       });
       const tutor = await getTutor(store);
       renderPractice(view, {
-        items, progress, store, now, voice: deps.voice, tutor,
+        items, progress, store, now, voice: deps.voice, tutor, speak: deps.speak,
         onWrong: (itemId, given) => logMistake(store, itemId, given),
         onDone: async () => { await deps.onStudyComplete?.(now); },
       });
@@ -172,18 +189,20 @@ export async function renderRoute(view, route, deps) {
       return;
     }
     case 'settings': {
-      const [themeM, lang, newPerDay, voice, aiKey, lastBackup] = await Promise.all([
+      const [themeM, lang, newPerDay, voice, ttsVoiceM, aiKey, lastBackup] = await Promise.all([
         store.getMeta('theme', 'dark'),
         store.getMeta('lang', 'es'),
         store.getMeta('newPerDay', HUB_DEFAULTS.newPerDay),
         store.getMeta('voice', ''),
+        store.getMeta('ttsVoice', ''),
         store.getMeta('aiKey', ''),
         store.getMeta('lastBackup', undefined),
       ]);
       renderSettings(view, {
         store,
-        settings: { theme: themeM, lang, newPerDay, voice, aiKey, lastBackup },
+        settings: { theme: themeM, lang, newPerDay, voice, ttsVoice: ttsVoiceM, aiKey, lastBackup },
         voices: listVoices().map((v) => v.name),
+        ttsVoices: TTS_VOICES,
         now,
         onChange: async (key, value) => {
           await store.setMeta(key, value);

@@ -13,9 +13,10 @@ const GEN_COUNT = 5; // how many extra items to ask the tutor for
  *   onPractice?: (topicId: string) => void,
  *   tutor?: import('../../ai/provider.js').AITutorProvider | null,
  *   onGenerated?: (items: import('../../engine/types.js').Item[]) => void,
+ *   speak?: (text: string) => void,
  * }} ctx
  */
-export function renderTopic(container, { topic, onPractice, tutor, onGenerated, onBack }) {
+export function renderTopic(container, { topic, onPractice, tutor, onGenerated, onBack, speak }) {
   clear(container);
   const voice = topic.audio?.voice;
 
@@ -39,9 +40,9 @@ export function renderTopic(container, { topic, onPractice, tutor, onGenerated, 
 
   // Learn-first: the one-sentence essence sits at the very top, before any
   // detail. ES is the anchor (large), EN underneath as comprehensible input.
-  if (topic.coreIdea) section.append(coreIdeaBlock(topic.coreIdea, voice));
+  if (topic.coreIdea) section.append(coreIdeaBlock(topic.coreIdea, voice, speak));
 
-  for (const block of topic.explanation ?? []) section.append(renderBlock(block, voice));
+  for (const block of topic.explanation ?? []) section.append(renderBlock(block, voice, speak));
 
   for (const src of topic.diagrams ?? []) {
     const img = document.createElement('img');
@@ -69,7 +70,7 @@ export function renderTopic(container, { topic, onPractice, tutor, onGenerated, 
       es.className = 'example-es';
       es.setAttribute('lang', 'es');
       es.textContent = ex.es;
-      li.append(en, audioButton(ex.en, { voice }), es);
+      li.append(en, audioButton(ex.en, { voice, speak }), es);
       ul.append(li);
     }
     section.append(ul);
@@ -146,16 +147,16 @@ function backButton(onBack) {
   return btn;
 }
 
-function renderBlock(block, voice) {
-  if (block.kind === 'callout') return bilingualCallout(block.text, { voice, kind: 'callout' });
-  if (block.kind === 'pitfall') return bilingualCallout(block.text, { voice, kind: 'pitfall' });
-  if (block.kind === 'quote') return bilingualPara(block.text, voice, 'blockquote', 'topic-quote');
+function renderBlock(block, voice, speak) {
+  if (block.kind === 'callout') return bilingualCallout(block.text, { voice, kind: 'callout', speak });
+  if (block.kind === 'pitfall') return bilingualCallout(block.text, { voice, kind: 'pitfall', speak });
+  if (block.kind === 'quote') return bilingualPara(block.text, voice, speak, 'blockquote', 'topic-quote');
   if (block.kind === 'table') return renderTable(block);
-  return bilingualPara(block.text, voice, 'div', 'topic-p'); // 'p' and unknown → paragraph
+  return bilingualPara(block.text, voice, speak, 'div', 'topic-p'); // 'p' and unknown → paragraph
 }
 
 // The topic's essence: ES big and bold, EN (with audio) underneath.
-function coreIdeaBlock(text, voice) {
+function coreIdeaBlock(text, voice, speak) {
   const box = document.createElement('div');
   box.className = 'topic-core-idea';
   box.setAttribute('data-role', 'core-idea');
@@ -168,19 +169,19 @@ function coreIdeaBlock(text, voice) {
   en.setAttribute('lang', 'en');
   const enText = document.createElement('span');
   enText.textContent = text.en;
-  en.append(enText, audioButton(text.en, { voice }));
+  en.append(enText, audioButton(text.en, { voice, speak }));
   box.append(es, en);
   return box;
 }
 
-function bilingualPara(text, voice, wrapperTag, className) {
+function bilingualPara(text, voice, speak, wrapperTag, className) {
   const wrap = document.createElement(wrapperTag);
   wrap.className = className;
   const en = document.createElement('p');
   en.setAttribute('lang', 'en');
   const enText = document.createElement('span');
   enText.textContent = text.en;
-  en.append(enText, audioButton(text.en, { voice }));
+  en.append(enText, audioButton(text.en, { voice, speak }));
   const es = document.createElement('p');
   es.className = 'muted';
   es.setAttribute('lang', 'es');
