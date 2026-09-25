@@ -310,3 +310,38 @@ test('streakChip shows the day count and is labelled', () => {
   assert.match(chip.textContent, /5/);
   assert.match(chip.getAttribute('aria-label') ?? '', /racha|5/i);
 });
+
+// --- Fase 2: dialogue route + "Hablar" nav link ---
+// Reuses the file's fakeStore/baseDeps helpers (no key → getTutor resolves null;
+// aiKey present → non-null tutor). The dialogue case ignores the catalog, so
+// baseDeps' CONTENT2 catalog is harmless; we only add `speak`.
+
+test('renderRoute "dialogue" with no param renders the scenario picker', async () => {
+  const view = document.createElement('main');
+  await renderRoute(view, { view: 'dialogue' }, baseDeps(fakeStore(), { speak: () => {} }));
+  assert.ok(view.querySelector('[data-role="scenario-picker"]'), 'shows the picker');
+});
+
+test('renderRoute "dialogue" with a valid scenario renders the conversation', async () => {
+  const view = document.createElement('main');
+  await renderRoute(view, { view: 'dialogue', param: 'cafe' }, baseDeps(fakeStore({ aiKey: 'K' }), { speak: () => {} }));
+  assert.ok(view.querySelector('[data-role="thread"]'), 'shows the conversation thread');
+  assert.ok(view.querySelector('[data-action="mic"]'), 'shows the mic button');
+});
+
+test('renderRoute "dialogue" with an unknown scenario redirects to the picker', async () => {
+  const view = document.createElement('main');
+  let navigatedTo = null;
+  await renderRoute(view, { view: 'dialogue', param: 'does-not-exist' }, baseDeps(fakeStore(), {
+    navigate: (v, p) => { navigatedTo = [v, p]; }, speak: () => {},
+  }));
+  assert.deepEqual(navigatedTo, ['dialogue', undefined]);
+});
+
+test('the nav includes a "Hablar" link to the dialogue route', async () => {
+  const root = document.createElement('div');
+  await mountApp(root, catalogOf(CONTENT), fakeStore());
+  const link = [...root.querySelectorAll('nav a[data-route]')].find((a) => a.getAttribute('data-route') === 'dialogue');
+  assert.ok(link, 'has a dialogue nav link');
+  assert.match(link.textContent, /Hablar/);
+});

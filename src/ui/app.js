@@ -23,6 +23,9 @@ import { getTutor, isOnline } from '../ai/tutor.js';
 import { listVoices } from '../audio/tts.js';
 import { speakSmart } from '../audio/voice.js';
 import { TTS_VOICES } from '../audio/gemini-tts.js';
+import { renderDialogue } from './views/dialogue.js';
+import { recognizeOnce, recognitionAvailable } from '../audio/speech.js';
+import { SCENARIOS } from '../../content/scenarios.js';
 
 /**
  * @param {HTMLElement} root
@@ -179,6 +182,25 @@ export async function renderRoute(view, route, deps) {
       });
       return;
     }
+    case 'dialogue': {
+      // #/dialogue → picker; #/dialogue/<id> → conversation. Unknown id → back
+      // to the picker (guide, don't dead-end). tutor is null offline / without a
+      // key → the view shows its notice and stays fully usable (read + listen).
+      const scenario = route.param ? (SCENARIOS.find((s) => s.id === route.param) ?? null) : null;
+      if (route.param && !scenario) { deps.navigate('dialogue', undefined); return; }
+      const tutor = await getTutor(store);
+      renderDialogue(view, {
+        scenario,
+        scenarios: SCENARIOS,
+        tutor,
+        online: isOnline(),
+        recognitionOk: recognitionAvailable(),
+        speak: deps.speak,
+        recognize: (opts) => recognizeOnce(opts),
+        onPick: (id) => deps.navigate('dialogue', id || undefined),
+      });
+      return;
+    }
     case 'insights': {
       const stats = computeStats(allItems(catalog), progress, now ?? new Date());
       renderInsights(view, {
@@ -278,6 +300,7 @@ function buildNav() {
   const links = [
     ['hub', 'Inicio', undefined],
     ['practice', 'Mis errores', 'mistakes'],
+    ['dialogue', 'Hablar', undefined],
     ['insights', 'Progreso', undefined],
     ['settings', 'Ajustes', undefined],
   ];
