@@ -24,7 +24,7 @@ export const TTS_VOICES = ['Kore', 'Puck', 'Zephyr', 'Charon', 'Fenrir', 'Aoede'
  * Synthesize `text` to a WAV blob with the given prebuilt voice.
  * @param {string} key the learner's Gemini API key
  * @param {string} text English text to speak
- * @param {{ voice?: string, timeoutMs?: number }} [opts]
+ * @param {{ voice?: string, timeoutMs?: number, models?: string[] }} [opts]
  * @returns {Promise<{ blob: Blob, mime: string }>}
  */
 export async function geminiTTS(key, text, { voice = 'Kore', timeoutMs = DEFAULT_TIMEOUT, models = TTS_MODELS } = {}) {

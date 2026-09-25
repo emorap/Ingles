@@ -109,3 +109,12 @@ test('chat rejects mid-turn → user bubble stays, status shows error, mic re-en
   assert.match(c.querySelector('[data-role="status"]').textContent, /404|reintenta/i);
   assert.equal(c.querySelector('[data-action="mic"]').disabled, false);
 });
+
+test('sin soporte de voz → muestra el aviso "no permite hablar" y deshabilita el micrófono', () => {
+  const c = document.createElement('div');
+  renderDialogue(c, { scenario: SCN, tutor: fakeTutor(), online: true, recognitionOk: false, speak: () => {} });
+  const notice = c.querySelector('[data-role="offline-notice"]');
+  assert.ok(notice, 'hay aviso de degradación');
+  assert.match(notice.textContent, /no permite hablar/i);
+  assert.equal(c.querySelector('[data-action="mic"]').disabled, true);
+});
