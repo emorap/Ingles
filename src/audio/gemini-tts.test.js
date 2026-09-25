@@ -63,6 +63,23 @@ test('geminiTTS maps an HTTP error to AiError', async () => {
   await assert.rejects(() => geminiTTS('BAD', 'Hi'), AiError);
 });
 
+test('geminiTTS falls back to the next voice model on 404', async () => {
+  const urls = [];
+  globalThis.fetch = async (url) => {
+    urls.push(url);
+    return url.includes('gemini-2.5-flash-preview-tts') ? ({ ok: false, status: 404, async json() { return {}; } }) : okResponse();
+  };
+  const { mime } = await geminiTTS('KEY', 'Hi');
+  assert.equal(mime, 'audio/wav');
+  assert.equal(urls.length, 2, 'tried the primary voice model, then the fallback');
+  assert.match(urls[1], /gemini-3\.8-flash-tts:generateContent/);
+});
+
+test('geminiTTS throws AiError mentioning 404 when every voice model is unavailable', async () => {
+  globalThis.fetch = async () => ({ ok: false, status: 404, async json() { return {}; } });
+  await assert.rejects(() => geminiTTS('KEY', 'Hi'), (e) => e instanceof AiError && /404/.test(e.message));
+});
+
 test('geminiTTS maps an abort to AiError', async () => {
   globalThis.fetch = async () => { throw Object.assign(new Error('aborted'), { name: 'AbortError' }); };
   await assert.rejects(() => geminiTTS('KEY', 'Hi'), AiError);

@@ -8,7 +8,12 @@
 import { base64ToBytes, pcm16ToWav } from './wav.js';
 import { AiError } from '../ai/gemini.js';
 
-const ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent';
+// Ordered voice-model candidates. The preview model is the known-good format
+// (16-bit PCM 24kHz that wav.js wraps); `gemini-3.8-flash-tts` is a non-preview
+// fallback for when the preview one is retired. A 404 on one just tries the
+// next, so the natural voice can't silently dead-end to the robotic fallback.
+const TTS_MODELS = ['gemini-2.5-flash-preview-tts', 'gemini-3.8-flash-tts'];
+const endpointFor = (model) => `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 const DEFAULT_TIMEOUT = 20000;
 
 // A curated subset of Gemini's prebuilt voices (there are ~30). These read well
@@ -22,36 +27,41 @@ export const TTS_VOICES = ['Kore', 'Puck', 'Zephyr', 'Charon', 'Fenrir', 'Aoede'
  * @param {{ voice?: string, timeoutMs?: number }} [opts]
  * @returns {Promise<{ blob: Blob, mime: string }>}
  */
-export async function geminiTTS(key, text, { voice = 'Kore', timeoutMs = DEFAULT_TIMEOUT } = {}) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await globalThis.fetch(`${ENDPOINT}?key=${encodeURIComponent(key)}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text }] }],
-        generationConfig: {
-          responseModalities: ['AUDIO'],
-          speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voice } } },
-        },
-      }),
-      signal: controller.signal,
-    });
-    if (!res.ok) throw new AiError(`La voz de la IA respondió ${res.status}. Revisa tu clave o inténtalo más tarde.`);
-    const data = await res.json();
-    const inline = data?.candidates?.[0]?.content?.parts?.find((p) => p?.inlineData)?.inlineData;
-    if (!inline?.data) throw new AiError('La IA no devolvió audio.');
-    const rate = rateFromMime(inline.mimeType);
-    const wav = pcm16ToWav(base64ToBytes(inline.data), { sampleRate: rate, channels: 1 });
-    return { blob: new Blob([wav], { type: 'audio/wav' }), mime: 'audio/wav' };
-  } catch (err) {
-    if (err instanceof AiError) throw err;
-    if (err && err.name === 'AbortError') throw new AiError('La voz de la IA tardó demasiado.', err);
-    throw new AiError('No se pudo generar la voz. ¿Estás conectado?', err);
-  } finally {
-    clearTimeout(timer);
+export async function geminiTTS(key, text, { voice = 'Kore', timeoutMs = DEFAULT_TIMEOUT, models = TTS_MODELS } = {}) {
+  let lastStatus = 0;
+  for (const model of models) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const res = await globalThis.fetch(`${endpointFor(model)}?key=${encodeURIComponent(key)}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text }] }],
+          generationConfig: {
+            responseModalities: ['AUDIO'],
+            speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voice } } },
+          },
+        }),
+        signal: controller.signal,
+      });
+      if (res.status === 404) { lastStatus = 404; continue; } // model gone → try the next (finally clears the timer)
+      if (!res.ok) throw new AiError(`La voz de la IA respondió ${res.status}. Revisa tu clave o inténtalo más tarde.`);
+      const data = await res.json();
+      const inline = data?.candidates?.[0]?.content?.parts?.find((p) => p?.inlineData)?.inlineData;
+      if (!inline?.data) throw new AiError('La IA no devolvió audio.');
+      const rate = rateFromMime(inline.mimeType);
+      const wav = pcm16ToWav(base64ToBytes(inline.data), { sampleRate: rate, channels: 1 });
+      return { blob: new Blob([wav], { type: 'audio/wav' }), mime: 'audio/wav' };
+    } catch (err) {
+      if (err instanceof AiError) throw err;
+      if (err && err.name === 'AbortError') throw new AiError('La voz de la IA tardó demasiado.', err);
+      throw new AiError('No se pudo generar la voz. ¿Estás conectado?', err);
+    } finally {
+      clearTimeout(timer);
+    }
   }
+  throw new AiError(`La voz de la IA respondió ${lastStatus || 404}. Ningún modelo de voz disponible para tu clave.`);
 }
 
 /** Pull the sample rate out of a mime type like "audio/L16;codec=pcm;rate=24000". */

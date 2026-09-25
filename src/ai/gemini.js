@@ -5,7 +5,14 @@
 // anything malformed — the model is never trusted to produce valid items.
 import { validateItem } from '../engine/schema.js';
 
-const ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
+// Ordered model candidates. `gemini-flash-latest` is Google's self-healing
+// alias for the current stable Flash — it never 404s when a dated version is
+// retired. `gemini-2.5-flash` is the concrete fallback if the alias is ever
+// unavailable for a key/region. A 404 on one model just tries the next, so the
+// tutor can't silently break the way it did before (a single hardcoded model
+// that returned 404 dead-ended the whole realce).
+const MODELS = ['gemini-flash-latest', 'gemini-2.5-flash'];
+const endpointFor = (model) => `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
 const DEFAULT_TIMEOUT = 20000;
 
 export class AiError extends Error {
@@ -39,33 +46,41 @@ export function createGeminiTutor(key, opts = {}) {
 }
 
 /**
- * Low-level single-turn call. Rejects with AiError on HTTP error, timeout, or
- * network failure.
+ * Low-level single-turn call. Tries each candidate model in order, falling
+ * through to the next only on a 404 (model not available for this key/region).
+ * Any other outcome — a non-404 HTTP error, timeout, or network failure — is a
+ * key/connection problem, not a model problem, so it rejects immediately with
+ * an AiError instead of wasting calls on the other models.
  * @param {string} key
  * @param {string} prompt
- * @param {{ timeoutMs?: number }} [opts]
+ * @param {{ timeoutMs?: number, models?: string[] }} [opts]
  * @returns {Promise<string>}
  */
-export async function callGemini(key, prompt, { timeoutMs = DEFAULT_TIMEOUT } = {}) {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const res = await globalThis.fetch(`${ENDPOINT}?key=${encodeURIComponent(key)}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }] }),
-      signal: controller.signal,
-    });
-    if (!res.ok) throw new AiError(`Gemini respondió ${res.status}. Revisa tu clave o inténtalo más tarde.`);
-    const data = await res.json();
-    return extractText(data);
-  } catch (err) {
-    if (err instanceof AiError) throw err;
-    if (err && err.name === 'AbortError') throw new AiError('La IA tardó demasiado en responder.', err);
-    throw new AiError('No se pudo contactar la IA. ¿Estás conectado?', err);
-  } finally {
-    clearTimeout(timer);
+export async function callGemini(key, prompt, { timeoutMs = DEFAULT_TIMEOUT, models = MODELS } = {}) {
+  let lastStatus = 0;
+  for (const model of models) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const res = await globalThis.fetch(`${endpointFor(model)}?key=${encodeURIComponent(key)}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: prompt }] }] }),
+        signal: controller.signal,
+      });
+      if (res.status === 404) { lastStatus = 404; continue; } // model gone → try the next (finally clears the timer)
+      if (!res.ok) throw new AiError(`Gemini respondió ${res.status}. Revisa tu clave o inténtalo más tarde.`);
+      const data = await res.json();
+      return extractText(data);
+    } catch (err) {
+      if (err instanceof AiError) throw err;
+      if (err && err.name === 'AbortError') throw new AiError('La IA tardó demasiado en responder.', err);
+      throw new AiError('No se pudo contactar la IA. ¿Estás conectado?', err);
+    } finally {
+      clearTimeout(timer);
+    }
   }
+  throw new AiError(`Gemini respondió ${lastStatus || 404}. Ningún modelo disponible para tu clave.`);
 }
 
 function extractText(data) {
