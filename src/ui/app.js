@@ -15,7 +15,7 @@ import { renderInsights } from './views/insights.js';
 import { renderSettings } from './views/settings.js';
 import { renderOnboarding, maybeOnboard, finishOnboarding } from './views/onboarding.js';
 import { selectItems } from './session-select.js';
-import { allItems, findTopic } from '../engine/catalog.js';
+import { allItems, allTopics, findTopic } from '../engine/catalog.js';
 import { computeStats } from '../engine/analytics.js';
 import { logMistake } from '../engine/mistakes.js';
 import { recordStudyDay } from '../engine/streak.js';
@@ -24,6 +24,8 @@ import { listVoices } from '../audio/tts.js';
 import { speakSmart } from '../audio/voice.js';
 import { TTS_VOICES } from '../audio/gemini-tts.js';
 import { renderDialogue } from './views/dialogue.js';
+import { renderPronounce } from './views/pronounce.js';
+import { comparePronunciation } from '../engine/pronunciation.js';
 import { recognizeOnce, recognitionAvailable } from '../audio/speech.js';
 import { SCENARIOS } from '../../content/scenarios.js';
 
@@ -201,6 +203,25 @@ export async function renderRoute(view, route, deps) {
       });
       return;
     }
+    case 'pronounce': {
+      // #/pronounce → tema-picker; #/pronounce/<id> → practicar sus frases.
+      // Solo temas con examples (todas las 52 los tienen). Sin reconocimiento /
+      // sin red / sin tutor la vista degrada a leer + escuchar (nunca dead-end).
+      const topics = allTopics(catalog).filter((t) => Array.isArray(t.examples) && t.examples.length);
+      const topic = route.param ? (topics.find((t) => t.id === route.param) ?? null) : null;
+      if (route.param && !topic) { deps.navigate('pronounce', undefined); return; }
+      const tutor = await getTutor(store);
+      renderPronounce(view, {
+        topic, topics, tutor,
+        online: isOnline(),
+        recognitionOk: recognitionAvailable(),
+        speak: deps.speak,
+        recognize: (opts) => recognizeOnce(opts),
+        compare: comparePronunciation,
+        onPick: (id) => deps.navigate('pronounce', id || undefined),
+      });
+      return;
+    }
     case 'insights': {
       const stats = computeStats(allItems(catalog), progress, now ?? new Date());
       renderInsights(view, {
@@ -301,6 +322,7 @@ function buildNav() {
     ['hub', 'Inicio', undefined],
     ['practice', 'Mis errores', 'mistakes'],
     ['dialogue', 'Hablar', undefined],
+    ['pronounce', 'Pronunciar', undefined],
     ['insights', 'Progreso', undefined],
     ['settings', 'Ajustes', undefined],
   ];

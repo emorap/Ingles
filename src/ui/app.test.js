@@ -345,3 +345,55 @@ test('the nav includes a "Hablar" link to the dialogue route', async () => {
   assert.ok(link, 'has a dialogue nav link');
   assert.match(link.textContent, /Hablar/);
 });
+
+// --- Fase 3: pronounce route + "Pronunciar" nav link ---
+// The pronounce case reads topics from the catalog (only those with examples),
+// so it needs a catalog whose topic carries an examples[] — CONTENT2's 'pt' has
+// none. speak is threaded through like the dialogue tests.
+
+const CONTENT_PRON = {
+  version: 1,
+  module: {
+    id: 'tenses', title: { en: 'Tenses', es: 'Tiempos verbales' }, accent: '#6366F1',
+    topics: [{
+      id: 'pt', title: { en: 'Present Simple', es: 'Presente simple' },
+      examples: [{ en: 'I want a coffee', es: 'Quiero un café' }],
+    }],
+    items: [],
+  },
+};
+
+test('renderRoute "pronounce" with no param renders the topic picker', async () => {
+  const view = document.createElement('main');
+  await renderRoute(view, { view: 'pronounce' }, baseDeps(fakeStore(), {
+    catalog: catalogOf(CONTENT_PRON), speak: () => {},
+  }));
+  assert.ok(view.querySelector('[data-role="topic-picker"]'), 'shows the topic picker');
+});
+
+test('renderRoute "pronounce" with a valid topic renders its phrase + mic', async () => {
+  const view = document.createElement('main');
+  await renderRoute(view, { view: 'pronounce', param: 'pt' }, baseDeps(fakeStore(), {
+    catalog: catalogOf(CONTENT_PRON), speak: () => {},
+  }));
+  assert.ok(view.querySelector('[data-role="phrase"]'), 'shows a phrase card');
+  assert.match(view.textContent, /I want a coffee/);
+  assert.ok(view.querySelector('[data-action="mic"]'), 'shows the mic button');
+});
+
+test('renderRoute "pronounce" with an unknown topic redirects to the picker', async () => {
+  const view = document.createElement('main');
+  let navigatedTo = null;
+  await renderRoute(view, { view: 'pronounce', param: 'does-not-exist' }, baseDeps(fakeStore(), {
+    catalog: catalogOf(CONTENT_PRON), navigate: (v, p) => { navigatedTo = [v, p]; }, speak: () => {},
+  }));
+  assert.deepEqual(navigatedTo, ['pronounce', undefined]);
+});
+
+test('the nav includes a "Pronunciar" link to the pronounce route', async () => {
+  const root = document.createElement('div');
+  await mountApp(root, catalogOf(CONTENT), fakeStore());
+  const link = [...root.querySelectorAll('nav a[data-route]')].find((a) => a.getAttribute('data-route') === 'pronounce');
+  assert.ok(link, 'has a pronounce nav link');
+  assert.match(link.textContent, /Pronunciar/);
+});
