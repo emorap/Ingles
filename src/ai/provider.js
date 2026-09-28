@@ -15,6 +15,9 @@
  *   Fresh practice items for a topic; output is schema-validated by the caller.
  * @property {(history: { role: string, text: string }[]) => Promise<string>} chat
  *   Free-form English-learning chat grounded in the conversation so far.
+ * @property {(target: string, heard: string) => Promise<string>} coachPronunciation
+ *   Coaching de pronunciación en español comparando lo que el estudiante intentó
+ *   decir (target) con lo que el reconocedor entendió (heard).
  */
 
 export {};

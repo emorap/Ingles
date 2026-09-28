@@ -83,3 +83,17 @@ test('callGemini honors a custom models list', async () => {
   assert.equal(urls.length, 1);
   assert.match(urls[0], /gemini-2\.5-flash:generateContent/);
 });
+
+test('coachPronunciation envía objetivo + lo oído y pide coaching en español', async () => {
+  let sentBody = null;
+  globalThis.fetch = async (url, init) => {
+    sentBody = JSON.parse(init.body);
+    return textResponse('La /θ/ de "think" se te fue a /t/.');
+  };
+  const out = await createGeminiTutor('K').coachPronunciation('I think so', 'I tink so');
+  assert.match(out, /think/);
+  const prompt = sentBody.contents[0].parts[0].text;
+  assert.match(prompt, /I think so/, 'incluye la frase objetivo');
+  assert.match(prompt, /I tink so/, 'incluye lo que se oyó');
+  assert.match(prompt, /español/i, 'pide coaching en español');
+});
