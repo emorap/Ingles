@@ -31,7 +31,13 @@
 // fetch handler — no SHELL change needed (the voice dialogue is an online
 // realce, so it is never needed offline before the first online visit). The
 // bump purges the stale v6 cache on activate so returning users get the new code.
-const CACHE = 'momentum-v7';
+// Bumped v7 -> v8 with Fase 3 (pronunciación): new ES modules
+// (engine/pronunciation.js, ui/views/pronounce.js) join the module graph and are
+// cached on-demand by the fetch handler — no SHELL change needed (pronunciation
+// is an online realce that needs a recognizer + the AI tutor, so it is never
+// needed offline before the first online visit). The bump purges the stale v7
+// cache on activate so returning users get the new code.
+const CACHE = 'momentum-v8';
 const SHELL = [
   './',
   './index.html',
