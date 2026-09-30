@@ -55,9 +55,17 @@ function alignedTargetIndices(target, heard) {
 export function comparePronunciation(target, heard) {
   const t = normalizeWords(target).split(' ').filter(Boolean);
   const h = normalizeWords(heard).split(' ').filter(Boolean);
-  // Palabras con caso/puntuación original para mostrarlas; alineadas 1:1 con `t`
-  // en las frases de ejemplo A2 (una palabra visible = un token normalizado).
-  const orig = (target ?? '').trim().split(/\s+/).filter(Boolean);
+  // Palabras con caso/puntuación original para mostrarlas, alineadas 1:1 con `t`.
+  // Una palabra separada por espacios puede normalizar a DOS tokens (guiones:
+  // "long-term" → long, term) o a CERO (puntuación suelta: un "—"), así que
+  // re-derivamos `orig` con la MISMA normalización: 1 token → conserva la
+  // palabra original (con su caso/puntuación); ≠1 → emite los tokens. Sin esto
+  // los chips se corren y un "—" se mostraría como palabra bien pronunciada.
+  const orig = (target ?? '').trim().split(/\s+/).filter(Boolean)
+    .flatMap((raw) => {
+      const parts = normalizeWords(raw).split(' ').filter(Boolean);
+      return parts.length === 1 ? [raw] : parts;
+    });
   if (!t.length) return { score: 0, wordsOk: [], wordsOff: [], marks: [] };
   const ok = alignedTargetIndices(t, h);
   const marks = t.map((w, i) => ({ word: orig[i] ?? w, ok: ok.has(i) }));
