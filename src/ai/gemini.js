@@ -139,7 +139,8 @@ function pronouncePrompt(target, heard) {
   return `${LEARNER}
 El estudiante intentó decir en inglés: "${target}".
 El reconocedor de voz entendió: "${heard}".
-Da coaching breve de pronunciación en español (2 a 4 frases). Enfócate en los sonidos difíciles para un hispanohablante: la /θ/ de "think", la /ð/ de "this", /v/ vs /b/, la /h/ aspirada, vocales largas vs cortas (ship/sheep), la terminación -ed y la -s final. Si algo sonó bien, dilo y anima. NO des un puntaje ni un número. Usa ejemplos en inglés cuando ayuden.`;
+No escuchaste el audio: solo tienes esos dos textos. Deduce los sonidos que probablemente fallaron a partir de la DIFERENCIA entre lo que quería decir y lo que el reconocedor entendió (p. ej. si "think" se oyó como "tink", la /θ/ se fue a /t/); no inventes errores en las palabras que coincidieron.
+Da coaching breve de pronunciación en español (2 a 4 frases). Enfócate en los sonidos difíciles para un hispanohablante: la /θ/ de "think", la /ð/ de "this", /v/ vs /b/, la /h/ aspirada, vocales largas vs cortas (ship/sheep), la terminación -ed y la -s final. Si todo coincidió, dilo y anima. NO des un puntaje ni un número. Usa ejemplos en inglés cuando ayuden.`;
 }
 
 function generatePrompt(topic, n) {

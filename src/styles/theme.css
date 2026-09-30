@@ -387,6 +387,16 @@ button{font:inherit;color:inherit;cursor:pointer}
 .goal-chooser{display:flex;flex-wrap:wrap;gap:var(--sp-2);justify-content:center;margin-top:var(--sp-3)}
 .onboarding .btn[data-role="advance"]{min-width:180px}
 
+/* ---- Pronounce feedback --------------------------------------------------- */
+/* Palabras ok/off del intento. El color NUNCA es el único indicador (WCAG
+   1.4.1): "off" lleva subrayado ondulado además del color de error, y en el
+   DOM cada palabra off arrastra un marcador " (revisar)" para lectores de
+   pantalla. "ok" usa el color de éxito. */
+.phrase-words{display:flex;flex-wrap:wrap;gap:var(--sp-1)}
+.word{font-weight:600}
+.word.ok{color:var(--color-success)}
+.word.off{color:var(--color-error);text-decoration:underline wavy var(--color-error);text-underline-offset:3px}
+
 /* ---- Responsive ----------------------------------------------------------- */
 @media (min-width:640px){
   #app{padding:var(--sp-4) var(--sp-4) var(--sp-5)}

@@ -54,14 +54,17 @@ export function renderPronounce(container, {
   bar.append(title, back);
   section.append(bar);
 
-  // Honestidad de alcance (spec).
+  // Honestidad de alcance (spec): es una guía por lo que la app logró escuchar,
+  // NO un examen. Sin `muted` para que el aviso pese tanto como el resultado.
   const honest = document.createElement('p');
-  honest.className = 'pronounce-honest muted';
-  honest.textContent = 'Es una guía basada en lo que el reconocedor entendió, no un examen de pronunciación.';
+  honest.className = 'pronounce-honest';
+  honest.textContent = 'Es una guía por lo que la app logró escuchar, no un examen de pronunciación.';
   section.append(honest);
 
   const canSpeak = online && recognitionOk;
-  if (!canSpeak) section.append(offlineNotice({ online, recognitionOk }));
+  // Aviso cuando algo degrada: sin voz / sin red (bloquean grabar) o sin tutor
+  // (se puede grabar y ver el score, pero sin coaching). Guía, no bloquea.
+  if (!canSpeak || !tutor) section.append(offlineNotice({ online, recognitionOk, tutor }));
 
   const list = document.createElement('div');
   list.className = 'pronounce-list';
@@ -80,6 +83,7 @@ function phraseCard(ex, { canSpeak, tutor, speak, recognize, compare }) {
 
   const en = document.createElement('p');
   en.className = 'phrase-en';
+  en.lang = 'en'; // que el lector de pantalla use su voz inglesa en la frase modelo
   en.textContent = ex.en;
   const es = document.createElement('p');
   es.className = 'phrase-es muted';
@@ -112,14 +116,22 @@ function phraseCard(ex, { canSpeak, tutor, speak, recognize, compare }) {
   controls.append(listen, mic, status);
   card.append(controls);
 
+  // Región viva: el resultado se anexa aquí para que un lector de pantalla lo
+  // anuncie al aparecer (mismo patrón que el hilo de diálogo). Presente desde el
+  // render; se vacía en cada reintento.
+  const results = document.createElement('div');
+  results.className = 'phrase-results';
+  results.setAttribute('data-role', 'results');
+  results.setAttribute('aria-live', 'polite');
+  card.append(results);
+
   const setStatus = (m) => { status.textContent = m ?? ''; };
 
   mic.addEventListener('click', async () => {
     if (mic.disabled) return;
     mic.disabled = true;
     setStatus('Escuchando…');
-    // Limpia un resultado previo (reintento).
-    card.querySelector('[data-role="result"]')?.remove();
+    clear(results); // limpia un resultado previo (reintento)
 
     let transcript = '';
     try {
@@ -138,8 +150,8 @@ function phraseCard(ex, { canSpeak, tutor, speak, recognize, compare }) {
     setStatus('');
 
     const cmp = compare(ex.en, transcript);
-    card.append(resultBox(cmp, transcript, tutor, ex.en));
-    mic.disabled = false; // reintentar cuando quiera
+    mic.disabled = false; // reactivar ANTES de construir el resultado (defensivo)
+    results.append(resultBox(cmp, transcript, tutor, ex.en));
   });
 
   return card;
@@ -150,33 +162,53 @@ function resultBox(cmp, transcript, tutor, target) {
   box.className = 'phrase-result';
   box.setAttribute('data-role', 'result');
 
+  // Score HONESTO: cuántas palabras se reconocieron, NO una nota /100. El número
+  // mide coincidencia con lo que el reconocedor entendió, no la calidad fonética
+  // real; presentarlo como "N de M palabras" evita venderlo como un examen.
+  const total = cmp.marks.length;
   const score = document.createElement('p');
   score.className = 'phrase-score';
   score.setAttribute('data-role', 'score');
-  score.textContent = `${cmp.score}/100`;
+  score.textContent = `Reconocí ${cmp.wordsOk.length} de ${total} ${total === 1 ? 'palabra' : 'palabras'}`;
   box.append(score);
 
-  // Palabras resaltadas ok/off.
+  // Palabras resaltadas ok/off. El color se refuerza con subrayado (CSS) y, para
+  // lectores de pantalla, con un marcador " (revisar)" en las que quedaron off
+  // — nunca solo color (WCAG 1.4.1).
   const words = document.createElement('p');
   words.className = 'phrase-words';
+  words.lang = 'en';
   for (const mk of cmp.marks) {
     const span = document.createElement('span');
     span.className = `word ${mk.ok ? 'ok' : 'off'}`;
-    span.textContent = mk.word;
+    span.lang = 'en';
+    span.append(document.createTextNode(mk.word));
+    if (!mk.ok) {
+      const tag = document.createElement('span');
+      tag.className = 'visually-hidden';
+      tag.lang = 'es';
+      tag.textContent = ' (revisar)';
+      span.append(tag);
+    }
     words.append(span, document.createTextNode(' '));
   }
   box.append(words);
 
   const heard = document.createElement('p');
   heard.className = 'phrase-heard muted';
-  heard.textContent = `Escuché: ${transcript}`;
+  heard.append(document.createTextNode('Escuché: '));
+  const heardEn = document.createElement('span');
+  heardEn.lang = 'en';
+  heardEn.textContent = transcript;
+  heard.append(heardEn);
   box.append(heard);
 
   if (tutor && typeof tutor.coachPronunciation === 'function') {
     const coaching = document.createElement('p');
     coaching.className = 'phrase-coaching';
     coaching.setAttribute('data-role', 'coaching');
-    coaching.textContent = 'Analizando tu pronunciación…';
+    coaching.setAttribute('role', 'status'); // anuncia el cambio placeholder → consejo
+    coaching.textContent = 'Buscando consejos para ti…';
     box.append(coaching);
     tutor.coachPronunciation(target, transcript)
       .then((t) => { coaching.textContent = (t ?? '').trim() || 'Sin consejo esta vez.'; })
@@ -219,7 +251,7 @@ function topicPicker(topics, onPick) {
   return wrap;
 }
 
-function offlineNotice({ online, recognitionOk }) {
+function offlineNotice({ online, recognitionOk, tutor }) {
   const note = document.createElement('div');
   note.className = 'pronounce-notice';
   note.setAttribute('data-role', 'offline-notice');
@@ -229,6 +261,10 @@ function offlineNotice({ online, recognitionOk }) {
     p.textContent = 'Tu navegador no permite hablar (usa Chrome en Android). Puedes leer y escuchar las frases.';
   } else if (!online) {
     p.textContent = 'La práctica de pronunciación necesita conexión. Puedes leer y escuchar las frases mientras tanto.';
+  } else if (!tutor) {
+    // Se puede grabar y ver qué palabras se entendieron sin clave; solo el
+    // coaching de la IA necesita la clave de Gemini.
+    p.textContent = 'Añade tu clave de Gemini en Ajustes para recibir consejos de la IA. Puedes grabar, escuchar y ver qué palabras se entendieron igual.';
   } else {
     p.textContent = 'La práctica de pronunciación no está disponible ahora. Puedes leer y escuchar las frases.';
   }
