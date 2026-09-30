@@ -35,6 +35,7 @@ export function createGeminiTutor(key, opts = {}) {
     explain: (topic, itemContext) => ask(explainPrompt(topic, itemContext)),
     whyWrong: (item, given) => ask(whyWrongPrompt(item, given)),
     chat: (history) => ask(chatPrompt(history)),
+    coachPronunciation: (target, heard) => ask(pronouncePrompt(target, heard)),
     async generateItems(topic, n) {
       const text = await ask(generatePrompt(topic, n));
       // Stamp the topic ourselves: the model is not trusted to set it, and the
@@ -132,6 +133,14 @@ function chatPrompt(history) {
     .join('\n');
   const framing = system || `${LEARNER}\nEres un tutor de inglés paciente. Continúa la conversación.`;
   return `${framing}\n${convo}\nTutor:`;
+}
+
+function pronouncePrompt(target, heard) {
+  return `${LEARNER}
+El estudiante intentó decir en inglés: "${target}".
+El reconocedor de voz entendió: "${heard}".
+No escuchaste el audio: solo tienes esos dos textos. Deduce los sonidos que probablemente fallaron a partir de la DIFERENCIA entre lo que quería decir y lo que el reconocedor entendió (p. ej. si "think" se oyó como "tink", la /θ/ se fue a /t/); no inventes errores en las palabras que coincidieron.
+Da coaching breve de pronunciación en español (2 a 4 frases). Enfócate en los sonidos difíciles para un hispanohablante: la /θ/ de "think", la /ð/ de "this", /v/ vs /b/, la /h/ aspirada, vocales largas vs cortas (ship/sheep), la terminación -ed y la -s final. Si todo coincidió, dilo y anima. NO des un puntaje ni un número. Usa ejemplos en inglés cuando ayuden.`;
 }
 
 function generatePrompt(topic, n) {
